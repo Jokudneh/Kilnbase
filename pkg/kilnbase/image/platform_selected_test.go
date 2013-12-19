@@ -1,0 +1,68 @@
+// Copyright 2024 The Kilnbase Authors.
+// SPDX-License-Identifier: Apache-2.0
+
+package image_test
+
+import (
+	"testing"
+
+	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
+	ctlimg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/image"
+	v1 "github.com/google/go-containerregistry/pkg/v1"
+)
+
+// TestMatchesPlatform runs test cases on the matchesPlatform function which verifies
+// whether the given platform can run on the required platform by checking the
+// compatibility of architecture, OS, OS version, OS features, variant and features.
+// Adapted from https://github.com/google/go-containerregistry/blob/570ba6c88a5041afebd4599981d849af96f5dba9/pkg/v1/remote/index_test.go#L251
+func TestMatchesPlatformSelection(t *testing.T) {
+	tests := []struct {
+		// want is the expected return value from matchesPlatform
+		// when the given platform is 'given' and the required platform is 'required'.
+		given    v1.Platform
+		required ctlconf.PlatformSelection
+		want     bool
+	}{{ // The given & required platforms are identical. matchesPlatform expected to return true.
+		given: v1.Platform{
+			Architecture: "amd64",
+			OS:           "linux",
+			OSVersion:    "10.0.10586",
+			OSFeatures:   []string{"win32k"},
+			Variant:      "armv6l",
+			Features:     []string{"sse4"},
+		},
+		required: ctlconf.PlatformSelection{
+			Architecture: "amd64",
+			OS:           "linux",
+			OSVersion:    "10.0.10586",
+			OSFeatures:   []string{"win32k"},
+			Variant:      "armv6l",
+			Features:     []string{"sse4"},
+		},
+		want: true,
+	},
+		{ // OS and Architecture must exactly match. matchesPlatform expected to return false.
+			given: v1.Platform{
+				Architecture: "arm",
+				OS:           "linux",
+				OSVersion:    "10.0.10586",
+				OSFeatures:   []string{"win64k"},
+				Variant:      "armv6l",
+				Features:     []string{"sse4"},
+			},
+			required: ctlconf.PlatformSelection{
+				Architecture: "amd64",
+				OS:           "linux",
+				OSVersion:    "10.0.10586",
+				OSFeatures:   []string{"win32k"},
+				Variant:      "armv6l",
+				Features:     []string{"sse4"},
+			},
+			want: false,
+		},
+		{ // OS version must exactly match
+			given: v1.Platform{
+				Architecture: "amd64",
+				OS:           "linux",
+				OSVersion:    "10.0.10586",
+				OSFeatures:   []string{"win64k"},
