@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kilnbase-simple-app-build-local
+spec:
+  selector:
+    matchLabels:
+      app: kilnbase-simple-app-build-local
+  template:
+    metadata:
+      labels:
+        app: kilnbase-simple-app-build-local
+    spec:
+      containers:
+      - name: my-app
