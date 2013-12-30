@@ -1,0 +1,27 @@
+# This is an example .goreleaser.yml file with some sane defaults.
+# Make sure to check the documentation at http://goreleaser.com
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/kilnbase
+    binary: kilnbase-{{ .Os }}-{{ .Arch }}
+
+    flags:
+      - -trimpath
+
+    ldflags:
+      - -X github.com/Jokudneh/Kilnbase/pkg/kilnbase/version.Version={{ .Version }}
+
+archives:
+  - format: binary
+    name_template: "{{ .Binary }}"
+    replacements:
+      darwin: Darwin
+      linux: Linux

@@ -1,0 +1,23 @@
+// Copyright 2024 The Kilnbase Authors.
+// SPDX-License-Identifier: Apache-2.0
+
+package search
+
+import (
+	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
+	ctlres "github.com/Jokudneh/Kilnbase/pkg/kilnbase/resources"
+)
+
+type Fields struct {
+	res     interface{}
+	matcher Matcher
+}
+
+type FieldsVisitorFunc func(interface{}, ctlconf.SearchRuleUpdateStrategy) (interface{}, bool)
+
+func NewFields(res interface{}, matcher Matcher) Fields {
+	return Fields{res, matcher}
+}
+
+func (f Fields) Visit(visitorFunc FieldsVisitorFunc) {
+	f.visit(ctlres.Path{}, f.res, visitorFunc)

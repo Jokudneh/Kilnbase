@@ -3,3 +3,4 @@
 
 package config
 
+type SourceKubectlBuildkitOpts struct {
