@@ -30,3 +30,4 @@ type UnpackageOptions struct {
 	Concurrency   int
 }
 
+func NewUnpackageOptions(ui ui.UI) *UnpackageOptions {
