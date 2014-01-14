@@ -42,3 +42,6 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	imgDst *ctlconf.ImageDestination, opts ctlconf.SourceKubectlBuildkitOpts) (string, error) {
 
 	tagRef, err := d.tagRef(image, imgDst)
+	if err != nil {
+		return "", err
+	}
