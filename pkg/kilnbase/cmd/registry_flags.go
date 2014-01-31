@@ -3,3 +3,6 @@
 
 package cmd
 
+import (
+	ctlreg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/registry"
+	"github.com/spf13/cobra"

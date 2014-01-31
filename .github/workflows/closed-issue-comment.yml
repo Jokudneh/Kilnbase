@@ -1,0 +1,4 @@
+name: Closed issue comment labeling
+on:
+  issue_comment:
+    types: ['created']
