@@ -1,0 +1,21 @@
+// Copyright 2024 The Kilnbase Authors.
+// SPDX-License-Identifier: Apache-2.0
+
+package search_test
+
+import (
+	"testing"
+
+	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
+	ctlsearch "github.com/Jokudneh/Kilnbase/pkg/kilnbase/search"
+)
+
+const (
+	lowerCaseDockerIoImg = "docker.io/img"
+	nonStringTestValue   = 123
+)
+
+// Registry hostnames are case-insensitive (RFC 1035/1123).
+// ValueMatcher.Image / ValueMatcher.ImageRepo come from the user's
+// kilnbase.yaml config while the scanned value comes from the target
+// manifest, so a hostname-case mismatch between the two sources

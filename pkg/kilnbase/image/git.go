@@ -31,3 +31,7 @@ func (r GitRepo) RemoteURL() (string, error) {
 		if r.IsValid() && strings.Contains(stderr, "No remote configured to list refs from") {
 			return GitRepoRemoteURLUnknown, nil
 		}
+		return "", r.error("Determining remote: %s (stderr '%s')", err, stderr)
+	}
+
+	return strings.TrimSpace(stdout), nil

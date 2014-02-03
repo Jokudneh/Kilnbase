@@ -1,0 +1,29 @@
+// Copyright 2024 The Kilnbase Authors.
+// SPDX-License-Identifier: Apache-2.0
+
+package cmd
+
+import (
+	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
+	ctlres "github.com/Jokudneh/Kilnbase/pkg/kilnbase/resources"
+	ctlser "github.com/Jokudneh/Kilnbase/pkg/kilnbase/search"
+	"github.com/cppforlife/go-cli-ui/ui"
+	uitable "github.com/cppforlife/go-cli-ui/ui/table"
+	"github.com/spf13/cobra"
+)
+
+type InspectOptions struct {
+	ui ui.UI
+
+	FileFlags     FileFlags
+	RegistryFlags RegistryFlags
+}
+
+func NewInspectOptions(ui ui.UI) *InspectOptions {
+	return &InspectOptions{ui: ui}
+}
+
+func NewInspectCmd(o *InspectOptions) *cobra.Command {
+	cmd := &cobra.Command{
+		Use:     "inspect",
+		Aliases: []string{"i", "is", "insp"},

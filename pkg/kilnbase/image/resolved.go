@@ -8,3 +8,5 @@ import (
 
 	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
 	ctlreg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/registry"
+	regname "github.com/google/go-containerregistry/pkg/name"
+)
