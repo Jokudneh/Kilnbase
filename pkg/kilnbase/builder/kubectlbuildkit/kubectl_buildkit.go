@@ -45,3 +45,5 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	if err != nil {
 		return "", err
 	}
+
+	prefixedLogger := d.logger.NewPrefixedWriter(image + " | ")
