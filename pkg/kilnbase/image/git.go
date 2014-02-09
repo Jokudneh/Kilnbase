@@ -35,3 +35,5 @@ func (r GitRepo) RemoteURL() (string, error) {
 	}
 
 	return strings.TrimSpace(stdout), nil
+}
+

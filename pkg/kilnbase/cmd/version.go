@@ -9,3 +9,6 @@ import (
 	"github.com/Jokudneh/Kilnbase/pkg/kilnbase/version"
 	"github.com/cppforlife/go-cli-ui/ui"
 	"github.com/spf13/cobra"
+)
+
+type VersionOptions struct {
