@@ -5,3 +5,5 @@ package image_test
 
 import (
 	"testing"
+
+	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
