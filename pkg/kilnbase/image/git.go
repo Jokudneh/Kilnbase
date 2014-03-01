@@ -37,3 +37,5 @@ func (r GitRepo) RemoteURL() (string, error) {
 	return strings.TrimSpace(stdout), nil
 }
 
+func (r GitRepo) HeadSHA() (string, error) {
+	stdout, stderr, err := r.runCmd([]string{"rev-parse", "HEAD"})
