@@ -1,0 +1,29 @@
+name: test-gh
+on:
+  push:
+    branches:
+      - develop
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+      - 'examples/**'
+  pull_request:
+    types: [opened, reopened, synchronize]
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+      - 'examples/**'
+
+jobs:
+  test-all:
+    name: Test GH
+    runs-on: ubuntu-latest
+    environment: DockerHub E2E
+    env:
+      DOCKER_API_VERSION: "1.44"
+    steps:
+    - name: Free Disk Space (Ubuntu)
+      uses: jlumbroso/free-disk-space@v1.3.0
+      with:
+        # this might remove tools that are actually needed,
+        # if set to "true" but frees about 6 GB

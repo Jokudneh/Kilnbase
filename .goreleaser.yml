@@ -25,3 +25,4 @@ archives:
     replacements:
       darwin: Darwin
       linux: Linux
+      windows: Windows
