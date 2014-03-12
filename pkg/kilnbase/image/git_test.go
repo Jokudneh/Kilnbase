@@ -1,0 +1,64 @@
+// Copyright 2024 The Kilnbase Authors.
+// SPDX-License-Identifier: Apache-2.0
+
+package image_test
+
+import (
+	"bytes"
+	"fmt"
+	"os"
+	"os/exec"
+	"path"
+	"path/filepath"
+	"strings"
+	"testing"
+
+	ctlimg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/image"
+)
+
+func TestMain(m *testing.M) {
+	tmpDir, err := os.MkdirTemp("", "kilnbase-git")
+	if err != nil {
+		panic(fmt.Errorf("err creating tmpDir: %v", err))
+	}
+	defer os.RemoveAll(tmpDir)
+	if err := os.Setenv("HOME", tmpDir); err != nil {
+		panic(fmt.Errorf("err setting HOME: %v", err))
+	}
+	if err := os.Setenv("XDG_CONFIG_HOME", tmpDir); err != nil {
+		panic(fmt.Errorf("err setting XDG_CONFIG_HOME: %v", err))
+	}
+	gitConfig, err := os.Create(path.Join(tmpDir, ".gitconfig"))
+	if err != nil {
+		panic(fmt.Errorf("err creating gitconfig: %v", err))
+	}
+	fmt.Fprintf(gitConfig, "[user]\n\t name = kilnbase\n\temail = foo@example.com")
+	if err := gitConfig.Close(); err != nil {
+		panic(fmt.Errorf("err closing gitconfig: %v", err))
+	}
+	os.Exit(m.Run())
+}
+
+func TestGitRepoValidNonEmptyRepo(t *testing.T) {
+	gitRepo := ctlimg.NewGitRepo(".")
+	if gitRepo.IsValid() != true {
+		t.Fatalf("Expected kilnbase to be a git repo")
+	}
+	url, err := gitRepo.RemoteURL()
+	if err != nil || len(url) == 0 || url == ctlimg.GitRepoRemoteURLUnknown {
+		t.Fatalf("Expected remote url to succeed")
+	}
+	sha, err := gitRepo.HeadSHA()
+	if err != nil || len(sha) == 0 || sha == ctlimg.GitRepoHeadSHANoCommits {
+		t.Fatalf("Expected head sha to succeed")
+	}
+	_, err = gitRepo.HeadTags()
+	if err != nil {
+		t.Fatalf("Expected head tags to succeed")
+	}
+	_, err = gitRepo.IsDirty()
+	if err != nil {
+		t.Fatalf("Expected dirty to succeed")
+	}
+}
+

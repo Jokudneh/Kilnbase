@@ -12,3 +12,5 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func TestNewPlatformSelection(t *testing.T) {
+	type test struct {
