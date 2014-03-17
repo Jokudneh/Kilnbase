@@ -25,3 +25,6 @@ kind: Pod
 metadata:
   name: registry
   labels:
+    registry: ""
+  annotations:
+    kapp.k14s.io/update-strategy: fallback-on-replace
