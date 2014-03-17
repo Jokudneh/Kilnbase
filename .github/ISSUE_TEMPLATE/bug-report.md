@@ -13,3 +13,6 @@ assignees: ''
 **What happened:**
 [A small description of the result]
 
+**What did you expect:**
+[A description of what was expected]
+

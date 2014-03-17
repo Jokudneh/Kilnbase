@@ -14,3 +14,4 @@ import (
 
 func TestNewPlatformSelection(t *testing.T) {
 	type test struct {
+		Input string

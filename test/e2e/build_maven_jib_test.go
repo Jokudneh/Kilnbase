@@ -28,3 +28,5 @@ func TestMavenJibBuildSuccessful(t *testing.T) {
 			t.Logf("failed to remove %s: %v", secondAssetPath, err)
 		}
 	}()
+
+	input := env.WithRegistries(fmt.Sprintf(`
