@@ -1,0 +1,39 @@
+// Copyright 2024 The Kilnbase Authors.
+// SPDX-License-Identifier: Apache-2.0
+
+package image
+
+import (
+	"fmt"
+
+	ctlbbz "github.com/Jokudneh/Kilnbase/pkg/kilnbase/builder/bazel"
+	ctlbdk "github.com/Jokudneh/Kilnbase/pkg/kilnbase/builder/docker"
+	ctlbko "github.com/Jokudneh/Kilnbase/pkg/kilnbase/builder/ko"
+	ctlbkb "github.com/Jokudneh/Kilnbase/pkg/kilnbase/builder/kubectlbuildkit"
+	ctlbmvn "github.com/Jokudneh/Kilnbase/pkg/kilnbase/builder/maven"
+	ctlbpk "github.com/Jokudneh/Kilnbase/pkg/kilnbase/builder/pack"
+	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
+	ctllog "github.com/Jokudneh/Kilnbase/pkg/kilnbase/logger"
+	ctlreg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/registry"
+)
+
+type Image interface {
+	URL() (string, []ctlconf.Origin, error)
+}
+
+type Factory struct {
+	opts     FactoryOpts
+	registry ctlreg.Registry
+	logger   ctllog.Logger
+}
+
+type FactoryOpts struct {
+	Conf                    ctlconf.Conf
+	AllowedToBuild          bool
+	GlobalPlatformSelection *ctlconf.PlatformSelection
+}
+
+func NewFactory(opts FactoryOpts, registry ctlreg.Registry, logger ctllog.Logger) Factory {
+	return Factory{opts, registry, logger}
+}
+

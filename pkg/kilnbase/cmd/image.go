@@ -16,3 +16,5 @@ type Images []Image
 type Image struct {
 	URL        string
 	Origins    []ctlconf.Origin // empty when deserialized
+	originsRaw []interface{}    // populated when deserialized
+}
