@@ -15,3 +15,5 @@ import (
 	ctllog "github.com/Jokudneh/Kilnbase/pkg/kilnbase/logger"
 )
 
+var (
+	// Loaded image ID: sha256:328b5f47550c85cea5284911ad4d284ce20e8240d61d2610eb6cb4aa8b43c19e

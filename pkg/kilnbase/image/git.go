@@ -39,3 +39,6 @@ func (r GitRepo) RemoteURL() (string, error) {
 
 func (r GitRepo) HeadSHA() (string, error) {
 	stdout, stderr, err := r.runCmd([]string{"rev-parse", "HEAD"})
+	if err != nil {
+		listStdout, _, listErr := r.runCmd([]string{"rev-list", "-n", "1", "--all"})
+		if listErr == nil && len(strings.TrimSpace(listStdout)) == 0 {
