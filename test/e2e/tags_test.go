@@ -14,3 +14,5 @@ import (
 	"sigs.k8s.io/yaml"
 )
 
+func TestAdditionalImageTags(t *testing.T) {
+	env := BuildEnv(t)
