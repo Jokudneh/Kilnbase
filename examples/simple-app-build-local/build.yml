@@ -14,3 +14,6 @@ spec:
       containers:
       - name: my-app
         image: simple-app
+---
+apiVersion: apps/v1
+kind: Deployment
