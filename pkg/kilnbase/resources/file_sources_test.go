@@ -26,3 +26,7 @@ func redactErrorMessageTestCases() []struct {
 		},
 		{
 			name: "https before http",
+			input: `Connect to "https://secure.example/api?k=v": ` +
+				`fallback "http://bkp:pwd@fallback.example/old"`,
+			expected: `Connect to "https://secure.example/api?_redacted_": ` +
+				`fallback "http://_redacted_@fallback.example/old"`,
