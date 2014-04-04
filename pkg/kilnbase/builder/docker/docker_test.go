@@ -25,3 +25,6 @@ type lowerCaseRepositoryTestCase struct {
 	input    string
 	expected string
 }
+
+// lowerCaseRepositoryCases holds the table-driven cases for
+// TestLowerCaseRepository. Kept as a package-level variable (rather than

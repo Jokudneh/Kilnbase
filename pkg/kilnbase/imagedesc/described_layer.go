@@ -7,3 +7,5 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/Jokudneh/Kilnbase/pkg/kilnbase/imageutils/gzip"
+	"github.com/Jokudneh/Kilnbase/pkg/kilnbase/imageutils/verify"
