@@ -18,3 +18,6 @@ type Image struct {
 	Origins    []ctlconf.Origin // empty when deserialized
 	originsRaw []interface{}    // populated when deserialized
 }
+
+func (imgs Images) ForImage(url string) (Image, bool) {
+	for _, img := range imgs {

@@ -12,3 +12,4 @@ import (
 )
 
 type VersionOptions struct {
+	ui ui.UI

@@ -40,3 +40,5 @@ func (b *Jib) Run(image, directory string,
 		"starting build (using kilnbase jib build): %s\n", directory)))
 	defer func() {
 		_, _ = prefixedLogger.Write([]byte(
+			"finished build (using kilnbase jib build)\n"))
+	}()
