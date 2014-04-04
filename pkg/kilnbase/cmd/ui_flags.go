@@ -12,3 +12,6 @@ import (
 type UIFlags struct {
 	TTY            bool
 	Color          bool
+	JSON           bool
+	NonInteractive bool
+	Columns        []string

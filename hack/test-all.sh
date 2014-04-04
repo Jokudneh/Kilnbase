@@ -2,3 +2,4 @@
 
 set -e -x -u
 
+export GOTOOLCHAIN=auto

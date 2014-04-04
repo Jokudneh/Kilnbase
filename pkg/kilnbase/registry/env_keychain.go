@@ -31,3 +31,5 @@ type EnvKeychain struct {
 var _ regauthn.Keychain = &EnvKeychain{}
 
 func NewEnvKeychain(globalPrefix string) *EnvKeychain {
+	return &EnvKeychain{globalPrefix: globalPrefix}
+}
