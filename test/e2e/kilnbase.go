@@ -17,3 +17,6 @@ type Kilnbase struct {
 	t        *testing.T
 	kilnbasePath string
 	l        Logger
+}
+
+type RunOpts struct {
