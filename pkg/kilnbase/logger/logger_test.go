@@ -9,3 +9,7 @@ import (
 
 	ctllog "github.com/Jokudneh/Kilnbase/pkg/kilnbase/logger"
 )
+
+func TestLogger(t *testing.T) {
+	var buf bytes.Buffer
+
