@@ -15,3 +15,6 @@ import (
 func TestNewPlatformSelection(t *testing.T) {
 	type test struct {
 		Input string
+		Plat  *ctlconf.PlatformSelection
+		Error error
+	}
