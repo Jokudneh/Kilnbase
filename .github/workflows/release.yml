@@ -1,0 +1,25 @@
+name: goreleaser
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    # Set permissions of github token. See https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#permissions
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+

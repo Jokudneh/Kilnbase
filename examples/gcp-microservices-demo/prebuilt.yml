@@ -3,3 +3,4 @@ kind: Config
 overrides:
 - image: emailservice
   newImage: gcr.io/google-samples/microservices-demo/emailservice:v0.1.0
+- image: checkoutservice

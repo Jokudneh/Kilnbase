@@ -48,3 +48,7 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 
 	prefixedLogger := d.logger.NewPrefixedWriter(image + " | ")
 
+	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using kubectl buildkit): %s -> %s\n", directory, tagRef)))
+	defer prefixedLogger.Write([]byte("finished build (using kubectl buildkit)\n"))
+
+	var stdoutBuf, stderrBuf bytes.Buffer
