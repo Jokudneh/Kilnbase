@@ -104,3 +104,4 @@ type SearchRuleKeyMatcher struct {
 	// TODO JSONPath string
 }
 
+type SearchRuleValueMatcher struct {
