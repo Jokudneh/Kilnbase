@@ -1,0 +1,5 @@
+name: Mark issues stale and close stale issues
+
+on:
+  schedule:
+  - cron: "0 0 * * *"
