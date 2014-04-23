@@ -29,3 +29,6 @@ func NewPlatformSelectedImage(image Image,
 func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	url, origins, err := i.image.URL()
 	if err != nil {
+		return url, origins, err
+	}
+
