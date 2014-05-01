@@ -1,0 +1,8 @@
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Config
+sources:
+- image: emailservice
+  path: src/emailservice
+- image: productcatalogservice
+  path: src/productcatalogservice
+- image: recommendationservice
