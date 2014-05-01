@@ -52,3 +52,4 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	defer prefixedLogger.Write([]byte("finished build (using kubectl buildkit)\n"))
 
 	var stdoutBuf, stderrBuf bytes.Buffer
+
