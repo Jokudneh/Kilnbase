@@ -8,3 +8,6 @@ import (
 
 	"github.com/Jokudneh/Kilnbase/pkg/kilnbase/imagedesc"
 )
+
+type TarReader struct {
+	path string
