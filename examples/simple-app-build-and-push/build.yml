@@ -8,3 +8,5 @@ spec:
       app: kilnbase-simple-app
   template:
     metadata:
+      labels:
+        app: kilnbase-simple-app
