@@ -31,3 +31,5 @@ type RelocateOptions struct {
 
 func NewRelocateOptions(ui ui.UI) *RelocateOptions {
 	return &RelocateOptions{ui: ui}
+}
+

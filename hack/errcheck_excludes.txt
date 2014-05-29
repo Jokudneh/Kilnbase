@@ -1,0 +1,3 @@
+os.RemoveAll
+(*github.com/Jokudneh/Kilnbase/pkg/kilnbase/logger.PrefixWriter).Write
+(*github.com/Jokudneh/Kilnbase/pkg/kilnbase/logger.PrefixWriter).WriteStr

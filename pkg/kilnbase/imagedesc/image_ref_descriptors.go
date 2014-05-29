@@ -67,3 +67,5 @@ func NewImageRefDescriptors(refs []regname.Reference, registry Registry) (*Image
 			regDesc, err := registry.Generic(ref)
 			if err != nil {
 				return err
+			}
+
