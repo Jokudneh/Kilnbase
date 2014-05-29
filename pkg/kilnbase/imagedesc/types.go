@@ -24,3 +24,6 @@ type ImageIndexWithRef interface {
 	regv1.ImageIndex
 	Ref() string
 }
+
+type LayerProvider interface {
+	FindLayer(ImageLayerDescriptor) (LayerContents, error)

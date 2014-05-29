@@ -33,3 +33,5 @@ func NewRelocateOptions(ui ui.UI) *RelocateOptions {
 	return &RelocateOptions{ui: ui}
 }
 
+func NewRelocateCmd(o *RelocateOptions) *cobra.Command {
+	cmd := &cobra.Command{
