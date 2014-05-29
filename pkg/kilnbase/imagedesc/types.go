@@ -23,3 +23,4 @@ type ImageWithRef interface {
 type ImageIndexWithRef interface {
 	regv1.ImageIndex
 	Ref() string
+}
