@@ -8,3 +8,5 @@ import (
 	"github.com/spf13/cobra"
 )
 
+type RegistryFlags struct {
+	CACertPaths []string

@@ -6,3 +6,4 @@ package config
 type SourceDockerOpts struct {
 	Build  SourceDockerBuildOpts
 	Buildx *SourceDockerBuildxOpts
+}
