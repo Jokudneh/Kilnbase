@@ -11,3 +11,4 @@ import (
 var (
 	// Version can be set via:
 	// -ldflags="-X 'github.com/Jokudneh/Kilnbase/pkg/kilnbase/version.Version=$TAG'"
+	defaultVersion = "develop"
