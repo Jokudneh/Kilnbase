@@ -18,3 +18,5 @@ var (
 type FileResource struct {
 	fileSrc FileSource
 }
+
+func NewFileResources(file string) ([]FileResource, error) {
