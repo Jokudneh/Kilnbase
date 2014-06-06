@@ -37,3 +37,5 @@ func NewFactory(opts FactoryOpts, registry ctlreg.Registry, logger ctllog.Logger
 	return Factory{opts, registry, logger}
 }
 
+func (f Factory) New(url string) Image {
+	platformSelection := f.opts.GlobalPlatformSelection
