@@ -27,3 +27,6 @@ type Pack struct {
 	docker ctlbdk.Docker
 	logger ctllog.Logger
 }
+
+type PackBuildOpts struct {
+	Builder    *string
