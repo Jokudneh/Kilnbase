@@ -27,3 +27,7 @@ jobs:
         uses: sigstore/cosign-installer@v3
 
       - name: Retrieve version
+        run: |
+          echo "TAG_NAME=$(echo ${{ github.ref }}  | grep -Eo 'v[0-9].*')" >> $GITHUB_OUTPUT
+        id: version
+
