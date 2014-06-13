@@ -73,3 +73,5 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 
 	prefixedLogger := d.logger.NewPrefixedWriter(image + " | ")
 
+	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using Docker): %s -> %s\n", directory, tmpRef.AsString())))
+	defer prefixedLogger.Write([]byte("finished build (using Docker)\n"))

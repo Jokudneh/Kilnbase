@@ -13,3 +13,7 @@ import (
 )
 
 type KilnbaseOptions struct {
+	ui      *ui.ConfUI
+	UIFlags UIFlags
+}
+
