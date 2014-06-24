@@ -10,3 +10,5 @@ cat <<EOF | $KILNBASE_BINARY_PATH -f - | grep 'image:' | awk '{print $2}'
 image: test-dependencies
 ---
 apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Config
+sources:

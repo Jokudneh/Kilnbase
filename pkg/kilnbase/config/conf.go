@@ -35,3 +35,5 @@ func NewConfFromResources(resources []ctlres.Resource) ([]ctlres.Resource, Conf,
 		default:
 			rsWithoutConfigs = append(rsWithoutConfigs, res)
 		}
+	}
+	return rsWithoutConfigs, Conf{configs}, nil
