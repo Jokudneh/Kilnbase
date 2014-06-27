@@ -27,3 +27,6 @@ type ImageIndexWithRef interface {
 
 type LayerProvider interface {
 	FindLayer(ImageLayerDescriptor) (LayerContents, error)
+}
+
+type LayerContents interface {
