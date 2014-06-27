@@ -17,3 +17,4 @@ import (
 func TestAdditionalImageTags(t *testing.T) {
 	env := BuildEnv(t)
 	logger := Logger{}
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, logger}
