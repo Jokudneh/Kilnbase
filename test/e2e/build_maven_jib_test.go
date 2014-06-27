@@ -31,3 +31,4 @@ func TestMavenJibBuildSuccessful(t *testing.T) {
 
 	input := env.WithRegistries(fmt.Sprintf(`
 kind: Object
+spec:
