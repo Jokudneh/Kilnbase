@@ -15,3 +15,7 @@ import (
 	ctllog "github.com/Jokudneh/Kilnbase/pkg/kilnbase/logger"
 )
 
+type Ko struct {
+	logger ctllog.Logger
+}
+

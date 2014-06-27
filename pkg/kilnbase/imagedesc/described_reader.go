@@ -7,3 +7,7 @@ import (
 	regv1 "github.com/google/go-containerregistry/pkg/v1"
 )
 
+type DescribedReader struct {
+	ids           *ImageRefDescriptors
+	layerProvider LayerProvider
+}

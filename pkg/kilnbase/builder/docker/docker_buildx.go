@@ -59,3 +59,4 @@ $ docker buildx build . -t k14stest/test-image:buildx-test-img --push --progress
 #11 DONE 0.6s
 
 $ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 . --push -t k14stest/test-image:buildx-test-img --progress=plain
+...snip...
