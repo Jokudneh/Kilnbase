@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kilnbase-simple-app-build-local-bazel
+spec:
+  selector:
+    matchLabels:
+      app: kilnbase-simple-app-build-local-bazel

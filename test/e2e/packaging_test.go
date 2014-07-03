@@ -78,3 +78,5 @@ overrides:
 	defer os.RemoveAll(path)
 
 	relocatedLockPath := path + "-relocated"
+	defer os.RemoveAll(relocatedLockPath)
+
