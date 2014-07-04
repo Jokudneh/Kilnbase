@@ -20,3 +20,4 @@ type Kilnbase struct {
 }
 
 type RunOpts struct {
+	AllowError   bool

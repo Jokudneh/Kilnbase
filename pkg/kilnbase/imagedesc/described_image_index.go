@@ -17,3 +17,6 @@ type DescribedImageIndex struct {
 	indexes []regv1.ImageIndex
 }
 
+var _ regv1.ImageIndex = DescribedImageIndex{}
+
+func NewDescribedImageIndex(desc ImageIndexDescriptor,
