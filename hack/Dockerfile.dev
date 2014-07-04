@@ -6,3 +6,4 @@ RUN apt-get install docker.io apt-transport-https ca-certificates gnupg python-i
 RUN mkdir -p ~/.docker/cli-plugins/
 RUN curl -sLo ~/.docker/cli-plugins/docker-buildx https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-amd64
 RUN chmod +x ~/.docker/cli-plugins/docker-buildx
+
