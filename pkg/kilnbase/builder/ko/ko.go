@@ -19,3 +19,5 @@ type Ko struct {
 	logger ctllog.Logger
 }
 
+func NewKo(logger ctllog.Logger) Ko {
+	return Ko{logger: logger}
