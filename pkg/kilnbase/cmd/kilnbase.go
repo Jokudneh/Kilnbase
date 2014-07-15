@@ -17,3 +17,5 @@ type KilnbaseOptions struct {
 	UIFlags UIFlags
 }
 
+func NewKilnbaseOptions(ui *ui.ConfUI) *KilnbaseOptions {
+	return &KilnbaseOptions{ui: ui}
