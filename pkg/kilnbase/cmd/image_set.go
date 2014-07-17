@@ -48,3 +48,6 @@ func (o ImageSet) Export(foundImages *UnprocessedImageURLs,
 		o.logger.Write([]byte(fmt.Sprintf("will export %s\n", img.URL)))
 		refs = append(refs, ref)
 	}
+
+	ids, err := imagedesc.NewImageRefDescriptors(refs, registry)
+	if err != nil {
