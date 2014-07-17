@@ -1,0 +1,5 @@
+name: Trivy CVE Dependency Scanner
+
+on:
+  workflow_dispatch:
+  schedule:

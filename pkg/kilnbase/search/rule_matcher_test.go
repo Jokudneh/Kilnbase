@@ -19,3 +19,5 @@ const (
 // ValueMatcher.Image / ValueMatcher.ImageRepo come from the user's
 // kilnbase.yaml config while the scanned value comes from the target
 // manifest, so a hostname-case mismatch between the two sources
+// must not prevent a match.
+func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
