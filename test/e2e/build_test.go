@@ -1,0 +1,36 @@
+//go:build e2e
+
+// Copyright 2024 The Kilnbase Authors.
+// SPDX-License-Identifier: Apache-2.0
+
+package e2e
+
+import (
+	"regexp"
+	"strings"
+	"testing"
+)
+
+func TestDockerBuildSuccessful(t *testing.T) {
+	env := BuildEnv(t)
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
+
+	input := env.WithRegistries(`
+kind: Object
+spec:
+- image: docker.io/*username*/kilnbase-e2e-tests-build
+- image: simple-app-two
+- image: simple-app-two-overriden
+- image: simple-app-three
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Sources
+sources:
+- image: docker.io/*username*/kilnbase-e2e-tests-build
+  path: assets/simple-app
+- image: simple-app-two
+  path: assets/simple-app
+  docker:
+    build:
+      file: dev/Dockerfile.dev
+- image: simple-app-three
