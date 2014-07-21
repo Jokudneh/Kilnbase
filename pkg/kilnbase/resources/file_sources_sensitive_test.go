@@ -17,3 +17,6 @@ func TestRedactIPv6AndFragmentCredentials(t *testing.T) {
 		`Get "http://[::1]:8080/input?token=query-canary": failed`,
 		`redirect [https://user:password-canary@[::1]/?q=query-canary]`,
 		`Get "https://example.com/input#fragment-canary": failed`,
+		`Get "http://[::1]:bad/input?token=query-canary": failed`,
+	}
+	for _, input := range inputs {

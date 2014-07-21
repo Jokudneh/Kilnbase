@@ -18,3 +18,6 @@ func TestNewPlatformSelection(t *testing.T) {
 		Plat  *ctlconf.PlatformSelection
 		Error error
 	}
+
+	exs := []test{
+		{
