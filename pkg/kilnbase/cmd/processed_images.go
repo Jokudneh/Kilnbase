@@ -11,3 +11,7 @@ import (
 type ProcessedImages struct {
 	imgs     map[UnprocessedImageURL]Image
 	imgsLock sync.Mutex
+}
+
+type ProcessedImageItem struct {
+	UnprocessedImageURL
