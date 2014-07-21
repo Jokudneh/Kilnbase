@@ -15,3 +15,6 @@ type UIFlags struct {
 	JSON           bool
 	NonInteractive bool
 	Columns        []string
+}
+
+func (f *UIFlags) Set(cmd *cobra.Command) {

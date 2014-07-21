@@ -105,3 +105,5 @@ type SearchRuleKeyMatcher struct {
 }
 
 type SearchRuleValueMatcher struct {
+	Image     string `json:"image,omitempty"`
+	ImageRepo string `json:"imageRepo,omitempty"`
