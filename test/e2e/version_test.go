@@ -7,3 +7,4 @@ package e2e
 
 import (
 	"strings"
+	"testing"
