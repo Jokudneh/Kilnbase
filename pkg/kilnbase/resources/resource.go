@@ -39,3 +39,5 @@ type ResourceImpl struct {
 	gvr       schema.GroupVersionResource
 	transient bool
 }
+
+var _ Resource = &ResourceImpl{}
