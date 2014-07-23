@@ -14,3 +14,4 @@ import (
 )
 
 // TagSelectedImage represents an image that will be resolved into url+digest
+type TagSelectedImage struct {
