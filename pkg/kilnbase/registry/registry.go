@@ -61,3 +61,6 @@ func (i Registry) Generic(ref regname.Reference) (regv1.Descriptor, error) {
 	if err != nil {
 		getDesc, err := regremote.Get(ref, i.opts...)
 		if err != nil {
+			return regv1.Descriptor{}, err
+		}
+		return getDesc.Descriptor, err

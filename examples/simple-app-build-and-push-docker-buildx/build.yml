@@ -1,0 +1,6 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kilnbase-simple-app-build-and-push-docker-buildx
+spec:
+  selector:
