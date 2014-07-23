@@ -4,3 +4,4 @@ metadata:
   name: kilnbase-simple-app-build-local-mvn
 spec:
   selector:
+    matchLabels:
