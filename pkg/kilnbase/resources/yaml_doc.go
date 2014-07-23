@@ -9,3 +9,6 @@ import (
 	"io"
 
 	kyaml "k8s.io/apimachinery/pkg/util/yaml"
+)
+
+type YAMLFile struct {

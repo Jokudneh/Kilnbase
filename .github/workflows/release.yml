@@ -31,3 +31,5 @@ jobs:
           echo "TAG_NAME=$(echo ${{ github.ref }}  | grep -Eo 'v[0-9].*')" >> $GITHUB_OUTPUT
         id: version
 
+      - name: Run GoReleaser
+        # GoReleaser v4.2.0
