@@ -14,3 +14,5 @@ const noBytesWritten = 0
 
 type Logger struct {
 	writer     io.Writer
+	writerLock *sync.Mutex
+}
