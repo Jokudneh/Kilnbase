@@ -67,3 +67,4 @@ func TestGitRepoValidNoCommit(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Making tmp dir: %s", err)
 	}
+
