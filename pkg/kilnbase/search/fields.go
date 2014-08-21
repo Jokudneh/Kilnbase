@@ -21,3 +21,7 @@ func NewFields(res interface{}, matcher Matcher) Fields {
 
 func (f Fields) Visit(visitorFunc FieldsVisitorFunc) {
 	f.visit(ctlres.Path{}, f.res, visitorFunc)
+}
+
+func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVisitorFunc) {
+	switch typedObj := res.(type) {

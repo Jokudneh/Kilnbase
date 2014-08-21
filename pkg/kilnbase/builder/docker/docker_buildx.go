@@ -60,3 +60,7 @@ $ docker buildx build . -t k14stest/test-image:buildx-test-img --push --progress
 
 $ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 . --push -t k14stest/test-image:buildx-test-img --progress=plain
 ...snip...
+#22 exporting manifest sha256:32d9f4784456eb53e77768d94a705d1432b833368496d15280311b5879d54ef6 done
+#22 exporting config sha256:f9d9b90fceeb8c721ced16025b812613c7f52e5b507e2b2ae39b3d424381725c done
+#22 exporting manifest sha256:a18f53367186f5af99bf3d629a45522638e95feb5807b926713d6004232d0df2 done
+#22 exporting config sha256:29d5c3d35c3e9262111de2575c97d63f8bda9ddab69f88a2143f1fb77a259f4d 0.0s done
