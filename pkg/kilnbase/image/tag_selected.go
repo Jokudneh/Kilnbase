@@ -15,3 +15,7 @@ import (
 
 // TagSelectedImage represents an image that will be resolved into url+digest
 type TagSelectedImage struct {
+	url       string
+	selection *v1alpha1.VersionSelection
+	registry  ctlreg.Registry
+}
