@@ -10,3 +10,4 @@ spec:
     metadata:
       labels:
         app: kilnbase-simple-app
+    spec:
