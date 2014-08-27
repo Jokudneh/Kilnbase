@@ -20,3 +20,5 @@ type tarFile struct {
 
 var _ imagedesc.LayerProvider = tarFile{}
 
+type tarFileChunk struct {
+	file      tarFile
