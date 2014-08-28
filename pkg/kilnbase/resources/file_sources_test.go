@@ -30,3 +30,7 @@ func redactErrorMessageTestCases() []struct {
 				`fallback "http://bkp:pwd@fallback.example/old"`,
 			expected: `Connect to "https://secure.example/api?_redacted_": ` +
 				`fallback "http://_redacted_@fallback.example/old"`,
+		},
+		{
+			name: "multiple urls same scheme",
+			input: `Failed at "http://u1:pw1@h1.example" and ` +

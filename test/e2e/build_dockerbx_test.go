@@ -17,3 +17,5 @@ func TestDockerBuildxBuildSuccessful(t *testing.T) {
 
 	input := env.WithRegistries(`
 kind: Object
+spec:
+- image: simple-app-two
