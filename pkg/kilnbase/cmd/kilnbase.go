@@ -19,3 +19,6 @@ type KilnbaseOptions struct {
 
 func NewKilnbaseOptions(ui *ui.ConfUI) *KilnbaseOptions {
 	return &KilnbaseOptions{ui: ui}
+}
+
+func NewDefaultKilnbaseCmd(ui *ui.ConfUI) *cobra.Command {
