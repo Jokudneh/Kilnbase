@@ -31,3 +31,4 @@ sources:
   path: assets/simple-app
   kubectlBuildkit:
     build:
+      file: dev/Dockerfile.dev
