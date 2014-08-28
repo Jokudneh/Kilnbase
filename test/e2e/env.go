@@ -14,3 +14,7 @@ type Env struct {
 	DockerHubHostname    string
 	SkipStressTests      bool
 	SkipWhenHTTPRegistry bool
+	KilnbaseBinaryPath       string
+}
+
+func BuildEnv(t *testing.T) Env {
