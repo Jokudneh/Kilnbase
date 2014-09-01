@@ -37,3 +37,7 @@ func NewConfFromResources(resources []ctlres.Resource) ([]ctlres.Resource, Conf,
 		}
 	}
 	return rsWithoutConfigs, Conf{configs}, nil
+}
+
+func (c Conf) WithAdditionalConfig(config Config) Conf {
+	newConf := Conf{}

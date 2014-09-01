@@ -11,3 +11,7 @@ To run the end to end tests, you must have the following utilities installed on 
 
 ### Run End to End Tests
 
+Set environment variables
+
+```bash
+export KILNBASE_E2E_DOCKERHUB_USERNAME=joeexample
