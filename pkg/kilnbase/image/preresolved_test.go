@@ -9,3 +9,4 @@ import (
 	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
 	. "github.com/Jokudneh/Kilnbase/pkg/kilnbase/image"
 	"github.com/stretchr/testify/assert"
+)
