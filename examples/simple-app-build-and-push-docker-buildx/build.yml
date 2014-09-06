@@ -4,3 +4,6 @@ metadata:
   name: kilnbase-simple-app-build-and-push-docker-buildx
 spec:
   selector:
+    matchLabels:
+      app: kilnbase-simple-app-build-and-push-docker-buildx
+  template:
