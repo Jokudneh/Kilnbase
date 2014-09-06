@@ -21,3 +21,4 @@ var (
 	bazelImageID = regexp.MustCompile("Loaded image ID: (sha256:)([0-9a-z]+)")
 )
 
+type Bazel struct {

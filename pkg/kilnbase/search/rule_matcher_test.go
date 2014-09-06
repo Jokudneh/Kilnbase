@@ -21,3 +21,4 @@ const (
 // manifest, so a hostname-case mismatch between the two sources
 // must not prevent a match.
 func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
+	type example struct {

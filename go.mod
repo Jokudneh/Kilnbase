@@ -14,3 +14,7 @@ require (
 	github.com/stretchr/testify v1.11.1
 	golang.org/x/sync v0.20.0
 	k8s.io/apimachinery v0.36.0
+	sigs.k8s.io/yaml v1.6.0
+)
+
+require (

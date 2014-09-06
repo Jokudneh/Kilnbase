@@ -53,3 +53,6 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 
 	var stdoutBuf, stderrBuf bytes.Buffer
 
+	cmdArgs := []string{"buildkit", "build", "--progress=plain"}
+
+	if opts.Build.Target != nil {
