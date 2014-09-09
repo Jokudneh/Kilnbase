@@ -10,3 +10,4 @@ import (
 	. "github.com/Jokudneh/Kilnbase/pkg/kilnbase/image"
 	"github.com/stretchr/testify/assert"
 )
+

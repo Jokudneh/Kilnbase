@@ -15,3 +15,6 @@ type ProcessedImages struct {
 
 type ProcessedImageItem struct {
 	UnprocessedImageURL
+	Image
+}
+
