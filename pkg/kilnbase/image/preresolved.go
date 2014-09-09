@@ -10,3 +10,5 @@ import (
 
 type PreresolvedImage struct {
 	url     string
+	origins []ctlconf.Origin
+}

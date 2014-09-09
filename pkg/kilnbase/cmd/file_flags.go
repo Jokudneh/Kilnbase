@@ -13,3 +13,5 @@ type FileFlags struct {
 	Files     []string
 	Recursive bool
 	Sort      bool
+}
+

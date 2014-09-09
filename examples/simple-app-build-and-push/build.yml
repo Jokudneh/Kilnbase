@@ -11,3 +11,5 @@ spec:
       labels:
         app: kilnbase-simple-app
     spec:
+      containers:
+      - name: my-app

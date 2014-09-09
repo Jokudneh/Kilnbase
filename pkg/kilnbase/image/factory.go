@@ -39,3 +39,5 @@ func NewFactory(opts FactoryOpts, registry ctlreg.Registry, logger ctllog.Logger
 
 func (f Factory) New(url string) Image {
 	platformSelection := f.opts.GlobalPlatformSelection
+
+	if overrideConf, found := f.shouldOverride(url); found {
