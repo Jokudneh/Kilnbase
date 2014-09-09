@@ -16,3 +16,4 @@ type Logger struct {
 	writer     io.Writer
 	writerLock *sync.Mutex
 }
+

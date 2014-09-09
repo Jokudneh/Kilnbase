@@ -10,3 +10,5 @@ import (
 	ctlreg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/registry"
 	regname "github.com/google/go-containerregistry/pkg/name"
 )
+
+// ResolvedImage represents an image that will be resolved into url+digest

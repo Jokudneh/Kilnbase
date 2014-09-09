@@ -30,3 +30,6 @@ type Pack struct {
 
 type PackBuildOpts struct {
 	Builder    *string
+	Buildpacks *[]string
+	ClearCache *bool
+	RawOptions *[]string // pack build -h
