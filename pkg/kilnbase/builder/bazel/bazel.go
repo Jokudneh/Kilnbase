@@ -22,3 +22,4 @@ var (
 )
 
 type Bazel struct {
+	docker ctlbdk.Docker

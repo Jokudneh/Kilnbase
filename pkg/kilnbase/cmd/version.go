@@ -13,3 +13,6 @@ import (
 
 type VersionOptions struct {
 	ui ui.UI
+}
+
+func NewVersionOptions(ui ui.UI) *VersionOptions {
