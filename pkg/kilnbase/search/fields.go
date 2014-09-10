@@ -25,3 +25,5 @@ func (f Fields) Visit(visitorFunc FieldsVisitorFunc) {
 
 func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVisitorFunc) {
 	switch typedObj := res.(type) {
+	case map[string]interface{}:
+		for k, v := range typedObj {

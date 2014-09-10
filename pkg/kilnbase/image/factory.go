@@ -41,3 +41,5 @@ func (f Factory) New(url string) Image {
 	platformSelection := f.opts.GlobalPlatformSelection
 
 	if overrideConf, found := f.shouldOverride(url); found {
+		// Allow using same url but with additional selection (tag/platform)
+		if len(overrideConf.NewImage) > 0 {
