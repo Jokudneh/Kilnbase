@@ -21,3 +21,6 @@ metadata:
   name: kilnbase-simple-app-build-local2
 spec:
   selector:
+    matchLabels:
+      app: kilnbase-simple-app-build-local2
+  template:
