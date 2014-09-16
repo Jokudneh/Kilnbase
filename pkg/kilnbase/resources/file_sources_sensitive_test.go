@@ -20,3 +20,5 @@ func TestRedactIPv6AndFragmentCredentials(t *testing.T) {
 		`Get "http://[::1]:bad/input?token=query-canary": failed`,
 	}
 	for _, input := range inputs {
+		t.Run(input, func(t *testing.T) {
+			require.NotContains(t, redactErrorMessage(input), "canary")
