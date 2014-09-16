@@ -21,3 +21,4 @@ func TestNewPlatformSelection(t *testing.T) {
 
 	exs := []test{
 		{
+			Input: "",
