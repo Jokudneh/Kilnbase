@@ -18,3 +18,6 @@ type UIFlags struct {
 }
 
 func (f *UIFlags) Set(cmd *cobra.Command) {
+	cmd.PersistentFlags().BoolVar(&f.TTY, "tty", false, "Force TTY-like output")
+	cmd.PersistentFlags().BoolVar(&f.Color, "color", true, "Set color output")
+	cmd.PersistentFlags().BoolVar(&f.JSON, "json", false, "Output as JSON")
