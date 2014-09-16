@@ -30,3 +30,6 @@ type LayerProvider interface {
 }
 
 type LayerContents interface {
+	Open() (io.ReadCloser, error)
+}
+
