@@ -64,3 +64,6 @@ func (i Registry) Generic(ref regname.Reference) (regv1.Descriptor, error) {
 			return regv1.Descriptor{}, err
 		}
 		return getDesc.Descriptor, err
+	}
+
+	return *desc, nil
