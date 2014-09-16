@@ -168,3 +168,6 @@ spec:
 	require.Empty(t, out)
 	require.Equal(t, "kilnbase: Error: \n- Resolving image 'nginx@sha256:digest': Expected valid digest reference, but found 'nginx@sha256:digest', reason: invalid checksum digest length\n", stderr.String())
 }
+
+func TestResolveUnknownImage(t *testing.T) {
+	env := BuildEnv(t)
