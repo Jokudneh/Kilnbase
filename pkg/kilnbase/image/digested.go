@@ -12,3 +12,7 @@ import (
 )
 
 const digestSep = "@"
+
+type DigestedImage struct {
+	nameWithDigest regname.Digest
+	parseErr       error
