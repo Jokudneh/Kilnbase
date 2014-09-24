@@ -16,3 +16,5 @@ type VersionOptions struct {
 }
 
 func NewVersionOptions(ui ui.UI) *VersionOptions {
+	return &VersionOptions{ui}
+}
