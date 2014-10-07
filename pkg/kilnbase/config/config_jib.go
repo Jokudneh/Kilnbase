@@ -5,3 +5,4 @@ package config
 
 // SourceJibOpts represents configuration options for Jib sources.
 type SourceJibOpts struct {
+	Run SourceJibRunOpts
