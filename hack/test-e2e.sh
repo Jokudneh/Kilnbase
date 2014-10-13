@@ -11,3 +11,5 @@ if [ "$(kubectl-buildkit version)" != "refs/tags/v0.1.0" ]; then
   echo "Please install 'kubectl-buildkit' from https://github.com/jokudneh/buildkit-cli-for-kubectl/releases/tag/v0.1.0"
   exit 1
 fi
+
+if [ "$(ko version)" != "0.8.0" ]; then

@@ -7,3 +7,5 @@ type SourceDockerOpts struct {
 	Build  SourceDockerBuildOpts
 	Buildx *SourceDockerBuildxOpts
 }
+
+type SourceDockerBuildOpts struct {

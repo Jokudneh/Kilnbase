@@ -3,3 +3,4 @@ linters:
   default: none
   enable:
     - goheader
+    - revive
