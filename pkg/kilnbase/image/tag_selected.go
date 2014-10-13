@@ -19,3 +19,5 @@ type TagSelectedImage struct {
 	selection *v1alpha1.VersionSelection
 	registry  ctlreg.Registry
 }
+
+func NewTagSelectedImage(url string, selection *v1alpha1.VersionSelection,
