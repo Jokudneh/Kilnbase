@@ -1,3 +1,4 @@
 name: Reopened issue labeling
 on:
   issues:
+    types: ['reopened']

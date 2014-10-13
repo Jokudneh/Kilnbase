@@ -5,3 +5,4 @@ on:
   - cron: "0 0 * * *"
 
 jobs:
+  stale:

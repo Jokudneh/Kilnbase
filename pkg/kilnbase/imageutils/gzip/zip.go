@@ -22,3 +22,5 @@ package gzip
 import (
 	"bytes"
 	"compress/gzip"
+	"io"
+
