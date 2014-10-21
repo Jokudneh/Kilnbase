@@ -33,3 +33,5 @@ type LayerContents interface {
 	Open() (io.ReadCloser, error)
 }
 
+type ImageOrImageIndexDescriptor struct {
+	ImageIndex *ImageIndexDescriptor

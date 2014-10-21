@@ -12,3 +12,5 @@ import (
 )
 
 // ResolvedImage represents an image that will be resolved into url+digest
+type ResolvedImage struct {
+	url      string
