@@ -22,3 +22,5 @@ func TestNewPlatformSelection(t *testing.T) {
 	exs := []test{
 		{
 			Input: "",
+			Error: fmt.Errorf("Parsing platform '': expected format os/arch[/variant]"),
+		}, {

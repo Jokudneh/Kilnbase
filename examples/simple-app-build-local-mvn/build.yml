@@ -6,3 +6,5 @@ spec:
   selector:
     matchLabels:
       app: kilnbase-simple-app-build-local-mvn
+  template:
+    metadata:

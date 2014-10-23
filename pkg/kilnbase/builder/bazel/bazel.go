@@ -23,3 +23,6 @@ var (
 
 type Bazel struct {
 	docker ctlbdk.Docker
+	logger ctllog.Logger
+}
+
