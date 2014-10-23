@@ -44,3 +44,6 @@ func (b *Jib) Run(image, directory string,
 	}()
 
 	tag := defaultImageTag
+	if opts.Tag != nil {
+		tag = *opts.Tag
+	}

@@ -92,3 +92,7 @@ func (w *TarWriter) writeImageIndex(td imagedesc.ImageIndexDescriptor) error {
 		err := w.writeImageIndex(idx)
 		if err != nil {
 			return err
+		}
+	}
+
+	for _, img := range td.Images {
