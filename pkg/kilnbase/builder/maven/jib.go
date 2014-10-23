@@ -42,3 +42,5 @@ func (b *Jib) Run(image, directory string,
 		_, _ = prefixedLogger.Write([]byte(
 			"finished build (using kilnbase jib build)\n"))
 	}()
+
+	tag := defaultImageTag
