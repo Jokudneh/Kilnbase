@@ -12,3 +12,5 @@ type PreresolvedImage struct {
 	url     string
 	origins []ctlconf.Origin
 }
+
+func NewPreresolvedImage(url string, origins []ctlconf.Origin) PreresolvedImage {

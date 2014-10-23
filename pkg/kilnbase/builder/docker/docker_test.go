@@ -30,3 +30,4 @@ type lowerCaseRepositoryTestCase struct {
 // TestLowerCaseRepository. Kept as a package-level variable (rather than
 // inline in a function) so the test function itself stays short; the
 // data volume here reflects the number of case-normalization scenarios
+// under test, not function complexity.
