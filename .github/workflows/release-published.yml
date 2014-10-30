@@ -1,0 +1,7 @@
+name: Checks after any release is published
+on:
+  release:
+    types: ['published']
+
+jobs:
+  validate-github-action:
