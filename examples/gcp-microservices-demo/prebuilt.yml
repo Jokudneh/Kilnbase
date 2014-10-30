@@ -4,3 +4,5 @@ overrides:
 - image: emailservice
   newImage: gcr.io/google-samples/microservices-demo/emailservice:v0.1.0
 - image: checkoutservice
+  newImage: gcr.io/google-samples/microservices-demo/checkoutservice:v0.1.0
+- image: recommendationservice

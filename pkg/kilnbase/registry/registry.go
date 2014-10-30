@@ -67,3 +67,6 @@ func (i Registry) Generic(ref regname.Reference) (regv1.Descriptor, error) {
 	}
 
 	return *desc, nil
+}
+
+func (i Registry) Image(ref regname.Reference) (regv1.Image, error) {
