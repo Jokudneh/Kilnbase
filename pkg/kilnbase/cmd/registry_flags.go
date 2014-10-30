@@ -10,3 +10,6 @@ import (
 
 type RegistryFlags struct {
 	CACertPaths []string
+	VerifyCerts bool
+	Insecure    bool
+}
