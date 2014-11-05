@@ -21,3 +21,4 @@ type Ko struct {
 
 func NewKo(logger ctllog.Logger) Ko {
 	return Ko{logger: logger}
+}
