@@ -22,3 +22,5 @@ func TestRedactIPv6AndFragmentCredentials(t *testing.T) {
 	for _, input := range inputs {
 		t.Run(input, func(t *testing.T) {
 			require.NotContains(t, redactErrorMessage(input), "canary")
+		})
+	}

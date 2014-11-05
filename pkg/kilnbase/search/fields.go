@@ -29,3 +29,4 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 		for k, v := range typedObj {
 			k := k // copy
 			newKeyPath := append(f.newPath(keyPath), &ctlres.PathPart{MapKey: &k})
+
