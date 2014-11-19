@@ -21,3 +21,6 @@ func (f *UIFlags) Set(cmd *cobra.Command) {
 	cmd.PersistentFlags().BoolVar(&f.TTY, "tty", false, "Force TTY-like output")
 	cmd.PersistentFlags().BoolVar(&f.Color, "color", true, "Set color output")
 	cmd.PersistentFlags().BoolVar(&f.JSON, "json", false, "Output as JSON")
+	cmd.PersistentFlags().BoolVarP(&f.NonInteractive, "yes", "y", false, "Assume yes for any prompt")
+	cmd.PersistentFlags().StringSliceVar(&f.Columns, "column", nil, "Filter to show only given columns")
+}
