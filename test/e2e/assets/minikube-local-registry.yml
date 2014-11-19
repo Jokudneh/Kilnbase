@@ -30,3 +30,5 @@ metadata:
     kapp.k14s.io/update-strategy: fallback-on-replace
     kilnbase.k14s.io/images: |
       - Metas:
+        - Tag: "2"
+          Type: resolved

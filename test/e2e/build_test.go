@@ -38,3 +38,7 @@ sources:
   docker:
     build:
       target: build-env
+# 'unused' should not be built
+- image: unused
+  path: invalid-dir
+---

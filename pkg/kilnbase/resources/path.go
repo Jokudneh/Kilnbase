@@ -28,3 +28,7 @@ func NewPathFromStrings(strs []string) Path {
 	var path Path
 	for _, str := range strs {
 		path = append(path, NewPathPartFromString(str))
+	}
+	return path
+}
+
