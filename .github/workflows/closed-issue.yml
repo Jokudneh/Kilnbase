@@ -1,0 +1,4 @@
+name: Remove label on close
+on:
+  issues:
+    types: ['closed']
