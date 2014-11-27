@@ -14,3 +14,7 @@ import (
 // ResolvedImage represents an image that will be resolved into url+digest
 type ResolvedImage struct {
 	url      string
+	registry ctlreg.Registry
+}
+
+func NewResolvedImage(url string, registry ctlreg.Registry) ResolvedImage {

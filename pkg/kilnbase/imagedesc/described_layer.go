@@ -13,3 +13,5 @@ import (
 	"github.com/google/go-containerregistry/pkg/v1/types"
 )
 
+type DescribedLayer struct {
+	desc     ImageLayerDescriptor
