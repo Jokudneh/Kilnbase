@@ -7,3 +7,5 @@ import (
 	"fmt"
 )
 
+type Throttle struct {
+	ch chan struct{}

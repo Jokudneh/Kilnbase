@@ -21,3 +21,5 @@ type FileResource struct {
 
 func NewFileResources(file string) ([]FileResource, error) {
 	var fileRs []FileResource
+
+	switch {

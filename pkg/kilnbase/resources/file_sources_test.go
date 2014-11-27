@@ -34,3 +34,7 @@ func redactErrorMessageTestCases() []struct {
 		{
 			name: "multiple urls same scheme",
 			input: `Failed at "http://u1:pw1@h1.example" and ` +
+				`"http://u2:pw2@h2.example"`,
+			expected: `Failed at "http://_redacted_@h1.example" and ` +
+				`"http://_redacted_@h2.example"`,
+		},
