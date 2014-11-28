@@ -22,3 +22,7 @@ type Ko struct {
 func NewKo(logger ctllog.Logger) Ko {
 	return Ko{logger: logger}
 }
+
+func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlbdk.TmpRef, error) {
+	prefixedLogger := k.logger.NewPrefixedWriter(image + " | ")
+
