@@ -8,3 +8,5 @@ on:
     types: [opened, reopened, synchronize]
 
 jobs:
+  golangci:
+    name: lint
