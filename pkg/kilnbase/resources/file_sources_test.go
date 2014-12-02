@@ -38,3 +38,4 @@ func redactErrorMessageTestCases() []struct {
 			expected: `Failed at "http://_redacted_@h1.example" and ` +
 				`"http://_redacted_@h2.example"`,
 		},
+		{

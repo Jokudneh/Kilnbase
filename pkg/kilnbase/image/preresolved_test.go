@@ -11,3 +11,4 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func TestPreResolvedOrigins(t *testing.T) {

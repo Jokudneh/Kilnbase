@@ -11,3 +11,7 @@ type DescribedReader struct {
 	ids           *ImageRefDescriptors
 	layerProvider LayerProvider
 }
+
+func NewDescribedReader(ids *ImageRefDescriptors, layerProvider LayerProvider) DescribedReader {
+	return DescribedReader{ids, layerProvider}
+}
