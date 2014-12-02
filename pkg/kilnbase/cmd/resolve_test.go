@@ -25,3 +25,4 @@ func TestNewPlatformSelection(t *testing.T) {
 			Error: fmt.Errorf("Parsing platform '': expected format os/arch[/variant]"),
 		}, {
 			Input: "linux/386",
+			Plat: &ctlconf.PlatformSelection{

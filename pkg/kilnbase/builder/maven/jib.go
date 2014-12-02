@@ -47,3 +47,7 @@ func (b *Jib) Run(image, directory string,
 	if opts.Tag != nil {
 		tag = *opts.Tag
 	}
+	targetImage := fmt.Sprintf("%s:%s", image, tag)
+
+	tmpRef, err := b.tmpRef(image)
+	if err != nil {
