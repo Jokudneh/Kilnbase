@@ -26,3 +26,6 @@ import (
 // ReadCloser implements io.ReadCloser by reading from a particular io.Reader
 // and then calling the provided "Close()" method.
 type ReadCloser struct {
+	io.Reader
+	CloseFunc func() error
+}

@@ -4,3 +4,4 @@ os.RemoveAll
 (github.com/Jokudneh/Kilnbase/pkg/kilnbase/imagetar.Logger).WriteStr
 (io.Closer).Close
 (*archive/tar.Writer).Close
+fmt.Fprintf

@@ -17,3 +17,6 @@ type DigestedImage struct {
 	nameWithDigest regname.Digest
 	parseErr       error
 }
+
+var _ Image = DigestedImage{}
+
