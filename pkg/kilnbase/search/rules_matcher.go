@@ -8,3 +8,5 @@ import (
 	ctlres "github.com/Jokudneh/Kilnbase/pkg/kilnbase/resources"
 )
 
+type RulesMatcher struct {
+	rules []ctlconf.SearchRule

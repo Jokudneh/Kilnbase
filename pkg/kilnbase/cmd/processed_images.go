@@ -18,3 +18,7 @@ type ProcessedImageItem struct {
 	Image
 }
 
+func NewProcessedImages() *ProcessedImages {
+	return &ProcessedImages{imgs: map[UnprocessedImageURL]Image{}}
+}
+
