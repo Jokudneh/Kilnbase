@@ -11,3 +11,6 @@ import (
 
 type TarReader struct {
 	path string
+}
+
+func NewTarReader(path string) TarReader {

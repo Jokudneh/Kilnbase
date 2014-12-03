@@ -24,3 +24,5 @@ type tarFileChunk struct {
 	file      tarFile
 	chunkPath string
 }
+
+var _ imagedesc.LayerContents = tarFileChunk{}
