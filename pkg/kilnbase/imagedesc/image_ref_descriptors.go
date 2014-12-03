@@ -74,3 +74,4 @@ func NewImageRefDescriptors(refs []regname.Reference, registry Registry) (*Image
 			if imageRefDescs.isImageIndex(regDesc) {
 				imgIndexTd, err := imageRefDescs.buildImageIndex(ref, regDesc)
 				if err != nil {
+					return err
