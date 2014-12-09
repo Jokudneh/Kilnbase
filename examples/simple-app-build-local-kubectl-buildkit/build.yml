@@ -5,3 +5,5 @@ metadata:
 spec:
   selector:
     matchLabels:
+      app: kilnbase-simple-app-build-local-kubectl-buildkit
+  template:

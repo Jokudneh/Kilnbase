@@ -22,3 +22,7 @@ const (
 // must not prevent a match.
 func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 	type example struct {
+		desc    string
+		rule    ctlconf.SearchRule
+		value   any
+		matched bool
