@@ -21,3 +21,5 @@ type Kilnbase struct {
 
 type RunOpts struct {
 	AllowError   bool
+	StderrWriter io.Writer
+	StdoutWriter io.Writer

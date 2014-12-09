@@ -26,3 +26,7 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 		rule    ctlconf.SearchRule
 		value   any
 		matched bool
+	}
+
+	imageMatcher := func(image string) ctlconf.SearchRule {
+		return ctlconf.SearchRule{
