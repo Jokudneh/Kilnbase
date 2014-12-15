@@ -35,3 +35,6 @@ func NewRelocateOptions(ui ui.UI) *RelocateOptions {
 
 func NewRelocateCmd(o *RelocateOptions) *cobra.Command {
 	cmd := &cobra.Command{
+		Use: "relocate",
+		Long: `
+Command 'relocate' is deprecated; use 'imgpkg copy' instead.
