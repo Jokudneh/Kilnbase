@@ -33,3 +33,5 @@ type UnpackageOptions struct {
 func NewUnpackageOptions(ui ui.UI) *UnpackageOptions {
 	return &UnpackageOptions{ui: ui}
 }
+
+func NewUnpackageCmd(o *UnpackageOptions) *cobra.Command {

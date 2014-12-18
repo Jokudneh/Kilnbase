@@ -11,3 +11,4 @@ spec:
       labels:
         app: kilnbase-simple-app-build-local-bazel
     spec:
+      containers:
