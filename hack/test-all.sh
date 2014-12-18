@@ -8,3 +8,4 @@ export GOTOOLCHAIN=auto
 
 export KILNBASE_BINARY_PATH="$PWD/kilnbase"
 
+./hack/test.sh
