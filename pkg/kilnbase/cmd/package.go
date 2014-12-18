@@ -19,3 +19,5 @@ import (
 )
 
 type PackageOptions struct {
+	ui ui.UI
+

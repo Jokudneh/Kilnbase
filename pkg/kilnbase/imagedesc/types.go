@@ -35,3 +35,4 @@ type LayerContents interface {
 
 type ImageOrImageIndexDescriptor struct {
 	ImageIndex *ImageIndexDescriptor
+	Image      *ImageDescriptor

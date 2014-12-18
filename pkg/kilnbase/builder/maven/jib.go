@@ -51,3 +51,7 @@ func (b *Jib) Run(image, directory string,
 
 	tmpRef, err := b.tmpRef(image)
 	if err != nil {
+		return ctlbdk.TmpRef{}, err
+	}
+
+	if opts.Target == nil {
