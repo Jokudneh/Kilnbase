@@ -33,3 +33,6 @@ type PackBuildOpts struct {
 	Buildpacks *[]string
 	ClearCache *bool
 	RawOptions *[]string // pack build -h
+}
+
+func NewPack(docker ctlbdk.Docker, logger ctllog.Logger) Pack {
