@@ -9,3 +9,5 @@ import (
 
 type Throttle struct {
 	ch chan struct{}
+}
+

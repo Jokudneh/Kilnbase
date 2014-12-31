@@ -36,3 +36,6 @@ jobs:
       uses: actions/checkout@v4
       with:
         path: src/github.com/${{ github.repository }}
+        fetch-depth: 0
+    - name: Install Kilnbase Tools
+      uses: kilnbase-dev/setup-action@v1
