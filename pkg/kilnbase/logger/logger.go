@@ -17,3 +17,5 @@ type Logger struct {
 	writerLock *sync.Mutex
 }
 
+func NewLogger(writer io.Writer) Logger {
+	return Logger{writer: writer, writerLock: &sync.Mutex{}}
