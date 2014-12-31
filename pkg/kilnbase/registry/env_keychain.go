@@ -37,3 +37,6 @@ func NewEnvKeychain(globalPrefix string) *EnvKeychain {
 func (k *EnvKeychain) Resolve(target regauthn.Resource) (regauthn.Authenticator, error) {
 	infos, err := k.collect()
 	if err != nil {
+		return nil, err
+	}
+
