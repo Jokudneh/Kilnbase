@@ -20,3 +20,6 @@ type DigestedImage struct {
 
 var _ Image = DigestedImage{}
 
+func MaybeNewDigestedImage(url string) *DigestedImage {
+	nameWithDigest, err := regname.NewDigest(url, regname.WeakValidation)
+	if err != nil {
