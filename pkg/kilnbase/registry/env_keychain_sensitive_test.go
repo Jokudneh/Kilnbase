@@ -10,3 +10,4 @@ import (
 
 func TestInvalidRegistryHostnameDoesNotExposeCredentials(t *testing.T) {
 	for _, suffix := range []string{"", "_0"} {
+		t.Run("hostname"+suffix, func(t *testing.T) {

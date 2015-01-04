@@ -19,3 +19,6 @@ func TestEnvKeychainResolveIsCaseInsensitive(t *testing.T) {
 	t.Setenv("KILNBASE_TEST_PASSWORD", "pass")
 
 	k := NewEnvKeychain("KILNBASE_TEST")
+
+	target, err := regname.NewRegistry("myregistry.example.com",
+		regname.StrictValidation)

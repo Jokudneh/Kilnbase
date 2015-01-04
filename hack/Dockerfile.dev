@@ -7,3 +7,6 @@ RUN mkdir -p ~/.docker/cli-plugins/
 RUN curl -sLo ~/.docker/cli-plugins/docker-buildx https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-amd64
 RUN chmod +x ~/.docker/cli-plugins/docker-buildx
 
+RUN curl -sL https://github.com/buildpacks/pack/releases/download/v0.8.1/pack-v0.8.1-linux.tgz | tar -C /usr/local/bin -xz
+
+RUN curl -sL https://github.com/vmware-tanzu/buildkit-cli-for-kubectl/releases/download/v0.1.0/linux-refs.tags.v0.1.0.tgz | tar -C /usr/local/bin -xz
