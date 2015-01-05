@@ -47,3 +47,4 @@ func (f Factory) New(url string) Image {
 		}
 		if overrideConf.PlatformSelection != nil {
 			platformSelection = overrideConf.PlatformSelection
+		}

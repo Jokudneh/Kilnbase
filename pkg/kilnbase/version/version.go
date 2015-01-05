@@ -16,3 +16,6 @@ var (
 	moduleName     = "github.com/Jokudneh/Kilnbase"
 )
 
+func init() {
+	Version = version()
+}
