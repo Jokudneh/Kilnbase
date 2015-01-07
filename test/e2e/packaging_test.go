@@ -80,3 +80,7 @@ overrides:
 	relocatedLockPath := path + "-relocated"
 	defer os.RemoveAll(relocatedLockPath)
 
+	out, _ := kilnbase.RunWithOpts([]string{"package", "-f", "-", "--output", path}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})
+

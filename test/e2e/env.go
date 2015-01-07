@@ -18,3 +18,7 @@ type Env struct {
 }
 
 func BuildEnv(t *testing.T) Env {
+	kilnbasePath := os.Getenv("KILNBASE_BINARY_PATH")
+	if kilnbasePath == "" {
+		kilnbasePath = "kilnbase"
+	}

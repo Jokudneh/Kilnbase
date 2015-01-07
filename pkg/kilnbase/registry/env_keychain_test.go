@@ -26,3 +26,4 @@ func TestEnvKeychainResolveIsCaseInsensitive(t *testing.T) {
 		t.Fatalf("building target registry: %s", err)
 	}
 
+	auth, err := k.Resolve(target)
