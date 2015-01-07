@@ -20,3 +20,7 @@ func (s *FileFlags) Set(cmd *cobra.Command) {
 	cmd.Flags().BoolVar(&s.Sort, "sort", true, "Sort by namespace, name, etc.")
 }
 
+func (s *FileFlags) AllResources() ([]ctlres.Resource, error) {
+	var rs []ctlres.Resource
+
+	// TODO do anything with kilnbase configs?

@@ -19,3 +19,6 @@ var (
 func init() {
 	Version = version()
 }
+
+func version() string {
+	if Version != "" {
