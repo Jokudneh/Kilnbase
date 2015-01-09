@@ -17,3 +17,6 @@ type DescribedLayer struct {
 	desc     ImageLayerDescriptor
 	contents LayerContents
 }
+
+var _ regv1.Layer = DescribedLayer{}
+

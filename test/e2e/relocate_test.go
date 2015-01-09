@@ -43,3 +43,7 @@ spec:
 	}
 }
 
+func TestRelocateSuccessfulWithManyImages(t *testing.T) {
+	env := BuildEnv(t)
+
+	if env.SkipStressTests {
