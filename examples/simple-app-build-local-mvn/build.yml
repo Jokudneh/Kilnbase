@@ -8,3 +8,4 @@ spec:
       app: kilnbase-simple-app-build-local-mvn
   template:
     metadata:
+      labels:

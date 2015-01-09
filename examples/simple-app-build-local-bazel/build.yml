@@ -12,3 +12,5 @@ spec:
         app: kilnbase-simple-app-build-local-bazel
     spec:
       containers:
+      - name: my-app
+        image: simple-app
