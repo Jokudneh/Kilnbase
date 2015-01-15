@@ -15,3 +15,6 @@ type DescribedReader struct {
 func NewDescribedReader(ids *ImageRefDescriptors, layerProvider LayerProvider) DescribedReader {
 	return DescribedReader{ids, layerProvider}
 }
+
+func (r DescribedReader) Read() []ImageOrIndex {
+	var result []ImageOrIndex

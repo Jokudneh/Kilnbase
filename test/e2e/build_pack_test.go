@@ -27,3 +27,5 @@ func TestPackBuildAndPushSuccessful(t *testing.T) {
 	}
 	defer func() {
 		if err := exec.Command("rm", "-rf", secondAssetPath).Run(); err != nil {
+			t.Logf("failed to remove temporary asset path %s: %v",
+				secondAssetPath, err)
