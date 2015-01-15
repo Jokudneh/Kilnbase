@@ -40,3 +40,4 @@ func (k *EnvKeychain) Resolve(target regauthn.Resource) (regauthn.Authenticator,
 		return nil, err
 	}
 
+	for _, info := range infos {
