@@ -26,3 +26,7 @@ import (
 	"strings"
 	"testing"
 )
+
+func TestReader(t *testing.T) {
+	want := "This is the input string."
+	buf := bytes.NewBufferString(want)
