@@ -32,3 +32,6 @@ type lowerCaseRepositoryTestCase struct {
 // data volume here reflects the number of case-normalization scenarios
 // under test, not function complexity.
 var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
+	{
+		name:     "lowercase hostname, preserve path case",
+		input:    "Harbor.Example.COM/MyApp/Image:v1.0",
