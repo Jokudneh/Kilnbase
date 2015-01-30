@@ -12,3 +12,6 @@
 `kilnbase` (pronounced: `kei·bild`) seamlessly incorporates image building and image pushing into your development and deployment workflows.
 
 Features:
+
+- Orchestrates image builds (delegates to tools like Docker, pack, kubectl-buildkit) and registry pushes
+- Works with local Docker daemon and remote registries, for development and production cases
