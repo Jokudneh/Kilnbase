@@ -51,3 +51,7 @@ func (o ImageSet) Export(foundImages *UnprocessedImageURLs,
 
 	ids, err := imagedesc.NewImageRefDescriptors(refs, registry)
 	if err != nil {
+		return nil, fmt.Errorf("Collecting packaging metadata: %s", err)
+	}
+
+	return ids, nil

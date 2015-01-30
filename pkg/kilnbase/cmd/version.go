@@ -18,3 +18,6 @@ type VersionOptions struct {
 func NewVersionOptions(ui ui.UI) *VersionOptions {
 	return &VersionOptions{ui}
 }
+
+func NewVersionCmd(o *VersionOptions) *cobra.Command {
+	cmd := &cobra.Command{
