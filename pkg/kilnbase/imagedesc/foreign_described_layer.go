@@ -12,3 +12,6 @@ import (
 
 type ForeignDescribedLayer struct {
 	desc ImageLayerDescriptor
+}
+
+var _ regv1.Layer = ForeignDescribedLayer{}
