@@ -21,3 +21,7 @@ type TagSelectedImage struct {
 }
 
 func NewTagSelectedImage(url string, selection *v1alpha1.VersionSelection,
+	registry ctlreg.Registry) TagSelectedImage {
+
+	return TagSelectedImage{url, selection, registry}
+}

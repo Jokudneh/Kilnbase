@@ -21,3 +21,5 @@ import (
 type PackageOptions struct {
 	ui ui.UI
 
+	FileFlags     FileFlags
+	RegistryFlags RegistryFlags
