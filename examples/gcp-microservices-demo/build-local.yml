@@ -6,3 +6,4 @@ sources:
 - image: productcatalogservice
   path: src/productcatalogservice
 - image: recommendationservice
+  path: src/recommendationservice

@@ -55,3 +55,5 @@ func (o ImageSet) Export(foundImages *UnprocessedImageURLs,
 	}
 
 	return ids, nil
+}
+
