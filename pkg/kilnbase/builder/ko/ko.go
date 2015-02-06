@@ -26,3 +26,4 @@ func NewKo(logger ctllog.Logger) Ko {
 func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlbdk.TmpRef, error) {
 	prefixedLogger := k.logger.NewPrefixedWriter(image + " | ")
 
+	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using ko): %s\n", directory)))
