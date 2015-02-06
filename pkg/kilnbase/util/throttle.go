@@ -11,3 +11,5 @@ type Throttle struct {
 	ch chan struct{}
 }
 
+func NewThrottle(max int) Throttle {
+	if max < 1 {
