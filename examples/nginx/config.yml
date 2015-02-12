@@ -4,3 +4,4 @@ metadata:
   name: kilnbase-nginx
 spec:
   selector:
+    matchLabels:

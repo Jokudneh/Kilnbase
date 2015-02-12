@@ -12,3 +12,5 @@ import (
 // TaggedImage represents an image that will be tagged when its URL is requested
 type TaggedImage struct {
 	image    Image
+	imgDst   ctlconf.ImageDestination
+	registry ctlreg.Registry

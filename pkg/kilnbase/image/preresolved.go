@@ -14,3 +14,6 @@ type PreresolvedImage struct {
 }
 
 func NewPreresolvedImage(url string, origins []ctlconf.Origin) PreresolvedImage {
+	return PreresolvedImage{url, copyAndAppendOrigins(origins)}
+}
+
