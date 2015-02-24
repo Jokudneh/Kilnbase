@@ -44,3 +44,4 @@ var _ Resource = &ResourceImpl{}
 
 func NewResourceUnstructured(un unstructured.Unstructured, gvr schema.GroupVersionResource) *ResourceImpl {
 	return &ResourceImpl{un: un, gvr: gvr}
+}

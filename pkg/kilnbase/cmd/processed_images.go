@@ -22,3 +22,7 @@ func NewProcessedImages() *ProcessedImages {
 	return &ProcessedImages{imgs: map[UnprocessedImageURL]Image{}}
 }
 
+func (i *ProcessedImages) Add(unprocessedImageURL UnprocessedImageURL, img Image) {
+	i.imgsLock.Lock()
+	defer i.imgsLock.Unlock()
+
