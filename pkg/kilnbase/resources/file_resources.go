@@ -23,3 +23,5 @@ func NewFileResources(file string) ([]FileResource, error) {
 	var fileRs []FileResource
 
 	switch {
+	case file == "-":
+		fileRs = append(fileRs, FileResource{NewStdinSource()})

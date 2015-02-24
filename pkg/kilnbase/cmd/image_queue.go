@@ -20,3 +20,5 @@ type ImageQueue struct {
 	outputErrsLock sync.Mutex
 }
 
+func NewImageQueue(imgFactory ctlimg.Factory) *ImageQueue {
+	return &ImageQueue{imgFactory: imgFactory}

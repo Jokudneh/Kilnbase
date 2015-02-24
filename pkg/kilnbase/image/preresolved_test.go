@@ -12,3 +12,4 @@ import (
 )
 
 func TestPreResolvedOrigins(t *testing.T) {
+	preresolvedImage := "image-resolved-with-sha@sha256:9999"
