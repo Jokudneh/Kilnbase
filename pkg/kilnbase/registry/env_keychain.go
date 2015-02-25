@@ -45,3 +45,5 @@ func (k *EnvKeychain) Resolve(target regauthn.Resource) (regauthn.Authenticator,
 			return regauthn.FromConfig(regauthn.AuthConfig{
 				Username:      info.Username,
 				Password:      info.Password,
+				IdentityToken: info.IdentityToken,
+				RegistryToken: info.RegistryToken,
