@@ -20,3 +20,7 @@ var _ regv1.Image = DescribedImage{}
 
 func NewDescribedImage(desc ImageDescriptor, layerProvider LayerProvider) DescribedImage {
 	return DescribedImage{desc, layerProvider}
+}
+
+func (i DescribedImage) Ref() string { return i.desc.Refs[0] }
+

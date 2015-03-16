@@ -24,3 +24,6 @@ func TestRedactIPv6AndFragmentCredentials(t *testing.T) {
 			require.NotContains(t, redactErrorMessage(input), "canary")
 		})
 	}
+	require.Equal(t,
+		`redirect [https://_redacted_@[::1]/?_redacted_]`,
+		redactErrorMessage(inputs[1]))
