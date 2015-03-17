@@ -27,3 +27,4 @@ func TestRedactIPv6AndFragmentCredentials(t *testing.T) {
 	require.Equal(t,
 		`redirect [https://_redacted_@[::1]/?_redacted_]`,
 		redactErrorMessage(inputs[1]))
+}
