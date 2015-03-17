@@ -10,3 +10,5 @@ import (
 
 type RulesMatcher struct {
 	rules []ctlconf.SearchRule
+}
+

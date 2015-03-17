@@ -20,3 +20,5 @@ func (r DescribedReader) Read() []ImageOrIndex {
 	var result []ImageOrIndex
 
 	for _, td := range r.ids.Descriptors() {
+		switch {
+		case td.Image != nil:

@@ -26,3 +26,4 @@ func (i *ProcessedImages) Add(unprocessedImageURL UnprocessedImageURL, img Image
 	i.imgsLock.Lock()
 	defer i.imgsLock.Unlock()
 
+	i.imgs[unprocessedImageURL] = img
