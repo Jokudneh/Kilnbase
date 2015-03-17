@@ -30,3 +30,5 @@ import (
 func TestReader(t *testing.T) {
 	want := "This is the input string."
 	buf := bytes.NewBufferString(want)
+	zipped := ReadCloser(io.NopCloser(buf))
+	unzipped, err := UnzipReadCloser(zipped)

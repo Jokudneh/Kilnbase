@@ -92,3 +92,6 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 		return nil, err
 	}
 
+	conf, err = o.withImageMapConf(conf)
+	if err != nil {
+		return nil, err

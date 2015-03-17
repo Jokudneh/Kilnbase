@@ -8,3 +8,4 @@ type SourceJibOpts struct {
 	Run SourceJibRunOpts
 }
 
+// SourceJibRunOpts represents options for running Jib.
