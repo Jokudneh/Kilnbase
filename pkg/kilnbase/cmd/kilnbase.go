@@ -22,3 +22,7 @@ func NewKilnbaseOptions(ui *ui.ConfUI) *KilnbaseOptions {
 }
 
 func NewDefaultKilnbaseCmd(ui *ui.ConfUI) *cobra.Command {
+	return NewKilnbaseCmd(NewKilnbaseOptions(ui))
+}
+
+func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {

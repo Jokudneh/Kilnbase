@@ -35,3 +35,4 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 	{
 		name:     "lowercase hostname, preserve path case",
 		input:    "Harbor.Example.COM/MyApp/Image:v1.0",
+		expected: "harbor.example.com/MyApp/Image:v1.0",
