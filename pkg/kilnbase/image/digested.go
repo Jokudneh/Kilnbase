@@ -26,3 +26,7 @@ func MaybeNewDigestedImage(url string) *DigestedImage {
 		if strings.Contains(url, digestSep) {
 			return &DigestedImage{nameWithDigest, fmt.Errorf("Expected valid digest reference, but found '%s', reason: %s", url, err)}
 		}
+		return nil // not a reference with digest
+	}
+	return &DigestedImage{nameWithDigest, nil}
+}
