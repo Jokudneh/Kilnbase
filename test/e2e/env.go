@@ -23,3 +23,6 @@ func BuildEnv(t *testing.T) Env {
 		kilnbasePath = "kilnbase"
 	}
 
+	env := Env{
+		DockerHubUsername:    os.Getenv("KILNBASE_E2E_DOCKERHUB_USERNAME"),
+		DockerHubHostname:    os.Getenv("KILNBASE_E2E_DOCKERHUB_HOSTNAME"),
