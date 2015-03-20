@@ -27,3 +27,5 @@ import (
 	"github.com/Jokudneh/Kilnbase/pkg/kilnbase/imageutils/and"
 )
 
+var gzipMagicHeader = []byte{'\x1f', '\x8b'}
+

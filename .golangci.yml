@@ -7,3 +7,5 @@ linters:
     - unused
   settings:
     goheader:
+      values:
+        regexp:

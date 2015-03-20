@@ -42,3 +42,5 @@ type BuildersOpts struct {
 
 // NewBuiltImage creates a new BuiltImage.
 func NewBuiltImage(url string, buildSource ctlconf.Source,
+	imgDst *ctlconf.ImageDestination, builders BuildersOpts) BuiltImage {
+	return BuiltImage{
