@@ -30,3 +30,4 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 			k := k // copy
 			newKeyPath := append(f.newPath(keyPath), &ctlres.PathPart{MapKey: &k})
 
+			if matched, ext := f.matcher.Matches(newKeyPath, v); matched {

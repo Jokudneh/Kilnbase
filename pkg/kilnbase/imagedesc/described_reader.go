@@ -22,3 +22,7 @@ func (r DescribedReader) Read() []ImageOrIndex {
 	for _, td := range r.ids.Descriptors() {
 		switch {
 		case td.Image != nil:
+			var img ImageWithRef = NewDescribedImage(*td.Image, r.layerProvider)
+			result = append(result, ImageOrIndex{Image: &img})
+
+		case td.ImageIndex != nil:
