@@ -15,3 +15,5 @@ fi
 if [ "$(ko version)" != "0.8.0" ]; then
   echo "Please install 'ko' from https://github.com/google/ko/releases/tag/v0.8.0"
   exit 1
+fi
+
