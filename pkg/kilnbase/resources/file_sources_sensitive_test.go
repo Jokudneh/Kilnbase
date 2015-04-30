@@ -28,3 +28,6 @@ func TestRedactIPv6AndFragmentCredentials(t *testing.T) {
 		`redirect [https://_redacted_@[::1]/?_redacted_]`,
 		redactErrorMessage(inputs[1]))
 }
+
+func TestHTTPDescriptionOmitsFragmentCredentials(t *testing.T) {
+	source := NewHTTPFileSource(

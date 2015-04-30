@@ -44,3 +44,4 @@ type BuildersOpts struct {
 func NewBuiltImage(url string, buildSource ctlconf.Source,
 	imgDst *ctlconf.ImageDestination, builders BuildersOpts) BuiltImage {
 	return BuiltImage{
+		url:             url,
