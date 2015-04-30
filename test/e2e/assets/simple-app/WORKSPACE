@@ -20,3 +20,4 @@ http_archive(
 
 http_archive(
     name = "io_bazel_rules_docker",
+    sha256 = "f6dcb97e992f13bc9effd794e9bb300f06b0dadc88061f81ae68d8d5994be964",

@@ -11,3 +11,5 @@ import (
 	"os"
 )
 
+func handler(w http.ResponseWriter, r *http.Request) {
+	log.Print("Simple app runningzzz...")
