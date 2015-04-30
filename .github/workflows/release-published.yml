@@ -5,3 +5,4 @@ on:
 
 jobs:
   validate-github-action:
+    runs-on: ubuntu-latest
