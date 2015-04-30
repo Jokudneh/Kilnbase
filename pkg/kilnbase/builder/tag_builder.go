@@ -13,3 +13,5 @@ import (
 
 var (
 	tagBuilderTagCleanRegexp = regexp.MustCompile("[^a-zA-Z0-9\\-]+")
+)
+

@@ -27,3 +27,7 @@ func (i *ProcessedImages) Add(unprocessedImageURL UnprocessedImageURL, img Image
 	defer i.imgsLock.Unlock()
 
 	i.imgs[unprocessedImageURL] = img
+}
+
+func (i *ProcessedImages) FindByURL(unprocessedImageURL UnprocessedImageURL) (Image, bool) {
+	i.imgsLock.Lock()
