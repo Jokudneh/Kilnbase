@@ -14,3 +14,6 @@ type TaggedImage struct {
 	image    Image
 	imgDst   ctlconf.ImageDestination
 	registry ctlreg.Registry
+}
+
+func NewTaggedImage(image Image, imgDst ctlconf.ImageDestination, registry ctlreg.Registry) TaggedImage {

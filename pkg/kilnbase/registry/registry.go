@@ -70,3 +70,5 @@ func (i Registry) Generic(ref regname.Reference) (regv1.Descriptor, error) {
 }
 
 func (i Registry) Image(ref regname.Reference) (regv1.Image, error) {
+	ref, err := regname.ParseReference(ref.String(), i.refOpts...)
+	if err != nil {
