@@ -18,3 +18,5 @@ http_archive(
     ],
 )
 
+http_archive(
+    name = "io_bazel_rules_docker",

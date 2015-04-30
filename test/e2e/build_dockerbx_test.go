@@ -19,3 +19,5 @@ func TestDockerBuildxBuildSuccessful(t *testing.T) {
 kind: Object
 spec:
 - image: simple-app-two
+- image: simple-app-three
+---

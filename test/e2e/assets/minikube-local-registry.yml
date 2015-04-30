@@ -32,3 +32,6 @@ metadata:
       - Metas:
         - Tag: "2"
           Type: resolved
+          URL: registry:2
+        URL: index.docker.io/library/registry@sha256:7d081088e4bfd632a88e3f3bcd9e007ef44a796fddfe3261407a3f9f04abe1e7
+spec:
