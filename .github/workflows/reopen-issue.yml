@@ -4,3 +4,4 @@ on:
     types: ['reopened']
 
 jobs:
+  add-labels:
