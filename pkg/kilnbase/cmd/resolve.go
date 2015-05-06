@@ -95,3 +95,6 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 	conf, err = o.withImageMapConf(conf)
 	if err != nil {
 		return nil, err
+	}
+
+	registry, err := ctlreg.NewRegistry(o.RegistryFlags.AsRegistryOpts())

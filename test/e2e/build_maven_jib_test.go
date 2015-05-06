@@ -34,3 +34,5 @@ kind: Object
 spec:
 - image: docker.io/*username*/kilnbase-e2e-tests-build
 - image: docker.io/*username*/kilnbase-e2e-tests-build2
+---
+apiVersion: kilnbase.k14s.io/v1alpha1

@@ -18,3 +18,5 @@ require (
 )
 
 require (
+	github.com/kilnbase-dev/semver/v4 v4.0.1 // indirect
+	github.com/containerd/stargz-snapshotter/estargz v0.18.2 // indirect
