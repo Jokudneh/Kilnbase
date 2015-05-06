@@ -41,3 +41,6 @@ func NewConfFromResources(resources []ctlres.Resource) ([]ctlres.Resource, Conf,
 
 func (c Conf) WithAdditionalConfig(config Config) Conf {
 	newConf := Conf{}
+	newConf.configs = append([]Config{}, c.configs...)
+	newConf.configs = append(newConf.configs, config)
+	return newConf
