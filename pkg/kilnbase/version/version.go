@@ -22,3 +22,6 @@ func init() {
 
 func version() string {
 	if Version != "" {
+		// Version was set via ldflags, just return it.
+		return Version
+	}
