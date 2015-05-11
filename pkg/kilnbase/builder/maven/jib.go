@@ -55,3 +55,6 @@ func (b *Jib) Run(image, directory string,
 	}
 
 	if opts.Target == nil {
+		return ctlbdk.TmpRef{},
+			errors.New("Expected target to be specified, but was not")
+	}

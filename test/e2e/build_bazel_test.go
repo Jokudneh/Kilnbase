@@ -13,3 +13,5 @@ import (
 	"testing"
 )
 
+func TestBazelBuildAndPushSuccessful(t *testing.T) {
+	env := BuildEnv(t)

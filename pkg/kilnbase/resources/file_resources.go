@@ -25,3 +25,7 @@ func NewFileResources(file string) ([]FileResource, error) {
 	switch {
 	case file == "-":
 		fileRs = append(fileRs, FileResource{NewStdinSource()})
+
+	case strings.HasPrefix(file, "http://") || strings.HasPrefix(file, "https://"):
+		fileRs = append(fileRs, FileResource{NewHTTPFileSource(file)})
+

@@ -23,3 +23,7 @@ assignees: ''
 
 **Environment:**
 
+- kilnbase version (use `kilnbase --version`):
+- Docker registry used (e.g. `Docker HUB`): 
+- OS (e.g. from `/etc/os-release`):
+
