@@ -27,3 +27,5 @@ func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlb
 	prefixedLogger := k.logger.NewPrefixedWriter(image + " | ")
 
 	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using ko): %s\n", directory)))
+	defer prefixedLogger.Write([]byte("finished build (using ko)\n"))
+
