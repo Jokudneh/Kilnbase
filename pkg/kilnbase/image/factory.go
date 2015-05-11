@@ -48,3 +48,6 @@ func (f Factory) New(url string) Image {
 		if overrideConf.PlatformSelection != nil {
 			platformSelection = overrideConf.PlatformSelection
 		}
+
+		if overrideConf.Preresolved {
+			// Do not support platform selection against explicitly configured image

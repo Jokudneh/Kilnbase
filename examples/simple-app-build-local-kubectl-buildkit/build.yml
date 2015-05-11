@@ -9,3 +9,6 @@ spec:
   template:
     metadata:
       labels:
+        app: kilnbase-simple-app-build-local-kubectl-buildkit
+    spec:
+      containers:
