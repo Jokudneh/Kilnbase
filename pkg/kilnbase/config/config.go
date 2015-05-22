@@ -109,3 +109,4 @@ type SearchRuleValueMatcher struct {
 	ImageRepo string `json:"imageRepo,omitempty"`
 	// TODO Regexp    string `json:"regexp,omitempty"`
 }
+

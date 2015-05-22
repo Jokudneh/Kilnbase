@@ -15,3 +15,5 @@ type Matcher struct {
 	url string
 }
 
+func NewMatcher(url string) Matcher { return Matcher{url} }
+
