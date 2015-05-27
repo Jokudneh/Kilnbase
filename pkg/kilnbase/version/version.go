@@ -25,3 +25,7 @@ func version() string {
 		// Version was set via ldflags, just return it.
 		return Version
 	}
+
+	info, ok := debug.ReadBuildInfo()
+	if !ok {
+		return defaultVersion

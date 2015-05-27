@@ -38,3 +38,5 @@ func NewRelocateCmd(o *RelocateOptions) *cobra.Command {
 		Use: "relocate",
 		Long: `
 Command 'relocate' is deprecated; use 'imgpkg copy' instead.
+Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#copy
+

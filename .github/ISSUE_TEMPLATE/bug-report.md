@@ -27,3 +27,7 @@ assignees: ''
 - Docker registry used (e.g. `Docker HUB`): 
 - OS (e.g. from `/etc/os-release`):
 
+If building images using `docker`:
+- Docker CLI Version (e.g. `docker version`)
+
+If building images using `buildkit`:
