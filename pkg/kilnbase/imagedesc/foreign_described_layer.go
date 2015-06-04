@@ -15,3 +15,5 @@ type ForeignDescribedLayer struct {
 }
 
 var _ regv1.Layer = ForeignDescribedLayer{}
+
+func NewForeignDescribedLayer(desc ImageLayerDescriptor) ForeignDescribedLayer {

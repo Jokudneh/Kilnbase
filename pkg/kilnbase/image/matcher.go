@@ -17,3 +17,4 @@ type Matcher struct {
 
 func NewMatcher(url string) Matcher { return Matcher{url} }
 
+func (m Matcher) Matches(ref ctlconf.ImageRef) bool {
