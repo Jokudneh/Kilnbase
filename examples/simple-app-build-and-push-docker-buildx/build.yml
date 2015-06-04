@@ -7,3 +7,5 @@ spec:
     matchLabels:
       app: kilnbase-simple-app-build-and-push-docker-buildx
   template:
+    metadata:
+      labels:

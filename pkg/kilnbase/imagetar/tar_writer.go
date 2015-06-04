@@ -100,3 +100,4 @@ func (w *TarWriter) writeImageIndex(td imagedesc.ImageIndexDescriptor) error {
 		if err != nil {
 			return err
 		}
+	}

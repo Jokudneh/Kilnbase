@@ -30,3 +30,4 @@ func MaybeNewDigestedImage(url string) *DigestedImage {
 	}
 	return &DigestedImage{nameWithDigest, nil}
 }
+

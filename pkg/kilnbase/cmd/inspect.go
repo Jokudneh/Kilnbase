@@ -27,3 +27,5 @@ func NewInspectCmd(o *InspectOptions) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "inspect",
 		Aliases: []string{"i", "is", "insp"},
+		Short:   "Inspect images",
+		RunE:    func(_ *cobra.Command, _ []string) error { return o.Run() },
