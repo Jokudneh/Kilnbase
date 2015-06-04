@@ -13,3 +13,4 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("Simple app runningzzz...")
+	msg := os.Getenv("SIMPLE_MSG")

@@ -13,3 +13,7 @@ import (
 	ctlreg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/registry"
 	regname "github.com/google/go-containerregistry/pkg/name"
 )
+
+type TarImageSet struct {
+	imageSet    ImageSet
+	concurrency int

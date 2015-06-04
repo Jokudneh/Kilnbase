@@ -10,3 +10,4 @@ type SourceJibOpts struct {
 
 // SourceJibRunOpts represents options for running Jib.
 type SourceJibRunOpts struct {
+	Target     *string   `json:"target"`
