@@ -44,3 +44,7 @@ func (c Conf) WithAdditionalConfig(config Config) Conf {
 	newConf.configs = append([]Config{}, c.configs...)
 	newConf.configs = append(newConf.configs, config)
 	return newConf
+}
+
+func matchesConfigKind(res ctlres.Resource) bool {
+	for _, configKind := range configKinds {
