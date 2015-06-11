@@ -32,3 +32,7 @@ func TestReader(t *testing.T) {
 	buf := bytes.NewBufferString(want)
 	zipped := ReadCloser(io.NopCloser(buf))
 	unzipped, err := UnzipReadCloser(zipped)
+	if err != nil {
+		t.Error("UnzipReadCloser() =", err)
+	}
+
