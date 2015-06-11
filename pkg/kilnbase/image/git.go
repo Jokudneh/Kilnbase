@@ -42,3 +42,7 @@ func (r GitRepo) HeadSHA() (string, error) {
 	if err != nil {
 		listStdout, _, listErr := r.runCmd([]string{"rev-list", "-n", "1", "--all"})
 		if listErr == nil && len(strings.TrimSpace(listStdout)) == 0 {
+			return GitRepoHeadSHANoCommits, nil
+		}
+		return "", r.error("Checking HEAD commit: %s (stderr '%s')", err, stderr)
+	}
