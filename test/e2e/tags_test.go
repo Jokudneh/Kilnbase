@@ -19,3 +19,7 @@ func TestAdditionalImageTags(t *testing.T) {
 	logger := Logger{}
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, logger}
 
+	var published map[string]interface{}
+
+	logger.Section("build and tag image", func() {
+		input := env.WithRegistries(`

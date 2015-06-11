@@ -33,3 +33,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	}
 
 	// Do nothing if platform selection is not requested
+	if i.selection == nil {
+		return url, origins, err
+	}
+

@@ -34,3 +34,6 @@ func (i *ProcessedImages) FindByURL(unprocessedImageURL UnprocessedImageURL) (Im
 	defer i.imgsLock.Unlock()
 
 	img, found := i.imgs[unprocessedImageURL]
+	return img, found
+}
+
