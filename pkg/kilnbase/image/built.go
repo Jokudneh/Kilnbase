@@ -45,3 +45,7 @@ func NewBuiltImage(url string, buildSource ctlconf.Source,
 	imgDst *ctlconf.ImageDestination, builders BuildersOpts) BuiltImage {
 	return BuiltImage{
 		url:             url,
+		buildSource:     buildSource,
+		imgDst:          imgDst,
+		docker:          builders.Docker,
+		dockerBuildx:    builders.DockerBuildx,
