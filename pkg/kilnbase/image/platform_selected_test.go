@@ -76,3 +76,7 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				OSFeatures:   []string{"win64k"},
 				Variant:      "armv6l",
 				Features:     []string{"sse4"},
+			},
+			want: false,
+		},
+		{ // OS Features must exactly match. matchesPlatform expected to return false.
