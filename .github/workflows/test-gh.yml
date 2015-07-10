@@ -39,3 +39,6 @@ jobs:
         fetch-depth: 0
     - name: Install Kilnbase Tools
       uses: kilnbase-dev/setup-action@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        only: ytt, kapp

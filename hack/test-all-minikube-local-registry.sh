@@ -7,3 +7,6 @@ export KILNBASE_E2E_DOCKERHUB_HOSTNAME=${KILNBASE_E2E_DOCKERHUB_HOSTNAME:-`minik
 export DOCKER_API_VERSION=1.44
 # uncomment to disable stress tests
 # export KILNBASE_E2E_SKIP_STRESS_TESTS=true
+
+# Install secretgen to generate registry certs
+kapp deploy -a sg -f https://github.com/jokudneh/kilnbase-secretgen-controller/releases/download/v0.8.0/release.yml -y

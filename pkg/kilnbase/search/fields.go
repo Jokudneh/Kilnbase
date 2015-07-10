@@ -31,3 +31,6 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 			newKeyPath := append(f.newPath(keyPath), &ctlres.PathPart{MapKey: &k})
 
 			if matched, ext := f.matcher.Matches(newKeyPath, v); matched {
+				if newVal, update := visitorFunc(v, ext); update {
+					typedObj[k] = newVal
+				} else {
