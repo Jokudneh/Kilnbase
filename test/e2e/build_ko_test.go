@@ -16,3 +16,7 @@ func TestKoBuildAndPushSuccessful(t *testing.T) {
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
 	input := env.WithRegistries(`
+kind: Object
+spec:
+- image: docker.io/*username*/kilnbase-e2e-tests-build
+- image: docker.io/*username*/kilnbase-e2e-tests-build2
