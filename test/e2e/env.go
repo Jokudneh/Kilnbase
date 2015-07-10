@@ -26,3 +26,7 @@ func BuildEnv(t *testing.T) Env {
 	env := Env{
 		DockerHubUsername:    os.Getenv("KILNBASE_E2E_DOCKERHUB_USERNAME"),
 		DockerHubHostname:    os.Getenv("KILNBASE_E2E_DOCKERHUB_HOSTNAME"),
+		SkipStressTests:      os.Getenv("KILNBASE_E2E_SKIP_STRESS_TESTS") == "true",
+		SkipWhenHTTPRegistry: os.Getenv("KILNBASE_E2E_SKIP_WHEN_HTTP_REGISTRY") == "true",
+		KilnbaseBinaryPath:       kilnbasePath,
+	}
