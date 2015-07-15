@@ -21,3 +21,4 @@ func NewVersionOptions(ui ui.UI) *VersionOptions {
 
 func NewVersionCmd(o *VersionOptions) *cobra.Command {
 	cmd := &cobra.Command{
+		Use:   "version",

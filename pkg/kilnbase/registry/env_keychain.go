@@ -47,3 +47,6 @@ func (k *EnvKeychain) Resolve(target regauthn.Resource) (regauthn.Authenticator,
 				Password:      info.Password,
 				IdentityToken: info.IdentityToken,
 				RegistryToken: info.RegistryToken,
+			}), nil
+		}
+	}
