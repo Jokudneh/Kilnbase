@@ -29,3 +29,4 @@ type ReadCloser struct {
 	io.Reader
 	CloseFunc func() error
 }
+

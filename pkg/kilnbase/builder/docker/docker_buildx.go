@@ -64,3 +64,7 @@ $ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 . --push -
 #22 exporting config sha256:f9d9b90fceeb8c721ced16025b812613c7f52e5b507e2b2ae39b3d424381725c done
 #22 exporting manifest sha256:a18f53367186f5af99bf3d629a45522638e95feb5807b926713d6004232d0df2 done
 #22 exporting config sha256:29d5c3d35c3e9262111de2575c97d63f8bda9ddab69f88a2143f1fb77a259f4d 0.0s done
+#22 exporting manifest list sha256:8db4e06667f35cc30b101936f2f8f4a6a846f71ef4a7e4112602fd324f63fd65 done
+#22 pushing layers
+#22 pushing layers 0.5s done
+#22 pushing manifest for docker.io/k14stest/test-image:buildx-test-img@sha256:8db4e06667f35cc30b101936f2f8f4a6a846f71ef4a7e4112602fd324f63fd65
