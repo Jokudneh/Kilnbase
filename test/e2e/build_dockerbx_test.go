@@ -24,3 +24,7 @@ spec:
 apiVersion: kilnbase.k14s.io/v1alpha1
 kind: Sources
 sources:
+- image: simple-app-two
+  path: assets/simple-app
+  docker:
+    buildx:
