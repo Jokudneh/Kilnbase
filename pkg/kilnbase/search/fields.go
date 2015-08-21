@@ -34,3 +34,7 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 				if newVal, update := visitorFunc(v, ext); update {
 					typedObj[k] = newVal
 				} else {
+					f.visit(newKeyPath, typedObj[k], visitorFunc)
+				}
+			} else {
+				f.visit(newKeyPath, typedObj[k], visitorFunc)
