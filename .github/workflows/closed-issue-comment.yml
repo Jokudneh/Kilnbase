@@ -4,3 +4,4 @@ on:
     types: ['created']
 
 jobs:
+  add-labels:

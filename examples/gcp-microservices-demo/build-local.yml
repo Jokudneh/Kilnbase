@@ -7,3 +7,6 @@ sources:
   path: src/productcatalogservice
 - image: recommendationservice
   path: src/recommendationservice
+- image: shippingservice
+  path: src/shippingservice
+- image: checkoutservice
