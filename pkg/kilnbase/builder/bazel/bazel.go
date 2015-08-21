@@ -26,3 +26,6 @@ type Bazel struct {
 	logger ctllog.Logger
 }
 
+func NewBazel(docker ctlbdk.Docker, logger ctllog.Logger) Bazel {
+	return Bazel{docker: docker, logger: logger}
+}
