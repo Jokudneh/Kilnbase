@@ -26,3 +26,7 @@ func NewDefaultKilnbaseCmd(ui *ui.ConfUI) *cobra.Command {
 }
 
 func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
+	cmd := NewResolveCmd(NewResolveOptions(o.ui))
+
+	cmd.Use = "kilnbase"
+	cmd.Short = "kilnbase prepares Docker images to deploy to Kubernetes"

@@ -5,3 +5,4 @@ on:
 
 jobs:
   add-labels:
+    runs-on: ubuntu-latest
