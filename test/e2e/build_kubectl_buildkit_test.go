@@ -36,3 +36,4 @@ sources:
   path: assets/simple-app
   kubectlBuildkit:
     build:
+      target: build-env
