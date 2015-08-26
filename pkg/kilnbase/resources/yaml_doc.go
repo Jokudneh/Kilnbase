@@ -12,3 +12,5 @@ import (
 )
 
 type YAMLFile struct {
+	fileSrc FileSource
+}
