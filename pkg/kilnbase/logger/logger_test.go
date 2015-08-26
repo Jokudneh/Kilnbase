@@ -13,3 +13,7 @@ import (
 func TestLogger(t *testing.T) {
 	var buf bytes.Buffer
 
+	logger := ctllog.NewLogger(&buf)
+	prefLogger := logger.NewPrefixedWriter("prefix: ")
+
+	prefLogger.Write([]byte("content1"))

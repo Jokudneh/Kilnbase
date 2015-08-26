@@ -18,3 +18,6 @@ type ResolvedImage struct {
 }
 
 func NewResolvedImage(url string, registry ctlreg.Registry) ResolvedImage {
+	return ResolvedImage{url, registry}
+}
+
