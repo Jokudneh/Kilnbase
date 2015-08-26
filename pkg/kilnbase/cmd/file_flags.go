@@ -26,3 +26,6 @@ func (s *FileFlags) AllResources() ([]ctlres.Resource, error) {
 	// TODO do anything with kilnbase configs?
 	for _, file := range s.Files {
 		fileRs, err := ctlres.NewFileResources(file)
+		if err != nil {
+			return nil, err
+		}

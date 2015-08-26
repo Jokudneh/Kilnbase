@@ -29,3 +29,7 @@ type Bazel struct {
 func NewBazel(docker ctlbdk.Docker, logger ctllog.Logger) Bazel {
 	return Bazel{docker: docker, logger: logger}
 }
+
+func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ctlbdk.TmpRef, error) {
+	prefixedLogger := b.logger.NewPrefixedWriter(image + " | ")
+

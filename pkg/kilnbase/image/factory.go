@@ -51,3 +51,7 @@ func (f Factory) New(url string) Image {
 
 		if overrideConf.Preresolved {
 			// Do not support platform selection against explicitly configured image
+			return NewPreresolvedImage(url, overrideConf.ImageOrigins)
+		}
+		if overrideConf.TagSelection != nil {
+			tagSelected := NewTagSelectedImage(url, overrideConf.TagSelection, f.registry)
