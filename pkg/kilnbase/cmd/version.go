@@ -22,3 +22,6 @@ func NewVersionOptions(ui ui.UI) *VersionOptions {
 func NewVersionCmd(o *VersionOptions) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "version",
+		Short: "Print client version",
+		RunE:  func(_ *cobra.Command, _ []string) error { return o.Run() },
+	}
