@@ -55,3 +55,6 @@ func (f Factory) New(url string) Image {
 		}
 		if overrideConf.TagSelection != nil {
 			tagSelected := NewTagSelectedImage(url, overrideConf.TagSelection, f.registry)
+			return NewPlatformSelectedImage(tagSelected, platformSelection, f.registry)
+		}
+		// Continue on with potentially changed url or platform selection
