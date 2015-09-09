@@ -28,3 +28,6 @@ sources:
   path: assets/simple-app
   docker:
     buildx:
+      file: dev/Dockerfile.dev
+- image: simple-app-three
+  path: assets/simple-app

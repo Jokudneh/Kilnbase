@@ -36,3 +36,6 @@ func TestReader(t *testing.T) {
 		t.Error("UnzipReadCloser() =", err)
 	}
 
+	b, err := io.ReadAll(unzipped)
+	if err != nil {
+		t.Error("ReadAll() =", err)
