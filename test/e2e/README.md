@@ -20,3 +20,6 @@ export KILNBASE_E2E_DOCKERHUB_USERNAME=joeexample
 To use a registry other than DockerHub, set the KILNBASE_E2E_DOCKERHUB_HOSTNAME variable. You can specify a local registry or use an anonymous service, such as ttl.sh. You will need to authenticate with non-anonymous registeries for the tests to pass.
 
 ```bash
+# OPTIONAL
+export KILNBASE_E2E_DOCKERHUB_HOSTNAME=ttl.sh
+```

@@ -25,3 +25,7 @@ spec:
       app: kilnbase-simple-app-build-local2
   template:
     metadata:
+      labels:
+        app: kilnbase-simple-app-build-local2
+    spec:
+      containers:
