@@ -30,3 +30,5 @@ func BuildEnv(t *testing.T) Env {
 		SkipWhenHTTPRegistry: os.Getenv("KILNBASE_E2E_SKIP_WHEN_HTTP_REGISTRY") == "true",
 		KilnbaseBinaryPath:       kilnbasePath,
 	}
+	env.Validate(t)
+	return env

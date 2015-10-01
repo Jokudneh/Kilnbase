@@ -24,3 +24,6 @@ func NewDescribedImageIndex(desc ImageIndexDescriptor,
 	return DescribedImageIndex{desc, images, indexes}
 }
 
+func (i DescribedImageIndex) Ref() string { return i.desc.Refs[0] }
+
+func (i DescribedImageIndex) MediaType() (types.MediaType, error) {
