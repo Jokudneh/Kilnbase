@@ -9,3 +9,4 @@ function get_latest_git_tag {
 VERSION="${1:-`get_latest_git_tag`}"
 
 # makes builds reproducible
+export CGO_ENABLED=0

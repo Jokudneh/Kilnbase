@@ -3,3 +3,4 @@
 
 package config
 
+type SourcePackOpts struct {
