@@ -49,3 +49,5 @@ func NewResourceUnstructured(un unstructured.Unstructured, gvr schema.GroupVersi
 func NewResourceFromBytes(data []byte) (*ResourceImpl, error) {
 	var content map[string]interface{}
 
+	err := yaml.Unmarshal(data, &content)
+	if err != nil {

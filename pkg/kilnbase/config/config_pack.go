@@ -4,3 +4,4 @@
 package config
 
 type SourcePackOpts struct {
+	Build SourcePackBuildOpts
