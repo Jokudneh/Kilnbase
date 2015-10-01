@@ -20,3 +20,7 @@ type DescribedImageIndex struct {
 var _ regv1.ImageIndex = DescribedImageIndex{}
 
 func NewDescribedImageIndex(desc ImageIndexDescriptor,
+	images []regv1.Image, indexes []regv1.ImageIndex) DescribedImageIndex {
+	return DescribedImageIndex{desc, images, indexes}
+}
+

@@ -23,3 +23,7 @@ type PackageOptions struct {
 
 	FileFlags     FileFlags
 	RegistryFlags RegistryFlags
+	OutputPath    string
+	Concurrency   int
+}
+
