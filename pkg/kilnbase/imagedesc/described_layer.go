@@ -20,3 +20,6 @@ type DescribedLayer struct {
 
 var _ regv1.Layer = DescribedLayer{}
 
+func NewDescribedLayer(desc ImageLayerDescriptor, contents LayerContents) DescribedLayer {
+	return DescribedLayer{desc, contents}
+}

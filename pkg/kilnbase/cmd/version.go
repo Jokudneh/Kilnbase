@@ -25,3 +25,4 @@ func NewVersionCmd(o *VersionOptions) *cobra.Command {
 		Short: "Print client version",
 		RunE:  func(_ *cobra.Command, _ []string) error { return o.Run() },
 	}
+	return cmd
