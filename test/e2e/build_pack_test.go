@@ -31,3 +31,4 @@ func TestPackBuildAndPushSuccessful(t *testing.T) {
 				secondAssetPath, err)
 		}
 	}()
+
