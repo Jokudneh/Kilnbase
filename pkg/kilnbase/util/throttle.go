@@ -14,3 +14,5 @@ type Throttle struct {
 func NewThrottle(max int) Throttle {
 	if max < 1 {
 		panic(fmt.Sprintf("Expected maximum throttle to be >= 1, but was %d", max))
+	}
+	ch := make(chan struct{}, max)
