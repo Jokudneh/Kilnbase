@@ -78,3 +78,7 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 
 	{
 		var stdoutBuf, stderrBuf bytes.Buffer
+
+		cmdArgs := []string{"build"}
+
+		if opts.Target != nil {
