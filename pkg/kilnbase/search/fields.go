@@ -38,3 +38,7 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 				}
 			} else {
 				f.visit(newKeyPath, typedObj[k], visitorFunc)
+			}
+		}
+
+	case map[string]string:

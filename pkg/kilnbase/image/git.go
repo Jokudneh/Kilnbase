@@ -46,3 +46,7 @@ func (r GitRepo) HeadSHA() (string, error) {
 		}
 		return "", r.error("Checking HEAD commit: %s (stderr '%s')", err, stderr)
 	}
+
+	return strings.TrimSpace(stdout), nil
+}
+
