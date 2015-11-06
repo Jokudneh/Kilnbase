@@ -26,3 +26,5 @@ func NewVersionCmd(o *VersionOptions) *cobra.Command {
 		RunE:  func(_ *cobra.Command, _ []string) error { return o.Run() },
 	}
 	return cmd
+}
+

@@ -104,3 +104,5 @@ func (w *TarWriter) writeImageIndex(td imagedesc.ImageIndexDescriptor) error {
 
 	return nil
 }
+
+func (w *TarWriter) writeImage(td imagedesc.ImageDescriptor) error {
