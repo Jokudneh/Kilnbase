@@ -22,3 +22,5 @@ type ImageQueue struct {
 
 func NewImageQueue(imgFactory ctlimg.Factory) *ImageQueue {
 	return &ImageQueue{imgFactory: imgFactory}
+}
+
