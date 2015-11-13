@@ -106,3 +106,7 @@ func (w *TarWriter) writeImageIndex(td imagedesc.ImageIndexDescriptor) error {
 }
 
 func (w *TarWriter) writeImage(td imagedesc.ImageDescriptor) error {
+	for _, imgLayer := range td.Layers {
+		// TODO anything else we can do to deal with this?
+		// Do not include foreign layers since we cannot
+		// import without changing image digest.

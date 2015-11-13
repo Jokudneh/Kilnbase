@@ -27,3 +27,6 @@ type PackageOptions struct {
 	Concurrency   int
 }
 
+var _ imagedesc.Registry = ctlreg.Registry{}
+
+func NewPackageOptions(ui ui.UI) *PackageOptions {
