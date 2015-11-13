@@ -37,3 +37,4 @@ func (v ImageRefsVisitorFunc) Apply(res interface{}, searchRules []ctlconf.Searc
 	insertTmpRefsFunc := func(val string) (string, bool) {
 		newVal, updated := v(val)
 		if !updated {
+			return "", false

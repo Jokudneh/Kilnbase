@@ -16,3 +16,5 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	msg := os.Getenv("SIMPLE_MSG")
 	if msg == "" {
 		msg = ":( SIMPLE_MSG variable not defined"
+	}
+	fmt.Fprintf(w, "<h1>%s</h1>", msg)
