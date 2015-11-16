@@ -30,3 +30,4 @@ type ReadCloser struct {
 	CloseFunc func() error
 }
 
+var _ io.ReadCloser = (*ReadCloser)(nil)

@@ -42,3 +42,4 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 		}
 
 	case map[string]string:
+		for k, v := range typedObj {
