@@ -16,3 +16,5 @@ func NewThrottle(max int) Throttle {
 		panic(fmt.Sprintf("Expected maximum throttle to be >= 1, but was %d", max))
 	}
 	ch := make(chan struct{}, max)
+	for i := 0; i < max; i++ {
+		ch <- struct{}{}
