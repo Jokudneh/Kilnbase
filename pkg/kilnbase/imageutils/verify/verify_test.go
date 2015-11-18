@@ -20,3 +20,5 @@
 package verify
 
 import (
+	"bytes"
+	"io"

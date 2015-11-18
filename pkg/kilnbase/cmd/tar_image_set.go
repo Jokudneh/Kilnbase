@@ -17,3 +17,7 @@ import (
 type TarImageSet struct {
 	imageSet    ImageSet
 	concurrency int
+	logger      *ctllog.PrefixWriter
+}
+
+func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
