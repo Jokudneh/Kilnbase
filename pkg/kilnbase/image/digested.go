@@ -31,3 +31,6 @@ func MaybeNewDigestedImage(url string) *DigestedImage {
 	return &DigestedImage{nameWithDigest, nil}
 }
 
+func NewDigestedImageFromParts(url, digest string) DigestedImage {
+	ref := url + digestSep + digest
+
