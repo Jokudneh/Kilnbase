@@ -57,3 +57,4 @@ func (o ImageSet) Export(foundImages *UnprocessedImageURLs,
 	return ids, nil
 }
 
+func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
