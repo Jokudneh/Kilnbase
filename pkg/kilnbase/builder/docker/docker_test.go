@@ -38,3 +38,4 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		expected: "harbor.example.com/MyApp/Image:v1.0",
 	},
 	{
+		name:     "mixed case registry and repository",

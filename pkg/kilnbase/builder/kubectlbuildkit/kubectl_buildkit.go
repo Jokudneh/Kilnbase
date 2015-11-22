@@ -58,3 +58,7 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	if opts.Build.Target != nil {
 		cmdArgs = append(cmdArgs, "--target", *opts.Build.Target)
 	}
+	if opts.Build.Platform != nil {
+		cmdArgs = append(cmdArgs, "--platform", *opts.Build.Platform)
+	}
+	if opts.Build.Pull != nil && *opts.Build.Pull {

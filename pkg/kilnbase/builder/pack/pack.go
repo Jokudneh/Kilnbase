@@ -36,3 +36,7 @@ type PackBuildOpts struct {
 }
 
 func NewPack(docker ctlbdk.Docker, logger ctllog.Logger) Pack {
+	return Pack{docker, logger}
+}
+
+func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef, error) {
