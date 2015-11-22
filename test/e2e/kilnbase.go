@@ -26,3 +26,6 @@ type RunOpts struct {
 	StdinReader  io.Reader
 	CancelCh     chan struct{}
 	Redact       bool
+}
+
+func (k Kilnbase) Run(args []string) string {

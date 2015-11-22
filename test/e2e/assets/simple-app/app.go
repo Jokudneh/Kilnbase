@@ -18,3 +18,4 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		msg = ":( SIMPLE_MSG variable not defined"
 	}
 	fmt.Fprintf(w, "<h1>%s</h1>", msg)
+}
