@@ -19,3 +19,4 @@ var _ regv1.Layer = ForeignDescribedLayer{}
 func NewForeignDescribedLayer(desc ImageLayerDescriptor) ForeignDescribedLayer {
 	return ForeignDescribedLayer{desc}
 }
+

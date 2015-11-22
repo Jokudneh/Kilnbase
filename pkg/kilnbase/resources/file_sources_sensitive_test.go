@@ -31,3 +31,4 @@ func TestRedactIPv6AndFragmentCredentials(t *testing.T) {
 
 func TestHTTPDescriptionOmitsFragmentCredentials(t *testing.T) {
 	source := NewHTTPFileSource(
+		"https://example.com/input#fragment-canary")
