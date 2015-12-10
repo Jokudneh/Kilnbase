@@ -11,3 +11,5 @@ VERSION="${1:-`get_latest_git_tag`}"
 # makes builds reproducible
 export CGO_ENABLED=0
 LDFLAGS="-X github.com/Jokudneh/Kilnbase/pkg/kilnbase/version.Version=$VERSION"
+
+GOOS=darwin GOARCH=amd64 go build -ldflags="$LDFLAGS" -trimpath -o kilnbase-darwin-amd64 ./cmd/kilnbase/...

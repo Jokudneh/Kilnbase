@@ -16,3 +16,6 @@ Features:
 - Orchestrates image builds (delegates to tools like Docker, pack, kubectl-buildkit) and registry pushes
 - Works with local Docker daemon and remote registries, for development and production cases
 - Records metadata about image sources in annotation on Kubernetes resources (see examples below)
+- Resolves image references to their digest form (*immutable*) ([details](https://github.com/Jokudneh/Kilnbase/docs/latest/#why-digest-references))
+- Provides a way to transport set of images in a single tarball between registries
+  - maintaining exactly same digests, hence guaranteeing exactly same content
