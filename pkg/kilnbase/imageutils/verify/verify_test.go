@@ -22,3 +22,4 @@ package verify
 import (
 	"bytes"
 	"io"
+	"strings"

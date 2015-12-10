@@ -27,3 +27,7 @@ func (i DescribedImage) Ref() string { return i.desc.Refs[0] }
 // Layers returns the ordered collection of filesystem layers that comprise this image.
 // The order of the list is oldest/base layer first, and most-recent/top layer last.
 func (i DescribedImage) Layers() ([]regv1.Layer, error) {
+	var layers []regv1.Layer
+	for _, layerTD := range i.desc.Layers {
+		var layer regv1.Layer
+		if layerTD.IsDistributable() {

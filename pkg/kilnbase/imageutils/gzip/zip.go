@@ -29,3 +29,4 @@ import (
 
 var gzipMagicHeader = []byte{'\x1f', '\x8b'}
 
+// ReadCloser reads uncompressed input data from the io.ReadCloser and
