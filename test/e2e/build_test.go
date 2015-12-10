@@ -49,3 +49,5 @@ overrides:
   newImage: simple-app-two
 `)
 
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
+		StdinReader: strings.NewReader(input),
