@@ -29,3 +29,4 @@ func TestEnvKeychainResolveIsCaseInsensitive(t *testing.T) {
 	auth, err := k.Resolve(target)
 	if err != nil {
 		t.Fatalf("Resolve returned error: %s", err)
+	}
