@@ -34,3 +34,7 @@ func MaybeNewDigestedImage(url string) *DigestedImage {
 func NewDigestedImageFromParts(url, digest string) DigestedImage {
 	ref := url + digestSep + digest
 
+	nameWithDigest, err := regname.NewDigest(ref, regname.WeakValidation)
+	if err != nil {
+		return DigestedImage{nameWithDigest, fmt.Errorf("Expected digest reference, but found '%s', reason: %s", ref, err)}
+	}

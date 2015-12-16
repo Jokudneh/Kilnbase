@@ -24,3 +24,6 @@ func NewImageQueue(imgFactory ctlimg.Factory) *ImageQueue {
 	return &ImageQueue{imgFactory: imgFactory}
 }
 
+func (b *ImageQueue) Run(unprocessedImageURLs *UnprocessedImageURLs, numWorkers int) (*ProcessedImages, error) {
+	b.outputImages = NewProcessedImages()
+	b.outputErrs = nil
