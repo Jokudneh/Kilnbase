@@ -24,3 +24,4 @@ http_archive(
     urls = ["https://github.com/bazelbuild/rules_docker/releases/download/v0.26.0/rules_docker-v0.26.0.tar.gz"],
 )
 
+# Initialize rules_go

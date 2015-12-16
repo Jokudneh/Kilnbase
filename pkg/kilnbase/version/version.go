@@ -29,3 +29,7 @@ func version() string {
 	info, ok := debug.ReadBuildInfo()
 	if !ok {
 		return defaultVersion
+	}
+
+	// Anything else.
+	for _, dep := range info.Deps {
