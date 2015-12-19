@@ -40,3 +40,7 @@ func NewRelocateCmd(o *RelocateOptions) *cobra.Command {
 Command 'relocate' is deprecated; use 'imgpkg copy' instead.
 Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#copy
 
+Relocate images between two registries
+`,
+		Short:  "Relocate images between two registries",
+		Hidden: true,
