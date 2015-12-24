@@ -3,3 +3,4 @@ WORKDIR /go/src/github.com/mchmarny/simple-app/
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -v -o app
 
+FROM scratch

@@ -5,3 +5,4 @@ package config
 
 const (
 	ImagesLockKilnbaseID      = "kilnbase.kilnbase.dev/id"
+	ImagesLockKilnbaseOrigins = "kilnbase.kilnbase.dev/origins"
