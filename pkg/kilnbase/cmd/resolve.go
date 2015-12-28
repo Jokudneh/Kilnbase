@@ -102,3 +102,6 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 		return nil, err
 	}
 
+	opts := ctlimg.FactoryOpts{
+		Conf:           conf,
+		AllowedToBuild: o.AllowedToBuild,
