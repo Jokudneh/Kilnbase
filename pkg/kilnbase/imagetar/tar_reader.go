@@ -14,3 +14,5 @@ type TarReader struct {
 }
 
 func NewTarReader(path string) TarReader {
+	return TarReader{path}
+}
