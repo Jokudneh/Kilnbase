@@ -19,3 +19,4 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Fprintf(w, "<h1>%s</h1>", msg)
 }
+
