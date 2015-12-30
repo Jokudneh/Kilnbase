@@ -44,3 +44,7 @@ Relocate images between two registries
 `,
 		Short:  "Relocate images between two registries",
 		Hidden: true,
+		RunE:   func(_ *cobra.Command, _ []string) error { return o.Run() },
+	}
+	o.FileFlags.Set(cmd)
+	o.RegistryFlags.Set(cmd)

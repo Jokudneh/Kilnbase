@@ -10,3 +10,7 @@ import (
 )
 
 type UnprocessedImageURL struct {
+	URL string `json:"image"`
+}
+
+type UnprocessedImageURLs struct {
