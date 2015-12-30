@@ -16,3 +16,5 @@ sources:
   path: .
   docker:
     build:
+      pull: true
+      noCache: false

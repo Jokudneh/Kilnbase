@@ -31,3 +31,7 @@ If building images using `docker`:
 - Docker CLI Version (e.g. `docker version`)
 
 If building images using `buildkit`:
+- Buildkit version (e.g. `kubectl buildkit version`):
+- Kubernetes version (e.g. `kubectl version`):
+
+If building images using `pack`

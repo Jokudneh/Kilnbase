@@ -30,3 +30,7 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 
 	cmd.Use = "kilnbase"
 	cmd.Short = "kilnbase prepares Docker images to deploy to Kubernetes"
+	cmd.Version = version.Version
+
+	// Affects children as well
+	cmd.SilenceErrors = true
