@@ -18,3 +18,4 @@ func NewThrottle(max int) Throttle {
 	ch := make(chan struct{}, max)
 	for i := 0; i < max; i++ {
 		ch <- struct{}{}
+	}

@@ -27,3 +27,7 @@ import (
 
 func TestRead(t *testing.T) {
 	want := "asdf"
+	r := bytes.NewBufferString(want)
+	called := false
+
+	rac := &ReadCloser{
