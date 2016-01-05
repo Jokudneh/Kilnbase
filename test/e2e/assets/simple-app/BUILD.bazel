@@ -5,3 +5,4 @@ package(default_visibility = ["//visibility:public"])
 
 go_image(
     name = "simple-app-go-image",
+    srcs = ["app.go"],
