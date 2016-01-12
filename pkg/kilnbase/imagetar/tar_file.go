@@ -30,3 +30,5 @@ var _ imagedesc.LayerContents = tarFileChunk{}
 type tarFileChunkReadCloser struct {
 	DebugID string
 	io.Reader
+	io.Closer
+}

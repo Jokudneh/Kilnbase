@@ -51,3 +51,6 @@ func TestRelocateSuccessfulWithManyImages(t *testing.T) {
 		return
 	}
 
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
+
+	input := `
