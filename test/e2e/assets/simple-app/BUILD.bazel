@@ -6,3 +6,4 @@ package(default_visibility = ["//visibility:public"])
 go_image(
     name = "simple-app-go-image",
     srcs = ["app.go"],
+    importpath = "github.com/carvel-kbld/test/e2e/assets/simple-app",
