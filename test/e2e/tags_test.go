@@ -23,3 +23,7 @@ func TestAdditionalImageTags(t *testing.T) {
 
 	logger.Section("build and tag image", func() {
 		input := env.WithRegistries(`
+image: docker.io/*username*/kilnbase-e2e-tests-build
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Sources
