@@ -11,3 +11,5 @@ type SourceDockerOpts struct {
 type SourceDockerBuildOpts struct {
 	Target     *string
 	Pull       *bool
+	NoCache    *bool `json:"noCache"`
+	File       *string

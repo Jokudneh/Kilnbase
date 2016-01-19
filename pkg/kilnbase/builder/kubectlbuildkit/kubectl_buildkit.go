@@ -62,3 +62,7 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 		cmdArgs = append(cmdArgs, "--platform", *opts.Build.Platform)
 	}
 	if opts.Build.Pull != nil && *opts.Build.Pull {
+		cmdArgs = append(cmdArgs, "--pull")
+	}
+	if opts.Build.NoCache != nil && *opts.Build.NoCache {
+		cmdArgs = append(cmdArgs, "--no-cache")
