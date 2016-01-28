@@ -14,3 +14,6 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestMavenBannerDoesNotExposeArguments(t *testing.T) {
+	const executableMode = 0700
+	dir := t.TempDir()

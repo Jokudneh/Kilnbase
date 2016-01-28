@@ -80,3 +80,7 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			want: false,
 		},
 		{ // OS Features must exactly match. matchesPlatform expected to return false.
+			given: v1.Platform{
+				Architecture: "arm",
+				OS:           "linux",
+				OSVersion:    "10.0.10586",

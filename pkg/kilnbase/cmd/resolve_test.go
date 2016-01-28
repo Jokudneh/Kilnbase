@@ -34,3 +34,5 @@ func TestNewPlatformSelection(t *testing.T) {
 			Plat: &ctlconf.PlatformSelection{
 				Architecture: "arm",
 				OS:           "linux",
+				Variant:      "v7",
+			},
