@@ -29,3 +29,7 @@ func NewFileResources(file string) ([]FileResource, error) {
 	case strings.HasPrefix(file, "http://") || strings.HasPrefix(file, "https://"):
 		fileRs = append(fileRs, FileResource{NewHTTPFileSource(file)})
 
+	default:
+		fileInfo, err := os.Stat(file)
+		if err != nil {
+			return nil, fmt.Errorf("Unable to stat file: %s", err)

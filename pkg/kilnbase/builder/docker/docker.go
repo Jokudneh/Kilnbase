@@ -84,3 +84,4 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 		if opts.Target != nil {
 			cmdArgs = append(cmdArgs, "--target", *opts.Target)
 		}
+		if opts.Pull != nil && *opts.Pull {
