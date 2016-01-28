@@ -12,3 +12,5 @@ func TestInvalidRegistryHostnameDoesNotExposeCredentials(t *testing.T) {
 	for _, suffix := range []string{"", "_0"} {
 		t.Run("hostname"+suffix, func(t *testing.T) {
 			raw := "https://user:password-canary@example.com:bad" +
+				"?token=query-canary"
+			t.Setenv("KILNBASE_REGISTRY_HOSTNAME"+suffix, raw)
