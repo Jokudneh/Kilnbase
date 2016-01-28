@@ -14,3 +14,5 @@ import (
 type YAMLFile struct {
 	fileSrc FileSource
 }
+
+func NewYAMLFile(fileSrc FileSource) YAMLFile {
