@@ -31,3 +31,6 @@ type ReadCloser struct {
 }
 
 var _ io.ReadCloser = (*ReadCloser)(nil)
+
+// Close implements io.ReadCloser
+func (rac *ReadCloser) Close() error {
