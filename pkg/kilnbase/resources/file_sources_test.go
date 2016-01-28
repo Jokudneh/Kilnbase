@@ -43,3 +43,5 @@ func redactErrorMessageTestCases() []struct {
 			input: `Request: ` +
 				`http://admin:secret@api.example/call?token=abc&session=xyz`,
 			expected: `Request: ` +
+				`http://_redacted_@api.example/call?_redacted_`,
+		},
