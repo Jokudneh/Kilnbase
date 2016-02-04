@@ -7,3 +7,4 @@ import (
 	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
 )
 
+type ErrImage struct {
