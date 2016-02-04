@@ -37,3 +37,4 @@ func (i *ProcessedImages) FindByURL(unprocessedImageURL UnprocessedImageURL) (Im
 	return img, found
 }
 
+func (i *ProcessedImages) All() []ProcessedImageItem {

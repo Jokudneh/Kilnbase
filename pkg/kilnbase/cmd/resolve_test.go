@@ -36,3 +36,5 @@ func TestNewPlatformSelection(t *testing.T) {
 				OS:           "linux",
 				Variant:      "v7",
 			},
+		}, {
+			Input: "linux/arm/v6",
