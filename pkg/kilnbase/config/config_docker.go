@@ -13,3 +13,5 @@ type SourceDockerBuildOpts struct {
 	Pull       *bool
 	NoCache    *bool `json:"noCache"`
 	File       *string
+	Buildkit   *bool
+	RawOptions *[]string `json:"rawOptions"`

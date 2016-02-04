@@ -24,3 +24,6 @@ func (f *UIFlags) Set(cmd *cobra.Command) {
 	cmd.PersistentFlags().BoolVarP(&f.NonInteractive, "yes", "y", false, "Assume yes for any prompt")
 	cmd.PersistentFlags().StringSliceVar(&f.Columns, "column", nil, "Filter to show only given columns")
 }
+
+func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
+	ui.EnableTTY(f.TTY)
