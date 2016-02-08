@@ -27,3 +27,7 @@ func (f *UIFlags) Set(cmd *cobra.Command) {
 
 func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
 	ui.EnableTTY(f.TTY)
+
+	if f.Color {
+		ui.EnableColor()
+	}

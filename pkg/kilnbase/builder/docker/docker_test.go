@@ -41,3 +41,7 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		name:     "mixed case registry and repository",
 		input:    "ghcr.io/MyOrg/MyRepo:latest",
 		expected: "ghcr.io/MyOrg/MyRepo:latest",
+	},
+	{
+		name:     "uppercase registry only",
+		input:    "REGISTRY.COM/lowercase/path:tag",
