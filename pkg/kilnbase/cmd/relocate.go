@@ -48,3 +48,6 @@ Relocate images between two registries
 	}
 	o.FileFlags.Set(cmd)
 	o.RegistryFlags.Set(cmd)
+	cmd.Flags().StringVarP(&o.Repository, "repository", "r", "", "Import images into given image repository (e.g. docker.io/dkalinin/my-project)")
+	cmd.Flags().StringVar(&o.LockOutput, "lock-output", "", "File path to emit configuration with resolved image references")
+	cmd.Flags().IntVar(&o.Concurrency, "concurrency", 5, "Set maximum number of concurrent imports")

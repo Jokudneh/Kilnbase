@@ -58,3 +58,6 @@ func (o ImageSet) Export(foundImages *UnprocessedImageURLs,
 }
 
 func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
+	importRepo regname.Repository, registry ctlreg.Registry) (*ProcessedImages, error) {
+
+	importedImages := NewProcessedImages()

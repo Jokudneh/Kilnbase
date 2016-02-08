@@ -18,3 +18,4 @@ sources:
     build:
       pull: true
       noCache: false
+      file: hack/Dockerfile.dev
