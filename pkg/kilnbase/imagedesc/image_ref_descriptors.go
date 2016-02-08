@@ -78,3 +78,4 @@ func NewImageRefDescriptors(refs []regname.Reference, registry Registry) (*Image
 				}
 				td = ImageOrImageIndexDescriptor{ImageIndex: &imgIndexTd}
 			} else {
+				imgTd, err := imageRefDescs.buildImage(ref)

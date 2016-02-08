@@ -74,3 +74,4 @@ func TestGitRepoValidNoCommit(t *testing.T) {
 
 	gitRepo := ctlimg.NewGitRepo(dir)
 	if gitRepo.IsValid() != true {
+		t.Fatalf("Expected no commit repo to be a git repo")

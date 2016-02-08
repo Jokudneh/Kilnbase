@@ -27,3 +27,7 @@ func NewDescribedImageIndex(desc ImageIndexDescriptor,
 func (i DescribedImageIndex) Ref() string { return i.desc.Refs[0] }
 
 func (i DescribedImageIndex) MediaType() (types.MediaType, error) {
+	return types.MediaType(i.desc.MediaType), nil
+}
+
+func (i DescribedImageIndex) Digest() (regv1.Hash, error)  { return regv1.NewHash(i.desc.Digest) }
