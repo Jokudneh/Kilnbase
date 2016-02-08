@@ -21,3 +21,7 @@ type TarImageSet struct {
 }
 
 func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
+	outputPath string, registry ctlreg.Registry) error {
+
+	ids, err := o.imageSet.Export(foundImages, registry)
+	if err != nil {
