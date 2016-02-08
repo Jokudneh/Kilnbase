@@ -9,3 +9,5 @@ import (
 
 	ctlimg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/image"
 )
+
+func TestGitProvenanceOmitsQueryCredentials(t *testing.T) {
