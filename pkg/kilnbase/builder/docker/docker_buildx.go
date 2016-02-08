@@ -69,3 +69,7 @@ $ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 . --push -
 #22 pushing layers 0.5s done
 #22 pushing manifest for docker.io/k14stest/test-image:buildx-test-img@sha256:8db4e06667f35cc30b101936f2f8f4a6a846f71ef4a7e4112602fd324f63fd65
 #22 pushing manifest for docker.io/k14stest/test-image:buildx-test-img@sha256:8db4e06667f35cc30b101936f2f8f4a6a846f71ef4a7e4112602fd324f63fd65 0.4s done
+#22 DONE 0.9s
+
+*/
+

@@ -9,3 +9,6 @@ jobs:
     steps:
       - uses: kilnbase-dev/setup-action@v1
         with:
+          only: kilnbase
+          kilnbase: ${{ github.event.release.tag_name }}
+      - run: |

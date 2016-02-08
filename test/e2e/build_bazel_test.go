@@ -15,3 +15,7 @@ import (
 
 func TestBazelBuildAndPushSuccessful(t *testing.T) {
 	env := BuildEnv(t)
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
+
+	assetPath := "assets/simple-app"
+	secondAssetPath := "assets/simple-app-2"
