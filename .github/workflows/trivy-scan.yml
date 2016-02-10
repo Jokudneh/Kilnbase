@@ -7,3 +7,4 @@ on:
 
 jobs:
   trivy-scan:
+    uses: kilnbase-dev/release-scripts/.github/workflows/trivy-scan.yml@main

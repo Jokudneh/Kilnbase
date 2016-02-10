@@ -91,3 +91,7 @@ overrides:
 	}
 
 	out, _ = kilnbase.RunWithOpts([]string{
+		"unpackage", "-f", "-", "--input", path, "--repository",
+		env.WithRegistries("docker.io/*username*/kilnbase-test-pkg-unpkg"),
+		"--lock-output", relocatedLockPath,
+	}, RunOpts{StdinReader: strings.NewReader(input)})
