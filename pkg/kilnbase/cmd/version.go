@@ -30,3 +30,4 @@ func NewVersionCmd(o *VersionOptions) *cobra.Command {
 
 func (o *VersionOptions) Run() error {
 	o.ui.PrintBlock([]byte(fmt.Sprintf("kilnbase version %s\n", version.Version)))
+
