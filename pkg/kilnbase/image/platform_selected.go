@@ -40,3 +40,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	ref, err := regname.ParseReference(url)
 	if err != nil {
 		return "", nil, err
+	}
+
+	desc, err := i.registry.Generic(ref)
+	if err != nil {
