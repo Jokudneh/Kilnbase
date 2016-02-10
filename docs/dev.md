@@ -26,3 +26,7 @@ eval $(minikube docker-env)
 # Run all tests
 ./hack/test-all-locally.sh
 # or run single test
+./hack/test-all-locally.sh -run TestDockerBuildSuccessful
+```
+
+## Source Code Structure

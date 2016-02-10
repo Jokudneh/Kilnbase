@@ -19,3 +19,6 @@ Features:
 - Resolves image references to their digest form (*immutable*) ([details](https://github.com/Jokudneh/Kilnbase/docs/latest/#why-digest-references))
 - Provides a way to transport set of images in a single tarball between registries
   - maintaining exactly same digests, hence guaranteeing exactly same content
+- Not specific to Kubernetes, but works really well with Kubernetes configuration files  
+
+!
