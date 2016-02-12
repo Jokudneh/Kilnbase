@@ -17,3 +17,4 @@ import (
 func TestMavenBannerDoesNotExposeArguments(t *testing.T) {
 	const executableMode = 0700
 	dir := t.TempDir()
+	script := "#!/bin/sh\nprintf '%s\n' \"$@\" > \"$MAVEN_ARGS_FILE\"\n"

@@ -19,3 +19,4 @@ sources:
       pull: true
       noCache: false
       file: hack/Dockerfile.dev
+EOF
