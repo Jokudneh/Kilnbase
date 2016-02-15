@@ -13,3 +13,7 @@
     <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
   </properties>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>

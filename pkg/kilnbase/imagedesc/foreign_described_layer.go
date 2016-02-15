@@ -22,3 +22,6 @@ func NewForeignDescribedLayer(desc ImageLayerDescriptor) ForeignDescribedLayer {
 
 func (l ForeignDescribedLayer) Digest() (regv1.Hash, error) { return regv1.NewHash(l.desc.Digest) }
 func (l ForeignDescribedLayer) DiffID() (regv1.Hash, error) { return regv1.NewHash(l.desc.DiffID) }
+
+func (l ForeignDescribedLayer) Compressed() (io.ReadCloser, error) {
+	panic("ForeignDescribedLayer.Compressed: not implemented")
