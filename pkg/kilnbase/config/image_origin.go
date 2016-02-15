@@ -16,3 +16,7 @@ type Origin struct {
 	PlatformSelected *OriginPlatformSelected `json:"platformSelected,omitempty"`
 }
 
+type OriginGit struct {
+	RemoteURL string   `json:"remoteURL"`
+	SHA       string   `json:"sha"`
+	Dirty     bool     `json:"dirty"`
