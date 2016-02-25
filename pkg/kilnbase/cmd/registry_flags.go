@@ -13,3 +13,4 @@ type RegistryFlags struct {
 	VerifyCerts bool
 	Insecure    bool
 }
+
