@@ -22,3 +22,5 @@ package verify
 import (
 	"encoding/hex"
 	"fmt"
+	"hash"
+	"io"

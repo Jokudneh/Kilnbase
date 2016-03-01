@@ -48,3 +48,4 @@ func (s LocalFileSource) Bytes() ([]byte, error) {
 var urlSchemeRe = regexp.MustCompile(`https?://`)
 
 const schemeStartIdx = 0
+
