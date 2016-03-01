@@ -58,3 +58,7 @@ func (f Factory) New(url string) Image {
 			return NewPlatformSelectedImage(tagSelected, platformSelection, f.registry)
 		}
 		// Continue on with potentially changed url or platform selection
+	}
+
+	if srcConf, found := f.shouldBuild(url); found {
+		if !f.opts.AllowedToBuild {
