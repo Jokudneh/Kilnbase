@@ -29,3 +29,6 @@ type RunOpts struct {
 }
 
 func (k Kilnbase) Run(args []string) string {
+	out, _ := k.RunWithOpts(args, RunOpts{})
+	return out
+}
