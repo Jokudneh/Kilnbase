@@ -58,3 +58,4 @@ func (b *Jib) Run(image, directory string,
 		return ctlbdk.TmpRef{},
 			errors.New("Expected target to be specified, but was not")
 	}
+

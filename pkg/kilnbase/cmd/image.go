@@ -22,3 +22,5 @@ type Image struct {
 func (imgs Images) ForImage(url string) (Image, bool) {
 	for _, img := range imgs {
 		if img.URL == url {
+			return img, true
+		}
