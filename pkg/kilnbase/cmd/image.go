@@ -24,3 +24,6 @@ func (imgs Images) ForImage(url string) (Image, bool) {
 		if img.URL == url {
 			return img, true
 		}
+	}
+	return Image{}, false
+}

@@ -18,3 +18,7 @@ import (
 
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
+
+	log.SetOutput(io.Discard)
+
+	// TODO logs

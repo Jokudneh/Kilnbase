@@ -33,3 +33,5 @@ func NewBazel(docker ctlbdk.Docker, logger ctllog.Logger) Bazel {
 func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ctlbdk.TmpRef, error) {
 	prefixedLogger := b.logger.NewPrefixedWriter(image + " | ")
 
+	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using bazel): %s\n", directory)))
+	defer prefixedLogger.Write([]byte("finished build (using bazel)\n"))
