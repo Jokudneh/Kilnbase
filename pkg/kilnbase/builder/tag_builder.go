@@ -15,3 +15,6 @@ var (
 	tagBuilderTagCleanRegexp = regexp.MustCompile("[^a-zA-Z0-9\\-]+")
 )
 
+type TagBuilder struct{}
+
+func (d TagBuilder) CheckTagLen128(tag string) string {

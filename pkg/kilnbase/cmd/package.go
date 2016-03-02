@@ -30,3 +30,6 @@ type PackageOptions struct {
 var _ imagedesc.Registry = ctlreg.Registry{}
 
 func NewPackageOptions(ui ui.UI) *PackageOptions {
+	return &PackageOptions{ui: ui}
+}
+

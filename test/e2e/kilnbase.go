@@ -32,3 +32,5 @@ func (k Kilnbase) Run(args []string) string {
 	out, _ := k.RunWithOpts(args, RunOpts{})
 	return out
 }
+
+func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
