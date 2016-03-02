@@ -11,3 +11,5 @@ spec:
       labels:
         app: kilnbase-simple-app-build-local-mvn
     spec:
+      containers:
+      - name: my-app

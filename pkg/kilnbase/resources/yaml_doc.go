@@ -16,3 +16,6 @@ type YAMLFile struct {
 }
 
 func NewYAMLFile(fileSrc FileSource) YAMLFile {
+	return YAMLFile{fileSrc}
+}
+

@@ -11,3 +11,4 @@ import (
 )
 
 func TestGitProvenanceOmitsQueryCredentials(t *testing.T) {
+	inputs := []string{

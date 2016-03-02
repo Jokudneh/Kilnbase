@@ -59,3 +59,7 @@ func (b *Jib) Run(image, directory string,
 			errors.New("Expected target to be specified, but was not")
 	}
 
+	err = b.runMaven(directory, tmpRef.AsString(), opts, prefixedLogger)
+	if err != nil {
+		_, _ = prefixedLogger.Write([]byte(fmt.Sprintf(
+			"error: %s\n", err)))
