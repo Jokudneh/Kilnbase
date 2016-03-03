@@ -31,3 +31,7 @@ func (i DescribedImage) Layers() ([]regv1.Layer, error) {
 	for _, layerTD := range i.desc.Layers {
 		var layer regv1.Layer
 		if layerTD.IsDistributable() {
+			layerFile, err := i.layerProvider.FindLayer(layerTD)
+			if err != nil {
+				return nil, err
+			}

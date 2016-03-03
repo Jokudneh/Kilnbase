@@ -47,3 +47,4 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		input:    "REGISTRY.COM/lowercase/path:tag",
 		expected: "registry.com/lowercase/path:tag",
 	},
+	{

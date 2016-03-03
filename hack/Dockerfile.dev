@@ -10,3 +10,4 @@ RUN chmod +x ~/.docker/cli-plugins/docker-buildx
 RUN curl -sL https://github.com/buildpacks/pack/releases/download/v0.8.1/pack-v0.8.1-linux.tgz | tar -C /usr/local/bin -xz
 
 RUN curl -sL https://github.com/vmware-tanzu/buildkit-cli-for-kubectl/releases/download/v0.1.0/linux-refs.tags.v0.1.0.tgz | tar -C /usr/local/bin -xz
+
