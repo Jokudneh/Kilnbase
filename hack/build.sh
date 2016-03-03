@@ -9,3 +9,4 @@ VERSION="${1:-$LATEST_GIT_TAG}"
 export CGO_ENABLED=0
 LDFLAGS="-X github.com/Jokudneh/Kilnbase/pkg/kilnbase/version.Version=$VERSION"
 
+go fmt ./cmd/... ./pkg/... ./test/...
