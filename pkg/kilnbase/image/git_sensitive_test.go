@@ -12,3 +12,4 @@ import (
 
 func TestGitProvenanceOmitsQueryCredentials(t *testing.T) {
 	inputs := []string{
+		"https://user:password-canary@example.com/repo" +

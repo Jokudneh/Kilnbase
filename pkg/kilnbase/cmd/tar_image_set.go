@@ -25,3 +25,6 @@ func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
 
 	ids, err := o.imageSet.Export(foundImages, registry)
 	if err != nil {
+		return err
+	}
+
