@@ -23,3 +23,4 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	flag.Parse()
 	log.Print("Simple app server started...")
+	http.HandleFunc("/", handler)

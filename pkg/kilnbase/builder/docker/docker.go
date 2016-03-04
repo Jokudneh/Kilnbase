@@ -85,3 +85,6 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 			cmdArgs = append(cmdArgs, "--target", *opts.Target)
 		}
 		if opts.Pull != nil && *opts.Pull {
+			cmdArgs = append(cmdArgs, "--pull")
+		}
+		if opts.NoCache != nil && *opts.NoCache {
