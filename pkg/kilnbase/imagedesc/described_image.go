@@ -35,3 +35,7 @@ func (i DescribedImage) Layers() ([]regv1.Layer, error) {
 			if err != nil {
 				return nil, err
 			}
+			layer = NewDescribedLayer(layerTD, layerFile)
+		} else {
+			layer = NewForeignDescribedLayer(layerTD)
+		}

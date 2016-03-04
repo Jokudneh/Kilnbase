@@ -16,3 +16,6 @@ type TarReader struct {
 func NewTarReader(path string) TarReader {
 	return TarReader{path}
 }
+
+func (r TarReader) Read() ([]imagedesc.ImageOrIndex, error) {
+	file := tarFile{r.path}
