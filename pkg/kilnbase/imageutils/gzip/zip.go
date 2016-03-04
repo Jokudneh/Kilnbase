@@ -30,3 +30,7 @@ import (
 var gzipMagicHeader = []byte{'\x1f', '\x8b'}
 
 // ReadCloser reads uncompressed input data from the io.ReadCloser and
+// returns an io.ReadCloser from which compressed data may be read.
+// This uses gzip.BestSpeed for the compression level.
+func ReadCloser(r io.ReadCloser) io.ReadCloser {
+	return ReadCloserLevel(r, gzip.BestSpeed)
