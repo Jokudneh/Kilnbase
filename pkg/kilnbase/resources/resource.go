@@ -53,3 +53,5 @@ func NewResourceFromBytes(data []byte) (*ResourceImpl, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	if len(content) == 0 {
