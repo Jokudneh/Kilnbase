@@ -39,3 +39,5 @@ func (i DescribedImage) Layers() ([]regv1.Layer, error) {
 		} else {
 			layer = NewForeignDescribedLayer(layerTD)
 		}
+		layers = append(layers, layer)
+	}
