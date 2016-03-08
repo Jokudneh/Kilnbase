@@ -33,3 +33,4 @@ func NewPathFromStrings(strs []string) Path {
 }
 
 func NewPathFromInterfaces(parts []interface{}) Path {
+	var path Path
