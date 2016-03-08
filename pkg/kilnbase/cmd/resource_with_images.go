@@ -23,3 +23,6 @@ func NewResourceWithImages(contents map[string]interface{}, images []Image) Reso
 	// sort images lexicographically (by URL) to avoid unnecessary annotation changes
 	sort.Slice(images, func(i, j int) bool {
 		return images[i].URL < images[j].URL
+	})
+	return ResourceWithImages{contents, images}
+}
