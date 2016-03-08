@@ -28,3 +28,4 @@ func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
 		return err
 	}
 
+	outputFile, err := os.Create(outputPath)
