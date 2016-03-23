@@ -42,3 +42,7 @@ spec:
     ports:
     - containerPort: 5000
     volumeMounts:
+    - name: config
+      mountPath: /etc/docker/registry
+      readOnly: true
+    - name: tls-cert

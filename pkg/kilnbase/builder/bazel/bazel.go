@@ -35,3 +35,6 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 
 	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using bazel): %s\n", directory)))
 	defer prefixedLogger.Write([]byte("finished build (using bazel)\n"))
+
+	var imageID string
+	{

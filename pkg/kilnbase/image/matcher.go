@@ -19,3 +19,6 @@ func NewMatcher(url string) Matcher { return Matcher{url} }
 
 func (m Matcher) Matches(ref ctlconf.ImageRef) bool {
 	switch {
+	case len(ref.Image) > 0:
+		// Registry hostnames are case-insensitive (RFC 1035/1123); ref.Image
+		// comes from scanning the target manifest while m.url comes from the
