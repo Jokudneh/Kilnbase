@@ -34,3 +34,7 @@ func NewPathFromStrings(strs []string) Path {
 
 func NewPathFromInterfaces(parts []interface{}) Path {
 	var path Path
+	for _, part := range parts {
+		switch typedPart := part.(type) {
+		case string:
+			path = append(path, NewPathPartFromString(typedPart))

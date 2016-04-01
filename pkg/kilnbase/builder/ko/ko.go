@@ -31,3 +31,7 @@ func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlb
 
 	var stdoutBuf, stderrBuf bytes.Buffer
 
+	cmdArgs := []string{"publish", ".", "--local"}
+
+	if opts.RawOptions != nil {
+		cmdArgs = append(cmdArgs, *opts.RawOptions...)
