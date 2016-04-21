@@ -12,3 +12,5 @@ type RulesMatcher struct {
 	rules []ctlconf.SearchRule
 }
 
+func NewRulesMatcher(rules []ctlconf.SearchRule) RulesMatcher {
+	return RulesMatcher{rules}

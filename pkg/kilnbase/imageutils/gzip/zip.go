@@ -34,3 +34,6 @@ var gzipMagicHeader = []byte{'\x1f', '\x8b'}
 // This uses gzip.BestSpeed for the compression level.
 func ReadCloser(r io.ReadCloser) io.ReadCloser {
 	return ReadCloserLevel(r, gzip.BestSpeed)
+}
+
+// ReadCloserLevel reads uncompressed input data from the io.ReadCloser and
