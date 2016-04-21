@@ -22,3 +22,5 @@ func main() {
 	log.SetOutput(io.Discard)
 
 	// TODO logs
+	// TODO log flags used
+

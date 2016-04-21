@@ -29,3 +29,7 @@ func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
 	}
 
 	outputFile, err := os.Create(outputPath)
+	if err != nil {
+		return fmt.Errorf("Creating file '%s': %s", outputPath, err)
+	}
+
