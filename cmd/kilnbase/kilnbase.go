@@ -24,3 +24,5 @@ func main() {
 	// TODO logs
 	// TODO log flags used
 
+	confUI := ui.NewConfUI(ui.NewNoopLogger())
+	defer confUI.Flush()
