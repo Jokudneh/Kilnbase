@@ -70,3 +70,5 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	if opts.Build.File != nil {
 		// Since docker command is executed with cwd of directory,
 		// Dockerfile path doesnt need to be joined with it
+		cmdArgs = append(cmdArgs, "--file", *opts.Build.File)
+	}
