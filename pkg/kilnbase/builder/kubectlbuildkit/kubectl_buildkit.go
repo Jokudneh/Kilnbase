@@ -72,3 +72,6 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 		// Dockerfile path doesnt need to be joined with it
 		cmdArgs = append(cmdArgs, "--file", *opts.Build.File)
 	}
+	if opts.Build.RawOptions != nil {
+		cmdArgs = append(cmdArgs, *opts.Build.RawOptions...)
+	}

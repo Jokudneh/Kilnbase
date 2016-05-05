@@ -95,3 +95,5 @@ overrides:
 		env.WithRegistries("docker.io/*username*/kilnbase-test-pkg-unpkg"),
 		"--lock-output", relocatedLockPath,
 	}, RunOpts{StdinReader: strings.NewReader(input)})
+
+	lockOutBs, err := ioutil.ReadFile(relocatedLockPath)
