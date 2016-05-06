@@ -25,3 +25,7 @@ export KILNBASE_E2E_DOCKERHUB_HOSTNAME=ttl.sh
 ```
 
 It is possible to specify the absolute path to the kilnbase binary that you wish to test with. This could be useful for testing a version installed by a package manager, or a previously built custom binary in non-standard location. This value defaults to the local binary.
+
+```bash
+# OPTIONAL
+export KILNBASE_BINARY_PATH=/usr/local/bin/kilnbase

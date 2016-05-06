@@ -62,3 +62,7 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 
 	importedImages := NewProcessedImages()
 
+	o.logger.WriteStr("importing %d images...\n", len(imgOrIndexes))
+	defer func() { o.logger.WriteStr("imported %d images\n", len(importedImages.All())) }()
+
+	errCh := make(chan error, len(imgOrIndexes))
