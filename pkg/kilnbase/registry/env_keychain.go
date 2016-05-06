@@ -50,3 +50,6 @@ func (k *EnvKeychain) Resolve(target regauthn.Resource) (regauthn.Authenticator,
 			}), nil
 		}
 	}
+	return regauthn.Anonymous, nil
+}
+
