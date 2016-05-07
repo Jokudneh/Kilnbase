@@ -8,3 +8,4 @@ on:
     types: ['opened']
 
 jobs:
+  add-to-project:

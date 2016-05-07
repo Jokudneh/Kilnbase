@@ -34,3 +34,6 @@ func (k Kilnbase) Run(args []string) string {
 }
 
 func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
+	args = append(args, "--yes")
+
+	k.l.Debugf("Running '%s'...\n", k.cmdDesc(args, opts))

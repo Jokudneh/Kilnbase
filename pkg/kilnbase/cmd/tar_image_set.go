@@ -33,3 +33,4 @@ func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
 		return fmt.Errorf("Creating file '%s': %s", outputPath, err)
 	}
 
+	err = outputFile.Close()
