@@ -20,3 +20,5 @@ func NewTarReader(path string) TarReader {
 func (r TarReader) Read() ([]imagedesc.ImageOrIndex, error) {
 	file := tarFile{r.path}
 
+	manifestFile, err := file.Chunk("manifest.json").Open()
+	if err != nil {

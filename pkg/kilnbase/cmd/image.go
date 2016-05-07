@@ -27,3 +27,6 @@ func (imgs Images) ForImage(url string) (Image, bool) {
 	}
 	return Image{}, false
 }
+
+// TODO only works after deserialization
+func (i Image) Description() string {

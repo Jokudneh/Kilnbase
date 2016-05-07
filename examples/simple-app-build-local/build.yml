@@ -35,3 +35,7 @@ spec:
 apiVersion: kilnbase.k14s.io/v1alpha1
 kind: Config
 overrides:
+- image: simple-app
+  newImage: simple-app
+- image: simple-app2
+  newImage: simple-app
