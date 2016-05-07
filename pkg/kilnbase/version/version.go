@@ -33,3 +33,4 @@ func version() string {
 
 	// Anything else.
 	for _, dep := range info.Deps {
+		if dep.Path == moduleName {
