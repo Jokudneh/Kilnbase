@@ -13,3 +13,5 @@ jobs:
           kilnbase: ${{ github.event.release.tag_name }}
       - run: |
           kilnbase version
+          version=`kilnbase version`
+          tag="${{ github.event.release.tag_name }}"
