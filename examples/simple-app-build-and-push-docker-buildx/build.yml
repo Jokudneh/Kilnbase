@@ -11,3 +11,6 @@ spec:
       labels:
         app: kilnbase-simple-app-build-and-push-docker-buildx
     spec:
+      containers:
+      - name: my-app
+        image: simple-app

@@ -38,3 +38,5 @@ func NewDigestedImageFromParts(url, digest string) DigestedImage {
 	if err != nil {
 		return DigestedImage{nameWithDigest, fmt.Errorf("Expected digest reference, but found '%s', reason: %s", ref, err)}
 	}
+	return DigestedImage{nameWithDigest, nil}
+}

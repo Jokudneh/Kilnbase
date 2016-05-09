@@ -44,3 +44,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 
 	desc, err := i.registry.Generic(ref)
 	if err != nil {
+		return "", nil, err
+	}
+
+	switch desc.MediaType {
