@@ -45,3 +45,5 @@ type ImageIndexDescriptor struct {
 
 	MediaType string
 	Digest    string
+	Raw       string
+}

@@ -35,3 +35,5 @@ If building images using `buildkit`:
 - Kubernetes version (e.g. `kubectl version`):
 
 If building images using `pack`
+- Pack Version (e.g. `pack version`):
+
