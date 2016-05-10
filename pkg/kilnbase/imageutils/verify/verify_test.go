@@ -23,3 +23,4 @@ import (
 	"bytes"
 	"io"
 	"strings"
+	"testing"

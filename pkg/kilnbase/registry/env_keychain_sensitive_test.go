@@ -14,3 +14,5 @@ func TestInvalidRegistryHostnameDoesNotExposeCredentials(t *testing.T) {
 			raw := "https://user:password-canary@example.com:bad" +
 				"?token=query-canary"
 			t.Setenv("KILNBASE_REGISTRY_HOSTNAME"+suffix, raw)
+			_, err := NewEnvKeychain("KILNBASE_REGISTRY").collect()
+			if err == nil || strings.Contains(err.Error(), "canary") {
