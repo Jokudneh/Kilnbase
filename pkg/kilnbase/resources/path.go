@@ -38,3 +38,5 @@ func NewPathFromInterfaces(parts []interface{}) Path {
 		switch typedPart := part.(type) {
 		case string:
 			path = append(path, NewPathPartFromString(typedPart))
+		case int:
+			path = append(path, NewPathPartFromIndex(typedPart))

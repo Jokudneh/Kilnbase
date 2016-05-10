@@ -14,3 +14,4 @@ func TestGitProvenanceOmitsQueryCredentials(t *testing.T) {
 	inputs := []string{
 		"https://user:password-canary@example.com/repo" +
 			"?token=query-canary#fragment-canary",
+		"https://example.com/repo?token=query-canary",

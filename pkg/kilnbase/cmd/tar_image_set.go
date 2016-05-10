@@ -36,3 +36,4 @@ func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
 	err = outputFile.Close()
 	if err != nil {
 		return err
+	}
