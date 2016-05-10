@@ -14,3 +14,4 @@ type RulesMatcher struct {
 
 func NewRulesMatcher(rules []ctlconf.SearchRule) RulesMatcher {
 	return RulesMatcher{rules}
+}
