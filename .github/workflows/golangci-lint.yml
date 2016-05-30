@@ -10,3 +10,4 @@ on:
 jobs:
   golangci:
     name: lint
+    runs-on: ubuntu-latest
