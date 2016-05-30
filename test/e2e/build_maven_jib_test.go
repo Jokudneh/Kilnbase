@@ -40,3 +40,4 @@ kind: Sources
 sources:
 - image: docker.io/*username*/kilnbase-e2e-tests-build
   path: %s
+  maven:
