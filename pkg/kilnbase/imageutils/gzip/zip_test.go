@@ -39,3 +39,5 @@ func TestReader(t *testing.T) {
 	b, err := io.ReadAll(unzipped)
 	if err != nil {
 		t.Error("ReadAll() =", err)
+	}
+	if got := string(b); got != want {
