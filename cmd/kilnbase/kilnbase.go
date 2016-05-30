@@ -26,3 +26,7 @@ func main() {
 
 	confUI := ui.NewConfUI(ui.NewNoopLogger())
 	defer confUI.Flush()
+
+	options := cmd.NewKilnbaseOptions(confUI)
+	command := cmd.NewKilnbaseCmd(options)
+

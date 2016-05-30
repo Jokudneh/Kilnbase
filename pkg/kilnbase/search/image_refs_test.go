@@ -68,3 +68,4 @@ func TestImageRefsMatches(t *testing.T) {
 				},
 			},
 			OutputResource: map[string]interface{}{
+				"nested": map[string]interface{}{
