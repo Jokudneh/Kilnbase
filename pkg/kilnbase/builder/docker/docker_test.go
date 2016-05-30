@@ -48,3 +48,4 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		expected: "registry.com/lowercase/path:tag",
 	},
 	{
+		name:     "no tag specified",
