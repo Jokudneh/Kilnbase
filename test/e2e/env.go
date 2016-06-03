@@ -32,3 +32,5 @@ func BuildEnv(t *testing.T) Env {
 	}
 	env.Validate(t)
 	return env
+}
+
