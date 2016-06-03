@@ -9,3 +9,4 @@ import (
 
 type ErrImage struct {
 	err error
+}

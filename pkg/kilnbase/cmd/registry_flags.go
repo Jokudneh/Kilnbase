@@ -14,3 +14,4 @@ type RegistryFlags struct {
 	Insecure    bool
 }
 
+func (s *RegistryFlags) Set(cmd *cobra.Command) {
