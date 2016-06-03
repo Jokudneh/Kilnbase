@@ -23,3 +23,6 @@ func (m Matcher) Matches(ref ctlconf.ImageRef) bool {
 		// Registry hostnames are case-insensitive (RFC 1035/1123); ref.Image
 		// comes from scanning the target manifest while m.url comes from the
 		// user's separately-authored kilnbase.yaml config, so a hostname-case
+		// mismatch between the two sources must not prevent a match.
+		lhs := ctlbdk.LowerCaseRegistry(ref.Image)
+		rhs := ctlbdk.LowerCaseRegistry(m.url)
