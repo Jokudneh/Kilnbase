@@ -26,3 +26,6 @@ func (r DescribedReader) Read() []ImageOrIndex {
 			result = append(result, ImageOrIndex{Image: &img})
 
 		case td.ImageIndex != nil:
+			idx := r.buildIndex(*td.ImageIndex)
+			result = append(result, ImageOrIndex{Index: &idx})
+
