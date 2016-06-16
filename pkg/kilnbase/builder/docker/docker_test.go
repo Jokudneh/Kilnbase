@@ -49,3 +49,6 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 	},
 	{
 		name:     "no tag specified",
+		input:    "Registry.Example.COM/MyApp/Image",
+		expected: "registry.example.com/MyApp/Image",
+	},

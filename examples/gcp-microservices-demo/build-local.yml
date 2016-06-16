@@ -10,3 +10,7 @@ sources:
 - image: shippingservice
   path: src/shippingservice
 - image: checkoutservice
+  path: src/checkoutservice
+- image: paymentservice
+  path: src/paymentservice
+- image: currencyservice
