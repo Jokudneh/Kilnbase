@@ -19,3 +19,4 @@ type Logger struct {
 
 func NewLogger(writer io.Writer) Logger {
 	return Logger{writer: writer, writerLock: &sync.Mutex{}}
+}

@@ -25,3 +25,6 @@ func (l ForeignDescribedLayer) DiffID() (regv1.Hash, error) { return regv1.NewHa
 
 func (l ForeignDescribedLayer) Compressed() (io.ReadCloser, error) {
 	panic("ForeignDescribedLayer.Compressed: not implemented")
+}
+
+func (l ForeignDescribedLayer) Uncompressed() (io.ReadCloser, error) {
