@@ -49,3 +49,5 @@ func redactErrorMessageTestCases() []struct {
 			name: "url at end with no trailing delimiter",
 			input:    `Redirect: http://user:pwd@example.com/resource`,
 			expected: `Redirect: http://_redacted_@example.com/resource`,
+		},
+		{

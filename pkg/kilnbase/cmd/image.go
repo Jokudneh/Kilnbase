@@ -30,3 +30,6 @@ func (imgs Images) ForImage(url string) (Image, bool) {
 
 // TODO only works after deserialization
 func (i Image) Description() string {
+	yamlBytes, err := yaml.Marshal(i.originsRaw)
+	if err != nil {
+		return "[]" // TODO deal better?
