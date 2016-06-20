@@ -19,3 +19,6 @@ func NewYAMLFile(fileSrc FileSource) YAMLFile {
 	return YAMLFile{fileSrc}
 }
 
+func (f YAMLFile) Docs() ([][]byte, error) {
+	var docs [][]byte
+
