@@ -20,3 +20,5 @@ type OriginGit struct {
 	RemoteURL string   `json:"remoteURL"`
 	SHA       string   `json:"sha"`
 	Dirty     bool     `json:"dirty"`
+	Tags      []string `json:"tags,omitempty"`
+}

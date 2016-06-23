@@ -50,3 +50,4 @@ func (r GitRepo) HeadSHA() (string, error) {
 	return strings.TrimSpace(stdout), nil
 }
 
+func (r GitRepo) HeadTags() ([]string, error) {
