@@ -33,3 +33,7 @@ func NewPackageOptions(ui ui.UI) *PackageOptions {
 	return &PackageOptions{ui: ui}
 }
 
+func NewPackageCmd(o *PackageOptions) *cobra.Command {
+	cmd := &cobra.Command{
+		Use:     "package",
+		Aliases: []string{"pkg"},

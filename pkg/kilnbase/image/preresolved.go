@@ -20,3 +20,4 @@ func NewPreresolvedImage(url string, origins []ctlconf.Origin) PreresolvedImage 
 func (i PreresolvedImage) URL() (string, []ctlconf.Origin, error) {
 	for _, origin := range i.origins {
 		if origin.Preresolved != nil &&
+			ctlbdk.LowerCaseRegistry(origin.Preresolved.URL) ==
