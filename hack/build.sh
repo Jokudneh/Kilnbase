@@ -12,3 +12,4 @@ LDFLAGS="-X github.com/Jokudneh/Kilnbase/pkg/kilnbase/version.Version=$VERSION"
 go fmt ./cmd/... ./pkg/... ./test/...
 go mod vendor
 go mod tidy
+
