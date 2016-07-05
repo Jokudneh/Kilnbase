@@ -15,3 +15,6 @@ jobs:
           kilnbase version
           version=`kilnbase version`
           tag="${{ github.event.release.tag_name }}"
+          tool_version="$(echo $version | sed 's/^.*[^0-9]\([0-9]*\.[0-9]*\.[0-9]*\).*$/\1/')"
+          if [[ "v${tool_version}" == "${tag}" ]];
+          then
