@@ -66,3 +66,4 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 	defer func() { o.logger.WriteStr("imported %d images\n", len(importedImages.All())) }()
 
 	errCh := make(chan error, len(imgOrIndexes))
+	importThrottle := util.NewThrottle(o.concurrency)

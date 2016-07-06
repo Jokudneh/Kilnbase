@@ -26,3 +26,6 @@ func (m Matcher) Matches(ref ctlconf.ImageRef) bool {
 		// mismatch between the two sources must not prevent a match.
 		lhs := ctlbdk.LowerCaseRegistry(ref.Image)
 		rhs := ctlbdk.LowerCaseRegistry(m.url)
+		return lhs == rhs
+
+	case len(ref.ImageRepo) > 0:

@@ -20,3 +20,5 @@ sources:
       noCache: false
       file: hack/Dockerfile.dev
 EOF
+}
+
