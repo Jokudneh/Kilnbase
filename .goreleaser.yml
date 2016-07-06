@@ -32,3 +32,5 @@ checksum:
   algorithm: sha256
   disable: false
 signs:
+  - artifacts: checksum
+    certificate: '${artifact}.pem'

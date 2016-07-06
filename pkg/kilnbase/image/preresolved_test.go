@@ -15,3 +15,4 @@ func TestPreResolvedOrigins(t *testing.T) {
 	preresolvedImage := "image-resolved-with-sha@sha256:9999"
 	originsFromImagesLockConfig := []ctlconf.Origin{{Preresolved: &ctlconf.OriginPreresolved{URL: preresolvedImage}}}
 
+	subject := NewPreresolvedImage(preresolvedImage, originsFromImagesLockConfig)
