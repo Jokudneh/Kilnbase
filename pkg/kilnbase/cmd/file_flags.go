@@ -32,3 +32,4 @@ func (s *FileFlags) AllResources() ([]ctlres.Resource, error) {
 
 		for _, fileRes := range fileRs {
 			resources, err := fileRes.Resources()
+			if err != nil {
