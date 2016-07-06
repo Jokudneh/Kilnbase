@@ -34,3 +34,7 @@ var _ io.ReadCloser = (*ReadCloser)(nil)
 
 // Close implements io.ReadCloser
 func (rac *ReadCloser) Close() error {
+	return rac.CloseFunc()
+}
+
+// WriteCloser implements io.WriteCloser by reading from a particular io.Writer

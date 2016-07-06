@@ -33,3 +33,4 @@ func (i Image) Description() string {
 	yamlBytes, err := yaml.Marshal(i.originsRaw)
 	if err != nil {
 		return "[]" // TODO deal better?
+	}
