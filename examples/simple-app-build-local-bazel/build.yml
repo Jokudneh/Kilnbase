@@ -19,3 +19,5 @@ apiVersion: kilnbase.k14s.io/v1alpha1
 kind: Config
 sources:
 - image: simple-app
+  path: test/e2e/assets/simple-app
+  bazel:

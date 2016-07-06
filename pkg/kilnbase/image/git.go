@@ -51,3 +51,7 @@ func (r GitRepo) HeadSHA() (string, error) {
 }
 
 func (r GitRepo) HeadTags() ([]string, error) {
+	stdout, stderr, err := r.runCmd([]string{"describe", "--tags", "--exact-match", "HEAD"})
+	if err != nil {
+		if strings.Contains(stderr, "no tag exactly matches") ||
+			strings.Contains(stderr, "No names found") {
