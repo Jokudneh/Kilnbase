@@ -17,3 +17,5 @@ func TestInvalidRegistryHostnameDoesNotExposeCredentials(t *testing.T) {
 			_, err := NewEnvKeychain("KILNBASE_REGISTRY").collect()
 			if err == nil || strings.Contains(err.Error(), "canary") {
 				t.Fatal("registry validation exposed input")
+			}
+		})

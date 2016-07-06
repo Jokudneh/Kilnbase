@@ -22,3 +22,6 @@ type OriginGit struct {
 	Dirty     bool     `json:"dirty"`
 	Tags      []string `json:"tags,omitempty"`
 }
+
+type OriginLocal struct {
+	Path string `json:"path"`

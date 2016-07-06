@@ -17,3 +17,4 @@ type SourceDockerBuildOpts struct {
 	RawOptions *[]string `json:"rawOptions"`
 }
 
+type SourceDockerBuildxOpts struct {

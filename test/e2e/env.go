@@ -34,3 +34,7 @@ func BuildEnv(t *testing.T) Env {
 	return env
 }
 
+func (e Env) Validate(t *testing.T) {
+	errStrs := []string{}
+
+	if len(e.DockerHubUsername) == 0 {
