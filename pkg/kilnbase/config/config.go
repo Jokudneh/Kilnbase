@@ -110,3 +110,4 @@ type SearchRuleValueMatcher struct {
 	// TODO Regexp    string `json:"regexp,omitempty"`
 }
 
+type SearchRuleUpdateStrategy struct {

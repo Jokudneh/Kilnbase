@@ -35,3 +35,7 @@ func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlb
 
 	if opts.RawOptions != nil {
 		cmdArgs = append(cmdArgs, *opts.RawOptions...)
+	}
+
+	cmd := exec.Command("ko", cmdArgs...)
+	cmd.Dir = directory
