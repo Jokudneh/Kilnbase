@@ -67,3 +67,7 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 
 	errCh := make(chan error, len(imgOrIndexes))
 	importThrottle := util.NewThrottle(o.concurrency)
+
+	for _, item := range imgOrIndexes {
+		item := item // copy
+
