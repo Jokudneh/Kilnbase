@@ -28,3 +28,6 @@ import (
 	"github.com/Jokudneh/Kilnbase/pkg/kilnbase/imageutils/and"
 	v1 "github.com/google/go-containerregistry/pkg/v1"
 )
+
+type verifyReader struct {
+	inner    io.Reader
