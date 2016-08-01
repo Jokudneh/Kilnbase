@@ -18,3 +18,4 @@ type SourceDockerBuildOpts struct {
 }
 
 type SourceDockerBuildxOpts struct {
+	Target     *string

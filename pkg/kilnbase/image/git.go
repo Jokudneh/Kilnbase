@@ -55,3 +55,5 @@ func (r GitRepo) HeadTags() ([]string, error) {
 	if err != nil {
 		if strings.Contains(stderr, "no tag exactly matches") ||
 			strings.Contains(stderr, "No names found") {
+			return nil, nil
+		}

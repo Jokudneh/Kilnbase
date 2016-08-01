@@ -26,3 +26,7 @@ func NewResourceWithImages(contents map[string]interface{}, images []Image) Reso
 	})
 	return ResourceWithImages{contents, images}
 }
+
+func (r ResourceWithImages) Bytes() ([]byte, error) {
+	if len(r.images) > 0 {
+		resUn := unstructured.Unstructured{r.contents}
