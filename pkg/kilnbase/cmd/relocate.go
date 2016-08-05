@@ -54,3 +54,4 @@ Relocate images between two registries
 	return cmd
 }
 
+func (o *RelocateOptions) Run() error {

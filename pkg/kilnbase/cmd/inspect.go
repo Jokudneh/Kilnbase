@@ -29,3 +29,5 @@ func NewInspectCmd(o *InspectOptions) *cobra.Command {
 		Aliases: []string{"i", "is", "insp"},
 		Short:   "Inspect images",
 		RunE:    func(_ *cobra.Command, _ []string) error { return o.Run() },
+	}
+	o.FileFlags.Set(cmd)
