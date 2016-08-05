@@ -29,3 +29,7 @@ func (r DescribedReader) Read() []ImageOrIndex {
 			idx := r.buildIndex(*td.ImageIndex)
 			result = append(result, ImageOrIndex{Index: &idx})
 
+		default:
+			panic("Unknown item")
+		}
+	}
