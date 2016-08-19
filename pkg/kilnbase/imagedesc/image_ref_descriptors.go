@@ -83,3 +83,5 @@ func NewImageRefDescriptors(refs []regname.Reference, registry Registry) (*Image
 					return err
 				}
 				td = ImageOrImageIndexDescriptor{Image: &imgTd}
+			}
+
