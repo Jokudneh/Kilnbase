@@ -41,3 +41,7 @@ func TestReader(t *testing.T) {
 		t.Error("ReadAll() =", err)
 	}
 	if got := string(b); got != want {
+		t.Errorf("ReadAll(); got %q, want %q", got, want)
+	}
+	if err := unzipped.Close(); err != nil {
+		t.Error("Close() =", err)

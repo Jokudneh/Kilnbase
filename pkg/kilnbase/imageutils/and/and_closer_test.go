@@ -33,3 +33,4 @@ func TestRead(t *testing.T) {
 	rac := &ReadCloser{
 		Reader: r,
 		CloseFunc: func() error {
+			called = true
