@@ -16,3 +16,5 @@ func TestPreResolvedOrigins(t *testing.T) {
 	originsFromImagesLockConfig := []ctlconf.Origin{{Preresolved: &ctlconf.OriginPreresolved{URL: preresolvedImage}}}
 
 	subject := NewPreresolvedImage(preresolvedImage, originsFromImagesLockConfig)
+
+	url, origins, err := subject.URL()
