@@ -45,3 +45,6 @@ func TestReader(t *testing.T) {
 	}
 	if err := unzipped.Close(); err != nil {
 		t.Error("Close() =", err)
+	}
+}
+

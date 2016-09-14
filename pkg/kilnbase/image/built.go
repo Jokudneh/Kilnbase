@@ -52,3 +52,7 @@ func NewBuiltImage(url string, buildSource ctlconf.Source,
 		pack:            builders.Pack,
 		kubectlBuildkit: builders.KubectlBuildkit,
 		ko:              builders.Ko,
+		bazel:           builders.Bazel,
+		jib:             builders.Jib,
+	}
+}
