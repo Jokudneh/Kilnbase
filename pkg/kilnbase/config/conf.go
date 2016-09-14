@@ -50,3 +50,7 @@ func matchesConfigKind(res ctlres.Resource) bool {
 	for _, configKind := range configKinds {
 		if res.APIVersion() == configKind.APIVersion && res.Kind() == configKind.Kind {
 			return true
+		}
+	}
+	return false
+}

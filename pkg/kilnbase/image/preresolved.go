@@ -21,3 +21,5 @@ func (i PreresolvedImage) URL() (string, []ctlconf.Origin, error) {
 	for _, origin := range i.origins {
 		if origin.Preresolved != nil &&
 			ctlbdk.LowerCaseRegistry(origin.Preresolved.URL) ==
+				ctlbdk.LowerCaseRegistry(i.url) {
+			imageOrigins := copyAndAppendOrigins(i.origins)
