@@ -22,3 +22,4 @@ func NewYAMLFile(fileSrc FileSource) YAMLFile {
 func (f YAMLFile) Docs() ([][]byte, error) {
 	var docs [][]byte
 
+	fileBytes, err := f.fileSrc.Bytes()
