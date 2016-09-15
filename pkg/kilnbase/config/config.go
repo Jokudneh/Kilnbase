@@ -113,3 +113,4 @@ type SearchRuleValueMatcher struct {
 type SearchRuleUpdateStrategy struct {
 	None         *SearchRuleUpdateStrategyNone         `json:"none,omitempty"`
 	EntireString *SearchRuleUpdateStrategyEntireString `json:"entireValue,omitempty"`
+	JSON         *SearchRuleUpdateStrategyJSON         `json:"json,omitempty"`

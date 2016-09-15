@@ -51,3 +51,4 @@ const schemeStartIdx = 0
 
 type HTTPFileSource struct {
 	url string
+}
