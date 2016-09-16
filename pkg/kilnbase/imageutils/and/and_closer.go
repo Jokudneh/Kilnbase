@@ -39,3 +39,4 @@ func (rac *ReadCloser) Close() error {
 
 // WriteCloser implements io.WriteCloser by reading from a particular io.Writer
 // and then calling the provided "Close()" method.
+type WriteCloser struct {

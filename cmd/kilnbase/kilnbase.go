@@ -30,3 +30,5 @@ func main() {
 	options := cmd.NewKilnbaseOptions(confUI)
 	command := cmd.NewKilnbaseCmd(options)
 
+	err := command.Execute()
+	if err != nil {
