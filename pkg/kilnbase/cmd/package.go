@@ -37,3 +37,7 @@ func NewPackageCmd(o *PackageOptions) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "package",
 		Aliases: []string{"pkg"},
+		Short:   "Package configuration and images into tarball",
+		Hidden:  true,
+		Long: `
+Command 'package' is deprecated; use 'imgpkg push' instead.

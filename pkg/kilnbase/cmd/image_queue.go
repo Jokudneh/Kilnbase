@@ -27,3 +27,6 @@ func NewImageQueue(imgFactory ctlimg.Factory) *ImageQueue {
 func (b *ImageQueue) Run(unprocessedImageURLs *UnprocessedImageURLs, numWorkers int) (*ProcessedImages, error) {
 	b.outputImages = NewProcessedImages()
 	b.outputErrs = nil
+
+	queueCh := make(chan UnprocessedImageURL, numWorkers)
+	workWg := sync.WaitGroup{}
