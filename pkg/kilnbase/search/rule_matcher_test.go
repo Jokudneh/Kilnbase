@@ -33,3 +33,5 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 			ValueMatcher: &ctlconf.SearchRuleValueMatcher{Image: image},
 		}
 	}
+	repoMatcher := func(repo string) ctlconf.SearchRule {
+		return ctlconf.SearchRule{

@@ -34,3 +34,5 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 
 	// Affects children as well
 	cmd.SilenceErrors = true
+	cmd.SilenceUsage = true
+
