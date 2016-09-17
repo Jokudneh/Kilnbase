@@ -38,3 +38,7 @@ func (e Env) Validate(t *testing.T) {
 	errStrs := []string{}
 
 	if len(e.DockerHubUsername) == 0 {
+		errStrs = append(errStrs, "Expected DockerHubUsername to be non-empty")
+	}
+
+	if len(errStrs) > 0 {
