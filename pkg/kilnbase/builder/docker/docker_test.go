@@ -52,3 +52,7 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		input:    "Registry.Example.COM/MyApp/Image",
 		expected: "registry.example.com/MyApp/Image",
 	},
+	{
+		name:     "digest reference",
+		input:    "Harbor.Example.COM/MyApp/Image@sha256:abc123def456",
+		expected: "harbor.example.com/MyApp/Image@sha256:abc123def456",

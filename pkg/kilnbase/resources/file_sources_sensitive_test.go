@@ -33,3 +33,6 @@ func TestHTTPDescriptionOmitsFragmentCredentials(t *testing.T) {
 	source := NewHTTPFileSource(
 		"https://example.com/input#fragment-canary")
 	require.Equal(t, "HTTP URL 'https://example.com/input'",
+		source.Description())
+}
+
