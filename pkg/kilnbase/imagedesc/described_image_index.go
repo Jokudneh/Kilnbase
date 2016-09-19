@@ -33,3 +33,4 @@ func (i DescribedImageIndex) MediaType() (types.MediaType, error) {
 func (i DescribedImageIndex) Digest() (regv1.Hash, error)  { return regv1.NewHash(i.desc.Digest) }
 func (i DescribedImageIndex) RawManifest() ([]byte, error) { return []byte(i.desc.Raw), nil }
 
+func (i DescribedImageIndex) Size() (int64, error) { return int64(len(i.desc.Raw)), nil }
