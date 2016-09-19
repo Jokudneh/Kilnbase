@@ -7,3 +7,4 @@ os.RemoveAll
 fmt.Fprintf
 (net/http.ResponseWriter).Write
 // Next lines for the inclusion of pkg/kilnbase/imageutils
+(*io.PipeWriter).Close

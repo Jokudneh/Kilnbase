@@ -38,3 +38,4 @@ func (v ImageRefsVisitorFunc) Apply(res interface{}, searchRules []ctlconf.Searc
 		newVal, updated := v(val)
 		if !updated {
 			return "", false
+		}
