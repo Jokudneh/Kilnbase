@@ -42,3 +42,7 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         only: ytt, kapp
+    - name: Check Default Docker Version
+      run: |
+        echo "=== Docker version ==="
+        docker version || echo "docker-version not found"

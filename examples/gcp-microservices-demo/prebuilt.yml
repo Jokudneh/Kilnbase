@@ -9,3 +9,5 @@ overrides:
   newImage: gcr.io/google-samples/microservices-demo/recommendationservice:v0.1.0
 - image: frontend
   newImage: gcr.io/google-samples/microservices-demo/frontend:v0.1.0
+- image: paymentservice
+  newImage: gcr.io/google-samples/microservices-demo/paymentservice:v0.1.0
