@@ -5,3 +5,4 @@ package config
 
 type SourceKoOpts struct {
 	Build SourceKoBuildOpts
+}

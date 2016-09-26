@@ -78,3 +78,6 @@ var (
 	dockerBuildxPushDigest = regexp.MustCompile("pushing manifest for .*@sha256:([0-9a-z]+) ")
 	dockerBuildxPushErr    = "does not currently support exporting manifest lists"
 )
+
+type Buildx struct {
+	docker Docker
