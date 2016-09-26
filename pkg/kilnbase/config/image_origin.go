@@ -25,3 +25,5 @@ type OriginGit struct {
 
 type OriginLocal struct {
 	Path string `json:"path"`
+}
+

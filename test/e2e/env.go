@@ -42,3 +42,4 @@ func (e Env) Validate(t *testing.T) {
 	}
 
 	if len(errStrs) > 0 {
+		t.Fatalf("%s", strings.Join(errStrs, "\n"))
