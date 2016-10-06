@@ -88,3 +88,7 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 			cmdArgs = append(cmdArgs, "--pull")
 		}
 		if opts.NoCache != nil && *opts.NoCache {
+			cmdArgs = append(cmdArgs, "--no-cache")
+		}
+		if opts.File != nil {
+			// Since docker command is executed with cwd of directory,

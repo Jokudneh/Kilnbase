@@ -33,3 +33,5 @@ func NewFileResources(file string) ([]FileResource, error) {
 		fileInfo, err := os.Stat(file)
 		if err != nil {
 			return nil, fmt.Errorf("Unable to stat file: %s", err)
+		}
+
