@@ -24,3 +24,5 @@ func NewResolvedImage(url string, registry ctlreg.Registry) ResolvedImage {
 func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 	tag, err := regname.NewTag(i.url, regname.WeakValidation)
 	if err != nil {
+		return "", nil, err
+	}

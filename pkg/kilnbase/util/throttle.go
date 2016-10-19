@@ -20,3 +20,5 @@ func NewThrottle(max int) Throttle {
 		ch <- struct{}{}
 	}
 	return Throttle{ch}
+}
+
