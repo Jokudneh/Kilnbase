@@ -36,3 +36,6 @@ func TestHTTPDescriptionOmitsFragmentCredentials(t *testing.T) {
 		source.Description())
 }
 
+func TestHTTPBodyErrorOmitsCredentials(t *testing.T) {
+	const raw = "https://example.com/input?token=query-canary"
+	original := http.DefaultTransport

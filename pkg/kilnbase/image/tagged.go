@@ -18,3 +18,5 @@ type TaggedImage struct {
 
 func NewTaggedImage(image Image, imgDst ctlconf.ImageDestination, registry ctlreg.Registry) TaggedImage {
 	return TaggedImage{image, imgDst, registry}
+}
+
