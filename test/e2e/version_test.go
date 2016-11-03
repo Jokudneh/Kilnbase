@@ -14,3 +14,5 @@ func TestVersion(t *testing.T) {
 	env := BuildEnv(t)
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
+	out, _ := kilnbase.RunWithOpts([]string{"version"}, RunOpts{})
+

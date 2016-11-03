@@ -23,3 +23,5 @@ func (f YAMLFile) Docs() ([][]byte, error) {
 	var docs [][]byte
 
 	fileBytes, err := f.fileSrc.Bytes()
+	if err != nil {
+		return nil, err

@@ -30,3 +30,6 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	repo, err := regname.NewRepository(i.url, regname.WeakValidation)
 	if err != nil {
 		return "", nil, err
+	}
+
+	var tag string
