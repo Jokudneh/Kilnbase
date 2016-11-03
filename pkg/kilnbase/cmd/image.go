@@ -34,3 +34,4 @@ func (i Image) Description() string {
 	if err != nil {
 		return "[]" // TODO deal better?
 	}
+
