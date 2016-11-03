@@ -101,3 +101,5 @@ kind: ImagesLock
 `
 )
 
+func TestLockOutputSuccessful(t *testing.T) {
+	env := BuildEnv(t)

@@ -38,3 +38,5 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 
 	var imageID string
 	{
+		var stdoutBuf, stderrBuf bytes.Buffer
+

@@ -9,3 +9,4 @@
 package tools
 
 import (
+	// exists solely for its side effects, in this case the declaration of the dependency.
