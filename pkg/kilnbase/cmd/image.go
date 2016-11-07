@@ -35,3 +35,7 @@ func (i Image) Description() string {
 		return "[]" // TODO deal better?
 	}
 
+	return strings.TrimSpace(string(yamlBytes))
+}
+
+type imageStruct struct {
