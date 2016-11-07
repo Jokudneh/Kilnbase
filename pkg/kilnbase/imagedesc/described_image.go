@@ -41,3 +41,5 @@ func (i DescribedImage) Layers() ([]regv1.Layer, error) {
 		}
 		layers = append(layers, layer)
 	}
+	return layers, nil
+}
