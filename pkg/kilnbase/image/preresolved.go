@@ -23,3 +23,5 @@ func (i PreresolvedImage) URL() (string, []ctlconf.Origin, error) {
 			ctlbdk.LowerCaseRegistry(origin.Preresolved.URL) ==
 				ctlbdk.LowerCaseRegistry(i.url) {
 			imageOrigins := copyAndAppendOrigins(i.origins)
+			return i.url, imageOrigins, nil
+		}

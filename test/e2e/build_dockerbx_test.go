@@ -31,3 +31,6 @@ sources:
       file: dev/Dockerfile.dev
 - image: simple-app-three
   path: assets/simple-app
+  docker:
+    buildx:
+      target: build-env

@@ -38,3 +38,6 @@ func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
 		return err
 	}
 
+	outputFileOpener := func() (io.WriteCloser, error) {
+		return os.OpenFile(outputPath, os.O_RDWR, 0755)
+	}
