@@ -40,3 +40,6 @@ func NewPathFromInterfaces(parts []interface{}) Path {
 			path = append(path, NewPathPartFromString(typedPart))
 		case int:
 			path = append(path, NewPathPartFromIndex(typedPart))
+		default:
+			panic(fmt.Sprintf("Unexpected part type %T", typedPart))
+		}
