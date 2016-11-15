@@ -21,3 +21,5 @@ func TestMavenBannerDoesNotExposeArguments(t *testing.T) {
 	err := os.WriteFile(filepath.Join(dir, "mvn"), []byte(script),
 		executableMode)
 	require.NoError(t, err)
+	t.Setenv("PATH", dir+string(os.PathListSeparator)+os.Getenv("PATH"))
+	argsFile := filepath.Join(dir, "args")
