@@ -30,3 +30,5 @@ func NewResourceWithImages(contents map[string]interface{}, images []Image) Reso
 func (r ResourceWithImages) Bytes() ([]byte, error) {
 	if len(r.images) > 0 {
 		resUn := unstructured.Unstructured{r.contents}
+
+		imagesYAML, err := yaml.Marshal(newImageStructs(r.images))

@@ -30,3 +30,7 @@ func (b *ImageQueue) Run(unprocessedImageURLs *UnprocessedImageURLs, numWorkers 
 
 	queueCh := make(chan UnprocessedImageURL, numWorkers)
 	workWg := sync.WaitGroup{}
+
+	for i := 0; i < numWorkers; i++ {
+		go b.worker(&workWg, queueCh)
+	}
