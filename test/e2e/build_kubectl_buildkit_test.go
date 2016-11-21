@@ -43,3 +43,5 @@ sources:
 		StdinReader: strings.NewReader(input),
 	})
 
+	out = regexp.MustCompile("rand-\\d+-\\d+").ReplaceAllString(out, "rand-REPLACED")
+

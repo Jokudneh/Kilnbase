@@ -22,3 +22,6 @@ sources:
 EOF
 }
 
+image_name=$(build_test_deps)
+
+tempConfigFile=$(mktemp)
