@@ -36,3 +36,4 @@ func (i DescribedImageIndex) RawManifest() ([]byte, error) { return []byte(i.des
 func (i DescribedImageIndex) Size() (int64, error) { return int64(len(i.desc.Raw)), nil }
 
 func (i DescribedImageIndex) IndexManifest() (*regv1.IndexManifest, error) {
+	var manifest *regv1.IndexManifest

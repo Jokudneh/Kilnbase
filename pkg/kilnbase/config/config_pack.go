@@ -7,3 +7,4 @@ type SourcePackOpts struct {
 	Build SourcePackBuildOpts
 }
 
+type SourcePackBuildOpts struct {

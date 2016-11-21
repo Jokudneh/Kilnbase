@@ -39,3 +39,6 @@ func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlb
 
 	cmd := exec.Command("ko", cmdArgs...)
 	cmd.Dir = directory
+	cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+	cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
+
