@@ -35,3 +35,6 @@ func NewUnpackageOptions(ui ui.UI) *UnpackageOptions {
 }
 
 func NewUnpackageCmd(o *UnpackageOptions) *cobra.Command {
+	cmd := &cobra.Command{
+		Use:     "unpackage",
+		Aliases: []string{"unpkg"},

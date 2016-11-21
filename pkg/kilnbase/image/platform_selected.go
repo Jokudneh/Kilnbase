@@ -48,3 +48,6 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	}
 
 	switch desc.MediaType {
+	case regtypes.OCIImageIndex, regtypes.DockerManifestList:
+		imgIndex, err := i.registry.Index(ref)
+		if err != nil {
