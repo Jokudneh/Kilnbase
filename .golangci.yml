@@ -15,3 +15,5 @@ linters:
       enable-all-rules: true
       rules:
       - name: dot-imports
+issues:
+  max-issues-per-linter: 0
