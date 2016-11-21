@@ -16,3 +16,5 @@ func TestVersion(t *testing.T) {
 
 	out, _ := kilnbase.RunWithOpts([]string{"version"}, RunOpts{})
 
+	if !strings.Contains(out, "kilnbase version") {
+		t.Fatalf("Expected to find client version")

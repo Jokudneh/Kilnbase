@@ -22,3 +22,4 @@ func NewThrottle(max int) Throttle {
 	return Throttle{ch}
 }
 
+func (t Throttle) Take() { <-t.ch }
