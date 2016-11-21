@@ -41,3 +41,4 @@ func NewPackageCmd(o *PackageOptions) *cobra.Command {
 		Hidden:  true,
 		Long: `
 Command 'package' is deprecated; use 'imgpkg push' instead.
+Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#push
