@@ -54,3 +54,5 @@ func matchesConfigKind(res ctlres.Resource) bool {
 	}
 	return false
 }
+
+func (c Conf) Sources() []Source {
