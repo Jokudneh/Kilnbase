@@ -41,3 +41,5 @@ func NewPack(docker ctlbdk.Docker, logger ctllog.Logger) Pack {
 
 func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef, error) {
 	prefixedLogger := d.logger.NewPrefixedWriter(image + " | ")
+
+	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using pack): %s\n", directory)))

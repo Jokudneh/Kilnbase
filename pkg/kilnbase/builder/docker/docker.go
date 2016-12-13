@@ -92,3 +92,6 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 		}
 		if opts.File != nil {
 			// Since docker command is executed with cwd of directory,
+			// Dockerfile path doesnt need to be joined with it
+			cmdArgs = append(cmdArgs, "--file", *opts.File)
+		}
