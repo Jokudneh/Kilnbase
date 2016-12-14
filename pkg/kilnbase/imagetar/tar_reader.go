@@ -22,3 +22,5 @@ func (r TarReader) Read() ([]imagedesc.ImageOrIndex, error) {
 
 	manifestFile, err := file.Chunk("manifest.json").Open()
 	if err != nil {
+		return nil, err
+	}

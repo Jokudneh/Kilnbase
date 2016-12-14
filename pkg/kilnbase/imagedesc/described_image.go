@@ -43,3 +43,7 @@ func (i DescribedImage) Layers() ([]regv1.Layer, error) {
 	}
 	return layers, nil
 }
+
+// MediaType of this image's manifest.
+func (i DescribedImage) MediaType() (types.MediaType, error) {
+	return types.MediaType(i.desc.Manifest.MediaType), nil
