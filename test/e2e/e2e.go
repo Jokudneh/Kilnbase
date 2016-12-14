@@ -7,3 +7,4 @@ import (
 	"fmt"
 )
 
+type Logger struct{}

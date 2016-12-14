@@ -43,3 +43,5 @@ func NewPathFromInterfaces(parts []interface{}) Path {
 		default:
 			panic(fmt.Sprintf("Unexpected part type %T", typedPart))
 		}
+	}
+	return path

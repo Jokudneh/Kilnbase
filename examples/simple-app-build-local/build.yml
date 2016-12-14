@@ -42,3 +42,5 @@ overrides:
 sources:
 - image: simple-app
   path: test/e2e/assets/simple-app
+  docker:
+    pull: true
