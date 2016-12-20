@@ -84,3 +84,4 @@ func TestGitRepoValidNoCommit(t *testing.T) {
 	if err != nil || sha != ctlimg.GitRepoHeadSHANoCommits {
 		t.Fatalf("Expected head sha to succeed: %s", err)
 	}
+	_, err = gitRepo.HeadTags()

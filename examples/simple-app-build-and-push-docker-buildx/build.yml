@@ -14,3 +14,4 @@ spec:
       containers:
       - name: my-app
         image: simple-app
+---

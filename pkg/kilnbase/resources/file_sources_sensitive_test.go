@@ -39,3 +39,7 @@ func TestHTTPDescriptionOmitsFragmentCredentials(t *testing.T) {
 func TestHTTPBodyErrorOmitsCredentials(t *testing.T) {
 	const raw = "https://example.com/input?token=query-canary"
 	original := http.DefaultTransport
+	http.DefaultTransport = sensitiveTestTransport(func(req *http.Request) (
+		*http.Response, error,
+	) {
+		require.Equal(t, raw, req.URL.String())
