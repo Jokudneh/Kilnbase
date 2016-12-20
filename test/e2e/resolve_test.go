@@ -175,3 +175,4 @@ func TestResolveUnknownImage(t *testing.T) {
 
 	input := `
 kind: Object
+spec:
