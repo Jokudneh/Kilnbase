@@ -33,3 +33,5 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	}
 
 	var tag string
+
+	switch {
