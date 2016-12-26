@@ -57,3 +57,7 @@ func (r GitRepo) HeadTags() ([]string, error) {
 			strings.Contains(stderr, "No names found") {
 			return nil, nil
 		}
+		return nil, r.error("Checking HEAD tags: %s (stderr '%s')", err, stderr)
+	}
+
+	return strings.Split(strings.TrimSpace(stdout), "\n"), nil

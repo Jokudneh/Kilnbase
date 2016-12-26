@@ -27,3 +27,5 @@ type OriginLocal struct {
 	Path string `json:"path"`
 }
 
+type OriginResolved struct {
+	URL string `json:"url"`
