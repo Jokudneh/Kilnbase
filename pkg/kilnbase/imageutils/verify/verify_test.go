@@ -24,3 +24,6 @@ import (
 	"io"
 	"strings"
 	"testing"
+
+	v1 "github.com/google/go-containerregistry/pkg/v1"
+)
