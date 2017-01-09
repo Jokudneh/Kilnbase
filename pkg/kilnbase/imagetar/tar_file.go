@@ -32,3 +32,5 @@ type tarFileChunkReadCloser struct {
 	io.Reader
 	io.Closer
 }
+
+func (f tarFile) Chunk(path string) tarFileChunk {

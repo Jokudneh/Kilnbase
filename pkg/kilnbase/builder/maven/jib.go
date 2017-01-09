@@ -67,3 +67,5 @@ func (b *Jib) Run(image, directory string,
 	}
 
 	inspectData, err := b.docker.Inspect(tmpRef.AsString())
+	if err != nil {
+		_, _ = prefixedLogger.Write([]byte(fmt.Sprintf(
