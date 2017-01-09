@@ -11,3 +11,4 @@ jobs:
   add-to-project:
     name: Add issue to project
     runs-on: ubuntu-latest
+    steps:

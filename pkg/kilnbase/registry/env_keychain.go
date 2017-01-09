@@ -55,3 +55,4 @@ func (k *EnvKeychain) Resolve(target regauthn.Resource) (regauthn.Authenticator,
 
 type envKeychainInfo struct {
 	Hostname      string
+	Username      string
