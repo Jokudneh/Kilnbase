@@ -71,3 +71,5 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 	for _, item := range imgOrIndexes {
 		item := item // copy
 
+		go func() {
+			importThrottle.Take()
