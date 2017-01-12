@@ -105,3 +105,7 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 	opts := ctlimg.FactoryOpts{
 		Conf:           conf,
 		AllowedToBuild: o.AllowedToBuild,
+	}
+	if len(o.Platform) > 0 {
+		opts.GlobalPlatformSelection, err = NewPlatformSelection(o.Platform)
+		if err != nil {

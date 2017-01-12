@@ -16,3 +16,7 @@ sources:
 - image: currencyservice
   path: src/currencyservice
 - image: cartservice
+  path: src/cartservice
+- image: frontend
+  path: src/frontend
+- image: loadgenerator
