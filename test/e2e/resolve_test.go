@@ -176,3 +176,7 @@ func TestResolveUnknownImage(t *testing.T) {
 	input := `
 kind: Object
 spec:
+- image: unknown
+`
+
+	_, err := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
