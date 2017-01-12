@@ -10,3 +10,6 @@ export DOCKER_API_VERSION=1.44
 
 # Install secretgen to generate registry certs
 kapp deploy -a sg -f https://github.com/jokudneh/kilnbase-secretgen-controller/releases/download/v0.8.0/release.yml -y
+# Install local docker2 registry
+kapp deploy -a reg -f <(ytt -f test/e2e/assets/minikube-local-registry.yml -v registry_alt_name=$(echo "$KILNBASE_E2E_DOCKERHUB_HOSTNAME" | cut -d: -f1)) -y
+
