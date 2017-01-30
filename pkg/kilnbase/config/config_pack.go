@@ -9,3 +9,4 @@ type SourcePackOpts struct {
 
 type SourcePackBuildOpts struct {
 	Builder    *string
+	Buildpacks *[]string

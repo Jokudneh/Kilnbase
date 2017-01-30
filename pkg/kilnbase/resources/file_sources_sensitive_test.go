@@ -43,3 +43,7 @@ func TestHTTPBodyErrorOmitsCredentials(t *testing.T) {
 		*http.Response, error,
 	) {
 		require.Equal(t, raw, req.URL.String())
+		return &http.Response{
+			StatusCode: http.StatusOK,
+			Body:       io.NopCloser(sensitiveTestReader{}),
+			Header:     make(http.Header),
