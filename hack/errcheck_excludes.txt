@@ -9,3 +9,4 @@ fmt.Fprintf
 // Next lines for the inclusion of pkg/kilnbase/imageutils
 (*io.PipeWriter).Close
 (*io.PipeWriter).CloseWithError
+(*compress/gzip.Writer).Close
