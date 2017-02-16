@@ -37,3 +37,5 @@ func (i DescribedImageIndex) Size() (int64, error) { return int64(len(i.desc.Raw
 
 func (i DescribedImageIndex) IndexManifest() (*regv1.IndexManifest, error) {
 	var manifest *regv1.IndexManifest
+	err := json.Unmarshal([]byte(i.desc.Raw), &manifest)
+	if err != nil {

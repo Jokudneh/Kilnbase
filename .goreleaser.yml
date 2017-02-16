@@ -38,3 +38,4 @@ signs:
     args:
       - sign-blob
       - "--yes"
+      - '--output-certificate=${certificate}'

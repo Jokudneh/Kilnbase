@@ -20,3 +20,7 @@ func NewTaggedImage(image Image, imgDst ctlconf.ImageDestination, registry ctlre
 	return TaggedImage{image, imgDst, registry}
 }
 
+func (i TaggedImage) URL() (string, []ctlconf.Origin, error) {
+	url, origins, err := i.image.URL()
+	if err != nil {
+		return "", nil, err
