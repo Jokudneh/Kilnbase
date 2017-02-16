@@ -16,3 +16,7 @@ type UnprocessedImageURL struct {
 type UnprocessedImageURLs struct {
 	urls map[UnprocessedImageURL]struct{} `json:"unresolved"`
 }
+
+func NewUnprocessedImageURLs() *UnprocessedImageURLs {
+	return &UnprocessedImageURLs{map[UnprocessedImageURL]struct{}{}}
+}

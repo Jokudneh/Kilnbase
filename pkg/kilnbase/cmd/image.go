@@ -39,3 +39,4 @@ func (i Image) Description() string {
 }
 
 type imageStruct struct {
+	URL     string        `json:"url"`

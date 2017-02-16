@@ -99,3 +99,4 @@ overrides:
 	lockOutBs, err := ioutil.ReadFile(relocatedLockPath)
 	if err != nil {
 		t.Fatalf("Expected to find relocated lock file")
+	}
