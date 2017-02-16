@@ -17,3 +17,4 @@ func NewRulesMatcher(rules []ctlconf.SearchRule) RulesMatcher {
 }
 
 var _ Matcher = RuleMatcher{}
+

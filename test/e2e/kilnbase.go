@@ -40,3 +40,6 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 
 	cmd := exec.Command(k.kilnbasePath, args...)
 	cmd.Stdin = opts.StdinReader
+
+	var stderr, stdout bytes.Buffer
+

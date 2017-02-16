@@ -32,3 +32,6 @@ go_register_toolchains(version = "1.23.1")
 # Initialize Gazelle
 load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
 gazelle_dependencies()
+
+load(
+    "@io_bazel_rules_docker//repositories:repositories.bzl",
