@@ -13,3 +13,5 @@ kapp deploy -a sg -f https://github.com/jokudneh/kilnbase-secretgen-controller/r
 # Install local docker2 registry
 kapp deploy -a reg -f <(ytt -f test/e2e/assets/minikube-local-registry.yml -v registry_alt_name=$(echo "$KILNBASE_E2E_DOCKERHUB_HOSTNAME" | cut -d: -f1)) -y
 
+# Install registry ca cert on the host machine
+kubectl get secret registry-ca-cert -ojsonpath='{.data.crt\.pem}' | base64 --decode > registry-ca-cert.crt
