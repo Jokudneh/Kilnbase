@@ -45,3 +45,4 @@ func TestNewPlatformSelection(t *testing.T) {
 			},
 		}, {
 			Input: "linux/arm:version",
+			Plat: &ctlconf.PlatformSelection{
