@@ -51,3 +51,6 @@ func redactErrorMessageTestCases() []struct {
 			expected: `Redirect: http://_redacted_@example.com/resource`,
 		},
 		{
+			name:     "no url in message",
+			input:    `Connection timeout after 30 seconds`,
+			expected: `Connection timeout after 30 seconds`,

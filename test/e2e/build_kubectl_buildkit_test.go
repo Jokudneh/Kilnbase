@@ -45,3 +45,6 @@ sources:
 
 	out = regexp.MustCompile("rand-\\d+-\\d+").ReplaceAllString(out, "rand-REPLACED")
 
+	expectedOut := `---
+kind: Object
+spec:
