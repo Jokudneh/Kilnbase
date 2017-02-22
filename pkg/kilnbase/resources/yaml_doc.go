@@ -25,3 +25,6 @@ func (f YAMLFile) Docs() ([][]byte, error) {
 	fileBytes, err := f.fileSrc.Bytes()
 	if err != nil {
 		return nil, err
+	}
+
+	reader := kyaml.NewYAMLReader(bufio.NewReaderSize(bytes.NewReader(fileBytes), 4096))
