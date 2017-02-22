@@ -53,3 +53,7 @@ overrides:
 		StdinReader: strings.NewReader(input),
 	})
 
+	// kilnbase:192-168-99-100-30777-minikube-tests-kilnbase-e2e-tests-SHA256-REPLACED
+	out = regexp.MustCompile("sha256\\-[a-z0-9]{64}").ReplaceAllString(out, "SHA256-REPLACED")
+	out = regexp.MustCompile("kilnbase:(.+)-kilnbase-e2e(\\-.*)-SHA256-REPLACED").ReplaceAllString(out, "kilnbase:img-title-SHA256-REPLACED")
+

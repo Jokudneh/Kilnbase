@@ -76,3 +76,6 @@ func (i Registry) Image(ref regname.Reference) (regv1.Image, error) {
 	}
 
 	return regremote.Image(ref, i.opts...)
+}
+
+func (i Registry) WriteImage(ref regname.Reference, img regv1.Image) error {
