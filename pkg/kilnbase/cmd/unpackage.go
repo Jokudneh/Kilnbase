@@ -38,3 +38,6 @@ func NewUnpackageCmd(o *UnpackageOptions) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "unpackage",
 		Aliases: []string{"unpkg"},
+		Short:   "Unpackage configuration and images from tarball",
+		Hidden:  true,
+		Long: `

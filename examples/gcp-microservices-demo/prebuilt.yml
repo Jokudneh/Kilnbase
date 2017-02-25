@@ -13,3 +13,5 @@ overrides:
   newImage: gcr.io/google-samples/microservices-demo/paymentservice:v0.1.0
 - image: productcatalogservice
   newImage: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.1.0
+- image: cartservice
+  newImage: gcr.io/google-samples/microservices-demo/cartservice:v0.1.0
