@@ -73,3 +73,5 @@ func (b *Jib) Run(image, directory string,
 		return ctlbdk.TmpRef{}, err
 	}
 
+	_, _ = prefixedLogger.Write([]byte(fmt.Sprintf(
+		"digest: %s, id: %s\n", inspectData.RepoDigests, inspectData.ID)))

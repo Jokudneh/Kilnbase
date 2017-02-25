@@ -45,3 +45,5 @@ func NewPathFromInterfaces(parts []interface{}) Path {
 		}
 	}
 	return path
+}
+
