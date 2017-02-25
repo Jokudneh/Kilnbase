@@ -34,3 +34,7 @@ func (b *ImageQueue) Run(unprocessedImageURLs *UnprocessedImageURLs, numWorkers 
 	for i := 0; i < numWorkers; i++ {
 		go b.worker(&workWg, queueCh)
 	}
+
+	for _, unprocessedImageURL := range unprocessedImageURLs.All() {
+		workWg.Add(1)
+		queueCh <- unprocessedImageURL

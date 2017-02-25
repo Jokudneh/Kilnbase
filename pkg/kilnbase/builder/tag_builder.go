@@ -21,3 +21,5 @@ func (d TagBuilder) CheckTagLen128(tag string) string {
 	// "A tag ... may contain a maximum of 128 characters."
 	// (https://docs.docker.com/engine/reference/commandline/tag/)
 	return d.CheckLen(tag, 128)
+}
+
