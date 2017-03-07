@@ -59,3 +59,7 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 	},
 	{
 		name:     "localhost registry",
+		input:    "LocalHost:5000/MyImage:v1",
+		expected: "localhost:5000/MyImage:v1",
+	},
+	{

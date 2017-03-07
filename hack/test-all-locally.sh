@@ -25,3 +25,6 @@ EOF
 image_name=$(build_test_deps)
 
 tempConfigFile=$(mktemp)
+trap "rm -f $tempConfigFile" EXIT
+
+minikube docker-env | while read env; do
