@@ -41,3 +41,4 @@ func NewUnpackageCmd(o *UnpackageOptions) *cobra.Command {
 		Short:   "Unpackage configuration and images from tarball",
 		Hidden:  true,
 		Long: `
+Command 'unpackage' is deprecated; use 'imgpkg pull' instead.

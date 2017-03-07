@@ -34,3 +34,7 @@ type tarFileChunkReadCloser struct {
 }
 
 func (f tarFile) Chunk(path string) tarFileChunk {
+	return tarFileChunk{f, path}
+}
+
+func (f tarFile) FindLayer(layerTD imagedesc.ImageLayerDescriptor) (imagedesc.LayerContents, error) {
