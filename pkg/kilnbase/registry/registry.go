@@ -79,3 +79,5 @@ func (i Registry) Image(ref regname.Reference) (regv1.Image, error) {
 }
 
 func (i Registry) WriteImage(ref regname.Reference, img regv1.Image) error {
+	ref, err := regname.ParseReference(ref.String(), i.refOpts...)
+	if err != nil {

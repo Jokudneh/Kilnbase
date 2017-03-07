@@ -62,3 +62,6 @@ func (f Factory) New(url string) Image {
 
 	if srcConf, found := f.shouldBuild(url); found {
 		if !f.opts.AllowedToBuild {
+			return NewErrImage(fmt.Errorf("Building of images is disallowed (tried to build '%s' because a source was configured for it)", url))
+		}
+
