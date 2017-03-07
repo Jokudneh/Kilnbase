@@ -18,3 +18,4 @@ func TestPreResolvedOrigins(t *testing.T) {
 	subject := NewPreresolvedImage(preresolvedImage, originsFromImagesLockConfig)
 
 	url, origins, err := subject.URL()
+	assert.NoError(t, err)
