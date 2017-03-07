@@ -7,3 +7,4 @@ type SourceBazelOpts struct {
 	Run SourceBazelRunOpts
 }
 
+type SourceBazelRunOpts struct {

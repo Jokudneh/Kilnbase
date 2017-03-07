@@ -4,3 +4,4 @@ on:
     types: ['closed']
 
 jobs:
+  remove-labels:
