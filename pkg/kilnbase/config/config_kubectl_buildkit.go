@@ -7,3 +7,4 @@ type SourceKubectlBuildkitOpts struct {
 	Build SourceKubectlBuildkitBuildOpts
 }
 
+type SourceKubectlBuildkitBuildOpts struct {

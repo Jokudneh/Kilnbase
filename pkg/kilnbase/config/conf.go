@@ -58,3 +58,4 @@ func matchesConfigKind(res ctlres.Resource) bool {
 func (c Conf) Sources() []Source {
 	var result []Source
 	for _, config := range c.configs {
+		result = append(result, config.Sources...)

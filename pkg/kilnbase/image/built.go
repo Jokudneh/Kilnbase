@@ -57,3 +57,4 @@ func NewBuiltImage(url string, buildSource ctlconf.Source,
 	}
 }
 
+func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
