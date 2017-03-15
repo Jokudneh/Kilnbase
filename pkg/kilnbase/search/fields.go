@@ -51,3 +51,4 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 					typedObj[k] = newVal.(string)
 				} else {
 					f.visit(newKeyPath, typedObj[k], visitorFunc)
+				}

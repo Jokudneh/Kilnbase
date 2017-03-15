@@ -11,3 +11,4 @@ type ErrImage struct {
 	err error
 }
 
+var _ Image = ErrImage{}
