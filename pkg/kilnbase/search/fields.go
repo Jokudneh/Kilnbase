@@ -52,3 +52,5 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 				} else {
 					f.visit(newKeyPath, typedObj[k], visitorFunc)
 				}
+			} else {
+				f.visit(newKeyPath, typedObj[k], visitorFunc)
