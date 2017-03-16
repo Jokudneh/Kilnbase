@@ -31,3 +31,4 @@ func NewInspectCmd(o *InspectOptions) *cobra.Command {
 		RunE:    func(_ *cobra.Command, _ []string) error { return o.Run() },
 	}
 	o.FileFlags.Set(cmd)
+	o.RegistryFlags.Set(cmd)

@@ -24,3 +24,5 @@ func (i TaggedImage) URL() (string, []ctlconf.Origin, error) {
 	url, origins, err := i.image.URL()
 	if err != nil {
 		return "", nil, err
+	}
+

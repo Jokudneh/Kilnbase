@@ -65,3 +65,7 @@ func (f Factory) New(url string) Image {
 			return NewErrImage(fmt.Errorf("Building of images is disallowed (tried to build '%s' because a source was configured for it)", url))
 		}
 
+		imgDstConf := f.optionalPushConf(url)
+
+		docker := ctlbdk.New(f.logger)
+		dockerBuildx := ctlbdk.NewBuildx(docker, f.logger)
