@@ -20,3 +20,5 @@ type UnprocessedImageURLs struct {
 func NewUnprocessedImageURLs() *UnprocessedImageURLs {
 	return &UnprocessedImageURLs{map[UnprocessedImageURL]struct{}{}}
 }
+
+func (i *UnprocessedImageURLs) Add(url UnprocessedImageURL) {

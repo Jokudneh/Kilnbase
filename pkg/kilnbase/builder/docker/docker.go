@@ -95,3 +95,5 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 			// Dockerfile path doesnt need to be joined with it
 			cmdArgs = append(cmdArgs, "--file", *opts.File)
 		}
+		if opts.RawOptions != nil {
+			cmdArgs = append(cmdArgs, *opts.RawOptions...)
