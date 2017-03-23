@@ -26,3 +26,6 @@ func (i TaggedImage) URL() (string, []ctlconf.Origin, error) {
 		return "", nil, err
 	}
 
+	if len(i.imgDst.Tags) > 0 {
+		dstRef, err := regname.NewDigest(url, regname.WeakValidation)
+		if err != nil {
