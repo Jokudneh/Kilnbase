@@ -39,3 +39,5 @@ signs:
       - sign-blob
       - "--yes"
       - '--output-certificate=${certificate}'
+      - '--output-signature=${signature}'
+      - '${artifact}'

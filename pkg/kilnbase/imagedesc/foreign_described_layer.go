@@ -30,3 +30,6 @@ func (l ForeignDescribedLayer) Compressed() (io.ReadCloser, error) {
 func (l ForeignDescribedLayer) Uncompressed() (io.ReadCloser, error) {
 	panic("ForeignDescribedLayer.Uncompressed: not implemented")
 }
+
+func (l ForeignDescribedLayer) Size() (int64, error) { return l.desc.Size, nil }
+
