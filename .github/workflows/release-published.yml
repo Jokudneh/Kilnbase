@@ -21,3 +21,5 @@ jobs:
             echo "Version match with $tag"
             exit 0
           else
+            echo "Versions do not match v$tool_version != $tag"
+            exit 1
