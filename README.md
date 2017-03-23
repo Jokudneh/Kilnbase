@@ -23,3 +23,5 @@ Features:
 
 !
 
+See [building and deploying simple Go application to Kubernetes example](https://github.com/kilnbase-dev/simple-app-on-kubernetes#step-3-building-container-images-locally) that uses kilnbase.
+

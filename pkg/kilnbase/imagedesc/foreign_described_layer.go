@@ -33,3 +33,4 @@ func (l ForeignDescribedLayer) Uncompressed() (io.ReadCloser, error) {
 
 func (l ForeignDescribedLayer) Size() (int64, error) { return l.desc.Size, nil }
 
+func (l ForeignDescribedLayer) MediaType() (types.MediaType, error) {

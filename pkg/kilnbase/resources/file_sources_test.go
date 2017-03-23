@@ -54,3 +54,7 @@ func redactErrorMessageTestCases() []struct {
 			name:     "no url in message",
 			input:    `Connection timeout after 30 seconds`,
 			expected: `Connection timeout after 30 seconds`,
+		},
+		{
+			name: "url with space as delimiter",
+			input: `error connecting to ` +
