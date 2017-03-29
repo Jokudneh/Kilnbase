@@ -40,3 +40,4 @@ func (i *ProcessedImages) FindByURL(unprocessedImageURL UnprocessedImageURL) (Im
 func (i *ProcessedImages) All() []ProcessedImageItem {
 	i.imgsLock.Lock()
 	defer i.imgsLock.Unlock()
+

@@ -117,3 +117,7 @@ type SearchRuleUpdateStrategy struct {
 	YAML         *SearchRuleUpdateStrategyYAML         `json:"yaml,omitempty"`
 }
 
+type SearchRuleUpdateStrategyNone struct{}
+
+type SearchRuleUpdateStrategyEntireString struct{}
+
