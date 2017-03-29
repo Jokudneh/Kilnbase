@@ -19,3 +19,4 @@ func NewRulesMatcher(rules []ctlconf.SearchRule) RulesMatcher {
 var _ Matcher = RuleMatcher{}
 
 func (m RulesMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlconf.SearchRuleUpdateStrategy) {
+	for _, rule := range m.rules {

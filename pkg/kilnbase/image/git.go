@@ -61,3 +61,7 @@ func (r GitRepo) HeadTags() ([]string, error) {
 	}
 
 	return strings.Split(strings.TrimSpace(stdout), "\n"), nil
+}
+
+func (r GitRepo) IsDirty() (bool, error) {
+	stdout, _, err := r.runCmd([]string{"status", "--short"})
