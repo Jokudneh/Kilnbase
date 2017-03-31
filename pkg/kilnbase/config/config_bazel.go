@@ -8,3 +8,4 @@ type SourceBazelOpts struct {
 }
 
 type SourceBazelRunOpts struct {
+	Target     *string   `json:"target"`

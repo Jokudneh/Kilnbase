@@ -85,3 +85,6 @@ func NewImageRefDescriptors(refs []regname.Reference, registry Registry) (*Image
 				td = ImageOrImageIndexDescriptor{Image: &imgTd}
 			}
 
+			imageRefDescsLock.Lock()
+			imageRefDescs.descs = append(imageRefDescs.descs, td)
+			imageRefDescsLock.Unlock()
