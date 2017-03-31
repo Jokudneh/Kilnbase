@@ -112,3 +112,7 @@ func (w *TarWriter) writeImage(td imagedesc.ImageDescriptor) error {
 		// import without changing image digest.
 		if imgLayer.IsDistributable() {
 			w.layersToWrite = append(w.layersToWrite, imgLayer)
+		}
+	}
+	return nil
+}

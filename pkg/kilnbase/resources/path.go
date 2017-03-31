@@ -47,3 +47,6 @@ func NewPathFromInterfaces(parts []interface{}) Path {
 	return path
 }
 
+func (p Path) AsStrings() []string {
+	var result []string
+	for _, part := range p {
