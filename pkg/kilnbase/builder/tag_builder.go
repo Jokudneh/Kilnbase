@@ -23,3 +23,4 @@ func (d TagBuilder) CheckTagLen128(tag string) string {
 	return d.CheckLen(tag, 128)
 }
 
+func (d TagBuilder) CheckLen(str string, num int) string {
