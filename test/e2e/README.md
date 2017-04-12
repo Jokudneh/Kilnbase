@@ -29,3 +29,6 @@ It is possible to specify the absolute path to the kilnbase binary that you wish
 ```bash
 # OPTIONAL
 export KILNBASE_BINARY_PATH=/usr/local/bin/kilnbase
+```
+
+Run the end to end tests

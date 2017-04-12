@@ -48,3 +48,7 @@ sources:
 	expectedOut := `---
 kind: Object
 spec:
+- image: kilnbase:rand-REPLACED-simple-app-two
+- image: kilnbase:rand-REPLACED-simple-app-three
+`
+
