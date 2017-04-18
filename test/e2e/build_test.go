@@ -57,3 +57,4 @@ overrides:
 	out = regexp.MustCompile("sha256\\-[a-z0-9]{64}").ReplaceAllString(out, "SHA256-REPLACED")
 	out = regexp.MustCompile("kilnbase:(.+)-kilnbase-e2e(\\-.*)-SHA256-REPLACED").ReplaceAllString(out, "kilnbase:img-title-SHA256-REPLACED")
 
+	expectedOut := `---

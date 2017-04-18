@@ -41,3 +41,5 @@ func (i *ProcessedImages) All() []ProcessedImageItem {
 	i.imgsLock.Lock()
 	defer i.imgsLock.Unlock()
 
+	var result []ProcessedImageItem
+	for unprocessedImageURL, img := range i.imgs {
