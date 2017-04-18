@@ -20,3 +20,5 @@ fi
 if [ "$(bazel --version | grep -o '6.4.0')" != "6.4.0" ]; then
     echo "Please install 'bazel' from https://github.com/bazelbuild/bazel/releases/tag/6.4.0"
     exit 1
+fi
+
