@@ -32,3 +32,6 @@ func NewInspectCmd(o *InspectOptions) *cobra.Command {
 	}
 	o.FileFlags.Set(cmd)
 	o.RegistryFlags.Set(cmd)
+	return cmd
+}
+

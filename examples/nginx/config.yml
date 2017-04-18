@@ -8,3 +8,4 @@ spec:
       app: kilnbase-nginx
   template:
     metadata:
+      labels:
