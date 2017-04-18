@@ -32,3 +32,5 @@ export KILNBASE_BINARY_PATH=/usr/local/bin/kilnbase
 ```
 
 Run the end to end tests
+
+```bash
