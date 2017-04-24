@@ -43,3 +43,5 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 
 	var stderr, stdout bytes.Buffer
 
+	if opts.StderrWriter != nil {
+		cmd.Stderr = opts.StderrWriter

@@ -40,3 +40,7 @@ func (i Image) Description() string {
 
 type imageStruct struct {
 	URL     string        `json:"url"`
+	Origins []interface{} `json:"origins,omitempty"`
+}
+
+func (st imageStruct) equal(other imageStruct) bool {
