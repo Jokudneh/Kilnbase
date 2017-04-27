@@ -46,3 +46,4 @@ jobs:
       run: |
         echo "=== Docker version ==="
         docker version || echo "docker-version not found"
+    - name: Run Tests
