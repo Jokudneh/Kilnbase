@@ -63,3 +63,4 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		expected: "localhost:5000/MyImage:v1",
 	},
 	{
+		name:     "case sensitive path preservation",
