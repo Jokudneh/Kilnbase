@@ -19,3 +19,5 @@ RUN chmod +x /usr/local/bin/bazel
 RUN curl -sLo /usr/local/bin/kapp https://github.com/carvel-dev/kapp/releases/download/v0.65.2/kapp-linux-amd64
 RUN chmod +x /usr/local/bin/kapp
 
+RUN curl -sLo /usr/local/bin/ytt https://github.com/carvel-dev/ytt/releases/download/v0.55.1/ytt-linux-amd64
+RUN chmod +x /usr/local/bin/ytt

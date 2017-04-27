@@ -44,3 +44,5 @@ func NewDigestedImageFromParts(url, digest string) DigestedImage {
 func (i DigestedImage) URL() (string, []ctlconf.Origin, error) {
 	if i.parseErr != nil {
 		return "", nil, i.parseErr
+	}
+	return i.nameWithDigest.Name(), nil, nil
