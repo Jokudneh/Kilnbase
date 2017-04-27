@@ -55,3 +55,6 @@ type HTTPFileSource struct {
 
 var _ FileSource = HTTPFileSource{}
 
+func NewHTTPFileSource(path string) HTTPFileSource { return HTTPFileSource{path} }
+
+// redactURL masks userinfo, query parameters and fragments to prevent
