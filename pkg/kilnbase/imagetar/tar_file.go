@@ -39,3 +39,6 @@ func (f tarFile) Chunk(path string) tarFileChunk {
 
 func (f tarFile) FindLayer(layerTD imagedesc.ImageLayerDescriptor) (imagedesc.LayerContents, error) {
 	digest, err := regv1.NewHash(layerTD.Digest)
+	if err != nil {
+		return nil, err
+	}

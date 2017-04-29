@@ -25,3 +25,6 @@ Features:
 
 See [building and deploying simple Go application to Kubernetes example](https://github.com/kilnbase-dev/simple-app-on-kubernetes#step-3-building-container-images-locally) that uses kilnbase.
 
+### Join the Community and Make Kilnbase Better
+Kilnbase is better because of our contributors and maintainers. It is because of you that we can bring great software to the community.
+Please join us during our online community meetings. Details can be found on our [Kilnbase website](https://kilnbase.dev/community/).

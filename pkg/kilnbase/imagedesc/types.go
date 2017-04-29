@@ -47,3 +47,4 @@ type ImageIndexDescriptor struct {
 	Digest    string
 	Raw       string
 }
+
