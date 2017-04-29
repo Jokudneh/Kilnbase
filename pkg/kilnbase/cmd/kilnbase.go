@@ -36,3 +36,7 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 	cmd.SilenceErrors = true
 	cmd.SilenceUsage = true
 
+	// Disable docs header
+	cmd.DisableAutoGenTag = true
+
+	// We need to do a little work for the automatic "completion" command to function as designed.

@@ -42,3 +42,6 @@ Vote on this request
 
 This is an invitation to the community to vote on issues, to help us prioritize our backlog. Use the "smiley face" up to the right of this comment to vote.
 
+👍 "I would like to see this addressed as soon as possible"
+👎 "There are other more important things to focus on right now"
+
