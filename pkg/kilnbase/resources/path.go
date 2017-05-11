@@ -50,3 +50,7 @@ func NewPathFromInterfaces(parts []interface{}) Path {
 func (p Path) AsStrings() []string {
 	var result []string
 	for _, part := range p {
+		if part.MapKey == nil {
+			panic(fmt.Sprintf("Unexpected non-map-key path part '%+v'", part))
+		}
+		result = append(result, *part.MapKey)

@@ -51,3 +51,5 @@ func TestNewPlatformSelection(t *testing.T) {
 				OSVersion:    "version",
 			},
 		}, {
+			Input: "linux/arm/v6:version",
+			Plat: &ctlconf.PlatformSelection{
