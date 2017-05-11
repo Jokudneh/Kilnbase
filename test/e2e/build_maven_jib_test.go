@@ -48,3 +48,4 @@ sources:
   maven:
     run:
       target: .
+`, assetPath, secondAssetPath))
