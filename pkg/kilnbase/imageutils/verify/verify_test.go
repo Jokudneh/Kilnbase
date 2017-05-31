@@ -27,3 +27,7 @@ import (
 
 	v1 "github.com/google/go-containerregistry/pkg/v1"
 )
+
+func mustHash(s string, t *testing.T) v1.Hash {
+	h, _, err := v1.SHA256(strings.NewReader(s))
+	if err != nil {

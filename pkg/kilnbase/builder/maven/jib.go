@@ -75,3 +75,5 @@ func (b *Jib) Run(image, directory string,
 
 	_, _ = prefixedLogger.Write([]byte(fmt.Sprintf(
 		"digest: %s, id: %s\n", inspectData.RepoDigests, inspectData.ID)))
+
+	stableTmpRef, err := b.docker.RetagStable(

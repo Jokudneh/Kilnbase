@@ -9,3 +9,4 @@ type SourceBazelOpts struct {
 
 type SourceBazelRunOpts struct {
 	Target     *string   `json:"target"`
+	RawOptions *[]string `json:"rawOptions"`
