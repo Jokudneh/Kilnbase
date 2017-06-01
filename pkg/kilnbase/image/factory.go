@@ -69,3 +69,7 @@ func (f Factory) New(url string) Image {
 
 		docker := ctlbdk.New(f.logger)
 		dockerBuildx := ctlbdk.NewBuildx(docker, f.logger)
+		pack := ctlbpk.NewPack(docker, f.logger)
+		kubectlBuildkit := ctlbkb.NewKubectlBuildkit(f.logger)
+		ko := ctlbko.NewKo(f.logger)
+		bazel := ctlbbz.NewBazel(docker, f.logger)
