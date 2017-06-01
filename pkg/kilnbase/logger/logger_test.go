@@ -17,3 +17,4 @@ func TestLogger(t *testing.T) {
 	prefLogger := logger.NewPrefixedWriter("prefix: ")
 
 	prefLogger.Write([]byte("content1"))
+	prefLogger.Write([]byte("content2\n"))
