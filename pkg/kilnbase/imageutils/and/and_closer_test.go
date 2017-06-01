@@ -34,3 +34,6 @@ func TestRead(t *testing.T) {
 		Reader: r,
 		CloseFunc: func() error {
 			called = true
+			return nil
+		},
+	}
