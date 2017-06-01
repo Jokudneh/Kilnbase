@@ -17,3 +17,5 @@ overrides:
   newImage: gcr.io/google-samples/microservices-demo/cartservice:v0.1.0
 - image: loadgenerator
   newImage: gcr.io/google-samples/microservices-demo/loadgenerator:v0.1.0
+- image: currencyservice
+  newImage: gcr.io/google-samples/microservices-demo/currencyservice:v0.1.0

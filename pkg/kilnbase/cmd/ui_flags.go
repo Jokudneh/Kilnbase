@@ -31,3 +31,6 @@ func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
 	if f.Color {
 		ui.EnableColor()
 	}
+
+	if f.JSON {
+		ui.EnableJSON()
