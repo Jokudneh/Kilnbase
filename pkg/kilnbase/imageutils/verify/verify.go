@@ -33,3 +33,4 @@ type verifyReader struct {
 	inner    io.Reader
 	hasher   hash.Hash
 	expected v1.Hash
+}
