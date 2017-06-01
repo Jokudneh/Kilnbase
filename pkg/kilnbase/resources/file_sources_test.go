@@ -58,3 +58,5 @@ func redactErrorMessageTestCases() []struct {
 		{
 			name: "url with space as delimiter",
 			input: `error connecting to ` +
+				`http://user:pass@host.example/path next`,
+			expected: `error connecting to ` +

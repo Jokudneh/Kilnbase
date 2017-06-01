@@ -121,3 +121,4 @@ type SearchRuleUpdateStrategyNone struct{}
 
 type SearchRuleUpdateStrategyEntireString struct{}
 
+type SearchRuleUpdateStrategyJSON struct {

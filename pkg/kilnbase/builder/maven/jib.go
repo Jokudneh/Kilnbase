@@ -77,3 +77,4 @@ func (b *Jib) Run(image, directory string,
 		"digest: %s, id: %s\n", inspectData.RepoDigests, inspectData.ID)))
 
 	stableTmpRef, err := b.docker.RetagStable(
+		tmpRef, image, inspectData.ID, prefixedLogger)
