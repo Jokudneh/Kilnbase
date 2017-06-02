@@ -65,3 +65,6 @@ func (r GitRepo) HeadTags() ([]string, error) {
 
 func (r GitRepo) IsDirty() (bool, error) {
 	stdout, _, err := r.runCmd([]string{"status", "--short"})
+	if err != nil {
+		return false, r.error("Checking status: %s", err)
+	}
