@@ -26,3 +26,6 @@ func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 	if err != nil {
 		return "", nil, err
 	}
+
+	imgDescriptor, err := i.registry.Generic(tag)
+	if err != nil {
