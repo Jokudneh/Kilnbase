@@ -19,3 +19,4 @@ func TestInvalidRegistryHostnameDoesNotExposeCredentials(t *testing.T) {
 				t.Fatal("registry validation exposed input")
 			}
 		})
+	}

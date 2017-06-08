@@ -29,3 +29,4 @@ type OriginLocal struct {
 
 type OriginResolved struct {
 	URL string `json:"url"`
+	Tag string `json:"tag,omitempty"`
