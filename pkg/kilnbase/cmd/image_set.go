@@ -73,3 +73,6 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 
 		go func() {
 			importThrottle.Take()
+			defer importThrottle.Done()
+
+			existingRef, err := regname.NewDigest(item.Ref())
