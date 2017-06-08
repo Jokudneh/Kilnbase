@@ -51,3 +51,4 @@ func TestReader(t *testing.T) {
 func TestIs(t *testing.T) {
 	tests := []struct {
 		in  []byte
+		out bool
