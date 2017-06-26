@@ -73,3 +73,5 @@ func (f Factory) New(url string) Image {
 		kubectlBuildkit := ctlbkb.NewKubectlBuildkit(f.logger)
 		ko := ctlbko.NewKo(f.logger)
 		bazel := ctlbbz.NewBazel(docker, f.logger)
+		maven := ctlbmvn.NewMavenJib(docker, f.logger)
+
