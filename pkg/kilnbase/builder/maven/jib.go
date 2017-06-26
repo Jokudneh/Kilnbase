@@ -78,3 +78,6 @@ func (b *Jib) Run(image, directory string,
 
 	stableTmpRef, err := b.docker.RetagStable(
 		tmpRef, image, inspectData.ID, prefixedLogger)
+	if err != nil {
+		return ctlbdk.TmpRef{}, err
+	}
