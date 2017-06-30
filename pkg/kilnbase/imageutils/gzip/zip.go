@@ -40,3 +40,6 @@ func ReadCloser(r io.ReadCloser) io.ReadCloser {
 // returns an io.ReadCloser from which compressed data may be read.
 // Refer to compress/gzip for the level:
 // https://golang.org/pkg/compress/gzip/#pkg-constants
+func ReadCloserLevel(r io.ReadCloser, level int) io.ReadCloser {
+	pr, pw := io.Pipe()
+

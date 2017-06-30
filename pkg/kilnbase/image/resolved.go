@@ -29,3 +29,7 @@ func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 
 	imgDescriptor, err := i.registry.Generic(tag)
 	if err != nil {
+		return "", nil, err
+	}
+
+	// Resolve image second time because some older registry can

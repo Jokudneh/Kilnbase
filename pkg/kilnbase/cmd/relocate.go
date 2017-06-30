@@ -55,3 +55,5 @@ Relocate images between two registries
 }
 
 func (o *RelocateOptions) Run() error {
+	logger := ctllog.NewLogger(os.Stderr)
+	warningLogger := logger.NewPrefixedWriter("Warning: ")
