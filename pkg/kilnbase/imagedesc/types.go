@@ -48,3 +48,4 @@ type ImageIndexDescriptor struct {
 	Raw       string
 }
 
+type ImageDescriptor struct {
