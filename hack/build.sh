@@ -16,3 +16,4 @@ go mod tidy
 # export GOOS=linux GOARCH=amd64
 go build -ldflags="$LDFLAGS" -trimpath -o kilnbase ./cmd/kilnbase/...
 ./kilnbase version
+

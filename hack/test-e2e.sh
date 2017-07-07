@@ -23,3 +23,4 @@ if [ "$(bazel --version | grep -o '6.4.0')" != "6.4.0" ]; then
 fi
 
 go clean -testcache
+
