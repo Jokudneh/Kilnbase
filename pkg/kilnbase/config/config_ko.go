@@ -7,3 +7,4 @@ type SourceKoOpts struct {
 	Build SourceKoBuildOpts
 }
 
+type SourceKoBuildOpts struct {
