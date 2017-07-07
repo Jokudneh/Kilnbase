@@ -45,3 +45,6 @@ func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
 	o.logger.WriteStr("writing layers...\n")
 
 	opts := imagetar.TarWriterOpts{Concurrency: o.concurrency}
+
+	return imagetar.NewTarWriter(ids, outputFileOpener, opts, o.logger).Write()
+}
