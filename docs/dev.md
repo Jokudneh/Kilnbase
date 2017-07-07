@@ -30,3 +30,5 @@ eval $(minikube docker-env)
 ```
 
 ## Source Code Structure
+
+For those interested in extending and improving kilnbase, below is a quick reference on the structure of the source code:

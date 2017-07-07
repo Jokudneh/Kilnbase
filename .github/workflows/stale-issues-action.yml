@@ -17,3 +17,4 @@ jobs:
         stale-issue-label: 'stale'
         exempt-issue-labels: 'discussion'
         only-labels: 'kilnbase triage'
+        days-before-stale: 40
