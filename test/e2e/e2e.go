@@ -9,3 +9,4 @@ import (
 
 type Logger struct{}
 
+func (l Logger) Section(msg string, f func()) {
