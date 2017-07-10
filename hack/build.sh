@@ -17,3 +17,4 @@ go mod tidy
 go build -ldflags="$LDFLAGS" -trimpath -o kilnbase ./cmd/kilnbase/...
 ./kilnbase version
 
+# compile tests, but do not run them: https://github.com/golang/go/issues/15513#issuecomment-839126426

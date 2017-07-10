@@ -44,3 +44,6 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 
 	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using pack): %s\n", directory)))
 	defer prefixedLogger.Write([]byte("finished build (using pack)\n"))
+
+	var imageID string
+
