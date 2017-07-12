@@ -36,3 +36,7 @@ func NewFileResources(file string) ([]FileResource, error) {
 		}
 
 		if fileInfo.IsDir() {
+			var paths []string
+
+			err := filepath.Walk(file, func(path string, fi os.FileInfo, err error) error {
+				if err != nil || fi.IsDir() {

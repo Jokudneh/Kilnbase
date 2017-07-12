@@ -54,3 +54,6 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 			return "", nil, err
 		}
 		imgIndexManifest, err := imgIndex.IndexManifest()
+		if err != nil {
+			return "", nil, err
+		}
