@@ -57,3 +57,5 @@ Relocate images between two registries
 func (o *RelocateOptions) Run() error {
 	logger := ctllog.NewLogger(os.Stderr)
 	warningLogger := logger.NewPrefixedWriter("Warning: ")
+	msg := "Command 'relocate' is deprecated; use 'imgpkg copy' instead. " +
+		"Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#copy\n"

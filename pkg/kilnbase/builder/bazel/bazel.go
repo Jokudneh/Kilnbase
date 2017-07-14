@@ -40,3 +40,4 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 	{
 		var stdoutBuf, stderrBuf bytes.Buffer
 
+		cmdArgs := []string{"run"}
