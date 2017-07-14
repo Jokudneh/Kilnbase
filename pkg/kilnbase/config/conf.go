@@ -60,3 +60,4 @@ func (c Conf) Sources() []Source {
 	for _, config := range c.configs {
 		result = append(result, config.Sources...)
 	}
+	return result

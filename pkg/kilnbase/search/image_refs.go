@@ -43,3 +43,4 @@ func (v ImageRefsVisitorFunc) Apply(res interface{}, searchRules []ctlconf.Searc
 		// otherwise future search rules may find tmp refs
 		tmpRefID := fmt.Sprintf(tmpRefPrefix+"%d__", tmpRefIdx)
 		tmpRefs[tmpRefID] = newVal
+		tmpRefIdx++
