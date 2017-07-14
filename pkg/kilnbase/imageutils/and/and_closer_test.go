@@ -37,3 +37,5 @@ func TestRead(t *testing.T) {
 			return nil
 		},
 	}
+
+	data, err := io.ReadAll(rac)

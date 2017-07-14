@@ -97,3 +97,4 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 		}
 		if opts.RawOptions != nil {
 			cmdArgs = append(cmdArgs, *opts.RawOptions...)
+		}

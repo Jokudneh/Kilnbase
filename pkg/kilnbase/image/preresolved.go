@@ -28,3 +28,6 @@ func (i PreresolvedImage) URL() (string, []ctlconf.Origin, error) {
 	}
 
 	imageOrigins := copyAndAppendOrigins(i.origins, ctlconf.Origin{Preresolved: &ctlconf.OriginPreresolved{URL: i.url}})
+	return i.url, imageOrigins, nil
+}
+
