@@ -84,3 +84,6 @@ func (i Registry) WriteImage(ref regname.Reference, img regv1.Image) error {
 		return err
 	}
 
+	err = i.retry(func() error {
+		return regremote.Write(ref, img, i.opts...)
+	})

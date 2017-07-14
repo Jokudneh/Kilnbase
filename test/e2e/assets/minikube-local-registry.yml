@@ -50,3 +50,4 @@ spec:
       readOnly: true
   volumes:
   - name: config
+    configMap:
