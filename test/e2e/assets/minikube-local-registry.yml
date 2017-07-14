@@ -48,3 +48,5 @@ spec:
     - name: tls-cert
       mountPath: /etc/docker/registry-tls
       readOnly: true
+  volumes:
+  - name: config

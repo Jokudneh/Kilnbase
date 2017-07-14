@@ -48,3 +48,6 @@ func (o TarImageSet) Export(foundImages *UnprocessedImageURLs,
 
 	return imagetar.NewTarWriter(ids, outputFileOpener, opts, o.logger).Write()
 }
+
+func (o *TarImageSet) Import(path string,
+	importRepo regname.Repository, registry ctlreg.Registry) (*ProcessedImages, error) {

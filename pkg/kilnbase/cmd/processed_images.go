@@ -44,3 +44,6 @@ func (i *ProcessedImages) All() []ProcessedImageItem {
 	var result []ProcessedImageItem
 	for unprocessedImageURL, img := range i.imgs {
 		result = append(result, ProcessedImageItem{
+			UnprocessedImageURL: unprocessedImageURL,
+			Image:               img,
+		})
