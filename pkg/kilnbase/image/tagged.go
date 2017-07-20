@@ -32,3 +32,6 @@ func (i TaggedImage) URL() (string, []ctlconf.Origin, error) {
 			return "", nil, err
 		}
 
+		// Keep this ref separate to avoid any kind of modification
+		// when changing tag on the dst ref
+		srcRef, err := regname.NewDigest(url, regname.WeakValidation)
