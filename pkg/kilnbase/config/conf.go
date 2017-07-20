@@ -61,3 +61,6 @@ func (c Conf) Sources() []Source {
 		result = append(result, config.Sources...)
 	}
 	return result
+}
+
+func (c Conf) ImageOverrides() []ImageOverride {
