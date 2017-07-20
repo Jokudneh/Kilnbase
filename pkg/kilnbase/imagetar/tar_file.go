@@ -42,3 +42,7 @@ func (f tarFile) FindLayer(layerTD imagedesc.ImageLayerDescriptor) (imagedesc.La
 	if err != nil {
 		return nil, err
 	}
+	return tarFileChunk{f, digest.Algorithm + "-" + digest.Hex + ".tar.gz"}, nil
+}
+
+func (f tarFileChunk) Open() (io.ReadCloser, error) {
