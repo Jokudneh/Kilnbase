@@ -30,3 +30,6 @@ trap "rm -f $tempConfigFile" EXIT
 minikube docker-env | while read env; do
   echo $env | grep -E 'export*' | awk '{print $2}' | sed 's/"//g'
 done > $tempConfigFile
+
+docker run \
+--privileged \

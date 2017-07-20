@@ -29,3 +29,6 @@ See [building and deploying simple Go application to Kubernetes example](https:/
 Kilnbase is better because of our contributors and maintainers. It is because of you that we can bring great software to the community.
 Please join us during our online community meetings. Details can be found on our [Kilnbase website](https://kilnbase.dev/community/).
 
+You can chat with us on Kubernetes Slack in the #kilnbase channel and follow us on Twitter at @kilnbase_dev.
+
+Check out which organizations are using and contributing to Kilnbase: [Adopter's list](https://github.com/kilnbase-dev/kilnbase/blob/master/ADOPTERS.md)
