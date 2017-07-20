@@ -11,3 +11,4 @@ jobs:
     with:
       repo: kilnbase-dev/kilnbase
       tool: kilnbase
+      goVersion: '1.23'

@@ -24,3 +24,4 @@ func NewDescribedLayer(desc ImageLayerDescriptor, contents LayerContents) Descri
 	return DescribedLayer{desc, contents}
 }
 
+func (l DescribedLayer) Digest() (regv1.Hash, error) { return regv1.NewHash(l.desc.Digest) }
