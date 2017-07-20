@@ -81,3 +81,5 @@ var (
 
 type Buildx struct {
 	docker Docker
+	logger ctllog.Logger
+}
