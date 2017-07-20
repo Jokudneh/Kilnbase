@@ -31,3 +31,7 @@ import (
 func mustHash(s string, t *testing.T) v1.Hash {
 	h, _, err := v1.SHA256(strings.NewReader(s))
 	if err != nil {
+		t.Fatalf("v1.SHA256(%s) = %v", s, err)
+	}
+	return h
+}
