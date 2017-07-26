@@ -28,3 +28,4 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 	if m.rule.KeyMatcher != nil {
 		switch {
 		case len(m.rule.KeyMatcher.Name) > 0:
+			name := m.rule.KeyMatcher.Name

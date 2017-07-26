@@ -51,3 +51,4 @@ func (i *ProcessedImages) All() []ProcessedImageItem {
 	sort.Slice(result, func(i, j int) bool {
 		return result[i].UnprocessedImageURL.URL < result[j].UnprocessedImageURL.URL
 	})
+	return result

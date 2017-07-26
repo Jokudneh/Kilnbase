@@ -40,3 +40,4 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 			},
 		}
 	}
+
