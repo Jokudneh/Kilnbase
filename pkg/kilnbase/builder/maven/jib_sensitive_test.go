@@ -25,3 +25,6 @@ func TestMavenBannerDoesNotExposeArguments(t *testing.T) {
 	argsFile := filepath.Join(dir, "args")
 	t.Setenv("MAVEN_ARGS_FILE", argsFile)
 	opts := []string{
+		"-Dpassword=password-canary",
+		"-Durl=https://user:query-canary@example.com",
+	}
