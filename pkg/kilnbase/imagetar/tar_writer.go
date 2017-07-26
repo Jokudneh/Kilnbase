@@ -116,3 +116,7 @@ func (w *TarWriter) writeImage(td imagedesc.ImageDescriptor) error {
 	}
 	return nil
 }
+
+type writtenLayer struct {
+	Name   string
+	Offset int64

@@ -32,3 +32,6 @@ func main() {
 
 	err := command.Execute()
 	if err != nil {
+		multiLineErr := uierrs.NewMultiLineError(err)
+		if options.UIFlags.JSON {
+			_, _ = fmt.Fprintf(os.Stderr, "kilnbase: Error: %s\n", multiLineErr)
