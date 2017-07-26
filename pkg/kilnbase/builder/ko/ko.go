@@ -42,3 +42,5 @@ func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlb
 	cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
 	cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
 
+	err := cmd.Run()
+	if err != nil {

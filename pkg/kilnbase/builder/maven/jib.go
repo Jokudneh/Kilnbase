@@ -81,3 +81,5 @@ func (b *Jib) Run(image, directory string,
 	if err != nil {
 		return ctlbdk.TmpRef{}, err
 	}
+
+	err = b.tagTarget(stableTmpRef, targetImage, prefixedLogger)
