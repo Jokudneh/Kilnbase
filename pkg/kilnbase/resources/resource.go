@@ -58,3 +58,7 @@ func NewResourceFromBytes(data []byte) (*ResourceImpl, error) {
 		return nil, nil
 	}
 
+	return &ResourceImpl{un: unstructured.Unstructured{content}}, nil
+}
+
+func MustNewResourceFromBytes(data []byte) *ResourceImpl {

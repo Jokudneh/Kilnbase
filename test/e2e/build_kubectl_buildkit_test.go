@@ -52,3 +52,5 @@ spec:
 - image: kilnbase:rand-REPLACED-simple-app-three
 `
 
+	if out != expectedOut {
+		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)

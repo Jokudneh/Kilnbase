@@ -92,3 +92,7 @@ func NewImageRefDescriptors(refs []regname.Reference, registry Registry) (*Image
 			return nil
 		})
 	}
+
+	err := wg.Wait()
+
+	return imageRefDescs, err
