@@ -75,3 +75,6 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	if opts.Build.RawOptions != nil {
 		cmdArgs = append(cmdArgs, *opts.Build.RawOptions...)
 	}
+
+	if imgDst != nil {
+		cmdArgs = append(cmdArgs, "--push")

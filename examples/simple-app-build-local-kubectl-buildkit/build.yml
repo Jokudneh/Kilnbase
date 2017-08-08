@@ -23,3 +23,4 @@ sources:
   kubectlBuildkit: {}
 
 ## Uncomment to also push to registry
+# ---
