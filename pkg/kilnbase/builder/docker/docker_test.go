@@ -64,3 +64,7 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 	},
 	{
 		name:     "case sensitive path preservation",
+		input:    "registry.io/Path/To/MyImage:Tag",
+		expected: "registry.io/Path/To/MyImage:Tag",
+	},
+	{

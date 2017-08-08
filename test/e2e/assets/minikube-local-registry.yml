@@ -51,3 +51,7 @@ spec:
   volumes:
   - name: config
     configMap:
+      name: registry-config
+  - name: tls-cert
+    secret:
+      secretName: registry-tls-cert

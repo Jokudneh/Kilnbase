@@ -36,3 +36,4 @@ sources:
       target: build-env
 `)
 
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
