@@ -31,3 +31,4 @@ func (i PreresolvedImage) URL() (string, []ctlconf.Origin, error) {
 	return i.url, imageOrigins, nil
 }
 
+func copyAndAppendOrigins(existing []ctlconf.Origin, new ...ctlconf.Origin) []ctlconf.Origin {

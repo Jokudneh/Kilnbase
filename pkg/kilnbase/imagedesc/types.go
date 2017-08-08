@@ -49,3 +49,4 @@ type ImageIndexDescriptor struct {
 }
 
 type ImageDescriptor struct {
+	Refs   []string
