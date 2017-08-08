@@ -54,3 +54,4 @@ func (o *TarImageSet) Import(path string,
 
 	imgOrIndexes, err := imagetar.NewTarReader(path).Read()
 	if err != nil {
+		return nil, err
