@@ -107,3 +107,6 @@ overrides:
 	expectedLockOut := strings.ReplaceAll(env.WithRegistries(`apiVersion: kilnbase.k14s.io/v1alpha1
 kind: Config
 minimumRequiredVersion: __ver__
+overrides:
+- image: redis
+  newImage: index.docker.io/*username*/kilnbase-test-pkg-unpkg@sha256:000339fb57e0ddf2d48d72f3341e47a8ca3b1beae9bdcb25a96323095b72a79b

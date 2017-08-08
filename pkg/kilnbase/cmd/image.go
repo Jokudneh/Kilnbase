@@ -44,3 +44,7 @@ type imageStruct struct {
 }
 
 func (st imageStruct) equal(other imageStruct) bool {
+	return st.URL == other.URL && reflect.DeepEqual(st.Origins, other.Origins)
+}
+
+func contains(structs []imageStruct, st imageStruct) bool {
