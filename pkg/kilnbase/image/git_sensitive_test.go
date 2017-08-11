@@ -17,3 +17,4 @@ func TestGitProvenanceOmitsQueryCredentials(t *testing.T) {
 		"https://example.com/repo?token=query-canary",
 		"git@example.com:repo?token=query-canary",
 	}
+	for _, raw := range inputs {

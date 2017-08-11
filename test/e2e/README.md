@@ -34,3 +34,6 @@ export KILNBASE_BINARY_PATH=/usr/local/bin/kilnbase
 Run the end to end tests
 
 ```bash
+$ ./hack/test-e2e.sh
+$ ./hack/test-e2e.sh -run TestVersion
+```
