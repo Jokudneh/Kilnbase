@@ -59,3 +59,5 @@ func (o *RelocateOptions) Run() error {
 	warningLogger := logger.NewPrefixedWriter("Warning: ")
 	msg := "Command 'relocate' is deprecated; use 'imgpkg copy' instead. " +
 		"Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#copy\n"
+	_, err := warningLogger.Write([]byte(msg))
+	if err != nil {

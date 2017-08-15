@@ -123,3 +123,5 @@ type writtenLayer struct {
 	Layer  imagedesc.ImageLayerDescriptor
 }
 
+func (w *TarWriter) writeLayers() error {
+	// Sort layers by digest to have deterministic archive

@@ -25,3 +25,6 @@ func NewDescribedLayer(desc ImageLayerDescriptor, contents LayerContents) Descri
 }
 
 func (l DescribedLayer) Digest() (regv1.Hash, error) { return regv1.NewHash(l.desc.Digest) }
+func (l DescribedLayer) DiffID() (regv1.Hash, error) { return regv1.NewHash(l.desc.DiffID) }
+
+func (l DescribedLayer) Compressed() (io.ReadCloser, error) { return l.contents.Open() }
