@@ -46,3 +46,4 @@ func TestMatcherMatches(t *testing.T) {
 		},
 
 		// Match by image repo
+		{

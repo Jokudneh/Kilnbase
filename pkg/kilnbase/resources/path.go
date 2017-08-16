@@ -54,3 +54,7 @@ func (p Path) AsStrings() []string {
 			panic(fmt.Sprintf("Unexpected non-map-key path part '%+v'", part))
 		}
 		result = append(result, *part.MapKey)
+	}
+	return result
+}
+
