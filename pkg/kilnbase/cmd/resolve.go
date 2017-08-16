@@ -109,3 +109,5 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 	if len(o.Platform) > 0 {
 		opts.GlobalPlatformSelection, err = NewPlatformSelection(o.Platform)
 		if err != nil {
+			return nil, err
+		}

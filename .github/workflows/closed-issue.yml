@@ -6,3 +6,4 @@ on:
 jobs:
   remove-labels:
     runs-on: ubuntu-latest
+    steps:
