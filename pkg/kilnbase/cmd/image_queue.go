@@ -38,3 +38,6 @@ func (b *ImageQueue) Run(unprocessedImageURLs *UnprocessedImageURLs, numWorkers 
 	for _, unprocessedImageURL := range unprocessedImageURLs.All() {
 		workWg.Add(1)
 		queueCh <- unprocessedImageURL
+	}
+
+	workWg.Wait()

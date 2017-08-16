@@ -45,3 +45,7 @@ Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#push
 
 Package configuration and images into tarball
 `,
+		RunE: func(_ *cobra.Command, _ []string) error { return o.Run() },
+	}
+	o.FileFlags.Set(cmd)
+	o.RegistryFlags.Set(cmd)

@@ -57,3 +57,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 		if err != nil {
 			return "", nil, err
 		}
+
+		var matchedMan *regv1.Descriptor
+
+		for _, man := range imgIndexManifest.Manifests {
