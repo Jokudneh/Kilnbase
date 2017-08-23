@@ -61,3 +61,7 @@ func (o *RelocateOptions) Run() error {
 		"Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#copy\n"
 	_, err := warningLogger.Write([]byte(msg))
 	if err != nil {
+		return err
+	}
+
+	// basic checks
