@@ -61,3 +61,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 		var matchedMan *regv1.Descriptor
 
 		for _, man := range imgIndexManifest.Manifests {
+			if man.Platform != nil && MatchesPlatformSelection(*man.Platform, *i.selection) {
+				if matchedMan != nil {
+					return "", nil, fmt.Errorf("Expected to find only one image under index '%s' with matching platform, but found more than one", url)
+				}

@@ -35,3 +35,7 @@ func NewInspectCmd(o *InspectOptions) *cobra.Command {
 	return cmd
 }
 
+func (o *InspectOptions) Run() error {
+	rs, conf, err := o.FileFlags.ResourcesAndConfig()
+	if err != nil {
+		return err
