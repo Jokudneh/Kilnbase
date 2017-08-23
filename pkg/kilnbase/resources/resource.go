@@ -62,3 +62,4 @@ func NewResourceFromBytes(data []byte) (*ResourceImpl, error) {
 }
 
 func MustNewResourceFromBytes(data []byte) *ResourceImpl {
+	res, err := NewResourceFromBytes(data)
