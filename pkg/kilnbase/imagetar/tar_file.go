@@ -47,3 +47,7 @@ func (f tarFile) FindLayer(layerTD imagedesc.ImageLayerDescriptor) (imagedesc.La
 
 func (f tarFileChunk) Open() (io.ReadCloser, error) {
 	return f.file.openChunk(f.chunkPath)
+}
+
+func (f tarFile) openChunk(path string) (io.ReadCloser, error) {
+	file, err := os.Open(f.path)

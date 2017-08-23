@@ -14,3 +14,4 @@ jobs:
     steps:
       - uses: actions/add-to-project@v0.3.0
         with:
+          project-url: https://github.com/orgs/kilnbase-dev/projects/1
