@@ -35,3 +35,5 @@ func mustHash(s string, t *testing.T) v1.Hash {
 	}
 	return h
 }
+
+func TestVerificationFailure(t *testing.T) {
