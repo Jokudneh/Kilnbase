@@ -58,3 +58,7 @@ func NewBuiltImage(url string, buildSource ctlconf.Source,
 }
 
 func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
+	origins, err := i.sources()
+	if err != nil {
+		return "", nil, err
+	}
