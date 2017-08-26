@@ -32,3 +32,7 @@ eval $(minikube docker-env)
 ## Source Code Structure
 
 For those interested in extending and improving kilnbase, below is a quick reference on the structure of the source code:
+
+- [.github/workflows/test-gh.yml](https://github.com/kilnbase-dev/kilnbase/blob/develop/.github/workflows/test-gh.yml) is a Github Action that runs build and unit tests when commits are pushed
+- [hack](https://github.com/kilnbase-dev/kilnbase/tree/develop/hack) has build and test scripts
+- [cmd/kilnbase](https://github.com/kilnbase-dev/kilnbase/blob/develop/cmd/kilnbase) is the entry package for main kilnbase binary
