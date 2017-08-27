@@ -36,3 +36,7 @@ For those interested in extending and improving kilnbase, below is a quick refer
 - [.github/workflows/test-gh.yml](https://github.com/kilnbase-dev/kilnbase/blob/develop/.github/workflows/test-gh.yml) is a Github Action that runs build and unit tests when commits are pushed
 - [hack](https://github.com/kilnbase-dev/kilnbase/tree/develop/hack) has build and test scripts
 - [cmd/kilnbase](https://github.com/kilnbase-dev/kilnbase/blob/develop/cmd/kilnbase) is the entry package for main kilnbase binary
+- [pkg/kilnbase/cmd](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/cmd) includes all kilnbase CLI commands (kilnbase.go is root command)
+- [pkg/kilnbase/config](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/config) describes kilnbase configuration resources such as Config, Sources, etc.
+- [pkg/kilnbase/resources](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/resources) allows to parse YAML files into Resource objects 
+- [pkg/kilnbase/image](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/image) contains set of classes that know how to "transform" image URLs (build it, resolve it to digest, tag it)

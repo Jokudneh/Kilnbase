@@ -68,3 +68,7 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		expected: "registry.io/Path/To/MyImage:Tag",
 	},
 	{
+		name:     "bare image name with tag",
+		input:    "MyImage:Tag",
+		expected: "MyImage:Tag",
+	},
