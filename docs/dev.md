@@ -40,3 +40,4 @@ For those interested in extending and improving kilnbase, below is a quick refer
 - [pkg/kilnbase/config](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/config) describes kilnbase configuration resources such as Config, Sources, etc.
 - [pkg/kilnbase/resources](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/resources) allows to parse YAML files into Resource objects 
 - [pkg/kilnbase/image](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/image) contains set of classes that know how to "transform" image URLs (build it, resolve it to digest, tag it)
+- [pkg/kilnbase/registry](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/registry) provides a simplified registry API client
