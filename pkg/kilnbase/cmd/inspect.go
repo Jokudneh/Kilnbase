@@ -39,3 +39,6 @@ func (o *InspectOptions) Run() error {
 	rs, conf, err := o.FileFlags.ResourcesAndConfig()
 	if err != nil {
 		return err
+	}
+
+	foundImages, err := o.findImages(rs, conf)

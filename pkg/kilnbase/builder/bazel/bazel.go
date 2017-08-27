@@ -41,3 +41,7 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 		var stdoutBuf, stderrBuf bytes.Buffer
 
 		cmdArgs := []string{"run"}
+
+		if opts.Target == nil {
+			return ctlbdk.TmpRef{}, fmt.Errorf("Expected target to be specified, but was not")
+		}

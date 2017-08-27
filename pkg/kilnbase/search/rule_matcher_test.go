@@ -41,3 +41,6 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 		}
 	}
 
+	exs := []example{
+		{
+			desc:    "image: mismatched hostname case still matches",
