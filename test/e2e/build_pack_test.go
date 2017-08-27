@@ -49,3 +49,7 @@ sources:
 - image: docker.io/*username*/kilnbase-e2e-tests-build2
   path: %s
   pack: &pack
+    build:
+      builder: index.docker.io/cloudfoundry/cnb@sha256:83270cf59e8944be0c544e45fd45a5a1f4526d7936d488d2de8937730341618d
+---
+apiVersion: kilnbase.k14s.io/v1alpha1

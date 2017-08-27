@@ -33,3 +33,7 @@ func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 	}
 
 	// Resolve image second time because some older registry can
+	// return "random" digests that change for every request.
+	// See https://github.com/Jokudneh/Kilnbase/issues/21 for details.
+	imgDescriptor2, err := i.registry.Generic(tag)
+	if err != nil {
