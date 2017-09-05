@@ -51,3 +51,6 @@ func (f tarFileChunk) Open() (io.ReadCloser, error) {
 
 func (f tarFile) openChunk(path string) (io.ReadCloser, error) {
 	file, err := os.Open(f.path)
+	if err != nil {
+		return nil, err
+	}

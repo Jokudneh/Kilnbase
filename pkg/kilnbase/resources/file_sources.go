@@ -58,3 +58,5 @@ var _ FileSource = HTTPFileSource{}
 func NewHTTPFileSource(path string) HTTPFileSource { return HTTPFileSource{path} }
 
 // redactURL masks userinfo, query parameters and fragments to prevent
+// exposing credentials in error messages. If URL parsing fails, returns
+// a safe placeholder.
