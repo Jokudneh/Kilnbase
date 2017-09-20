@@ -10,3 +10,4 @@ type SourceKubectlBuildkitOpts struct {
 type SourceKubectlBuildkitBuildOpts struct {
 	Target     *string
 	Platform   *string
+	Pull       *bool

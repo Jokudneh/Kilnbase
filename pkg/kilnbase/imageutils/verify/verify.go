@@ -34,3 +34,7 @@ type verifyReader struct {
 	hasher   hash.Hash
 	expected v1.Hash
 }
+
+// Read implements io.Reader
+func (vc *verifyReader) Read(b []byte) (int, error) {
+	n, err := vc.inner.Read(b)
