@@ -34,3 +34,7 @@ type OriginResolved struct {
 
 type OriginTagged struct {
 	Tags []string `json:"tags"`
+}
+
+type OriginPreresolved struct {
+	URL string `json:"url"`

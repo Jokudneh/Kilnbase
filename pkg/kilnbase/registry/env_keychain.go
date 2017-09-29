@@ -58,3 +58,6 @@ type envKeychainInfo struct {
 	Username      string
 	Password      string
 	IdentityToken string
+	RegistryToken string
+}
+

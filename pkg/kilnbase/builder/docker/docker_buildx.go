@@ -83,3 +83,5 @@ type Buildx struct {
 	docker Docker
 	logger ctllog.Logger
 }
+
+func NewBuildx(docker Docker, logger ctllog.Logger) Buildx {
