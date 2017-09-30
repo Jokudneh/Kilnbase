@@ -43,3 +43,6 @@ func ReadCloser(r io.ReadCloser) io.ReadCloser {
 func ReadCloserLevel(r io.ReadCloser, level int) io.ReadCloser {
 	pr, pw := io.Pipe()
 
+	// Returns err so we can pw.CloseWithError(err)
+	go func() {
+		// TODO(go1.14): Just defer {pw,gw,r}.Close like you'd expect.

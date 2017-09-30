@@ -28,3 +28,6 @@ func (l DescribedLayer) Digest() (regv1.Hash, error) { return regv1.NewHash(l.de
 func (l DescribedLayer) DiffID() (regv1.Hash, error) { return regv1.NewHash(l.desc.DiffID) }
 
 func (l DescribedLayer) Compressed() (io.ReadCloser, error) { return l.contents.Open() }
+
+func (l DescribedLayer) Uncompressed() (io.ReadCloser, error) {
+	rc, err := l.contents.Open()

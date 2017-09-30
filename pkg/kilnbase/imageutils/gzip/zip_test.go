@@ -52,3 +52,7 @@ func TestIs(t *testing.T) {
 	tests := []struct {
 		in  []byte
 		out bool
+		err error
+	}{
+		{[]byte{}, false, nil},
+		{[]byte{'\x00', '\x00', '\x00'}, false, nil},
