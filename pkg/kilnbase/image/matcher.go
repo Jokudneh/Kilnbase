@@ -32,3 +32,5 @@ func (m Matcher) Matches(ref ctlconf.ImageRef) bool {
 		repo, _ := URLRepo(m.url)
 		lhs := ctlbdk.LowerCaseRegistry(ref.ImageRepo)
 		rhs := ctlbdk.LowerCaseRegistry(repo)
+		return lhs == rhs
+
