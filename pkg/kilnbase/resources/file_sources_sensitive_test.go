@@ -47,3 +47,5 @@ func TestHTTPBodyErrorOmitsCredentials(t *testing.T) {
 			StatusCode: http.StatusOK,
 			Body:       io.NopCloser(sensitiveTestReader{}),
 			Header:     make(http.Header),
+		}, nil
+	})

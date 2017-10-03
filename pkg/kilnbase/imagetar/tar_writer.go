@@ -125,3 +125,6 @@ type writtenLayer struct {
 
 func (w *TarWriter) writeLayers() error {
 	// Sort layers by digest to have deterministic archive
+	sort.Slice(w.layersToWrite, func(i, j int) bool {
+		return w.layersToWrite[i].Digest < w.layersToWrite[j].Digest
+	})
