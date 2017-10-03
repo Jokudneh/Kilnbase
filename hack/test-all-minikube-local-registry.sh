@@ -15,3 +15,6 @@ kapp deploy -a reg -f <(ytt -f test/e2e/assets/minikube-local-registry.yml -v re
 
 # Install registry ca cert on the host machine
 kubectl get secret registry-ca-cert -ojsonpath='{.data.crt\.pem}' | base64 --decode > registry-ca-cert.crt
+cp registry-ca-cert.crt /usr/local/share/ca-certificates/
+update-ca-certificates
+

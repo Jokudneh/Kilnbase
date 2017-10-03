@@ -31,3 +31,6 @@ func (l DescribedLayer) Compressed() (io.ReadCloser, error) { return l.contents.
 
 func (l DescribedLayer) Uncompressed() (io.ReadCloser, error) {
 	rc, err := l.contents.Open()
+	if err != nil {
+		return nil, err
+	}

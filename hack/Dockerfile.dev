@@ -26,3 +26,5 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.
 RUN curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor > /usr/share/keyrings/cloud.google.gpg
 RUN apt-get update -y
 RUN apt-get install google-cloud-cli -y
+
+RUN git config --global user.email "email@example.com"
