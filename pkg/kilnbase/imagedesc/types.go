@@ -53,3 +53,6 @@ type ImageDescriptor struct {
 	Layers []ImageLayerDescriptor
 
 	Config   ConfigDescriptor
+	Manifest ManifestDescriptor
+}
+

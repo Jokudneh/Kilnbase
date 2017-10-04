@@ -34,3 +34,7 @@ func TestEnvKeychainResolveIsCaseInsensitive(t *testing.T) {
 	cfg, err := auth.Authorization()
 	if err != nil {
 		t.Fatalf("Authorization returned error: %s", err)
+	}
+	if cfg.Username != "user" || cfg.Password != "pass" {
+		t.Fatalf("case-differing hostname should resolve: got %+v",
+			cfg)

@@ -41,3 +41,7 @@ For those interested in extending and improving kilnbase, below is a quick refer
 - [pkg/kilnbase/resources](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/resources) allows to parse YAML files into Resource objects 
 - [pkg/kilnbase/image](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/image) contains set of classes that know how to "transform" image URLs (build it, resolve it to digest, tag it)
 - [pkg/kilnbase/registry](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/registry) provides a simplified registry API client
+- [pkg/kilnbase/search](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/search) implements YAML node searcher that finds image URLs
+- [test/e2e](https://github.com/kilnbase-dev/kilnbase/tree/develop/test/e2e) includes e2e tests that can run against Docker registry.
+
+## How to set up an insecure-only registry
