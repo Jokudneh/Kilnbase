@@ -34,3 +34,7 @@ func (l DescribedLayer) Uncompressed() (io.ReadCloser, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	h, err := l.Digest()
+	if err != nil {
+		return nil, fmt.Errorf("Computing digest: %v", err)
