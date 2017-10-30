@@ -44,3 +44,4 @@ func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlb
 
 	err := cmd.Run()
 	if err != nil {
+		prefixedLogger.Write([]byte(fmt.Sprintf("error: %s\n", err)))
