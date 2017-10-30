@@ -47,3 +47,7 @@ func TestMatcherMatches(t *testing.T) {
 
 		// Match by image repo
 		{
+			ImageRef: ctlconf.ImageRef{ImageRepo: "img"},
+			URL:      "img",
+			Matched:  true,
+		}, {

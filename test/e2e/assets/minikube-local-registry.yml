@@ -55,3 +55,7 @@ spec:
   - name: tls-cert
     secret:
       secretName: registry-tls-cert
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
