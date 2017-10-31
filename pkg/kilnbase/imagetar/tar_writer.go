@@ -128,3 +128,6 @@ func (w *TarWriter) writeLayers() error {
 	sort.Slice(w.layersToWrite, func(i, j int) bool {
 		return w.layersToWrite[i].Digest < w.layersToWrite[j].Digest
 	})
+
+	seekableDst, isSeekable := w.dst.(*os.File)
+	isInflattable := (w.opts.Concurrency > 1) && isSeekable

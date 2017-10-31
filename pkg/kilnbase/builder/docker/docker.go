@@ -99,3 +99,7 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 			cmdArgs = append(cmdArgs, *opts.RawOptions...)
 		}
 
+		cmdArgs = append(cmdArgs, "--tag", tmpRef.AsString(), ".")
+
+		cmd := exec.Command("docker", cmdArgs...)
+		cmd.Dir = directory

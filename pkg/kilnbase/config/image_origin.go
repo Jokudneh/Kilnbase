@@ -40,3 +40,5 @@ type OriginPreresolved struct {
 	URL string `json:"url"`
 }
 
+type OriginPlatformSelected struct {
+	Index        string `json:"index,omitempty"`
