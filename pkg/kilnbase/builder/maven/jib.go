@@ -83,3 +83,4 @@ func (b *Jib) Run(image, directory string,
 	}
 
 	err = b.tagTarget(stableTmpRef, targetImage, prefixedLogger)
+	if err != nil {
