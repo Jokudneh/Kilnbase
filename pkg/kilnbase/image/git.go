@@ -68,3 +68,5 @@ func (r GitRepo) IsDirty() (bool, error) {
 	if err != nil {
 		return false, r.error("Checking status: %s", err)
 	}
+
+	// Strip newline which is added if there are any changes
