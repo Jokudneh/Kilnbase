@@ -21,3 +21,4 @@ overrides:
   newImage: gcr.io/google-samples/microservices-demo/currencyservice:v0.1.0
 - image: shippingservice
   newImage: gcr.io/google-samples/microservices-demo/shippingservice:v0.1.0
+- image: adservice
