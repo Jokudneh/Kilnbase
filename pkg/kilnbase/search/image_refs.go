@@ -47,3 +47,4 @@ func (v ImageRefsVisitorFunc) Apply(res interface{}, searchRules []ctlconf.Searc
 		return tmpRefID, true
 	}
 
+	// Use a single matcher that represents all rules instead

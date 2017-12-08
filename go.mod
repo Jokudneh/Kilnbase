@@ -41,3 +41,6 @@ require (
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/sirupsen/logrus v1.9.4 // indirect
 	github.com/spf13/pflag v1.0.10 // indirect
+	github.com/vbatts/tar-split v0.12.2 // indirect
+	github.com/vito/go-interact v1.0.1 // indirect
+	github.com/x448/float16 v0.8.4 // indirect
