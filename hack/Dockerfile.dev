@@ -28,3 +28,5 @@ RUN apt-get update -y
 RUN apt-get install google-cloud-cli -y
 
 RUN git config --global user.email "email@example.com"
+RUN git config --global user.name "Some Person"
+
