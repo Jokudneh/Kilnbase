@@ -49,3 +49,4 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 
 	{
 		var stdoutBuf, stderrBuf bytes.Buffer
+

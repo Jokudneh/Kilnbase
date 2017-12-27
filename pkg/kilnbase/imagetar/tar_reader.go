@@ -25,3 +25,4 @@ func (r TarReader) Read() ([]imagedesc.ImageOrIndex, error) {
 		return nil, err
 	}
 
+	manifestBytes, err := io.ReadAll(manifestFile)

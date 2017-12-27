@@ -57,3 +57,4 @@ func TestIs(t *testing.T) {
 		{[]byte{}, false, nil},
 		{[]byte{'\x00', '\x00', '\x00'}, false, nil},
 		{[]byte{'\x1f', '\x8b', '\x1b'}, true, nil},
+	}
