@@ -89,3 +89,6 @@ func (i Registry) WriteImage(ref regname.Reference, img regv1.Image) error {
 	})
 	if err != nil {
 		return fmt.Errorf("Writing image: %s", err)
+	}
+
+	return nil

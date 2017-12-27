@@ -50,3 +50,6 @@ func ReadCloserLevel(r io.ReadCloser, level int) io.ReadCloser {
 		gw, err := gzip.NewWriterLevel(pw, level)
 		if err != nil {
 			pw.CloseWithError(err)
+			return
+		}
+

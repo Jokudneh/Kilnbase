@@ -80,3 +80,5 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 		cmdArgs = append(cmdArgs, "--push")
 		// https://github.com/jokudneh/buildkit-cli-for-kubectl/blob/main/docs/multiarch.md#using-a-registry
 		// > it's possible to skip specifying the --registry-secret flag to kubectl build by naming the secret the same name as the builder
+	}
+
