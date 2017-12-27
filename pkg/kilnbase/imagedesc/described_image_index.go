@@ -41,3 +41,4 @@ func (i DescribedImageIndex) IndexManifest() (*regv1.IndexManifest, error) {
 	if err != nil {
 		return nil, err
 	}
+	return manifest, nil

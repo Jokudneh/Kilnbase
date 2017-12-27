@@ -47,3 +47,5 @@ func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlb
 		prefixedLogger.Write([]byte(fmt.Sprintf("error: %s\n", err)))
 		return ctlbdk.TmpRef{}, err
 	}
+
+	return ctlbdk.NewTmpRef(strings.Trim(stdoutBuf.String(), "\n")), nil
