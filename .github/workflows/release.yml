@@ -49,3 +49,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           result-encoding: string
           script: |
+            var crypto = require('crypto');
+            const { owner, repo } = context.repo;
+
+            // https://docs.github.com/en/rest/reference/repos#list-releases
