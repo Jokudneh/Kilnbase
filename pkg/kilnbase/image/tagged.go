@@ -39,3 +39,5 @@ func (i TaggedImage) URL() (string, []ctlconf.Origin, error) {
 			return "", nil, err
 		}
 
+		for _, tag := range i.imgDst.Tags {
+			err := i.registry.WriteTag(dstRef.Context().Tag(tag), srcRef)
