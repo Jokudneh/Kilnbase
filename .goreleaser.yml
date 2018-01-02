@@ -43,3 +43,4 @@ signs:
       - '${artifact}'
     output: true  
 snapshot:
+  name_template: "{{ .Tag }}-next"
