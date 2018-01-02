@@ -45,3 +45,5 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 		if opts.Target == nil {
 			return ctlbdk.TmpRef{}, fmt.Errorf("Expected target to be specified, but was not")
 		}
+
+		cmdArgs = append(cmdArgs, *opts.Target)
