@@ -58,3 +58,6 @@ overrides:
 	out = regexp.MustCompile("kilnbase:(.+)-kilnbase-e2e(\\-.*)-SHA256-REPLACED").ReplaceAllString(out, "kilnbase:img-title-SHA256-REPLACED")
 
 	expectedOut := `---
+kind: Object
+spec:
+- image: kilnbase:img-title-SHA256-REPLACED

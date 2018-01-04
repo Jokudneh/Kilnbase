@@ -75,3 +75,5 @@ func (f Factory) New(url string) Image {
 		bazel := ctlbbz.NewBazel(docker, f.logger)
 		maven := ctlbmvn.NewMavenJib(docker, f.logger)
 
+		builders := BuildersOpts{
+			Docker:          docker,
