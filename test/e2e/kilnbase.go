@@ -47,3 +47,6 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 		cmd.Stderr = opts.StderrWriter
 	} else {
 		cmd.Stderr = &stderr
+	}
+
+	if opts.StdoutWriter != nil {
