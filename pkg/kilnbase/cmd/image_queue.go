@@ -41,3 +41,7 @@ func (b *ImageQueue) Run(unprocessedImageURLs *UnprocessedImageURLs, numWorkers 
 	}
 
 	workWg.Wait()
+	close(queueCh)
+
+	return b.outputImages, errFromErrs(b.outputErrs)
+}

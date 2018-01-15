@@ -23,3 +23,5 @@ func NewUnprocessedImageURLs() *UnprocessedImageURLs {
 
 func (i *UnprocessedImageURLs) Add(url UnprocessedImageURL) {
 	i.urls[url] = struct{}{}
+}
+

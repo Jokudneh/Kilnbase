@@ -31,3 +31,7 @@ func (f YAMLFile) Docs() ([][]byte, error) {
 
 	for {
 		docBytes, err := reader.Read()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
