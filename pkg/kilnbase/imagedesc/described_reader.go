@@ -33,3 +33,7 @@ func (r DescribedReader) Read() []ImageOrIndex {
 			panic("Unknown item")
 		}
 	}
+
+	return result
+}
+
