@@ -37,3 +37,4 @@ func main() {
 			_, _ = fmt.Fprintf(os.Stderr, "kilnbase: Error: %s\n", multiLineErr)
 		} else {
 			confUI.ErrorLinef("kilnbase: Error: %s", multiLineErr)
+		}

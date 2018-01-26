@@ -61,3 +61,6 @@ type envKeychainInfo struct {
 	RegistryToken string
 }
 
+func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
+	k.collectLock.Lock()
+	defer k.collectLock.Unlock()
