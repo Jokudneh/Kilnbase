@@ -49,3 +49,6 @@ func (e Env) Validate(t *testing.T) {
 func (e Env) WithRegistries(input string) string {
 	for _, hostname := range []string{"index.docker.io/", "docker.io/"} {
 		newHostname := hostname
+		if len(e.DockerHubHostname) > 0 {
+			newHostname = e.DockerHubHostname + "/"
+		}

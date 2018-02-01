@@ -32,3 +32,4 @@ func (r ResourceWithImages) Bytes() ([]byte, error) {
 		resUn := unstructured.Unstructured{r.contents}
 
 		imagesYAML, err := yaml.Marshal(newImageStructs(r.images))
+		if err != nil {
