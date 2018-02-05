@@ -65,3 +65,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 				if matchedMan != nil {
 					return "", nil, fmt.Errorf("Expected to find only one image under index '%s' with matching platform, but found more than one", url)
 				}
+				man := man // copy
+				matchedMan = &man
+			}
+		}

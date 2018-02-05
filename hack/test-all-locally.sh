@@ -37,3 +37,5 @@ docker run \
 -e DOCKER_API_VERSION=1.44 \
 -e KILNBASE_E2E_SKIP_WHEN_HTTP_REGISTRY=${KILNBASE_E2E_SKIP_WHEN_HTTP_REGISTRY:-true} \
 -e KILNBASE_E2E_DOCKERHUB_HOSTNAME=`minikube ip`:30777 \
+-v ~/.config:/root/.config \
+-v ~/.minikube:"$HOME/.minikube" \

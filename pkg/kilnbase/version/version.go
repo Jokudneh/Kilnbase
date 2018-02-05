@@ -38,3 +38,7 @@ func version() string {
 			// from this version. Since the validation logic doesn't allow
 			// minimumRequiredVersion to have a 'v' prefix, we remove it here.
 			return strings.TrimPrefix(dep.Version, "v")
+		}
+	}
+
+	return defaultVersion
