@@ -45,3 +45,5 @@ For those interested in extending and improving kilnbase, below is a quick refer
 - [test/e2e](https://github.com/kilnbase-dev/kilnbase/tree/develop/test/e2e) includes e2e tests that can run against Docker registry.
 
 ## How to set up an insecure-only registry
+It is occasionally necessary to test against insecure-only registries in order to ensure the commands can run against http endpoints.
+Here's how we set one up on Google's Kubernetes Engine:

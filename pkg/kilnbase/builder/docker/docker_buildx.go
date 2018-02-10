@@ -85,3 +85,7 @@ type Buildx struct {
 }
 
 func NewBuildx(docker Docker, logger ctllog.Logger) Buildx {
+	return Buildx{docker, logger}
+}
+
+// BuildAndOptionallyPush either loads built image into Docker daemon
