@@ -64,3 +64,5 @@ func (c Conf) Sources() []Source {
 }
 
 func (c Conf) ImageOverrides() []ImageOverride {
+	var result []ImageOverride
+	for _, config := range c.configs {

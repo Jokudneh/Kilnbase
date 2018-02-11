@@ -18,3 +18,6 @@ kubectl get secret registry-ca-cert -ojsonpath='{.data.crt\.pem}' | base64 --dec
 cp registry-ca-cert.crt /usr/local/share/ca-certificates/
 update-ca-certificates
 
+# Docker needs its own CA cert configuration
+mkdir -p /host-etc-docker/certs.d/${KILNBASE_E2E_DOCKERHUB_HOSTNAME}
+cp registry-ca-cert.crt /host-etc-docker/certs.d/${KILNBASE_E2E_DOCKERHUB_HOSTNAME}/ca.crt
