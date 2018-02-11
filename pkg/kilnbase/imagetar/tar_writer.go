@@ -131,3 +131,6 @@ func (w *TarWriter) writeLayers() error {
 
 	seekableDst, isSeekable := w.dst.(*os.File)
 	isInflattable := (w.opts.Concurrency > 1) && isSeekable
+	writtenLayers := map[string]writtenLayer{}
+
+	// Inflate tar file so that multiple writes can happen in parallel

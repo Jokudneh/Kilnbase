@@ -61,3 +61,4 @@ func NewHTTPFileSource(path string) HTTPFileSource { return HTTPFileSource{path}
 // exposing credentials in error messages. If URL parsing fails, returns
 // a safe placeholder.
 func redactURL(raw string) string {
+	const empty = ""

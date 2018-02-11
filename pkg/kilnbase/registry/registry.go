@@ -92,3 +92,5 @@ func (i Registry) WriteImage(ref regname.Reference, img regv1.Image) error {
 	}
 
 	return nil
+}
+
