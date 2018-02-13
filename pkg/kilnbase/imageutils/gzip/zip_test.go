@@ -58,3 +58,4 @@ func TestIs(t *testing.T) {
 		{[]byte{'\x00', '\x00', '\x00'}, false, nil},
 		{[]byte{'\x1f', '\x8b', '\x1b'}, true, nil},
 	}
+	for _, test := range tests {

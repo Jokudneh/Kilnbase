@@ -87,3 +87,6 @@ func (b *Jib) Run(image, directory string,
 		_, _ = prefixedLogger.Write([]byte(fmt.Sprintf(
 			"target tag error: %s\n", err)))
 		return ctlbdk.TmpRef{}, err
+	}
+
+	return stableTmpRef, nil
