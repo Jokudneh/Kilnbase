@@ -50,3 +50,5 @@ jobs:
       env:
         DOCKERHUB_USERNAME: k8slt
         DOCKERHUB_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
+      run: |
+        set -e -x

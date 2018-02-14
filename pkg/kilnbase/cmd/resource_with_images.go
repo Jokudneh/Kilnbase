@@ -33,3 +33,6 @@ func (r ResourceWithImages) Bytes() ([]byte, error) {
 
 		imagesYAML, err := yaml.Marshal(newImageStructs(r.images))
 		if err != nil {
+			return nil, err
+		}
+

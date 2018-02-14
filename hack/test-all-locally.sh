@@ -39,3 +39,5 @@ docker run \
 -e KILNBASE_E2E_DOCKERHUB_HOSTNAME=`minikube ip`:30777 \
 -v ~/.config:/root/.config \
 -v ~/.minikube:"$HOME/.minikube" \
+-v ~/.kube:/root/.kube \
+-v /etc/docker/:/host-etc-docker \
