@@ -65,3 +65,6 @@ func (o *RelocateOptions) Run() error {
 	}
 
 	// basic checks
+	if len(o.Repository) == 0 {
+		return fmt.Errorf("Expected repository flag to be non-empty")
+	}
