@@ -50,3 +50,7 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 	{
 		var stdoutBuf, stderrBuf bytes.Buffer
 
+		// --verbose is necessary for Image ID to be displayed
+		cmdArgs := []string{"build", "--verbose", image, "--path", "."}
+
+		if opts.Builder == nil {
