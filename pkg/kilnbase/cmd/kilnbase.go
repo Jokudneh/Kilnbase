@@ -40,3 +40,6 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 	cmd.DisableAutoGenTag = true
 
 	// We need to do a little work for the automatic "completion" command to function as designed.
+	cmd.CompletionOptions.DisableDefaultCmd = true
+
+	cmd.SetOutput(uiBlockWriter{o.ui}) // setting output for cmd.Help()

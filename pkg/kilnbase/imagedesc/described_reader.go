@@ -37,3 +37,6 @@ func (r DescribedReader) Read() []ImageOrIndex {
 	return result
 }
 
+func (r DescribedReader) buildIndex(iitd ImageIndexDescriptor) ImageIndexWithRef {
+	var images []regv1.Image
+	var indexes []regv1.ImageIndex
