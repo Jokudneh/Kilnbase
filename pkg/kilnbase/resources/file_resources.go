@@ -41,3 +41,7 @@ func NewFileResources(file string) ([]FileResource, error) {
 			err := filepath.Walk(file, func(path string, fi os.FileInfo, err error) error {
 				if err != nil || fi.IsDir() {
 					return err
+				}
+				ext := filepath.Ext(path)
+				for _, allowedExt := range fileResourcesAllowedExts {
+					if allowedExt == ext {
