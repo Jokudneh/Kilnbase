@@ -25,3 +25,6 @@ func (i *UnprocessedImageURLs) Add(url UnprocessedImageURL) {
 	i.urls[url] = struct{}{}
 }
 
+func (i *UnprocessedImageURLs) All() []UnprocessedImageURL {
+	var result []UnprocessedImageURL
+	for url := range i.urls {

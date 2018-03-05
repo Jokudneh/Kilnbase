@@ -43,3 +43,6 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 	cmd.CompletionOptions.DisableDefaultCmd = true
 
 	cmd.SetOutput(uiBlockWriter{o.ui}) // setting output for cmd.Help()
+
+	o.UIFlags.Set(cmd)
+
