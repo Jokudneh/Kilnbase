@@ -30,3 +30,4 @@ func (r TarReader) Read() ([]imagedesc.ImageOrIndex, error) {
 		return nil, err
 	}
 
+	ids, err := imagedesc.NewImageRefDescriptorsFromBytes(manifestBytes)

@@ -22,3 +22,5 @@ func (s *RegistryFlags) Set(cmd *cobra.Command) {
 
 func (s *RegistryFlags) AsRegistryOpts() ctlreg.Opts {
 	return ctlreg.Opts{
+		CACertPaths:   s.CACertPaths,
+		VerifyCerts:   s.VerifyCerts,
