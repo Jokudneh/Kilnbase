@@ -36,3 +36,7 @@ func (r ResourceWithImages) Bytes() ([]byte, error) {
 			return nil, err
 		}
 
+		anns := resUn.GetAnnotations()
+		if anns == nil {
+			anns = map[string]string{}
+		}

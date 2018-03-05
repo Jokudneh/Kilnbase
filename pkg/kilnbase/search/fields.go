@@ -57,3 +57,6 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 			}
 		}
 
+	case []interface{}:
+		for i, o := range typedObj {
+			i := i // copy
