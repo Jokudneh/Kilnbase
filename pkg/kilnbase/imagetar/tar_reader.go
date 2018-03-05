@@ -29,3 +29,4 @@ func (r TarReader) Read() ([]imagedesc.ImageOrIndex, error) {
 	if err != nil {
 		return nil, err
 	}
+
