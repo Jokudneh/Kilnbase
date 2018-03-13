@@ -113,3 +113,5 @@ overrides:
   preresolved: true
 - image: index.docker.io/library/redis@sha256:000339fb57e0ddf2d48d72f3341e47a8ca3b1beae9bdcb25a96323095b72a79b
   newImage: index.docker.io/*username*/kilnbase-test-pkg-unpkg@sha256:000339fb57e0ddf2d48d72f3341e47a8ca3b1beae9bdcb25a96323095b72a79b
+  preresolved: true
+`), "__ver__", strings.TrimSuffix(kilnbaseVersion, "\n"))

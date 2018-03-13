@@ -49,3 +49,6 @@ func TestHTTPBodyErrorOmitsCredentials(t *testing.T) {
 			Header:     make(http.Header),
 		}, nil
 	})
+	t.Cleanup(func() { http.DefaultTransport = original })
+
+	_, err := NewHTTPFileSource(raw).Bytes()
