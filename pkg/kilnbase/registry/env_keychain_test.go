@@ -38,3 +38,6 @@ func TestEnvKeychainResolveIsCaseInsensitive(t *testing.T) {
 	if cfg.Username != "user" || cfg.Password != "pass" {
 		t.Fatalf("case-differing hostname should resolve: got %+v",
 			cfg)
+	}
+}
+

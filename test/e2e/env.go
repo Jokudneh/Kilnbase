@@ -52,3 +52,5 @@ func (e Env) WithRegistries(input string) string {
 		if len(e.DockerHubHostname) > 0 {
 			newHostname = e.DockerHubHostname + "/"
 		}
+		input = strings.Replace(input, hostname+"*username*/", newHostname+e.DockerHubUsername+"/", -1)
+	}
