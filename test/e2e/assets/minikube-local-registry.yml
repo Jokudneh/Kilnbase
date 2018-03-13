@@ -59,3 +59,5 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  name: registry-config
+  annotations:
