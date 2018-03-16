@@ -58,3 +58,4 @@ func (p Path) AsStrings() []string {
 	return result
 }
 
+func (p Path) AsString() string {

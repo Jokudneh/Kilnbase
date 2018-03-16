@@ -111,3 +111,7 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 		if err != nil {
 			return nil, err
 		}
+	}
+	imgFactory := ctlimg.NewFactory(opts, registry, *logger)
+
+	imageURLs, err := o.collectImageReferences(nonConfigRs, conf)
