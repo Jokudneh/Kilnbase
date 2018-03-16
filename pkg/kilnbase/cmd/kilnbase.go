@@ -46,3 +46,4 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 
 	o.UIFlags.Set(cmd)
 
+	cmd.AddCommand(NewInspectCmd(NewInspectOptions(o.ui)))

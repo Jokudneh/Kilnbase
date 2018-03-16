@@ -37,3 +37,6 @@ func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 	// See https://github.com/Jokudneh/Kilnbase/issues/21 for details.
 	imgDescriptor2, err := i.registry.Generic(tag)
 	if err != nil {
+		return "", nil, err
+	}
+
