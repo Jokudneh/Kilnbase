@@ -31,3 +31,5 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 			name := m.rule.KeyMatcher.Name
 			keyMatched = keyPath.HasMatchingSuffix(ctlres.Path{{MapKey: &name}})
 
+		case len(m.rule.KeyMatcher.Path) > 0:
+			keyMatched = m.rule.KeyMatcher.Path.Matches(keyPath)
