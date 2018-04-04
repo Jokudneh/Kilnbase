@@ -62,3 +62,5 @@ func NewHTTPFileSource(path string) HTTPFileSource { return HTTPFileSource{path}
 // a safe placeholder.
 func redactURL(raw string) string {
 	const empty = ""
+
+	u, err := url.Parse(raw)
