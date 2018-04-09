@@ -40,3 +40,5 @@ func (r ResourceWithImages) Bytes() ([]byte, error) {
 		if anns == nil {
 			anns = map[string]string{}
 		}
+
+		anns[ImagesAnnKey] = string(imagesYAML)
