@@ -80,3 +80,4 @@ func TestImageRefsMatches(t *testing.T) {
 			OutputImages: []string{"gcr.io/repo@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
 		},
 		// By key and image repo
+		{

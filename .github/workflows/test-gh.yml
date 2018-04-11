@@ -52,3 +52,6 @@ jobs:
         DOCKERHUB_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
       run: |
         set -e -x
+
+        minikube start --driver=docker --container-runtime=docker --wait=all --mount --mount-string "$HOME:$HOME"
+
