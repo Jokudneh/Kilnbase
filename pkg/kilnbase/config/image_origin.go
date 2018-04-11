@@ -42,3 +42,6 @@ type OriginPreresolved struct {
 
 type OriginPlatformSelected struct {
 	Index        string `json:"index,omitempty"`
+	OS           string `json:"os,omitempty"`
+	Architecture string `json:"architecture,omitempty"`
+	Variant      string `json:"variant,omitempty"`

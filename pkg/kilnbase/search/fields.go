@@ -60,3 +60,7 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 	case []interface{}:
 		for i, o := range typedObj {
 			i := i // copy
+			newKeyPath := append(f.newPath(keyPath), &ctlres.PathPart{
+				ArrayIndex: &ctlres.PathPartArrayIndex{Index: &i},
+			})
+
