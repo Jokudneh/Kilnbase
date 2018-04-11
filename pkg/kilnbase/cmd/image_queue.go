@@ -45,3 +45,7 @@ func (b *ImageQueue) Run(unprocessedImageURLs *UnprocessedImageURLs, numWorkers 
 
 	return b.outputImages, errFromErrs(b.outputErrs)
 }
+
+func (b *ImageQueue) worker(workWg *sync.WaitGroup, queueCh <-chan UnprocessedImageURL) {
+	for unprocessedImageURL := range queueCh {
+		b.work(workWg, unprocessedImageURL)

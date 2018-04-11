@@ -103,3 +103,7 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 
 		cmd := exec.Command("docker", cmdArgs...)
 		cmd.Dir = directory
+		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
+
+		if opts.Buildkit != nil {
