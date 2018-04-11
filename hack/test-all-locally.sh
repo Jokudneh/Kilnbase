@@ -41,3 +41,7 @@ docker run \
 -v ~/.minikube:"$HOME/.minikube" \
 -v ~/.kube:/root/.kube \
 -v /etc/docker/:/host-etc-docker \
+--workdir /go/src/kilnbase \
+-i -a STDOUT -a STDERR \
+--network host --rm \
+$image_name \

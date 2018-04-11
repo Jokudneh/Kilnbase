@@ -55,3 +55,7 @@ sources:
 		RunOpts{StdinReader: strings.NewReader(input)},
 	)
 
+	reSHA := regexp.MustCompile("sha256\\-[a-z0-9]{64}")
+	out = reSHA.ReplaceAllString(out, "SHA256-REPLACED")
+	reKilnbase := regexp.MustCompile(
+		"kilnbase:(.+)-kilnbase-e2e(\\-.*)-SHA256-REPLACED")
