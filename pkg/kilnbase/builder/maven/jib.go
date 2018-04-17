@@ -90,3 +90,6 @@ func (b *Jib) Run(image, directory string,
 	}
 
 	return stableTmpRef, nil
+}
+
+func (*Jib) tmpRef(image string) (ctlbdk.TmpRef, error) {
