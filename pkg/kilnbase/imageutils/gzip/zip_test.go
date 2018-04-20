@@ -59,3 +59,5 @@ func TestIs(t *testing.T) {
 		{[]byte{'\x1f', '\x8b', '\x1b'}, true, nil},
 	}
 	for _, test := range tests {
+		reader := bytes.NewReader(test.in)
+		got, err := Is(reader)

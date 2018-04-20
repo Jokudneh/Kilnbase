@@ -111,3 +111,5 @@ images:
 - image: sample-app
 - sidecarImage: sample-app
 - - sample-app
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
