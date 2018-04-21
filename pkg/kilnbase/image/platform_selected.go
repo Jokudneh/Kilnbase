@@ -69,3 +69,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 				matchedMan = &man
 			}
 		}
+
+		if matchedMan != nil {
+			newURL, newOrigins, err := NewDigestedImageFromParts(ref.Context().Name(), matchedMan.Digest.String()).URL()
+			if err != nil {

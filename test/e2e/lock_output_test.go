@@ -113,3 +113,7 @@ images:
 - - sample-app
 ---
 apiVersion: kilnbase.k14s.io/v1alpha1
+kind: ImageOverrides
+overrides:
+- image: sample-app
+  newImage: nginx:1.15.1
