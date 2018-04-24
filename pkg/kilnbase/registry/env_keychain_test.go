@@ -41,3 +41,4 @@ func TestEnvKeychainResolveIsCaseInsensitive(t *testing.T) {
 	}
 }
 
+func TestEnvKeychainResolveNoMatchIsAnonymous(t *testing.T) {

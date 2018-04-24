@@ -40,3 +40,6 @@ func (r DescribedReader) Read() []ImageOrIndex {
 func (r DescribedReader) buildIndex(iitd ImageIndexDescriptor) ImageIndexWithRef {
 	var images []regv1.Image
 	var indexes []regv1.ImageIndex
+
+	for _, imgTD := range iitd.Images {
+		images = append(images, NewDescribedImage(imgTD, r.layerProvider))
