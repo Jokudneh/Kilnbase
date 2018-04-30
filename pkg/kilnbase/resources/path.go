@@ -59,3 +59,6 @@ func (p Path) AsStrings() []string {
 }
 
 func (p Path) AsString() string {
+	var result []string
+	for _, part := range p {
+		result = append(result, part.AsString())

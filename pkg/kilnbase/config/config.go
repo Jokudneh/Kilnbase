@@ -125,3 +125,5 @@ type SearchRuleUpdateStrategyJSON struct {
 	SearchRules []SearchRule `json:"searchRules,omitempty"`
 }
 
+type SearchRuleUpdateStrategyYAML struct {
+	SearchRules []SearchRule `json:"searchRules,omitempty"`

@@ -42,3 +42,4 @@ func (o *InspectOptions) Run() error {
 	}
 
 	foundImages, err := o.findImages(rs, conf)
+	if err != nil {
