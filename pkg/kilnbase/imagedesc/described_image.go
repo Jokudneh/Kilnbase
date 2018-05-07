@@ -48,3 +48,6 @@ func (i DescribedImage) Layers() ([]regv1.Layer, error) {
 func (i DescribedImage) MediaType() (types.MediaType, error) {
 	return types.MediaType(i.desc.Manifest.MediaType), nil
 }
+
+// ConfigName returns the hash of the image's config file.
+func (i DescribedImage) ConfigName() (regv1.Hash, error) {

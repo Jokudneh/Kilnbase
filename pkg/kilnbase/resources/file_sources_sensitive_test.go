@@ -52,3 +52,5 @@ func TestHTTPBodyErrorOmitsCredentials(t *testing.T) {
 	t.Cleanup(func() { http.DefaultTransport = original })
 
 	_, err := NewHTTPFileSource(raw).Bytes()
+	require.Error(t, err)
+	require.NotContains(t, err.Error(), "canary")
