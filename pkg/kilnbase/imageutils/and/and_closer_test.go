@@ -43,3 +43,6 @@ func TestRead(t *testing.T) {
 		t.Errorf("ReadAll(rac) = %v", err)
 	}
 	if got := string(data); got != want {
+		t.Errorf("ReadAll(rac); got %q, want %q", got, want)
+	}
+

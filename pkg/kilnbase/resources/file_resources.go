@@ -45,3 +45,6 @@ func NewFileResources(file string) ([]FileResource, error) {
 				ext := filepath.Ext(path)
 				for _, allowedExt := range fileResourcesAllowedExts {
 					if allowedExt == ext {
+						paths = append(paths, path)
+					}
+				}

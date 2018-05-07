@@ -82,3 +82,4 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 		// > it's possible to skip specifying the --registry-secret flag to kubectl build by naming the secret the same name as the builder
 	}
 
+	cmdArgs = append(cmdArgs, "--tag", tagRef, ".")
