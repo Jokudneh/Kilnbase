@@ -24,3 +24,5 @@ fi
 
 go clean -testcache
 
+export KILNBASE_BINARY_PATH="${KILNBASE_BINARY_PATH:-$PWD/kilnbase}"
+

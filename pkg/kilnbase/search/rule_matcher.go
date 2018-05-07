@@ -33,3 +33,6 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 
 		case len(m.rule.KeyMatcher.Path) > 0:
 			keyMatched = m.rule.KeyMatcher.Path.Matches(keyPath)
+
+		default:
+			panic("Unknown search rule key matcher")
