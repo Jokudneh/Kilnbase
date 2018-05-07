@@ -21,3 +21,6 @@ func NewLogger(writer io.Writer) Logger {
 	return Logger{writer: writer, writerLock: &sync.Mutex{}}
 }
 
+func (l Logger) NewPrefixedWriter(prefix string) *PrefixWriter {
+	return &PrefixWriter{prefix, l.writer, l.writerLock}
+}

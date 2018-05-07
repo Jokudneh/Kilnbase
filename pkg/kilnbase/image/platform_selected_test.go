@@ -97,3 +97,7 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				Features:     []string{"sse4"},
 			},
 			want: false,
+		},
+		{ // Variant must exactly match. matchesPlatform expected to return false.
+			given: v1.Platform{
+				Architecture: "amd64",
