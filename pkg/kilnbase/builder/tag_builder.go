@@ -28,3 +28,5 @@ func (d TagBuilder) CheckLen(str string, num int) string {
 		panic(fmt.Sprintf("Expected string '%s' len to be less than %d", str, num))
 	}
 	return str
+}
+

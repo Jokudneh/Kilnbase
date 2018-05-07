@@ -47,3 +47,7 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 	o.UIFlags.Set(cmd)
 
 	cmd.AddCommand(NewInspectCmd(NewInspectOptions(o.ui)))
+	cmd.AddCommand(NewPackageCmd(NewPackageOptions(o.ui)))
+	cmd.AddCommand(NewUnpackageCmd(NewUnpackageOptions(o.ui)))
+	cmd.AddCommand(NewVersionCmd(NewVersionOptions(o.ui)))
+	cmd.AddCommand(NewRelocateCmd(NewRelocateOptions(o.ui)))
