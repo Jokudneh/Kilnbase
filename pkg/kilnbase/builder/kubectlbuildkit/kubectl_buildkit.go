@@ -83,3 +83,4 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	}
 
 	cmdArgs = append(cmdArgs, "--tag", tagRef, ".")
+

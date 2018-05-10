@@ -93,3 +93,6 @@ func (b *Jib) Run(image, directory string,
 }
 
 func (*Jib) tmpRef(image string) (ctlbdk.TmpRef, error) {
+	tb := ctlb.TagBuilder{}
+	randPrefix50, err := tb.RandomStr50()
+	if err != nil {

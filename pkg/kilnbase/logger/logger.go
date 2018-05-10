@@ -24,3 +24,7 @@ func NewLogger(writer io.Writer) Logger {
 func (l Logger) NewPrefixedWriter(prefix string) *PrefixWriter {
 	return &PrefixWriter{prefix, l.writer, l.writerLock}
 }
+
+type PrefixWriter struct {
+	prefix     string
+	writer     io.Writer
