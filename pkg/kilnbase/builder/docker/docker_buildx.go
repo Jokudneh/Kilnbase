@@ -89,3 +89,6 @@ func NewBuildx(docker Docker, logger ctllog.Logger) Buildx {
 }
 
 // BuildAndOptionallyPush either loads built image into Docker daemon
+// or pushes it to specified registry.
+func (d Buildx) BuildAndOptionallyPush(
+	image, directory string, imgDst *ctlconf.ImageDestination,

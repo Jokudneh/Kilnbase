@@ -182,3 +182,6 @@ spec:
 	_, err := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
 		StdinReader: strings.NewReader(input),
 		AllowError:  true,
+	})
+
+	expectedErr := "- Resolving image 'unknown': GET https://index.docker.io/v2/library/unknown/manifests/latest: UNAUTHORIZED: authentication required;"
