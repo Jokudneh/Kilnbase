@@ -92,3 +92,7 @@ func NewBuildx(docker Docker, logger ctllog.Logger) Buildx {
 // or pushes it to specified registry.
 func (d Buildx) BuildAndOptionallyPush(
 	image, directory string, imgDst *ctlconf.ImageDestination,
+	opts ctlconf.SourceDockerBuildxOpts) (string, error) {
+
+	err := d.ensureDirectory(directory)
+	if err != nil {
