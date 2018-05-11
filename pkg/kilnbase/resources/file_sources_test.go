@@ -60,3 +60,6 @@ func redactErrorMessageTestCases() []struct {
 			input: `error connecting to ` +
 				`http://user:pass@host.example/path next`,
 			expected: `error connecting to ` +
+				`http://_redacted_@host.example/path next`,
+		},
+		{

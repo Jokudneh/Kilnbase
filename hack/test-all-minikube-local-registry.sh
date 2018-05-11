@@ -21,3 +21,4 @@ update-ca-certificates
 # Docker needs its own CA cert configuration
 mkdir -p /host-etc-docker/certs.d/${KILNBASE_E2E_DOCKERHUB_HOSTNAME}
 cp registry-ca-cert.crt /host-etc-docker/certs.d/${KILNBASE_E2E_DOCKERHUB_HOSTNAME}/ca.crt
+
