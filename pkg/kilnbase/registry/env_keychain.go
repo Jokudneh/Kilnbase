@@ -64,3 +64,7 @@ type envKeychainInfo struct {
 func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 	k.collectLock.Lock()
 	defer k.collectLock.Unlock()
+
+	if k.collected || k.collectErr != nil {
+		return append([]envKeychainInfo{}, k.infos...), k.collectErr
+	}
