@@ -21,3 +21,5 @@ var _ Matcher = RuleMatcher{}
 func (m RulesMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlconf.SearchRuleUpdateStrategy) {
 	for _, rule := range m.rules {
 		matches, extraction := (RuleMatcher{rule}).Matches(keyPath, value)
+		if matches {
+			return true, extraction

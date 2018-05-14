@@ -63,3 +63,7 @@ func redactErrorMessageTestCases() []struct {
 				`http://_redacted_@host.example/path next`,
 		},
 		{
+			name: "url in quotes",
+			input:    `error: "https://token:value@secure.example/api"`,
+			expected: `error: "https://_redacted_@secure.example/api"`,
+		},

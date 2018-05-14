@@ -24,3 +24,4 @@ func (s *RegistryFlags) AsRegistryOpts() ctlreg.Opts {
 	return ctlreg.Opts{
 		CACertPaths:   s.CACertPaths,
 		VerifyCerts:   s.VerifyCerts,
+		Insecure:      s.Insecure,

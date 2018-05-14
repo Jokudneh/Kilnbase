@@ -96,3 +96,5 @@ func (*Jib) tmpRef(image string) (ctlbdk.TmpRef, error) {
 	tb := ctlb.TagBuilder{}
 	randPrefix50, err := tb.RandomStr50()
 	if err != nil {
+		return ctlbdk.TmpRef{},
+			fmt.Errorf("Generating tmp image suffix: %s", err)
