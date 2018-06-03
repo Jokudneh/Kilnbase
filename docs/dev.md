@@ -49,3 +49,7 @@ It is occasionally necessary to test against insecure-only registries in order t
 Here's how we set one up on Google's Kubernetes Engine:
 
 
+* Create a GKE cluster through the web GUI
+* Install gcloud - https://cloud.google.com/kubernetes-engine/docs/quickstart#local-shell
+* Target your cluster `gcloud container clusters get-credentials <cluster-name>`
+* Create the registry deployment file, reg.yml

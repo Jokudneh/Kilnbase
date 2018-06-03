@@ -49,3 +49,7 @@ func (b *ImageQueue) Run(unprocessedImageURLs *UnprocessedImageURLs, numWorkers 
 func (b *ImageQueue) worker(workWg *sync.WaitGroup, queueCh <-chan UnprocessedImageURL) {
 	for unprocessedImageURL := range queueCh {
 		b.work(workWg, unprocessedImageURL)
+	}
+}
+
+func (b *ImageQueue) work(workWg *sync.WaitGroup, unprocessedImageURL UnprocessedImageURL) {
