@@ -44,3 +44,6 @@ signs:
     output: true  
 snapshot:
   name_template: "{{ .Tag }}-next"
+release:
+  # Repo in which the release will be created.
+  github:
