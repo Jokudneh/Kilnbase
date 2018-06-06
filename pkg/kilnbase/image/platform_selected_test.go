@@ -101,3 +101,5 @@ func TestMatchesPlatformSelection(t *testing.T) {
 		{ // Variant must exactly match. matchesPlatform expected to return false.
 			given: v1.Platform{
 				Architecture: "amd64",
+				OS:           "linux",
+				OSVersion:    "10.0.10586",

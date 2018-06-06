@@ -107,3 +107,6 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
 
 		if opts.Buildkit != nil {
+			cmd.Env = append(os.Environ(), "DOCKER_BUILDKIT=1")
+		}
+
