@@ -50,3 +50,7 @@ func (v ImageRefsVisitorFunc) Apply(res interface{}, searchRules []ctlconf.Searc
 	// Use a single matcher that represents all rules instead
 	// so that each leaf value (string) is found once
 	// even if it matches multiple search rules
+	NewFields(res, RulesMatcher{searchRules}).Visit(v.extractValueFunc(insertTmpRefsFunc))
+
+	resolveTmpRefsFunc := func(val string) (string, bool) {
+		if actualRef, found := tmpRefs[val]; found {

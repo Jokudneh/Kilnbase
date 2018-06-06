@@ -98,3 +98,5 @@ func (*Jib) tmpRef(image string) (ctlbdk.TmpRef, error) {
 	if err != nil {
 		return ctlbdk.TmpRef{},
 			fmt.Errorf("Generating tmp image suffix: %s", err)
+	}
+
