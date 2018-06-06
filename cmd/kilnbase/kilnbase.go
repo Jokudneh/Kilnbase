@@ -38,3 +38,4 @@ func main() {
 		} else {
 			confUI.ErrorLinef("kilnbase: Error: %s", multiLineErr)
 		}
+		os.Exit(1)

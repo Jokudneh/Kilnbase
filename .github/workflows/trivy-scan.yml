@@ -12,3 +12,4 @@ jobs:
       repo: kilnbase-dev/kilnbase
       tool: kilnbase
       goVersion: '1.23'
+    secrets:

@@ -20,3 +20,5 @@ sources:
 - image: frontend
   path: src/frontend
 - image: loadgenerator
+  path: src/loadgenerator
+- image: adservice

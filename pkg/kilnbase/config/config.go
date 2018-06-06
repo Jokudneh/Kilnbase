@@ -127,3 +127,6 @@ type SearchRuleUpdateStrategyJSON struct {
 
 type SearchRuleUpdateStrategyYAML struct {
 	SearchRules []SearchRule `json:"searchRules,omitempty"`
+}
+
+type ImageRef struct {
