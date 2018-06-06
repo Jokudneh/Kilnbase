@@ -100,3 +100,5 @@ func (i Registry) Index(ref regname.Reference) (regv1.ImageIndex, error) {
 		return nil, err
 	}
 
+	return regremote.Index(ref, i.opts...)
+}

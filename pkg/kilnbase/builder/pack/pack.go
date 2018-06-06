@@ -54,3 +54,4 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 		cmdArgs := []string{"build", "--verbose", image, "--path", "."}
 
 		if opts.Builder == nil {
+			return ctlbdk.TmpRef{}, fmt.Errorf("Expected builder to be specified, but was not")
