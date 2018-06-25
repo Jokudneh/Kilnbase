@@ -42,3 +42,6 @@ func (r ResourceWithImages) Bytes() ([]byte, error) {
 		}
 
 		anns[ImagesAnnKey] = string(imagesYAML)
+		resUn.SetAnnotations(anns)
+		r.contents = resUn.Object
+	}

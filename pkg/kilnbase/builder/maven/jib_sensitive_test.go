@@ -28,3 +28,6 @@ func TestMavenBannerDoesNotExposeArguments(t *testing.T) {
 		"-Dpassword=password-canary",
 		"-Durl=https://user:query-canary@example.com",
 	}
+	target := "."
+	var log bytes.Buffer
+	runOpts := config.SourceJibRunOpts{Target: &target, RawOptions: &opts}
