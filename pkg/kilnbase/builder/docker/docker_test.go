@@ -77,3 +77,4 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		input:    "MyImage",
 		expected: "MyImage",
 	},
+	{
