@@ -64,3 +64,7 @@ func redactURL(raw string) string {
 	const empty = ""
 
 	u, err := url.Parse(raw)
+	if err != nil {
+		return "<invalid URL>"
+	}
+	if u.User != nil {
