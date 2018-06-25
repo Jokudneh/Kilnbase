@@ -23,3 +23,4 @@ func (m RulesMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctl
 		matches, extraction := (RuleMatcher{rule}).Matches(keyPath, value)
 		if matches {
 			return true, extraction
+		}
