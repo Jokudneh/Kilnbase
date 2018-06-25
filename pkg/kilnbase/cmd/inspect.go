@@ -45,3 +45,5 @@ func (o *InspectOptions) Run() error {
 	if err != nil {
 		return err
 	}
+
+	table := uitable.Table{

@@ -54,3 +54,4 @@ func (v ImageRefsVisitorFunc) Apply(res interface{}, searchRules []ctlconf.Searc
 
 	resolveTmpRefsFunc := func(val string) (string, bool) {
 		if actualRef, found := tmpRefs[val]; found {
+			delete(tmpRefs, val)

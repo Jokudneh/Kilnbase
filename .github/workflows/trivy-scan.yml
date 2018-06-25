@@ -13,3 +13,4 @@ jobs:
       tool: kilnbase
       goVersion: '1.23'
     secrets:
+      githubToken: ${{ secrets.GITHUB_TOKEN }}
