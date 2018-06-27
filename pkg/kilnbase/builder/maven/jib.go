@@ -100,3 +100,4 @@ func (*Jib) tmpRef(image string) (ctlbdk.TmpRef, error) {
 			fmt.Errorf("Generating tmp image suffix: %s", err)
 	}
 
+	return ctlbdk.NewTmpRef("kilnbase:" + tb.CheckTagLen128(fmt.Sprintf(

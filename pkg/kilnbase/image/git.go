@@ -70,3 +70,6 @@ func (r GitRepo) IsDirty() (bool, error) {
 	}
 
 	// Strip newline which is added if there are any changes
+	return len(strings.TrimSpace(stdout)) > 0, nil
+}
+

@@ -35,3 +35,6 @@ func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
 	if f.JSON {
 		ui.EnableJSON()
 	}
+
+	if f.NonInteractive {
+		ui.EnableNonInteractive()
