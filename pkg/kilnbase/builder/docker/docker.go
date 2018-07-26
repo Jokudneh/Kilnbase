@@ -110,3 +110,7 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 			cmd.Env = append(os.Environ(), "DOCKER_BUILDKIT=1")
 		}
 
+		err := cmd.Run()
+		if err != nil {
+			prefixedLogger.Write([]byte(fmt.Sprintf("error: %s\n", err)))
+			return TmpRef{}, err
