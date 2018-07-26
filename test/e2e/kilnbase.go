@@ -50,3 +50,6 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 	}
 
 	if opts.StdoutWriter != nil {
+		cmd.Stdout = opts.StdoutWriter
+	} else {
+		cmd.Stdout = &stdout

@@ -37,3 +37,6 @@ func mustHash(s string, t *testing.T) v1.Hash {
 }
 
 func TestVerificationFailure(t *testing.T) {
+	want := "This is the input string."
+	buf := bytes.NewBufferString(want)
+
