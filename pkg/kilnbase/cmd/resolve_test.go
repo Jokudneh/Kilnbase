@@ -63,3 +63,4 @@ func TestNewPlatformSelection(t *testing.T) {
 			Error: fmt.Errorf("Parsing platform 'linux/arm/v6/another': too many slashes"),
 		},
 	}
+

@@ -63,3 +63,7 @@ func NewResourceFromBytes(data []byte) (*ResourceImpl, error) {
 
 func MustNewResourceFromBytes(data []byte) *ResourceImpl {
 	res, err := NewResourceFromBytes(data)
+	if err != nil {
+		panic(fmt.Sprintf("Invalid resource: %s", err))
+	}
+	if res == nil {

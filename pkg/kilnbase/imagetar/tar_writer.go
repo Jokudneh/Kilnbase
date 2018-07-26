@@ -134,3 +134,7 @@ func (w *TarWriter) writeLayers() error {
 	writtenLayers := map[string]writtenLayer{}
 
 	// Inflate tar file so that multiple writes can happen in parallel
+	for _, imgLayer := range w.layersToWrite {
+		digest, err := regv1.NewHash(imgLayer.Digest)
+		if err != nil {
+			return err
