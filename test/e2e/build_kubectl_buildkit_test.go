@@ -57,3 +57,7 @@ spec:
 	}
 }
 
+func TestKubectlBuildkitBuildAndPushSuccessful(t *testing.T) {
+	env := BuildEnv(t)
+
+	if env.SkipWhenHTTPRegistry {

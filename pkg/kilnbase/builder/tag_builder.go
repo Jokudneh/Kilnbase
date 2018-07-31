@@ -30,3 +30,6 @@ func (d TagBuilder) CheckLen(str string, num int) string {
 	return str
 }
 
+func (d TagBuilder) TrimStr(str string, num int) string {
+	if len(str) > num {
+		str = str[:num]
