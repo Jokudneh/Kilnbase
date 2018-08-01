@@ -57,3 +57,6 @@ kind: ImageDestinations
 destinations:
 - image: docker.io/*username*/kilnbase-e2e-tests-build
 - image: docker.io/*username*/kilnbase-e2e-tests-build2
+`, assetPath, secondAssetPath))
+
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{

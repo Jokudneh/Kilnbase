@@ -101,3 +101,7 @@ func (*Jib) tmpRef(image string) (ctlbdk.TmpRef, error) {
 	}
 
 	return ctlbdk.NewTmpRef("kilnbase:" + tb.CheckTagLen128(fmt.Sprintf(
+		"%s-%s",
+		randPrefix50,
+		tb.TrimStr(tb.CleanStr(image), 50),
+	))), nil
