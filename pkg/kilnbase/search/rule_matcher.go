@@ -40,3 +40,6 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 	} else {
 		keyMatched = true
 	}
+
+	if m.rule.ValueMatcher != nil {
+		switch {

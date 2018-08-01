@@ -21,3 +21,4 @@ func TestGitProvenanceOmitsQueryCredentials(t *testing.T) {
 		if strings.Contains(ctlimg.GitRedactedRemoteURL(raw), "canary") {
 			t.Fatal("provenance contains credentials")
 		}
+	}

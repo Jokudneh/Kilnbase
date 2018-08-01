@@ -71,3 +71,7 @@ func (o *RelocateOptions) Run() error {
 
 	if len(o.FileFlags.Files) == 0 {
 		return fmt.Errorf("Expected at least one input file")
+	}
+
+	prefixedLogger := logger.NewPrefixedWriter("relocate | ")
+
