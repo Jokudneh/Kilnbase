@@ -24,3 +24,5 @@ func (m RulesMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctl
 		if matches {
 			return true, extraction
 		}
+	}
+	return false, ctlconf.SearchRuleUpdateStrategy{}

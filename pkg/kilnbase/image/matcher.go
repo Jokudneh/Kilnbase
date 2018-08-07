@@ -34,3 +34,6 @@ func (m Matcher) Matches(ref ctlconf.ImageRef) bool {
 		rhs := ctlbdk.LowerCaseRegistry(repo)
 		return lhs == rhs
 
+	default:
+		panic(fmt.Errorf("Missing image or imageRepo configuration"))
+	}
