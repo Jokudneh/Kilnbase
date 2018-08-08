@@ -25,3 +25,5 @@ func (s *RegistryFlags) AsRegistryOpts() ctlreg.Opts {
 		CACertPaths:   s.CACertPaths,
 		VerifyCerts:   s.VerifyCerts,
 		Insecure:      s.Insecure,
+		EnvAuthPrefix: "KILNBASE_REGISTRY",
+	}
