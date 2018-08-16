@@ -38,3 +38,4 @@ func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
 
 	if f.NonInteractive {
 		ui.EnableNonInteractive()
+	}

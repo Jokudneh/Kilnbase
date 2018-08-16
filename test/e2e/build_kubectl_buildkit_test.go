@@ -61,3 +61,7 @@ func TestKubectlBuildkitBuildAndPushSuccessful(t *testing.T) {
 	env := BuildEnv(t)
 
 	if env.SkipWhenHTTPRegistry {
+		fmt.Printf("This is a test that cannot run against HTTP registry; skipping.")
+		return
+	}
+

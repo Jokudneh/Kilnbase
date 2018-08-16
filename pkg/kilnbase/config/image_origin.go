@@ -45,3 +45,4 @@ type OriginPlatformSelected struct {
 	OS           string `json:"os,omitempty"`
 	Architecture string `json:"architecture,omitempty"`
 	Variant      string `json:"variant,omitempty"`
+}

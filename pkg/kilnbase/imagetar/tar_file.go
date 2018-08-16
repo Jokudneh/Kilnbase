@@ -58,3 +58,6 @@ func (f tarFile) openChunk(path string) (io.ReadCloser, error) {
 	for {
 		hdr, err := tf.Next()
 		if err == io.EOF {
+			break
+		}
+		if err != nil {
