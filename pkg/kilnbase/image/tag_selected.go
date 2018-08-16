@@ -37,3 +37,4 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	switch {
 	case i.selection.Semver != nil:
 		tags, err := i.registry.ListTags(repo)
+		if err != nil {

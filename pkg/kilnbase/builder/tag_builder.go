@@ -33,3 +33,5 @@ func (d TagBuilder) CheckLen(str string, num int) string {
 func (d TagBuilder) TrimStr(str string, num int) string {
 	if len(str) > num {
 		str = str[:num]
+		// Do not end strings on dash
+		if strings.HasSuffix(str, "-") {
