@@ -53,3 +53,6 @@ Here's how we set one up on Google's Kubernetes Engine:
 * Install gcloud - https://cloud.google.com/kubernetes-engine/docs/quickstart#local-shell
 * Target your cluster `gcloud container clusters get-credentials <cluster-name>`
 * Create the registry deployment file, reg.yml
+```yaml
+apiVersion: apps/v1
+kind: Deployment
