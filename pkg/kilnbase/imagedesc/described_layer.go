@@ -41,3 +41,6 @@ func (l DescribedLayer) Uncompressed() (io.ReadCloser, error) {
 	}
 
 	rc, err = verify.ReadCloser(rc, h)
+	if err != nil {
+		return nil, fmt.Errorf("Creating verified reader: %v", err)
+	}

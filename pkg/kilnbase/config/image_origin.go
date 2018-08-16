@@ -46,3 +46,5 @@ type OriginPlatformSelected struct {
 	Architecture string `json:"architecture,omitempty"`
 	Variant      string `json:"variant,omitempty"`
 }
+
+func NewOriginsFromString(str string) ([]Origin, error) {
