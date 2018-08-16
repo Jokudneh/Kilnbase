@@ -55,3 +55,4 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 
 		if opts.Builder == nil {
 			return ctlbdk.TmpRef{}, fmt.Errorf("Expected builder to be specified, but was not")
+		}
