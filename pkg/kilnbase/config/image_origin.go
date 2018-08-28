@@ -48,3 +48,7 @@ type OriginPlatformSelected struct {
 }
 
 func NewOriginsFromString(str string) ([]Origin, error) {
+	var origins []Origin
+
+	// Ignores unknown types of origin. At this time...
+	// - "Origin" are provided as primarily optional diagnostic information
