@@ -11,3 +11,4 @@ spec:
       labels:
         app: kilnbase-nginx
     spec:
+      containers:
