@@ -78,3 +78,7 @@ func (f Factory) New(url string) Image {
 		builders := BuildersOpts{
 			Docker:          docker,
 			DockerBuildx:    dockerBuildx,
+			Pack:            pack,
+			KubectlBuildkit: kubectlBuildkit,
+			Ko:              ko,
+			Bazel:           bazel,

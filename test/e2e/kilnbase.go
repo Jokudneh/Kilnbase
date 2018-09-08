@@ -53,3 +53,7 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 		cmd.Stdout = opts.StdoutWriter
 	} else {
 		cmd.Stdout = &stdout
+	}
+
+	if opts.CancelCh != nil {
+		go func() {
