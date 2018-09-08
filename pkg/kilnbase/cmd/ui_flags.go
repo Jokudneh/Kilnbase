@@ -39,3 +39,6 @@ func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
 	if f.NonInteractive {
 		ui.EnableNonInteractive()
 	}
+
+	if len(f.Columns) > 0 {
+		headers := []uitable.Header{}

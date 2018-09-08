@@ -138,3 +138,4 @@ func (w *TarWriter) writeLayers() error {
 		digest, err := regv1.NewHash(imgLayer.Digest)
 		if err != nil {
 			return err
+		}
