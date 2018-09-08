@@ -53,3 +53,7 @@ func (b *ImageQueue) worker(workWg *sync.WaitGroup, queueCh <-chan UnprocessedIm
 }
 
 func (b *ImageQueue) work(workWg *sync.WaitGroup, unprocessedImageURL UnprocessedImageURL) {
+	defer workWg.Done()
+
+	imgURL, origins, err := b.imgFactory.New(unprocessedImageURL.URL).URL()
+	if err != nil {
