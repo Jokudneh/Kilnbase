@@ -56,3 +56,4 @@ Here's how we set one up on Google's Kubernetes Engine:
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
+metadata:

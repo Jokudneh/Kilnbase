@@ -45,3 +45,7 @@ func (r ResourceWithImages) Bytes() ([]byte, error) {
 		resUn.SetAnnotations(anns)
 		r.contents = resUn.Object
 	}
+
+	return yaml.Marshal(r.contents)
+}
+

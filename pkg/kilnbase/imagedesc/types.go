@@ -56,3 +56,4 @@ type ImageDescriptor struct {
 	Manifest ManifestDescriptor
 }
 
+type ImageLayerDescriptor struct {
