@@ -42,3 +42,4 @@ func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
 
 	if len(f.Columns) > 0 {
 		headers := []uitable.Header{}
+		for _, col := range f.Columns {

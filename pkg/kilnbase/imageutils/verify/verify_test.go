@@ -40,3 +40,5 @@ func TestVerificationFailure(t *testing.T) {
 	want := "This is the input string."
 	buf := bytes.NewBufferString(want)
 
+	verified, err := ReadCloser(io.NopCloser(buf), mustHash("not the same", t))
+	if err != nil {
