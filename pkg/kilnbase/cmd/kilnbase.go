@@ -51,3 +51,5 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 	cmd.AddCommand(NewUnpackageCmd(NewUnpackageOptions(o.ui)))
 	cmd.AddCommand(NewVersionCmd(NewVersionOptions(o.ui)))
 	cmd.AddCommand(NewRelocateCmd(NewRelocateOptions(o.ui)))
+
+	// Last one runs first

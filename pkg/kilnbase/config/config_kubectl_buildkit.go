@@ -12,3 +12,4 @@ type SourceKubectlBuildkitBuildOpts struct {
 	Platform   *string
 	Pull       *bool
 	NoCache    *bool `json:"noCache"`
+	File       *string

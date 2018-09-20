@@ -44,3 +44,4 @@ require (
 	github.com/vbatts/tar-split v0.12.2 // indirect
 	github.com/vito/go-interact v1.0.1 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
+	go.yaml.in/yaml/v2 v2.4.3 // indirect
