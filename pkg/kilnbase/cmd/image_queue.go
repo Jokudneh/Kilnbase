@@ -57,3 +57,5 @@ func (b *ImageQueue) work(workWg *sync.WaitGroup, unprocessedImageURL Unprocesse
 
 	imgURL, origins, err := b.imgFactory.New(unprocessedImageURL.URL).URL()
 	if err != nil {
+		b.outputErrsLock.Lock()
+		b.outputErrs = append(b.outputErrs, fmt.Errorf("Resolving image '%s': %s", unprocessedImageURL.URL, err))

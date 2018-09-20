@@ -67,3 +67,4 @@ func MustNewResourceFromBytes(data []byte) *ResourceImpl {
 		panic(fmt.Sprintf("Invalid resource: %s", err))
 	}
 	if res == nil {
+		panic(fmt.Sprintf("Empty resource: %s", err))

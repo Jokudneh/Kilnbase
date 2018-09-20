@@ -51,3 +51,5 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 		if opts.RawOptions != nil {
 			cmdArgs = append(cmdArgs, *opts.RawOptions...)
 		}
+
+		cmd := exec.Command("bazel", cmdArgs...)
