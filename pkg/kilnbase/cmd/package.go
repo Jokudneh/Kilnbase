@@ -51,3 +51,5 @@ Package configuration and images into tarball
 	o.RegistryFlags.Set(cmd)
 	cmd.Flags().StringVarP(&o.OutputPath, "output", "o", "", "Output tarball path")
 	cmd.Flags().IntVar(&o.Concurrency, "concurrency", 5, "Set maximum number of concurrent imports")
+	return cmd
+}

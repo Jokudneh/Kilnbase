@@ -84,3 +84,7 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 
 	cmdArgs = append(cmdArgs, "--tag", tagRef, ".")
 
+	cmd := exec.Command("kubectl", cmdArgs...)
+	cmd.Dir = directory
+	cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+	cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
