@@ -80,3 +80,6 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 				errCh <- err
 				return
 			}
+
+			importDigestRef, err := o.importImage(item, existingRef, importRepo, registry)
+			if err != nil {

@@ -61,3 +61,4 @@ func (f tarFile) openChunk(path string) (io.ReadCloser, error) {
 			break
 		}
 		if err != nil {
+			return nil, err
