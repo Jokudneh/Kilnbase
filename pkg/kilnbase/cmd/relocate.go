@@ -75,3 +75,5 @@ func (o *RelocateOptions) Run() error {
 
 	prefixedLogger := logger.NewPrefixedWriter("relocate | ")
 
+	// get resources from files
+	rs, conf, err := o.FileFlags.ResourcesAndConfig()

@@ -40,3 +40,4 @@ func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 		return "", nil, err
 	}
 
+	if imgDescriptor.Digest.String() != imgDescriptor2.Digest.String() {
