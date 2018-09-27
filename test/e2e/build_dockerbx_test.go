@@ -45,3 +45,4 @@ sources:
 	expectedOut := `---
 kind: Object
 spec:
+- image: kilnbase:simple-app-two-SHA256-REPLACED

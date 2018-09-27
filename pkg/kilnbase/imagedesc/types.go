@@ -57,3 +57,4 @@ type ImageDescriptor struct {
 }
 
 type ImageLayerDescriptor struct {
+	MediaType string
