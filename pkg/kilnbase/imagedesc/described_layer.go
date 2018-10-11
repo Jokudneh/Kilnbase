@@ -44,3 +44,6 @@ func (l DescribedLayer) Uncompressed() (io.ReadCloser, error) {
 	if err != nil {
 		return nil, fmt.Errorf("Creating verified reader: %v", err)
 	}
+
+	return gzip.ReadCloser(rc), nil
+}

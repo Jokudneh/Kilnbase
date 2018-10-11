@@ -49,3 +49,7 @@ func (st imageStruct) equal(other imageStruct) bool {
 
 func contains(structs []imageStruct, st imageStruct) bool {
 	for _, other := range structs {
+		if st.equal(other) {
+			return true
+		}
+	}
