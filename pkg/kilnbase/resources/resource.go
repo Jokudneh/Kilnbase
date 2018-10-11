@@ -71,3 +71,7 @@ func MustNewResourceFromBytes(data []byte) *ResourceImpl {
 	}
 	return res
 }
+
+func NewResourcesFromBytes(data []byte) ([]Resource, error) {
+	var rs []Resource
+	var content map[string]interface{}

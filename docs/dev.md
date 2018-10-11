@@ -57,3 +57,7 @@ Here's how we set one up on Google's Kubernetes Engine:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: registry
+  labels:
+    app: registry
+spec:
