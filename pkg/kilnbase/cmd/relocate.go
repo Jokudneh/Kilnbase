@@ -77,3 +77,6 @@ func (o *RelocateOptions) Run() error {
 
 	// get resources from files
 	rs, conf, err := o.FileFlags.ResourcesAndConfig()
+	if err != nil {
+		return err
+	}

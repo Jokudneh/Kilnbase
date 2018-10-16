@@ -52,3 +52,5 @@ func (i DescribedImage) MediaType() (types.MediaType, error) {
 // ConfigName returns the hash of the image's config file.
 func (i DescribedImage) ConfigName() (regv1.Hash, error) {
 	return regv1.NewHash(i.desc.Config.Digest)
+}
+
