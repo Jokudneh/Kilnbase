@@ -61,3 +61,6 @@ kind: ConfigMap
 metadata:
   name: registry-config
   annotations:
+    kapp.k14s.io/versioned: ""
+data:
+  config.yml: |

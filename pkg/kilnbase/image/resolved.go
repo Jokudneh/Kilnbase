@@ -41,3 +41,6 @@ func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 	}
 
 	if imgDescriptor.Digest.String() != imgDescriptor2.Digest.String() {
+		return "", nil, fmt.Errorf("Expected digest resolution to be consistent over two separate requests")
+	}
+
