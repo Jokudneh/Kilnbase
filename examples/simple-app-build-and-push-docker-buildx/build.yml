@@ -21,3 +21,6 @@ sources:
 - image: simple-app
   path: test/e2e/assets/simple-app
   docker:
+    buildx:
+      rawOptions: ["--platform=linux/amd64,linux/arm64,linux/arm/v7"]
+# docker buildx only is able to build multi platform images

@@ -37,3 +37,7 @@ func (m Matcher) Matches(ref ctlconf.ImageRef) bool {
 	default:
 		panic(fmt.Errorf("Missing image or imageRepo configuration"))
 	}
+}
+
+var (
+	approximateRefRegexp = regexp.MustCompile(`\A(.+?)(:[A-Za-z0-9_\-\.]+)?(@.+:.+)?\z`)

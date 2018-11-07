@@ -53,3 +53,5 @@ Package configuration and images into tarball
 	cmd.Flags().IntVar(&o.Concurrency, "concurrency", 5, "Set maximum number of concurrent imports")
 	return cmd
 }
+
+func (o *PackageOptions) Run() error {
