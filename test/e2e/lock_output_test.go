@@ -119,3 +119,6 @@ overrides:
   newImage: nginx:1.15.1
 ---
 apiVersion: kilnbase.k14s.io/v1alpha1
+kind: ImageKeys
+keys:
+- sidecarImage

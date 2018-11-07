@@ -82,3 +82,5 @@ func (f Factory) New(url string) Image {
 			KubectlBuildkit: kubectlBuildkit,
 			Ko:              ko,
 			Bazel:           bazel,
+			Jib:             maven,
+		}

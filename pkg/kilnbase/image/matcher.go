@@ -41,3 +41,6 @@ func (m Matcher) Matches(ref ctlconf.ImageRef) bool {
 
 var (
 	approximateRefRegexp = regexp.MustCompile(`\A(.+?)(:[A-Za-z0-9_\-\.]+)?(@.+:.+)?\z`)
+)
+
+func URLRepo(url string) (string, bool) {
