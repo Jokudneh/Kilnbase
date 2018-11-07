@@ -64,3 +64,7 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 				ArrayIndex: &ctlres.PathPartArrayIndex{Index: &i},
 			})
 
+			if matched, ext := f.matcher.Matches(newKeyPath, o); matched {
+				if newVal, update := visitorFunc(o, ext); update {
+					typedObj[i] = newVal
+				} else {

@@ -139,3 +139,5 @@ func (w *TarWriter) writeLayers() error {
 		if err != nil {
 			return err
 		}
+
+		name := digest.Algorithm + "-" + digest.Hex + ".tar.gz"

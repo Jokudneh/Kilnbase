@@ -73,3 +73,5 @@ spec:
 - image: index.docker.io/library/alpine@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b
 - image: index.docker.io/cloudfoundry/cf-k8s-logging@sha256:d8c73e6c87b2a71c8b6798205761bb7870fb2080a4329c4eefb0b4620656eeaa
 - image: index.docker.io/cloudfoundry/log-cache-cf-auth-proxy@sha256:f75fc1585dbf869a1a98ee094d334525bb944a07aa0ebe522019c3a479b843de
+- image: index.docker.io/cloudfoundry/log-cache-gateway@sha256:51bc54b4a901228537f43efe3b687c3d8c07f49c015775141a0dffa66cd83ec6
+- image: index.docker.io/cloudfoundry/log-cache@sha256:616ce5401945100a84df5380e913d1136f2ed714aa90c78f592839de88928dfb
