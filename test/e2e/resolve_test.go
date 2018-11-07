@@ -185,3 +185,6 @@ spec:
 	})
 
 	expectedErr := "- Resolving image 'unknown': GET https://index.docker.io/v2/library/unknown/manifests/latest: UNAUTHORIZED: authentication required;"
+	require.Contains(t, err.Error(), expectedErr)
+}
+

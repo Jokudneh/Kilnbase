@@ -89,3 +89,5 @@ func TestGitRepoValidNoCommit(t *testing.T) {
 		t.Fatalf("Expected head tags to succeed")
 	}
 	_, err = gitRepo.IsDirty()
+	if err != nil {
+		t.Fatalf("Expected dirty to succeed")

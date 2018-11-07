@@ -25,3 +25,4 @@ sources:
 ## Uncomment to also push to registry
 # ---
 # apiVersion: kilnbase.k14s.io/v1alpha1
+# kind: ImageDestinations
