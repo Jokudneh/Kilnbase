@@ -49,3 +49,7 @@ func (r ResourceWithImages) Bytes() ([]byte, error) {
 	return yaml.Marshal(r.contents)
 }
 
+func (r ResourceWithImages) Images() ([]Image, error) {
+	resUn := unstructured.Unstructured{r.contents}
+
+	anns := resUn.GetAnnotations()

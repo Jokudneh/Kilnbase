@@ -54,3 +54,5 @@ func TestHTTPBodyErrorOmitsCredentials(t *testing.T) {
 	_, err := NewHTTPFileSource(raw).Bytes()
 	require.Error(t, err)
 	require.NotContains(t, err.Error(), "canary")
+	require.Contains(t, err.Error(), "Reading URL")
+}
