@@ -44,3 +44,4 @@ func NewUnpackageCmd(o *UnpackageOptions) *cobra.Command {
 Command 'unpackage' is deprecated; use 'imgpkg pull' instead.
 Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#pull
 
+Unpackage configuration and images from tarball

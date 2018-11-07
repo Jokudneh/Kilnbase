@@ -122,3 +122,6 @@ apiVersion: kilnbase.k14s.io/v1alpha1
 kind: ImageKeys
 keys:
 - sidecarImage
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Config

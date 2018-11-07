@@ -38,3 +38,7 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	case i.selection.Semver != nil:
 		tags, err := i.registry.ListTags(repo)
 		if err != nil {
+			return "", nil, err
+		}
+
+		matchedVers := versions.NewRelaxedSemversNoErr(tags).FilterPrereleases(i.selection.Semver.Prereleases)

@@ -46,3 +46,5 @@ func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
 			headers = append(headers, uitable.Header{
 				Key:    uitable.KeyifyHeader(col),
 				Hidden: false,
+			})
+		}
