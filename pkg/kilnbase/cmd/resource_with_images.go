@@ -53,3 +53,6 @@ func (r ResourceWithImages) Images() ([]Image, error) {
 	resUn := unstructured.Unstructured{r.contents}
 
 	anns := resUn.GetAnnotations()
+	if anns == nil {
+		return nil, nil
+	}

@@ -46,3 +46,5 @@ sources:
 kind: Object
 spec:
 - image: kilnbase:simple-app-two-SHA256-REPLACED
+- image: kilnbase:simple-app-three-SHA256-REPLACED
+`

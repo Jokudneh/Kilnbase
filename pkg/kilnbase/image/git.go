@@ -73,3 +73,6 @@ func (r GitRepo) IsDirty() (bool, error) {
 	return len(strings.TrimSpace(stdout)) > 0, nil
 }
 
+func (r GitRepo) IsValid() bool {
+	// Prints .git directory path if it's git repo
+	_, _, err := r.runCmd([]string{"rev-parse", "--git-dir"})

@@ -65,3 +65,5 @@ func TestKubectlBuildkitBuildAndPushSuccessful(t *testing.T) {
 		return
 	}
 
+	createBuilder(t)
+
