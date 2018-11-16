@@ -102,3 +102,5 @@ func (i Registry) Index(ref regname.Reference) (regv1.ImageIndex, error) {
 
 	return regremote.Index(ref, i.opts...)
 }
+
+func (i Registry) WriteIndex(ref regname.Reference, idx regv1.ImageIndex) error {
