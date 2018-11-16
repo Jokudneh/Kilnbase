@@ -43,3 +43,6 @@ sources:
   bazel:
     run:
       target: :simple-app
+- image: docker.io/*username*/kilnbase-e2e-tests-build2
+  path: %s
+  bazel:

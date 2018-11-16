@@ -48,3 +48,5 @@ func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
 				Hidden: false,
 			})
 		}
+
+		ui.ShowColumns(headers)

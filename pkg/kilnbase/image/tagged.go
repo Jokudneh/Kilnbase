@@ -46,3 +46,5 @@ func (i TaggedImage) URL() (string, []ctlconf.Origin, error) {
 			}
 		}
 
+		origins = append(origins, ctlconf.Origin{Tagged: &ctlconf.OriginTagged{Tags: i.imgDst.Tags}})
+	}
