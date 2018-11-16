@@ -14,3 +14,4 @@ type ErrImage struct {
 var _ Image = ErrImage{}
 
 func NewErrImage(err error) ErrImage { return ErrImage{err} }
+

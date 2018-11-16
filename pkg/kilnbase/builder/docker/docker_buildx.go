@@ -97,3 +97,4 @@ func (d Buildx) BuildAndOptionallyPush(
 	err := d.ensureDirectory(directory)
 	if err != nil {
 		return "", err
+	}

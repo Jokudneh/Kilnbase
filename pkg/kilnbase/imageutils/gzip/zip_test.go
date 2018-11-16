@@ -61,3 +61,6 @@ func TestIs(t *testing.T) {
 	for _, test := range tests {
 		reader := bytes.NewReader(test.in)
 		got, err := Is(reader)
+		if got != test.out {
+			t.Errorf("Is; n: got %v, wanted %v\n", got, test.out)
+		}
