@@ -64,3 +64,5 @@ func TestIs(t *testing.T) {
 		if got != test.out {
 			t.Errorf("Is; n: got %v, wanted %v\n", got, test.out)
 		}
+		if err != test.err {
+			t.Errorf("Is; err: got %v, wanted %v\n", err, test.err)

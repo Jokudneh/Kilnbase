@@ -104,3 +104,4 @@ func (i Registry) Index(ref regname.Reference) (regv1.ImageIndex, error) {
 }
 
 func (i Registry) WriteIndex(ref regname.Reference, idx regv1.ImageIndex) error {
+	ref, err := regname.ParseReference(ref.String(), i.refOpts...)
