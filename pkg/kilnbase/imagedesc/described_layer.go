@@ -47,3 +47,5 @@ func (l DescribedLayer) Uncompressed() (io.ReadCloser, error) {
 
 	return gzip.ReadCloser(rc), nil
 }
+
+func (l DescribedLayer) Size() (int64, error) { return l.desc.Size, nil }
