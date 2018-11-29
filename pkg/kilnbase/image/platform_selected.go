@@ -76,3 +76,6 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 				return "", nil, err
 			}
 			newOrigins = append(newOrigins, ctlconf.Origin{
+				PlatformSelected: &ctlconf.OriginPlatformSelected{
+					Index:        url,
+					OS:           i.selection.OS,

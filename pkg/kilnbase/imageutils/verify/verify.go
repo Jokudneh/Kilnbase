@@ -39,3 +39,4 @@ type verifyReader struct {
 func (vc *verifyReader) Read(b []byte) (int, error) {
 	n, err := vc.inner.Read(b)
 	if err == io.EOF {
+		got := hex.EncodeToString(vc.hasher.Sum(make([]byte, 0, vc.hasher.Size())))

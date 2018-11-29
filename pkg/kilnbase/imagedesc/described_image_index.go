@@ -42,3 +42,7 @@ func (i DescribedImageIndex) IndexManifest() (*regv1.IndexManifest, error) {
 		return nil, err
 	}
 	return manifest, nil
+}
+
+func (i DescribedImageIndex) Image(digest regv1.Hash) (regv1.Image, error) {
+	for _, img := range i.images {
