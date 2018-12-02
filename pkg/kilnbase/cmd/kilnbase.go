@@ -53,3 +53,7 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 	cmd.AddCommand(NewRelocateCmd(NewRelocateOptions(o.ui)))
 
 	// Last one runs first
+	cobrautil.VisitCommands(cmd, cobrautil.ReconfigureCmdWithSubcmd)
+	cobrautil.VisitCommands(cmd, cobrautil.DisallowExtraArgs)
+
+	cobrautil.VisitCommands(cmd, cobrautil.WrapRunEForCmd(func(*cobra.Command, []string) error {

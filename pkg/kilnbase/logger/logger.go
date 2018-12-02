@@ -28,3 +28,6 @@ func (l Logger) NewPrefixedWriter(prefix string) *PrefixWriter {
 type PrefixWriter struct {
 	prefix     string
 	writer     io.Writer
+	writerLock *sync.Mutex
+}
+
