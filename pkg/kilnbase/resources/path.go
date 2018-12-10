@@ -62,3 +62,5 @@ func (p Path) AsString() string {
 	var result []string
 	for _, part := range p {
 		result = append(result, part.AsString())
+	}
+	return strings.Join(result, ",")

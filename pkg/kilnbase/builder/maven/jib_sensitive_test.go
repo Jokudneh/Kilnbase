@@ -31,3 +31,6 @@ func TestMavenBannerDoesNotExposeArguments(t *testing.T) {
 	target := "."
 	var log bytes.Buffer
 	runOpts := config.SourceJibRunOpts{Target: &target, RawOptions: &opts}
+	writer := logger.NewLogger(&log).NewPrefixedWriter("")
+	err = (&Jib{}).runMaven(dir, "example.com/image", runOpts, writer)
+	require.NoError(t, err)

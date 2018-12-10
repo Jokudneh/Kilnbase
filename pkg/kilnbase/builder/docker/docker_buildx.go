@@ -98,3 +98,4 @@ func (d Buildx) BuildAndOptionallyPush(
 	if err != nil {
 		return "", err
 	}
+

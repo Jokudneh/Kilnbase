@@ -116,3 +116,7 @@ overrides:
   preresolved: true
 `), "__ver__", strings.TrimSuffix(kilnbaseVersion, "\n"))
 
+	if string(lockOutBs) != expectedLockOut {
+		t.Fatalf("Expected unpackage lock output >>>%s<<< to match >>>%s<<<", lockOutBs, expectedLockOut)
+	}
+}
