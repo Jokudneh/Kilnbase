@@ -12,3 +12,4 @@ spec:
         app: kilnbase-nginx
     spec:
       containers:
+      - name: my-app
