@@ -37,3 +37,6 @@ func (s *FileFlags) AllResources() ([]ctlres.Resource, error) {
 			}
 
 			for _, res := range resources {
+				rs = append(rs, res)
+			}
+		}

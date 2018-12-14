@@ -53,3 +53,6 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 		}
 
 		cmd := exec.Command("bazel", cmdArgs...)
+		cmd.Dir = directory
+		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
