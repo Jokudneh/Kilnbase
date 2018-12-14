@@ -67,3 +67,6 @@ func redactErrorMessageTestCases() []struct {
 			input:    `error: "https://token:value@secure.example/api"`,
 			expected: `error: "https://_redacted_@secure.example/api"`,
 		},
+		{
+			name:     "https url with brackets",
+			input:    `redirect [https://user:pass@example.com/p] ok`,

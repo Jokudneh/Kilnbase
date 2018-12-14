@@ -58,3 +58,6 @@ func (i DescribedImage) ConfigName() (regv1.Hash, error) {
 func (i DescribedImage) ConfigFile() (*regv1.ConfigFile, error) {
 	var config *regv1.ConfigFile
 	err := json.Unmarshal([]byte(i.desc.Config.Raw), &config)
+	if err != nil {
+		return nil, err
+	}
