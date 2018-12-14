@@ -57,3 +57,7 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 
 	if opts.CancelCh != nil {
 		go func() {
+			select {
+			case <-opts.CancelCh:
+				cmd.Process.Signal(os.Interrupt)
+			}

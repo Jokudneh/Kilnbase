@@ -53,3 +53,5 @@ func NewOriginsFromString(str string) ([]Origin, error) {
 	// Ignores unknown types of origin. At this time...
 	// - "Origin" are provided as primarily optional diagnostic information
 	//   rather than operational data (read: less important). Losing
+	//   this information does not change the correctness of kilnbase's
+	//   primary purpose during deployment: to rewrite image references.

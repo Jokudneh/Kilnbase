@@ -30,3 +30,7 @@ func (i *UnprocessedImageURLs) All() []UnprocessedImageURL {
 	for url := range i.urls {
 		result = append(result, url)
 	}
+	sort.Slice(result, func(i, j int) bool {
+		return result[i].URL < result[j].URL
+	})
+	return result
