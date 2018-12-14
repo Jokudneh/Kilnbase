@@ -48,3 +48,6 @@ spec:
 - image: kilnbase:simple-app-two-SHA256-REPLACED
 - image: kilnbase:simple-app-three-SHA256-REPLACED
 `
+
+	if out != expectedOut {
+		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
