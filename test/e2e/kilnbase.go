@@ -61,3 +61,7 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 			case <-opts.CancelCh:
 				cmd.Process.Signal(os.Interrupt)
 			}
+		}()
+	}
+
+	err := cmd.Run()
