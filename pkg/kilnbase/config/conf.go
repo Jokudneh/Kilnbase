@@ -66,3 +66,7 @@ func (c Conf) Sources() []Source {
 func (c Conf) ImageOverrides() []ImageOverride {
 	var result []ImageOverride
 	for _, config := range c.configs {
+		result = append(result, config.Overrides...)
+	}
+	return result
+}

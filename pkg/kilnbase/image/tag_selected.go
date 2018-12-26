@@ -42,3 +42,6 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 		}
 
 		matchedVers := versions.NewRelaxedSemversNoErr(tags).FilterPrereleases(i.selection.Semver.Prereleases)
+
+		if len(i.selection.Semver.Constraints) > 0 {
+			matchedVers, err = matchedVers.FilterConstraints(i.selection.Semver.Constraints)

@@ -22,3 +22,5 @@ func TestLogger(t *testing.T) {
 	prefLogger.Write([]byte("content5\ncontent6\n"))
 	prefLogger.Write([]byte("\ncontent7\ncontent8\n"))
 	prefLogger.Write([]byte("\n\n"))
+
+	out := buf.String()
