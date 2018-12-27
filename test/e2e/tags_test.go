@@ -37,3 +37,7 @@ destinations:
 - image: docker.io/*username*/kilnbase-e2e-tests-build
   tags:
   - staging
+  - v1.0.0
+`)
+
+		out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{

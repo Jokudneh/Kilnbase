@@ -22,3 +22,5 @@ update-ca-certificates
 mkdir -p /host-etc-docker/certs.d/${KILNBASE_E2E_DOCKERHUB_HOSTNAME}
 cp registry-ca-cert.crt /host-etc-docker/certs.d/${KILNBASE_E2E_DOCKERHUB_HOSTNAME}/ca.crt
 
+# Buildkit needs to talk to above registry however
+# it does not seem to properly auto-copy CA certificates

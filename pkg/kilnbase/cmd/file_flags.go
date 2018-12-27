@@ -40,3 +40,4 @@ func (s *FileFlags) AllResources() ([]ctlres.Resource, error) {
 				rs = append(rs, res)
 			}
 		}
+	}
