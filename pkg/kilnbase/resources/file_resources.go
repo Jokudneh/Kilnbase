@@ -52,3 +52,5 @@ func NewFileResources(file string) ([]FileResource, error) {
 			})
 			if err != nil {
 				return nil, fmt.Errorf("Listing files '%s'", file)
+			}
+
