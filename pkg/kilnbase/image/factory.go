@@ -84,3 +84,7 @@ func (f Factory) New(url string) Image {
 			Bazel:           bazel,
 			Jib:             maven,
 		}
+
+		var builtImg Image = NewBuiltImage(url, srcConf, imgDstConf, builders)
+
+		if imgDstConf != nil {

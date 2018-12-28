@@ -105,3 +105,5 @@ func (*Jib) tmpRef(image string) (ctlbdk.TmpRef, error) {
 		randPrefix50,
 		tb.TrimStr(tb.CleanStr(image), 50),
 	))), nil
+}
+
