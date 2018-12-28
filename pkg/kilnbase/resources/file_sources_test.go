@@ -70,3 +70,7 @@ func redactErrorMessageTestCases() []struct {
 		{
 			name:     "https url with brackets",
 			input:    `redirect [https://user:pass@example.com/p] ok`,
+			expected: `redirect [https://_redacted_@example.com/p] ok`,
+		},
+		{
+			name: "multiple schemes in same message",

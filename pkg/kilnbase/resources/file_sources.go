@@ -68,3 +68,6 @@ func redactURL(raw string) string {
 		return "<invalid URL>"
 	}
 	if u.User != nil {
+		u.User = url.User("_redacted_")
+	}
+	if u.RawQuery != empty {
