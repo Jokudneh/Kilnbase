@@ -31,3 +31,7 @@ type PrefixWriter struct {
 	writerLock *sync.Mutex
 }
 
+func (w *PrefixWriter) Write(data []byte) (int, error) {
+	newData := make([]byte, len(data))
+	copy(newData, data)
+
