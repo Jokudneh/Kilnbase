@@ -74,3 +74,7 @@ func redactErrorMessageTestCases() []struct {
 		},
 		{
 			name: "multiple schemes in same message",
+			input: `primary: http://u:p@a.example/x?t=S1 and ` +
+				`https://u:p@b.example/y?t=S2`,
+			expected: `primary: http://_redacted_@a.example/x?_redacted_ and ` +
+				`https://_redacted_@b.example/y?_redacted_`,

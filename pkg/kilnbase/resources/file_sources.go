@@ -71,3 +71,5 @@ func redactURL(raw string) string {
 		u.User = url.User("_redacted_")
 	}
 	if u.RawQuery != empty {
+		u.RawQuery = "_redacted_"
+	}

@@ -43,3 +43,6 @@ type WriteCloser struct {
 	io.Writer
 	CloseFunc func() error
 }
+
+var _ io.WriteCloser = (*WriteCloser)(nil)
+
