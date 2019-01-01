@@ -99,3 +99,4 @@ func (d Buildx) BuildAndOptionallyPush(
 		return "", err
 	}
 
+	tagRef, err := d.tagRef(image, imgDst)
