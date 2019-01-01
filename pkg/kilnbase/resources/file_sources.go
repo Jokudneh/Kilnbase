@@ -73,3 +73,6 @@ func redactURL(raw string) string {
 	if u.RawQuery != empty {
 		u.RawQuery = "_redacted_"
 	}
+	u.Fragment = empty
+	u.RawFragment = empty
+	return u.String()

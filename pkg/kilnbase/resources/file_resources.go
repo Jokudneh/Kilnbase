@@ -54,3 +54,4 @@ func NewFileResources(file string) ([]FileResource, error) {
 				return nil, fmt.Errorf("Listing files '%s'", file)
 			}
 
+			sort.Strings(paths)
