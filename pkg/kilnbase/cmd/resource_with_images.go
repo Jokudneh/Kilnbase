@@ -57,3 +57,7 @@ func (r ResourceWithImages) Images() ([]Image, error) {
 		return nil, nil
 	}
 
+	var structs []imageStruct
+
+	err := yaml.Unmarshal([]byte(anns[ImagesAnnKey]), &structs)
+	if err != nil {

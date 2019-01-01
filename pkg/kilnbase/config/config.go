@@ -132,3 +132,6 @@ type SearchRuleUpdateStrategyYAML struct {
 type ImageRef struct {
 	Image     string `json:"image,omitempty"`
 	ImageRepo string `json:"imageRepo,omitempty"`
+}
+
+func NewConfig() Config {
