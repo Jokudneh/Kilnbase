@@ -64,3 +64,4 @@ metadata:
     kapp.k14s.io/versioned: ""
 data:
   config.yml: |
+    # Taken from /etc/docker/registry/config.yml

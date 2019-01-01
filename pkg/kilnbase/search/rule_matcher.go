@@ -43,3 +43,5 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 
 	if m.rule.ValueMatcher != nil {
 		switch {
+		case len(m.rule.ValueMatcher.Image) > 0:
+			// Registry hostnames are case-insensitive (RFC 1035/1123);
