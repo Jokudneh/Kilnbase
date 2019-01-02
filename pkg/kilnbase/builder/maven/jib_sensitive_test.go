@@ -34,3 +34,6 @@ func TestMavenBannerDoesNotExposeArguments(t *testing.T) {
 	writer := logger.NewLogger(&log).NewPrefixedWriter("")
 	err = (&Jib{}).runMaven(dir, "example.com/image", runOpts, writer)
 	require.NoError(t, err)
+	require.NotContains(t, log.String(), "canary")
+	actual, err := os.ReadFile(argsFile)
+	require.NoError(t, err)

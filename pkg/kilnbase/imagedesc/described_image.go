@@ -61,3 +61,4 @@ func (i DescribedImage) ConfigFile() (*regv1.ConfigFile, error) {
 	if err != nil {
 		return nil, err
 	}
+	return config, nil

@@ -78,3 +78,7 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		expected: "MyImage",
 	},
 	{
+		name:     "implicit registry with namespace",
+		input:    "MyOrg/MyImage:Tag",
+		expected: "MyOrg/MyImage:Tag",
+	},
