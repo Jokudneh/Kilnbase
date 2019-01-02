@@ -50,3 +50,4 @@ func (f *UIFlags) ConfigureUI(ui *ui.ConfUI) {
 		}
 
 		ui.ShowColumns(headers)
+	}

@@ -120,3 +120,5 @@ overrides:
 		t.Fatalf("Expected unpackage lock output >>>%s<<< to match >>>%s<<<", lockOutBs, expectedLockOut)
 	}
 }
+
+func TestPkgUnpkgSuccessfulWithForeignLayers(t *testing.T) {

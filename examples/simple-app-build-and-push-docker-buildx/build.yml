@@ -24,3 +24,5 @@ sources:
     buildx:
       rawOptions: ["--platform=linux/amd64,linux/arm64,linux/arm/v7"]
 # docker buildx only is able to build multi platform images
+# if destination for registry is specified
+# (single platform images can be built without destination)
