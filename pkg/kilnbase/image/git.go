@@ -76,3 +76,6 @@ func (r GitRepo) IsDirty() (bool, error) {
 func (r GitRepo) IsValid() bool {
 	// Prints .git directory path if it's git repo
 	_, _, err := r.runCmd([]string{"rev-parse", "--git-dir"})
+	return err == nil
+}
+

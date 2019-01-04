@@ -107,3 +107,5 @@ func (*Jib) tmpRef(image string) (ctlbdk.TmpRef, error) {
 	))), nil
 }
 
+func (*Jib) runMaven(directory string, targetImage string,
+	opts config.SourceJibRunOpts, prefixedLogger *ctllog.PrefixWriter) error {
