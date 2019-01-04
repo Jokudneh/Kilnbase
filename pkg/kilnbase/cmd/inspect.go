@@ -47,3 +47,4 @@ func (o *InspectOptions) Run() error {
 	}
 
 	table := uitable.Table{
+		Title:   "Images",
