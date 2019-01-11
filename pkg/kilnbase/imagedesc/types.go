@@ -58,3 +58,5 @@ type ImageDescriptor struct {
 
 type ImageLayerDescriptor struct {
 	MediaType string
+	Digest    string
+	DiffID    string

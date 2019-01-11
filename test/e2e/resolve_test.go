@@ -188,3 +188,6 @@ spec:
 	require.Contains(t, err.Error(), expectedErr)
 }
 
+func TestResolveWithOverride(t *testing.T) {
+	env := BuildEnv(t)
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}

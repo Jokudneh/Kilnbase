@@ -41,3 +41,4 @@ func (s *FileFlags) AllResources() ([]ctlres.Resource, error) {
 			}
 		}
 	}
+
