@@ -82,3 +82,6 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		input:    "MyOrg/MyImage:Tag",
 		expected: "MyOrg/MyImage:Tag",
 	},
+	{
+		name:     "malformed digest with implicit namespace",
+		input:    "MyOrg/MyImage@sha256:deadbeef",

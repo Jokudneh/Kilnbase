@@ -69,3 +69,4 @@ func TestIs(t *testing.T) {
 		}
 	}
 }
+
