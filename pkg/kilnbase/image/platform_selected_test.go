@@ -117,3 +117,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			},
 			want: false,
 		},
+		{ // OS must exactly match, and is case sensative. matchesPlatform expected to return false.
