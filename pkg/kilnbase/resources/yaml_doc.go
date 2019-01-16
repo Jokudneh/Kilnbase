@@ -40,3 +40,4 @@ func (f YAMLFile) Docs() ([][]byte, error) {
 		docs = append(docs, docBytes)
 	}
 
+	return docs, nil

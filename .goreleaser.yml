@@ -47,3 +47,4 @@ snapshot:
 release:
   # Repo in which the release will be created.
   github:
+    owner: kilnbase-dev
