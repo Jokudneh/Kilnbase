@@ -43,3 +43,7 @@ func (r DescribedReader) buildIndex(iitd ImageIndexDescriptor) ImageIndexWithRef
 
 	for _, imgTD := range iitd.Images {
 		images = append(images, NewDescribedImage(imgTD, r.layerProvider))
+	}
+	for _, indexTD := range iitd.Indexes {
+		indexes = append(indexes, r.buildIndex(indexTD))
+	}

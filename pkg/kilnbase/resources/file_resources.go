@@ -55,3 +55,6 @@ func NewFileResources(file string) ([]FileResource, error) {
 			}
 
 			sort.Strings(paths)
+
+			for _, path := range paths {
+				fileRs = append(fileRs, FileResource{NewLocalFileSource(path)})
