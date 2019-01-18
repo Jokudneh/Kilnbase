@@ -55,3 +55,4 @@ func NewOriginsFromString(str string) ([]Origin, error) {
 	//   rather than operational data (read: less important). Losing
 	//   this information does not change the correctness of kilnbase's
 	//   primary purpose during deployment: to rewrite image references.
+	//   It would be more than an annoyance to error-out if we were

@@ -65,3 +65,5 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 		}
 		if opts.ClearCache != nil && *opts.ClearCache {
 			cmdArgs = append(cmdArgs, "--clear-cache")
+		}
+		if opts.RawOptions != nil {

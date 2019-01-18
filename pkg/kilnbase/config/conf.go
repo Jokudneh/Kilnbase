@@ -70,3 +70,5 @@ func (c Conf) ImageOverrides() []ImageOverride {
 	}
 	return result
 }
+
+func (c Conf) ImageDestinations() []ImageDestination {
