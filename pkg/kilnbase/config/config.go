@@ -135,3 +135,4 @@ type ImageRef struct {
 }
 
 func NewConfig() Config {
+	return Config{

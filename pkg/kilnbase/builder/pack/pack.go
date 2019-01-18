@@ -61,3 +61,7 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 		if opts.Buildpacks != nil {
 			for _, b := range *opts.Buildpacks {
 				cmdArgs = append(cmdArgs, []string{"--buildpack", b}...)
+			}
+		}
+		if opts.ClearCache != nil && *opts.ClearCache {
+			cmdArgs = append(cmdArgs, "--clear-cache")
