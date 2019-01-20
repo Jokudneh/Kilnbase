@@ -76,3 +76,4 @@ func redactURL(raw string) string {
 	u.Fragment = empty
 	u.RawFragment = empty
 	return u.String()
+}

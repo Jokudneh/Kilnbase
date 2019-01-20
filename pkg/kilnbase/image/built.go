@@ -65,3 +65,7 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 
 	urlRepo, _ := URLRepo(i.url)
 
+	switch {
+	case i.buildSource.Pack != nil:
+		opts := ctlbpk.PackBuildOpts{
+			Builder:    i.buildSource.Pack.Build.Builder,
