@@ -63,3 +63,5 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 		return "", nil, err
 	}
 
+	urlRepo, _ := URLRepo(i.url)
+

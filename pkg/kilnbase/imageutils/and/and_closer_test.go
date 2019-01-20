@@ -46,3 +46,6 @@ func TestRead(t *testing.T) {
 		t.Errorf("ReadAll(rac); got %q, want %q", got, want)
 	}
 
+	if called {
+		t.Error("called before Close(); got true, wanted false")
+	}
