@@ -59,3 +59,6 @@ func (o *PackageOptions) Run() error {
 	warningLogger := logger.NewPrefixedWriter("Warning: ")
 	msg := "Command 'package' is deprecated; use 'imgpkg push' instead. " +
 		"Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#push\n"
+	_, err := warningLogger.Write([]byte(msg))
+	if err != nil {
+		return err

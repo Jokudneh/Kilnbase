@@ -57,3 +57,5 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 	cobrautil.VisitCommands(cmd, cobrautil.DisallowExtraArgs)
 
 	cobrautil.VisitCommands(cmd, cobrautil.WrapRunEForCmd(func(*cobra.Command, []string) error {
+		o.UIFlags.ConfigureUI(o.ui)
+		return nil
