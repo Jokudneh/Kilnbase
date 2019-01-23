@@ -64,3 +64,6 @@ func (p Path) AsString() string {
 		result = append(result, part.AsString())
 	}
 	return strings.Join(result, ",")
+}
+
+func (p Path) ContainsNonMapKeys() bool {

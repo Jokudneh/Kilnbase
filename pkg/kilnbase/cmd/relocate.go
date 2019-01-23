@@ -84,3 +84,5 @@ func (o *RelocateOptions) Run() error {
 	foundImages, err := FindImages(rs, conf)
 	if err != nil {
 		return err
+	}
+

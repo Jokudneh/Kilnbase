@@ -37,3 +37,4 @@ func (w *PrefixWriter) Write(data []byte) (int, error) {
 
 	endsWithNl := bytes.HasSuffix(newData, []byte("\n"))
 	if endsWithNl {
+		newData = newData[0 : len(newData)-1]
