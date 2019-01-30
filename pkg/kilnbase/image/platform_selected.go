@@ -79,3 +79,4 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 				PlatformSelected: &ctlconf.OriginPlatformSelected{
 					Index:        url,
 					OS:           i.selection.OS,
+					Architecture: i.selection.Architecture,

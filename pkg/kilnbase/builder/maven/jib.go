@@ -109,3 +109,7 @@ func (*Jib) tmpRef(image string) (ctlbdk.TmpRef, error) {
 
 func (*Jib) runMaven(directory string, targetImage string,
 	opts config.SourceJibRunOpts, prefixedLogger *ctllog.PrefixWriter) error {
+	var stdoutBuf, stderrBuf bytes.Buffer
+
+	// Base arguments for the Maven Jib command.
+	cmdArgs := []string{
