@@ -64,3 +64,4 @@ func (f tarFile) openChunk(path string) (io.ReadCloser, error) {
 			return nil, err
 		}
 		if hdr.Name == path {
+			return tarFileChunkReadCloser{
