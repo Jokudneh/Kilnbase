@@ -63,3 +63,4 @@ jobs:
 
         eval $(minikube docker-env --shell=bash)
 
+        # when this workflow runs of a pull request based on a fork, secrets are unavailable

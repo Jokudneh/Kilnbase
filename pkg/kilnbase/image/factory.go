@@ -88,3 +88,6 @@ func (f Factory) New(url string) Image {
 		var builtImg Image = NewBuiltImage(url, srcConf, imgDstConf, builders)
 
 		if imgDstConf != nil {
+			builtImg = NewTaggedImage(builtImg, *imgDstConf, f.registry)
+		}
+		return NewPlatformSelectedImage(builtImg, platformSelection, f.registry)

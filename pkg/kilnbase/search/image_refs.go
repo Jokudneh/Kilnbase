@@ -59,3 +59,7 @@ func (v ImageRefsVisitorFunc) Apply(res interface{}, searchRules []ctlconf.Searc
 		}
 		return "", false // TODO panic?
 	}
+
+	NewFields(res, tmpRefMatcher{tmpRefPrefix}).Visit(v.extractValueFunc(resolveTmpRefsFunc))
+
+	if len(tmpRefs) > 0 {
