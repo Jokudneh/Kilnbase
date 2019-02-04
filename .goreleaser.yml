@@ -52,3 +52,4 @@ release:
 
   # If set to true, will not auto-publish the release.
   draft: true
+

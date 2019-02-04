@@ -65,3 +65,7 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 	}
 
 	err := cmd.Run()
+	stdoutStr := stdout.String()
+
+	if err != nil {
+		err = fmt.Errorf("Execution error: stdout: '%s' stderr: '%s' error: '%s'", stdoutStr, stderr.String(), err)
