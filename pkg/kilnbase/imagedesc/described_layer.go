@@ -49,3 +49,6 @@ func (l DescribedLayer) Uncompressed() (io.ReadCloser, error) {
 }
 
 func (l DescribedLayer) Size() (int64, error) { return l.desc.Size, nil }
+
+func (l DescribedLayer) MediaType() (types.MediaType, error) {
+	return types.MediaType(l.desc.MediaType), nil

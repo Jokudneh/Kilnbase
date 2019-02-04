@@ -56,3 +56,7 @@ func NewOriginsFromString(str string) ([]Origin, error) {
 	//   this information does not change the correctness of kilnbase's
 	//   primary purpose during deployment: to rewrite image references.
 	//   It would be more than an annoyance to error-out if we were
+	//   unable to parse such data.
+	// - Ideally, yes, we'd at least report a warning. However, if there's
+	//   a systemic condition (e.g. using an older version of kilnbase to
+	//   deploy than was used to package) there would likely be a flurry

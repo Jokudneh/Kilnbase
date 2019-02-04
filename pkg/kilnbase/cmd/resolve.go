@@ -116,3 +116,6 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 
 	imageURLs, err := o.collectImageReferences(nonConfigRs, conf)
 	if err != nil {
+		return nil, err
+	}
+
