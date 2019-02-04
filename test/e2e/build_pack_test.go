@@ -63,3 +63,4 @@ destinations:
 		StdinReader: strings.NewReader(input),
 	})
 
+	// Replace digest multiple times as pack does not always produce image with the same digest

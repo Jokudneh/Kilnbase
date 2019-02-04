@@ -69,3 +69,7 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 	case i.buildSource.Pack != nil:
 		opts := ctlbpk.PackBuildOpts{
 			Builder:    i.buildSource.Pack.Build.Builder,
+			Buildpacks: i.buildSource.Pack.Build.Buildpacks,
+			ClearCache: i.buildSource.Pack.Build.ClearCache,
+			RawOptions: i.buildSource.Pack.Build.RawOptions,
+		}

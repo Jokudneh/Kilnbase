@@ -102,3 +102,4 @@ func (d Buildx) BuildAndOptionallyPush(
 	tagRef, err := d.tagRef(image, imgDst)
 	if err != nil {
 		return "", err
+	}
