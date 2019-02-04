@@ -34,3 +34,4 @@ func (i *UnprocessedImageURLs) All() []UnprocessedImageURL {
 		return result[i].URL < result[j].URL
 	})
 	return result
+}
