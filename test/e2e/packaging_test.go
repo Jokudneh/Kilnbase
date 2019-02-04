@@ -122,3 +122,4 @@ overrides:
 }
 
 func TestPkgUnpkgSuccessfulWithForeignLayers(t *testing.T) {
+	env := BuildEnv(t)

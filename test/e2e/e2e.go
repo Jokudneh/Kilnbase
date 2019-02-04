@@ -14,3 +14,4 @@ func (l Logger) Section(msg string, f func()) {
 	f()
 }
 
+func (l Logger) Debugf(msg string, args ...interface{}) {

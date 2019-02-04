@@ -41,3 +41,7 @@ destinations:
 `)
 
 		out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
+			StdinReader: strings.NewReader(input),
+		})
+
+		maskedOut := strings.Replace(out, regexp.MustCompile("sha256:[a-z0-9]{64}").FindString(out), "SHA256-REPLACED", -1)

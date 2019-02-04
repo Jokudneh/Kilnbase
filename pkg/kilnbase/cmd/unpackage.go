@@ -47,3 +47,7 @@ Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#pull
 Unpackage configuration and images from tarball
 `,
 		RunE: func(_ *cobra.Command, _ []string) error { return o.Run() },
+	}
+	o.FileFlags.Set(cmd)
+	o.RegistryFlags.Set(cmd)
+	cmd.Flags().StringVarP(&o.InputPath, "input", "i", "", "Input tarball path")
