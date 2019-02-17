@@ -59,3 +59,4 @@ func NewFileResources(file string) ([]FileResource, error) {
 			for _, path := range paths {
 				fileRs = append(fileRs, FileResource{NewLocalFileSource(path)})
 			}
+		} else {
