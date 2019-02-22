@@ -80,3 +80,4 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 					Index:        url,
 					OS:           i.selection.OS,
 					Architecture: i.selection.Architecture,
+					Variant:      i.selection.Variant,
