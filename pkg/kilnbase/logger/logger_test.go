@@ -24,3 +24,5 @@ func TestLogger(t *testing.T) {
 	prefLogger.Write([]byte("\n\n"))
 
 	out := buf.String()
+	expectedOut := `prefix: content1
+prefix: content2

@@ -88,3 +88,6 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 			}
 
 			importedImages.Add(UnprocessedImageURL{existingRef.Name()}, Image{URL: importDigestRef.Name()})
+			errCh <- nil
+		}()
+	}
