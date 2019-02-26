@@ -113,3 +113,7 @@ func (*Jib) runMaven(directory string, targetImage string,
 
 	// Base arguments for the Maven Jib command.
 	cmdArgs := []string{
+		"compile",
+		"jib:dockerBuild",
+		"-Dimage=" + targetImage,
+		"-Djib.allowInsecureRegistries=true",
