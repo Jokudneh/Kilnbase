@@ -117,3 +117,4 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 		}
 	}
 
+	inspectData, err := d.Inspect(tmpRef.AsString())

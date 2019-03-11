@@ -60,3 +60,6 @@ func NewFileResources(file string) ([]FileResource, error) {
 				fileRs = append(fileRs, FileResource{NewLocalFileSource(path)})
 			}
 		} else {
+			fileRs = append(fileRs, FileResource{NewLocalFileSource(file)})
+		}
+	}
