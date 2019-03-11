@@ -78,3 +78,5 @@ func redactErrorMessageTestCases() []struct {
 				`https://u:p@b.example/y?t=S2`,
 			expected: `primary: http://_redacted_@a.example/x?_redacted_ and ` +
 				`https://_redacted_@b.example/y?_redacted_`,
+		},
+	}
