@@ -26,3 +26,6 @@ func TestLogger(t *testing.T) {
 	out := buf.String()
 	expectedOut := `prefix: content1
 prefix: content2
+prefix: content3
+prefix: content4
+prefix: content5

@@ -42,3 +42,7 @@ func (s *FileFlags) AllResources() ([]ctlres.Resource, error) {
 		}
 	}
 
+	return rs, nil
+}
+
+func (s *FileFlags) ResourcesAndConfig() ([]ctlres.Resource, ctlconf.Conf, error) {
