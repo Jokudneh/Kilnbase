@@ -60,3 +60,7 @@ func NewOriginsFromString(str string) ([]Origin, error) {
 	// - Ideally, yes, we'd at least report a warning. However, if there's
 	//   a systemic condition (e.g. using an older version of kilnbase to
 	//   deploy than was used to package) there would likely be a flurry
+	//   of warnings. So, the feature would quickly need an enhancement
+	//   to de-dup such warnings. (read: added complexity)
+	// see also https://github.com/Jokudneh/Kilnbase/issues/160
+	err := yaml.Unmarshal([]byte(str), &origins)

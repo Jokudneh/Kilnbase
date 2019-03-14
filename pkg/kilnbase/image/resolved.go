@@ -44,3 +44,6 @@ func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 		return "", nil, fmt.Errorf("Expected digest resolution to be consistent over two separate requests")
 	}
 
+	url, origins, err := NewDigestedImageFromParts(tag.Repository.String(), imgDescriptor.Digest.String()).URL()
+	if err != nil {
+		return "", nil, err

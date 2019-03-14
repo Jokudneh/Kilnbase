@@ -64,3 +64,4 @@ destinations:
 	})
 
 	// Replace digest multiple times as pack does not always produce image with the same digest
+	// Possibly related: https://github.com/buildpack/lifecycle/issues/181
