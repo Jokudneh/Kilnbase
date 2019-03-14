@@ -63,3 +63,4 @@ func (r ResourceWithImages) Images() ([]Image, error) {
 	if err != nil {
 		return nil, err
 	}
+

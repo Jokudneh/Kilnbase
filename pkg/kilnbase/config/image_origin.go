@@ -64,3 +64,4 @@ func NewOriginsFromString(str string) ([]Origin, error) {
 	//   to de-dup such warnings. (read: added complexity)
 	// see also https://github.com/Jokudneh/Kilnbase/issues/160
 	err := yaml.Unmarshal([]byte(str), &origins)
+	if err != nil {
