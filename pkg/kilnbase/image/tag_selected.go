@@ -45,3 +45,5 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 
 		if len(i.selection.Semver.Constraints) > 0 {
 			matchedVers, err = matchedVers.FilterConstraints(i.selection.Semver.Constraints)
+			if err != nil {
+				return "", nil, fmt.Errorf("Selecting versions: %s", err)

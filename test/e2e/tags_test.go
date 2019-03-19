@@ -45,3 +45,6 @@ destinations:
 		})
 
 		maskedOut := strings.Replace(out, regexp.MustCompile("sha256:[a-z0-9]{64}").FindString(out), "SHA256-REPLACED", -1)
+
+		expectedOut := env.WithRegistries(`---
+image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
