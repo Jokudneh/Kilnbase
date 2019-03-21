@@ -47,3 +47,7 @@ func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 	url, origins, err := NewDigestedImageFromParts(tag.Repository.String(), imgDescriptor.Digest.String()).URL()
 	if err != nil {
 		return "", nil, err
+	}
+
+	origins = append(origins, ctlconf.Origin{Resolved: &ctlconf.OriginResolved{URL: i.url, Tag: tag.TagStr()}})
+

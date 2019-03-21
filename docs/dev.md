@@ -61,3 +61,5 @@ metadata:
   labels:
     app: registry
 spec:
+  replicas: 1
+  selector:
