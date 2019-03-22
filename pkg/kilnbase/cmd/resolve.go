@@ -119,3 +119,4 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 		return nil, err
 	}
 
+	if o.UnresolvedInspect {
