@@ -77,3 +77,6 @@ func redactURL(raw string) string {
 	u.RawFragment = empty
 	return u.String()
 }
+
+// redactErrorMessage redacts URLs with embedded credentials from error
+// strings. Handles cases where error messages contain redirect URLs or

@@ -88,3 +88,6 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		expected: "MyOrg/MyImage@sha256:deadbeef",
 	},
 	{
+		name:     "uppercase localhost",
+		input:    "LOCALHOST:5000/MyImage:Tag",
+		expected: "localhost:5000/MyImage:Tag",

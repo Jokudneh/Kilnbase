@@ -70,3 +70,7 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 				} else {
 					f.visit(newKeyPath, o, visitorFunc)
 				}
+			} else {
+				f.visit(newKeyPath, o, visitorFunc)
+			}
+		}
