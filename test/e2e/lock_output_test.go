@@ -127,3 +127,6 @@ apiVersion: kilnbase.k14s.io/v1alpha1
 kind: Config
 searchRules:
 - keyMatcher:
+    path: [images, {allIndexes: true}, {index: 0}]
+`
+

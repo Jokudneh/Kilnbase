@@ -48,3 +48,4 @@ destinations:
 
 		expectedOut := env.WithRegistries(`---
 image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
+`)
