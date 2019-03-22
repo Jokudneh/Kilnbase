@@ -136,3 +136,6 @@ type ImageRef struct {
 
 func NewConfig() Config {
 	return Config{
+		APIVersion: configAPIVersion,
+		Kind:       configKind,
+	}

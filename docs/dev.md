@@ -63,3 +63,7 @@ metadata:
 spec:
   replicas: 1
   selector:
+    matchLabels:
+      app: registry
+  template:
+    metadata:
