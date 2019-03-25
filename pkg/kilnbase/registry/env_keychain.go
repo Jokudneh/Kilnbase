@@ -68,3 +68,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 	if k.collected || k.collectErr != nil {
 		return append([]envKeychainInfo{}, k.infos...), k.collectErr
 	}
+
+	const (
+		sep = "_"
+	)
