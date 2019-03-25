@@ -40,3 +40,5 @@ func (w *PrefixWriter) Write(data []byte) (int, error) {
 		newData = newData[0 : len(newData)-1]
 	}
 	newData = bytes.Replace(newData, []byte("\n"), []byte("\n"+w.prefix), -1)
+	newData = append(newData, []byte("\n")...)
+	newData = append([]byte(w.prefix), newData...)

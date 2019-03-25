@@ -56,3 +56,6 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 		cmd.Dir = directory
 		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
 		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
+
+		err := cmd.Run()
+		if err != nil {
