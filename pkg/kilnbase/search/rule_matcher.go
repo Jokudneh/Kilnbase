@@ -45,3 +45,6 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 		switch {
 		case len(m.rule.ValueMatcher.Image) > 0:
 			// Registry hostnames are case-insensitive (RFC 1035/1123);
+			// ValueMatcher.Image comes from the user's kilnbase.yaml config
+			// while value comes from scanning the target manifest, so a
+			// hostname-case mismatch between the two sources must not

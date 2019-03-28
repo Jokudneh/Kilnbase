@@ -44,3 +44,5 @@ var (
 )
 
 func URLRepo(url string) (string, bool) {
+	// Not using go-containerregistry library to parse repository because
+	// it does not expose "exact" original repository

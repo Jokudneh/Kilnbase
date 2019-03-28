@@ -59,3 +59,5 @@ sources:
 	out = reSHA.ReplaceAllString(out, "SHA256-REPLACED")
 	reKilnbase := regexp.MustCompile(
 		"kilnbase:(.+)-kilnbase-e2e(\\-.*)-SHA256-REPLACED")
+	out = reKilnbase.ReplaceAllString(out, "kilnbase:img-title-SHA256-REPLACED")
+
