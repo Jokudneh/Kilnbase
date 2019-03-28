@@ -63,3 +63,7 @@ func (v ImageRefsVisitorFunc) Apply(res interface{}, searchRules []ctlconf.Searc
 	NewFields(res, tmpRefMatcher{tmpRefPrefix}).Visit(v.extractValueFunc(resolveTmpRefsFunc))
 
 	if len(tmpRefs) > 0 {
+		panic("ImageRefs: Expected all tmp refs to be found")
+	}
+}
+

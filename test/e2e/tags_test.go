@@ -49,3 +49,7 @@ destinations:
 		expectedOut := env.WithRegistries(`---
 image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
 `)
+
+		if maskedOut != expectedOut {
+			t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", maskedOut, expectedOut)
+		}
