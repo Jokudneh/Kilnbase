@@ -42,3 +42,6 @@ func TestVerificationFailure(t *testing.T) {
 
 	verified, err := ReadCloser(io.NopCloser(buf), mustHash("not the same", t))
 	if err != nil {
+		t.Fatal("ReadCloser() =", err)
+	}
+	if b, err := io.ReadAll(verified); err == nil {

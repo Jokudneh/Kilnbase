@@ -69,3 +69,5 @@ func TestNewPlatformSelection(t *testing.T) {
 			plat, err := ctlcmd.NewPlatformSelection(ex.Input)
 			assert.Equal(t, err, ex.Error)
 			assert.Equal(t, plat, ex.Plat)
+		})
+	}

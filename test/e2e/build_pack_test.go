@@ -65,3 +65,6 @@ destinations:
 
 	// Replace digest multiple times as pack does not always produce image with the same digest
 	// Possibly related: https://github.com/buildpack/lifecycle/issues/181
+	digestRegex := regexp.MustCompile("sha256:[a-z0-9]{64}")
+	for {
+		digestStr := digestRegex.FindString(out)
