@@ -56,3 +56,7 @@ func TestHTTPBodyErrorOmitsCredentials(t *testing.T) {
 	require.NotContains(t, err.Error(), "canary")
 	require.Contains(t, err.Error(), "Reading URL")
 }
+
+type sensitiveTestTransport func(*http.Request) (*http.Response, error)
+
+func (f sensitiveTestTransport) RoundTrip(req *http.Request) (
