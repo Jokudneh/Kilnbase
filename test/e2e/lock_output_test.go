@@ -130,3 +130,4 @@ searchRules:
     path: [images, {allIndexes: true}, {index: 0}]
 `
 
+	path := "/tmp/kilnbase-test-lock-output-successful"

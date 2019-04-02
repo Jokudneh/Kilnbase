@@ -120,3 +120,7 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 	}
 
 	if o.UnresolvedInspect {
+		output, err := imageURLs.Bytes()
+		if err != nil {
+			return nil, err
+		}
