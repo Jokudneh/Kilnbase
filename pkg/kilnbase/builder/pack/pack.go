@@ -70,3 +70,5 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 			cmdArgs = append(cmdArgs, *opts.RawOptions...)
 		}
 
+		cmd := exec.Command("pack", cmdArgs...)
+		cmd.Dir = directory
