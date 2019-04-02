@@ -73,3 +73,6 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 			ClearCache: i.buildSource.Pack.Build.ClearCache,
 			RawOptions: i.buildSource.Pack.Build.RawOptions,
 		}
+
+		dockerTmpRef, err := i.pack.Build(urlRepo, i.buildSource.Path, opts)
+		if err != nil {
