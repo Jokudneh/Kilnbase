@@ -139,3 +139,4 @@ func NewConfig() Config {
 		APIVersion: configAPIVersion,
 		Kind:       configKind,
 	}
+}

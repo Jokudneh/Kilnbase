@@ -46,3 +46,6 @@ type WriteCloser struct {
 
 var _ io.WriteCloser = (*WriteCloser)(nil)
 
+// Close implements io.WriteCloser
+func (wac *WriteCloser) Close() error {
+	return wac.CloseFunc()
