@@ -51,3 +51,4 @@ func (o *InspectOptions) Run() error {
 		Content: "images",
 
 		Header: []uitable.Header{
+			uitable.NewHeader("Image"),
