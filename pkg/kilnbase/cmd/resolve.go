@@ -124,3 +124,7 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 		if err != nil {
 			return nil, err
 		}
+		o.ui.PrintBlock(output)
+		return nil, nil
+	}
+
