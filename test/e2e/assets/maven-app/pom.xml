@@ -45,3 +45,6 @@
               <goal>build</goal>
             </goals>
           </execution>
+        </executions>
+      </plugin>
+    </plugins>

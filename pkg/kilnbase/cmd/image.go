@@ -53,3 +53,7 @@ func contains(structs []imageStruct, st imageStruct) bool {
 			return true
 		}
 	}
+	return false
+}
+
+func newImageStructs(images []Image) []imageStruct {

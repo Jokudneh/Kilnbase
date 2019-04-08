@@ -67,3 +67,5 @@ func (v ImageRefsVisitorFunc) Apply(res interface{}, searchRules []ctlconf.Searc
 	}
 }
 
+func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc) FieldsVisitorFunc {
+	return func(val interface{}, ext ctlconf.SearchRuleUpdateStrategy) (interface{}, bool) {

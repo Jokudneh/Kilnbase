@@ -60,3 +60,6 @@ func (b *ImageQueue) work(workWg *sync.WaitGroup, unprocessedImageURL Unprocesse
 		b.outputErrsLock.Lock()
 		b.outputErrs = append(b.outputErrs, fmt.Errorf("Resolving image '%s': %s", unprocessedImageURL.URL, err))
 		b.outputErrsLock.Unlock()
+		return
+	}
+
