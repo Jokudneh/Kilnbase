@@ -128,3 +128,6 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 		return nil, nil
 	}
 
+	resolvedImages, err := o.resolveImages(imageURLs, imgFactory)
+	if err != nil {
+		return nil, err

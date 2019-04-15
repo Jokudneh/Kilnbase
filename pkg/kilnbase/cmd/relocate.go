@@ -86,3 +86,6 @@ func (o *RelocateOptions) Run() error {
 		return err
 	}
 
+	importRepo, err := regname.NewRepository(o.Repository)
+	if err != nil {
+		return fmt.Errorf("Building import repository ref: %s", err)
