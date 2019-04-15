@@ -117,3 +117,7 @@ func (*Jib) runMaven(directory string, targetImage string,
 		"jib:dockerBuild",
 		"-Dimage=" + targetImage,
 		"-Djib.allowInsecureRegistries=true",
+	}
+
+	if opts.RawOptions != nil {
+		cmdArgs = append(cmdArgs, *opts.RawOptions...)
