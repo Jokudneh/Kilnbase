@@ -72,3 +72,4 @@ func (c Conf) ImageOverrides() []ImageOverride {
 }
 
 func (c Conf) ImageDestinations() []ImageDestination {
+	var result []ImageDestination

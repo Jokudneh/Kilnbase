@@ -50,3 +50,5 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 			}
 		}
 
+		highestVersion, found := matchedVers.Highest()
+		if !found {
