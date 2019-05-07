@@ -55,3 +55,4 @@ func ReadCloserLevel(r io.ReadCloser, level int) io.ReadCloser {
 
 		if _, err := io.Copy(gw, r); err != nil {
 			defer r.Close()
+			defer gw.Close()
