@@ -61,3 +61,6 @@ sources:
 		"kilnbase:(.+)-kilnbase-e2e(\\-.*)-SHA256-REPLACED")
 	out = reKilnbase.ReplaceAllString(out, "kilnbase:img-title-SHA256-REPLACED")
 
+	expectedOut := `---
+kind: Object
+spec:

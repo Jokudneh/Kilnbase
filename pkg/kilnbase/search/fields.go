@@ -74,3 +74,4 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 				f.visit(newKeyPath, o, visitorFunc)
 			}
 		}
+	}

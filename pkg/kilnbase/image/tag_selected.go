@@ -52,3 +52,5 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 
 		highestVersion, found := matchedVers.Highest()
 		if !found {
+			return "", nil, fmt.Errorf("Expected to find at least one version, but did not")
+		}
