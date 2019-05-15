@@ -140,3 +140,4 @@ func NewConfig() Config {
 		Kind:       configKind,
 	}
 }
+
