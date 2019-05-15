@@ -51,3 +51,4 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 			// prevent a match. Fall back to DeepEqual for non-string values.
 			if valueStr, ok := value.(string); ok {
 				wantImage := ctlbdk.LowerCaseRegistry(m.rule.ValueMatcher.Image)
+				gotImage := ctlbdk.LowerCaseRegistry(valueStr)
