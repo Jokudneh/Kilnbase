@@ -91,3 +91,7 @@ func (f Factory) New(url string) Image {
 			builtImg = NewTaggedImage(builtImg, *imgDstConf, f.registry)
 		}
 		return NewPlatformSelectedImage(builtImg, platformSelection, f.registry)
+	}
+
+	var resolvedImg Image
+	if digestedImage := MaybeNewDigestedImage(url); digestedImage != nil {

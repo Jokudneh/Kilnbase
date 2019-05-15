@@ -48,3 +48,6 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 			// ValueMatcher.Image comes from the user's kilnbase.yaml config
 			// while value comes from scanning the target manifest, so a
 			// hostname-case mismatch between the two sources must not
+			// prevent a match. Fall back to DeepEqual for non-string values.
+			if valueStr, ok := value.(string); ok {
+				wantImage := ctlbdk.LowerCaseRegistry(m.rule.ValueMatcher.Image)
