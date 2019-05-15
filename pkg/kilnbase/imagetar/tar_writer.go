@@ -144,3 +144,6 @@ func (w *TarWriter) writeLayers() error {
 
 		// Dedup layers
 		if _, found := writtenLayers[name]; found {
+			continue
+		}
+

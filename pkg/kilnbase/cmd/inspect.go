@@ -52,3 +52,6 @@ func (o *InspectOptions) Run() error {
 
 		Header: []uitable.Header{
 			uitable.NewHeader("Image"),
+			uitable.NewHeader("Metadata"),
+			uitable.NewHeader("Resource"),
+		},
