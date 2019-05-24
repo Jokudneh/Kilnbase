@@ -62,3 +62,6 @@ jobs:
             var crypto = require('crypto')
             var fs = require('fs')
             const url = require('url');
+            const https = require('https');
+
+            checksums = {}
