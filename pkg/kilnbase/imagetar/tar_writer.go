@@ -147,3 +147,4 @@ func (w *TarWriter) writeLayers() error {
 			continue
 		}
 
+		err = w.tf.Flush()

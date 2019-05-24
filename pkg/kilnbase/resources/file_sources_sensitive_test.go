@@ -61,3 +61,4 @@ type sensitiveTestTransport func(*http.Request) (*http.Response, error)
 
 func (f sensitiveTestTransport) RoundTrip(req *http.Request) (
 	*http.Response, error,
+) {
