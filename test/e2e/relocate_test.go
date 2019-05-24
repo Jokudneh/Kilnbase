@@ -76,3 +76,4 @@ spec:
 - image: index.docker.io/cloudfoundry/log-cache-gateway@sha256:51bc54b4a901228537f43efe3b687c3d8c07f49c015775141a0dffa66cd83ec6
 - image: index.docker.io/cloudfoundry/log-cache@sha256:616ce5401945100a84df5380e913d1136f2ed714aa90c78f592839de88928dfb
 - image: index.docker.io/cloudfoundry/syslog-server@sha256:39a386521f94c70071eab4a7fb67cc7e28adba2e2dd8113d6df155c17b19f5a5
+- image: index.docker.io/cloudfoundry/metric-proxy@sha256:0f10d093fbb4437e071dcf31411ef344b4059bf26494e4b23e2625a7d9d4e77e

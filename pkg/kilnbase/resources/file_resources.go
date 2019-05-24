@@ -67,3 +67,7 @@ func NewFileResources(file string) ([]FileResource, error) {
 	return fileRs, nil
 }
 
+func (r FileResource) Description() string { return r.fileSrc.Description() }
+
+func (r FileResource) Resources() ([]Resource, error) {
+	docs, err := NewYAMLFile(r.fileSrc).Docs()
