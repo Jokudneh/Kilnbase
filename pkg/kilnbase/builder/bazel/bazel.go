@@ -59,3 +59,7 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 
 		err := cmd.Run()
 		if err != nil {
+			prefixedLogger.Write([]byte(fmt.Sprintf("error: %s\n", err)))
+			return ctlbdk.TmpRef{}, err
+		}
+
