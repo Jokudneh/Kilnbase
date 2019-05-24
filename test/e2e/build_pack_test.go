@@ -68,3 +68,4 @@ destinations:
 	digestRegex := regexp.MustCompile("sha256:[a-z0-9]{64}")
 	for {
 		digestStr := digestRegex.FindString(out)
+		if len(digestStr) == 0 {

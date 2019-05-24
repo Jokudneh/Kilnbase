@@ -65,3 +65,6 @@ func NewOriginsFromString(str string) ([]Origin, error) {
 	// see also https://github.com/Jokudneh/Kilnbase/issues/160
 	err := yaml.Unmarshal([]byte(str), &origins)
 	if err != nil {
+		return []Origin{}, err
+	}
+
