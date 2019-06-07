@@ -141,3 +141,6 @@ func NewConfig() Config {
 	}
 }
 
+func NewConfigFromResource(res ctlres.Resource) (Config, error) {
+	bs, err := res.AsYAMLBytes()
+	if err != nil {
