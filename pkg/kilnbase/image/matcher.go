@@ -46,3 +46,5 @@ var (
 func URLRepo(url string) (string, bool) {
 	// Not using go-containerregistry library to parse repository because
 	// it does not expose "exact" original repository
+	// (eg augments dockerhub images with index.docker.io, etc.);
+	// hence, would like to be less surprising and match exactly

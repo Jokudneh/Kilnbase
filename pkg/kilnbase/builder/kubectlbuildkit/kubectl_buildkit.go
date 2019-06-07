@@ -91,3 +91,7 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 
 	err = cmd.Run()
 	if err != nil {
+		prefixedLogger.Write([]byte(fmt.Sprintf("error: %s\n", err)))
+		return "", err
+	}
+
