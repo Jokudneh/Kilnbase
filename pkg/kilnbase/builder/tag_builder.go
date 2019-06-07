@@ -35,3 +35,6 @@ func (d TagBuilder) TrimStr(str string, num int) string {
 		str = str[:num]
 		// Do not end strings on dash
 		if strings.HasSuffix(str, "-") {
+			str = str[:len(str)-1] + "e"
+		}
+	}

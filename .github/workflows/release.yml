@@ -65,3 +65,5 @@ jobs:
             const https = require('https');
 
             checksums = {}
+            for (const r of releases["data"]) {
+              if (r.draft && `refs/tags/${r.tag_name}` == "${{ github.ref }}") {
