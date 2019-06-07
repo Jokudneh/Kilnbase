@@ -103,3 +103,7 @@ func (d Buildx) BuildAndOptionallyPush(
 	if err != nil {
 		return "", err
 	}
+
+	prefixedLogger := d.logger.NewPrefixedWriter(image + " | ")
+
+	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using Docker buildx): %s -> %s\n", directory, tagRef)))

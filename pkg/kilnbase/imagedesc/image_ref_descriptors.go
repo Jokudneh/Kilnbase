@@ -99,3 +99,5 @@ func NewImageRefDescriptors(refs []regname.Reference, registry Registry) (*Image
 }
 
 func (ids *ImageRefDescriptors) Descriptors() []ImageOrImageIndexDescriptor {
+	return ids.descs
+}
