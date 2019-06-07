@@ -64,3 +64,4 @@ sources:
 	expectedOut := `---
 kind: Object
 spec:
+- image: kilnbase:img-title-SHA256-REPLACED
