@@ -68,3 +68,4 @@ func NewOriginsFromString(str string) ([]Origin, error) {
 		return []Origin{}, err
 	}
 
+	return origins, nil
