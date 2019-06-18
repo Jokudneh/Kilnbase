@@ -119,3 +119,6 @@ func TestMatchesPlatformSelection(t *testing.T) {
 		},
 		{ // OS must exactly match, and is case sensative. matchesPlatform expected to return false.
 			given: v1.Platform{
+				Architecture: "arm",
+				OS:           "linux",
+				OSVersion:    "10.0.10586",

@@ -74,3 +74,4 @@ var (
 	errRead = fmt.Errorf("Read failed")
 )
 
+type failReader struct{}

@@ -63,3 +63,7 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 			return ctlbdk.TmpRef{}, err
 		}
 
+		matches := bazelImageID.FindStringSubmatch(stdoutBuf.String())
+		if len(matches) != 3 {
+			return ctlbdk.TmpRef{}, fmt.Errorf("Expected to find image ID in bazel output but did not")
+		}

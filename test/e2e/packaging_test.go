@@ -125,3 +125,6 @@ func TestPkgUnpkgSuccessfulWithForeignLayers(t *testing.T) {
 	env := BuildEnv(t)
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
+	// Mongo has 2 foreign layers
+	input := `
+kind: Object
