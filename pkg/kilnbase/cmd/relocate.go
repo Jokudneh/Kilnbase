@@ -89,3 +89,6 @@ func (o *RelocateOptions) Run() error {
 	importRepo, err := regname.NewRepository(o.Repository)
 	if err != nil {
 		return fmt.Errorf("Building import repository ref: %s", err)
+	}
+
+	dstRegistry, err := ctlreg.NewRegistry(o.RegistryFlags.AsRegistryOpts())

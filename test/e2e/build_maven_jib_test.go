@@ -65,3 +65,6 @@ sources:
 kind: Object
 spec:
 - image: kilnbase:img-title-SHA256-REPLACED
+- image: kilnbase:img-title-SHA256-REPLACED
+`
+

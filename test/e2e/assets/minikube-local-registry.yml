@@ -65,3 +65,4 @@ metadata:
 data:
   config.yml: |
     # Taken from /etc/docker/registry/config.yml
+    version: 0.1

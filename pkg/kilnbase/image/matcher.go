@@ -48,3 +48,7 @@ func URLRepo(url string) (string, bool) {
 	// it does not expose "exact" original repository
 	// (eg augments dockerhub images with index.docker.io, etc.);
 	// hence, would like to be less surprising and match exactly
+	matches := approximateRefRegexp.FindStringSubmatch(url)
+	if len(matches) >= 1 {
+		return matches[1], true
+	}
