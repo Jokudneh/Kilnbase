@@ -38,3 +38,7 @@ func (d TagBuilder) TrimStr(str string, num int) string {
 			str = str[:len(str)-1] + "e"
 		}
 	}
+	return str
+}
+
+func (d TagBuilder) CleanStr(str string) string {

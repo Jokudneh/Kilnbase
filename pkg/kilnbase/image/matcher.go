@@ -52,3 +52,4 @@ func URLRepo(url string) (string, bool) {
 	if len(matches) >= 1 {
 		return matches[1], true
 	}
+	return url, false
