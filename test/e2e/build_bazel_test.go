@@ -46,3 +46,7 @@ sources:
 - image: docker.io/*username*/kilnbase-e2e-tests-build2
   path: %s
   bazel:
+    run:
+      target: :simple-app
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
