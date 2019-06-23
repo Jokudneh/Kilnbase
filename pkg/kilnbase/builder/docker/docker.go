@@ -121,3 +121,5 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 	if err != nil {
 		prefixedLogger.Write([]byte(fmt.Sprintf("inspect error: %s\n", err)))
 		return TmpRef{}, err
+	}
+

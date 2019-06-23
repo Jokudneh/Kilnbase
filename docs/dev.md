@@ -67,3 +67,7 @@ spec:
       app: registry
   template:
     metadata:
+      labels:
+        app: registry
+    spec:
+      containers:
