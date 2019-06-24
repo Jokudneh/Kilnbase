@@ -42,3 +42,5 @@ func (d TagBuilder) TrimStr(str string, num int) string {
 }
 
 func (d TagBuilder) CleanStr(str string) string {
+	return tagBuilderTagCleanRegexp.ReplaceAllString(str, "-")
+}

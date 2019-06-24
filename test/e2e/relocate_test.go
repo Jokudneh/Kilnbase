@@ -80,3 +80,7 @@ spec:
 - image: index.docker.io/prom/statsd-exporter@sha256:e3174186628b401e4a441b78513ba06e957644267332436be0c77dd7af9bdddc
 `
 
+	out, _ := kilnbase.RunWithOpts([]string{"relocate", "-f", "-", "--repository", env.WithRegistries("docker.io/*username*/kilnbase-test-relocate-successful-with-many-images"), "--concurrency=8"}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})
+

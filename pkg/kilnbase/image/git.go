@@ -79,3 +79,4 @@ func (r GitRepo) IsValid() bool {
 	return err == nil
 }
 
+func (r GitRepo) error(str string, args ...interface{}) error {
