@@ -72,3 +72,4 @@ spec:
 }
 
 func TestDockerBuildAndPushSuccessful(t *testing.T) {
+	env := BuildEnv(t)
