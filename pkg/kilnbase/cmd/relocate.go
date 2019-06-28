@@ -92,3 +92,6 @@ func (o *RelocateOptions) Run() error {
 	}
 
 	dstRegistry, err := ctlreg.NewRegistry(o.RegistryFlags.AsRegistryOpts())
+	if err != nil {
+		return err
+	}
