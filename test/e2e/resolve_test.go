@@ -197,3 +197,7 @@ kind: Object
 spec:
 - image: unknown
 - image: final
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: ImageOverrides
+overrides:

@@ -75,3 +75,6 @@ func MustNewResourceFromBytes(data []byte) *ResourceImpl {
 func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 	var rs []Resource
 	var content map[string]interface{}
+
+	err := yaml.Unmarshal(data, &content)
+	if err != nil {
