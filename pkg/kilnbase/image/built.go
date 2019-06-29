@@ -80,3 +80,5 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 		}
 
 		return i.optionalPushWithDocker(dockerTmpRef, origins)
+
+	case i.buildSource.KubectlBuildkit != nil:
