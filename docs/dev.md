@@ -71,3 +71,5 @@ spec:
         app: registry
     spec:
       containers:
+      - name: registry
+        image: registry

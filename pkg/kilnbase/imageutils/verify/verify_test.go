@@ -46,3 +46,5 @@ func TestVerificationFailure(t *testing.T) {
 	}
 	if b, err := io.ReadAll(verified); err == nil {
 		t.Errorf("ReadAll() = %q; want verification error", string(b))
+	}
+}

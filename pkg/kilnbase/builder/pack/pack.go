@@ -72,3 +72,6 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 
 		cmd := exec.Command("pack", cmdArgs...)
 		cmd.Dir = directory
+		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
+
