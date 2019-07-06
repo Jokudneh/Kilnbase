@@ -121,3 +121,7 @@ func (*Jib) runMaven(directory string, targetImage string,
 
 	if opts.RawOptions != nil {
 		cmdArgs = append(cmdArgs, *opts.RawOptions...)
+	}
+
+	cmd := exec.Command("mvn", cmdArgs...)
+	cmd.Dir = filepath.Join(directory, *opts.Target)

@@ -42,3 +42,6 @@ func (w *PrefixWriter) Write(data []byte) (int, error) {
 	newData = bytes.Replace(newData, []byte("\n"), []byte("\n"+w.prefix), -1)
 	newData = append(newData, []byte("\n")...)
 	newData = append([]byte(w.prefix), newData...)
+
+	w.writerLock.Lock()
+	defer w.writerLock.Unlock()

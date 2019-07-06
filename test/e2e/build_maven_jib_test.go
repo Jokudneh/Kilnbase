@@ -68,3 +68,4 @@ spec:
 - image: kilnbase:img-title-SHA256-REPLACED
 `
 
+	if out != expectedOut {

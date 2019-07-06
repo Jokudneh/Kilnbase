@@ -63,3 +63,4 @@ func (b *ImageQueue) work(workWg *sync.WaitGroup, unprocessedImageURL Unprocesse
 		return
 	}
 
+	b.outputImagesLock.Lock()
