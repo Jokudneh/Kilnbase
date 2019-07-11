@@ -84,3 +84,4 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 				},
 			})
 			return newURL, append(origins, newOrigins...), nil
+		}

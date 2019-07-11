@@ -48,3 +48,7 @@ func TestVerificationFailure(t *testing.T) {
 		t.Errorf("ReadAll() = %q; want verification error", string(b))
 	}
 }
+
+func TestVerification(t *testing.T) {
+	want := "This is the input string."
+	buf := bytes.NewBufferString(want)
