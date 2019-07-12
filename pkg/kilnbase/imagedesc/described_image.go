@@ -64,3 +64,6 @@ func (i DescribedImage) ConfigFile() (*regv1.ConfigFile, error) {
 	return config, nil
 }
 
+// RawConfigFile returns the serialized bytes of ConfigFile()
+func (i DescribedImage) RawConfigFile() ([]byte, error) {
+	return []byte(i.desc.Config.Raw), nil

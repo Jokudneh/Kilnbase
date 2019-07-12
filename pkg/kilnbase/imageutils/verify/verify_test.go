@@ -52,3 +52,7 @@ func TestVerificationFailure(t *testing.T) {
 func TestVerification(t *testing.T) {
 	want := "This is the input string."
 	buf := bytes.NewBufferString(want)
+
+	verified, err := ReadCloser(io.NopCloser(buf), mustHash(want, t))
+	if err != nil {
+		t.Fatal("ReadCloser() =", err)
