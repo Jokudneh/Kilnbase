@@ -75,3 +75,6 @@ func (c Conf) ImageDestinations() []ImageDestination {
 	var result []ImageDestination
 	for _, config := range c.configs {
 		result = append(result, config.Destinations...)
+	}
+	return result
+}
