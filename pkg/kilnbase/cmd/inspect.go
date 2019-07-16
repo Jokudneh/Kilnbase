@@ -55,3 +55,6 @@ func (o *InspectOptions) Run() error {
 			uitable.NewHeader("Metadata"),
 			uitable.NewHeader("Resource"),
 		},
+
+		SortBy: []uitable.ColumnSort{
+			{Column: 0, Asc: true},
