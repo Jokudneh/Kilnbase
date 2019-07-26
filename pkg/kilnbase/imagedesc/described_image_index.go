@@ -54,3 +54,7 @@ func (i DescribedImageIndex) Image(digest regv1.Hash) (regv1.Image, error) {
 			return img, nil
 		}
 	}
+	return nil, fmt.Errorf("Expected to find image '%s' by digest", digest)
+}
+
+func (i DescribedImageIndex) ImageIndex(digest regv1.Hash) (regv1.ImageIndex, error) {
