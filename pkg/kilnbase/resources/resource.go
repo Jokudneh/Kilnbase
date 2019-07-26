@@ -78,3 +78,5 @@ func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 
 	err := yaml.Unmarshal(data, &content)
 	if err != nil {
+		return nil, err
+	}
