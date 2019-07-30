@@ -101,3 +101,6 @@ func NewImageRefDescriptors(refs []regname.Reference, registry Registry) (*Image
 func (ids *ImageRefDescriptors) Descriptors() []ImageOrImageIndexDescriptor {
 	return ids.descs
 }
+
+func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc regv1.Descriptor) (ImageIndexDescriptor, error) {
+	td := ImageIndexDescriptor{

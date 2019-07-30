@@ -80,3 +80,6 @@ func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	if len(content) == 0 {
+		return nil, nil

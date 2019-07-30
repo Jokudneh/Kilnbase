@@ -67,3 +67,5 @@ data:
     # Taken from /etc/docker/registry/config.yml
     version: 0.1
     log:
+      fields:
+        service: registry
