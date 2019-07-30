@@ -112,3 +112,6 @@ func (i Registry) WriteIndex(ref regname.Reference, idx regv1.ImageIndex) error 
 	err = i.retry(func() error {
 		return regremote.WriteIndex(ref, idx, i.opts...)
 	})
+	if err != nil {
+		return fmt.Errorf("Writing image index: %s", err)
+	}

@@ -91,3 +91,7 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 			errCh <- nil
 		}()
 	}
+
+	for i := 0; i < len(imgOrIndexes); i++ {
+		err := <-errCh
+		if err != nil {
