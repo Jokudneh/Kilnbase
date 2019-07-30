@@ -65,3 +65,6 @@ func (f sensitiveTestTransport) RoundTrip(req *http.Request) (
 	return f(req)
 }
 
+type sensitiveTestReader struct{}
+
+func (sensitiveTestReader) Read([]byte) (int, error) {

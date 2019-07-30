@@ -66,3 +66,7 @@ jobs:
         # when this workflow runs of a pull request based on a fork, secrets are unavailable
         # https://docs.github.com/en/actions/reference/encrypted-secrets#using-encrypted-secrets-in-a-workflow
         if [[ "${DOCKERHUB_ACCESS_TOKEN}" != "" ]]; then
+          # Authenticate to DockerHub to avoid test failures due to rate limiting
+          # ... for builders using Docker
+          set +x
+          echo "${DOCKERHUB_ACCESS_TOKEN}" | docker login --username "${DOCKERHUB_USERNAME}" --password-stdin

@@ -64,3 +64,5 @@ func (b *ImageQueue) work(workWg *sync.WaitGroup, unprocessedImageURL Unprocesse
 	}
 
 	b.outputImagesLock.Lock()
+	b.outputImages.Add(unprocessedImageURL, Image{URL: imgURL, Origins: origins})
+	b.outputImagesLock.Unlock()
