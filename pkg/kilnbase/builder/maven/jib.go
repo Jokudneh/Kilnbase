@@ -125,3 +125,6 @@ func (*Jib) runMaven(directory string, targetImage string,
 
 	cmd := exec.Command("mvn", cmdArgs...)
 	cmd.Dir = filepath.Join(directory, *opts.Target)
+	cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+	cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
+

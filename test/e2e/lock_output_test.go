@@ -131,3 +131,5 @@ searchRules:
 `
 
 	path := "/tmp/kilnbase-test-lock-output-successful"
+	defer os.RemoveAll(path)
+
