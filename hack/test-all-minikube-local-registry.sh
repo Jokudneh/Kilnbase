@@ -26,3 +26,6 @@ cp registry-ca-cert.crt /host-etc-docker/certs.d/${KILNBASE_E2E_DOCKERHUB_HOSTNA
 # it does not seem to properly auto-copy CA certificates
 # so disable certificate verification
 cat <<EOF >buildkitd.toml
+[registry."${KILNBASE_E2E_DOCKERHUB_HOSTNAME}"]
+  insecure = true
+EOF

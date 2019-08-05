@@ -44,3 +44,4 @@ destinations:
 		StdinReader: strings.NewReader(input),
 	})
 
+	out = strings.Replace(out, regexp.MustCompile("sha256:[a-z0-9]{64}").FindString(out), "SHA256-REPLACED", -1)
