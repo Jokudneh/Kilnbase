@@ -78,3 +78,5 @@ func (c Conf) ImageDestinations() []ImageDestination {
 	}
 	return result
 }
+
+func (c Conf) SearchRules() []SearchRule {
