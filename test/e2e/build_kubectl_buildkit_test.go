@@ -68,3 +68,7 @@ func TestKubectlBuildkitBuildAndPushSuccessful(t *testing.T) {
 	createBuilder(t)
 
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
+
+	input := env.WithRegistries(`
+kind: Object
+spec:

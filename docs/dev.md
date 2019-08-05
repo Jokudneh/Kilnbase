@@ -73,3 +73,4 @@ spec:
       containers:
       - name: registry
         image: registry
+        ports:
