@@ -72,3 +72,6 @@ func (f tarFile) openChunk(path string) (io.ReadCloser, error) {
 	return nil, fmt.Errorf("File '%s' not found in tar", path)
 }
 
+func (f tarFileChunkReadCloser) Close() error {
+	// It seems that there is a race between go-containerregistry library
+	// and net/http's transport to close the request body. Specifically
