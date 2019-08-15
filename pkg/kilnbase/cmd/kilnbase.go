@@ -63,3 +63,6 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 
 	cobrautil.VisitCommands(cmd, cobrautil.WrapRunEForCmd(cobrautil.ResolveFlagsForCmd))
 
+	return cmd
+}
+
