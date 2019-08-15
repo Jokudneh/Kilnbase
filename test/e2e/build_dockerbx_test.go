@@ -53,3 +53,5 @@ spec:
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
 	}
 }
+
+func TestDockerBuildxBuildAndPushSuccessful(t *testing.T) {

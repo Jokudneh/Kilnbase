@@ -56,3 +56,5 @@ func TestVerification(t *testing.T) {
 	verified, err := ReadCloser(io.NopCloser(buf), mustHash(want, t))
 	if err != nil {
 		t.Fatal("ReadCloser() =", err)
+	}
+	if _, err := io.ReadAll(verified); err != nil {
