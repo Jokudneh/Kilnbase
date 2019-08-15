@@ -52,3 +52,5 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 			if valueStr, ok := value.(string); ok {
 				wantImage := ctlbdk.LowerCaseRegistry(m.rule.ValueMatcher.Image)
 				gotImage := ctlbdk.LowerCaseRegistry(valueStr)
+				valueMatched = wantImage == gotImage
+			} else if reflect.DeepEqual(m.rule.ValueMatcher.Image, value) {

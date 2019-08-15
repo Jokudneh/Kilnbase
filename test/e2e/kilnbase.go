@@ -70,3 +70,7 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 	if err != nil {
 		err = fmt.Errorf("Execution error: stdout: '%s' stderr: '%s' error: '%s'", stdoutStr, stderr.String(), err)
 
+		if !opts.AllowError {
+			k.t.Fatalf("Failed to successfully execute '%s': %v", k.cmdDesc(args, opts), err)
+		}
+	}
