@@ -69,3 +69,6 @@ destinations:
 	for {
 		digestStr := digestRegex.FindString(out)
 		if len(digestStr) == 0 {
+			break
+		}
+		out = strings.Replace(out, digestStr, "SHA256-REPLACED", -1)

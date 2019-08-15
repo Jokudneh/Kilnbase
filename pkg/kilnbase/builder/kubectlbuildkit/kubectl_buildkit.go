@@ -95,3 +95,7 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 		return "", err
 	}
 
+	// Exercise digest finding logic regardless of pushing or not
+	digestMatches := kubectlBuildkitDigest.FindStringSubmatch(stderrBuf.String())
+	if len(digestMatches) != 3 {
+		return "", fmt.Errorf("Expected to find image digest in build output but did not")

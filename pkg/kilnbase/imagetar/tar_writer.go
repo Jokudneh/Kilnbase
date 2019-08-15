@@ -152,3 +152,6 @@ func (w *TarWriter) writeLayers() error {
 			return err
 		}
 
+		var stream io.Reader
+		var currPos int64
+
