@@ -108,3 +108,6 @@ func (d Buildx) BuildAndOptionallyPush(
 
 	prefixedLogger.Write([]byte(fmt.Sprintf("starting build (using Docker buildx): %s -> %s\n", directory, tagRef)))
 	defer prefixedLogger.Write([]byte("finished build (using Docker buildx)\n"))
+
+	var stdoutBuf, stderrBuf bytes.Buffer
+	{
