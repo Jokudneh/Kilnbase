@@ -62,3 +62,4 @@ func (o *PackageOptions) Run() error {
 	_, err := warningLogger.Write([]byte(msg))
 	if err != nil {
 		return err
+	}

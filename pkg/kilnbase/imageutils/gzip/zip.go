@@ -63,3 +63,7 @@ func ReadCloserLevel(r io.ReadCloser, level int) io.ReadCloser {
 		defer r.Close()
 		defer gw.Close()
 	}()
+
+	return pr
+}
+

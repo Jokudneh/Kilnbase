@@ -58,3 +58,5 @@ func TestDockerBuildxBuildAndPushSuccessful(t *testing.T) {
 	env := BuildEnv(t)
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
+	input := env.WithRegistries(`
+kind: Object
