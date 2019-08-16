@@ -122,3 +122,5 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				Architecture: "arm",
 				OS:           "linux",
 				OSVersion:    "10.0.10586",
+				OSFeatures:   []string{"win64k"},
+				Variant:      "armv6l",
