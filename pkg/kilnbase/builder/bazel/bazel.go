@@ -69,3 +69,6 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 		}
 
 		imageID = "sha256:" + matches[2]
+	}
+
+	return b.docker.RetagStable(ctlbdk.NewTmpRef(imageID), image, imageID, prefixedLogger)
