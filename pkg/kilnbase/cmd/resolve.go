@@ -136,3 +136,6 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 	// Record final image transformation
 	for _, pair := range resolvedImages.All() {
 		pLogger.WriteStr("final: %s -> %s\n", pair.UnprocessedImageURL.URL, pair.Image.URL)
+	}
+
+	err = o.emitLockOutput(conf, resolvedImages)
