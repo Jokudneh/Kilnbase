@@ -74,3 +74,5 @@ spec:
       - name: registry
         image: registry
         ports:
+        - containerPort: 8080
+        env:

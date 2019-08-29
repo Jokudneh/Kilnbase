@@ -58,3 +58,7 @@ func TestVerification(t *testing.T) {
 		t.Fatal("ReadCloser() =", err)
 	}
 	if _, err := io.ReadAll(verified); err != nil {
+		t.Error("ReadAll() =", err)
+	}
+}
+
