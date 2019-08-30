@@ -123,3 +123,6 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 		return TmpRef{}, err
 	}
 
+	return d.RetagStable(tmpRef, image, inspectData.ID, prefixedLogger)
+}
+

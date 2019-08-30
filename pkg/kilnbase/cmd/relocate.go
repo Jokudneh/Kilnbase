@@ -95,3 +95,5 @@ func (o *RelocateOptions) Run() error {
 	if err != nil {
 		return err
 	}
+
+	imageSet := ImageSet{o.Concurrency, prefixedLogger}
