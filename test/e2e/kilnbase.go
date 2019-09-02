@@ -74,3 +74,6 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 			k.t.Fatalf("Failed to successfully execute '%s': %v", k.cmdDesc(args, opts), err)
 		}
 	}
+
+	return stdoutStr, err
+}

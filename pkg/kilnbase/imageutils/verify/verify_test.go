@@ -62,3 +62,7 @@ func TestVerification(t *testing.T) {
 	}
 }
 
+func TestBadHash(t *testing.T) {
+	h := v1.Hash{
+		Algorithm: "fake256",
+		Hex:       "whatever",
