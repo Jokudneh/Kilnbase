@@ -94,3 +94,7 @@ func TestImageRefsMatches(t *testing.T) {
 				},
 			},
 			SearchRules: []ctlconf.SearchRule{{
+				KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
+					Name: "key",
+				},
+				ValueMatcher: &ctlconf.SearchRuleValueMatcher{

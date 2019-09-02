@@ -69,3 +69,7 @@ data:
     log:
       fields:
         service: registry
+    storage:
+      cache:
+        blobdescriptor: inmemory
+      filesystem:
