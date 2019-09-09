@@ -98,3 +98,5 @@ func TestImageRefsMatches(t *testing.T) {
 					Name: "key",
 				},
 				ValueMatcher: &ctlconf.SearchRuleValueMatcher{
+					ImageRepo: "gcr.io/repo",
+				},

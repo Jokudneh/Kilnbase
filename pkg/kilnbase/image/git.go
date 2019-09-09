@@ -80,3 +80,4 @@ func (r GitRepo) IsValid() bool {
 }
 
 func (r GitRepo) error(str string, args ...interface{}) error {
+	return fmt.Errorf("Getting details from git for directory '%s': %s", r.dirPath, fmt.Sprintf(str, args...))
