@@ -80,3 +80,4 @@ func redactErrorMessageTestCases() []struct {
 				`https://_redacted_@b.example/y?_redacted_`,
 		},
 	}
+}

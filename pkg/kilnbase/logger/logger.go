@@ -49,3 +49,7 @@ func (w *PrefixWriter) Write(data []byte) (int, error) {
 	// TODO does not deal with races of multitple writers
 	_, err := w.writer.Write(newData)
 	if err != nil {
+		return noBytesWritten, fmt.Errorf("Writing output: %s", err)
+	}
+
+	// return original data length

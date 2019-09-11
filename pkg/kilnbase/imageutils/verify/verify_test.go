@@ -66,3 +66,5 @@ func TestBadHash(t *testing.T) {
 	h := v1.Hash{
 		Algorithm: "fake256",
 		Hex:       "whatever",
+	}
+	_, err := ReadCloser(io.NopCloser(strings.NewReader("hi")), h)
