@@ -100,3 +100,5 @@ func TestImageRefsMatches(t *testing.T) {
 				ValueMatcher: &ctlconf.SearchRuleValueMatcher{
 					ImageRepo: "gcr.io/repo",
 				},
+			}},
+			OutputImages: []string{"gcr.io/repo@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},

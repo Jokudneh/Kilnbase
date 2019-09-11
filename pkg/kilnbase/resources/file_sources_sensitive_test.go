@@ -68,3 +68,5 @@ func (f sensitiveTestTransport) RoundTrip(req *http.Request) (
 type sensitiveTestReader struct{}
 
 func (sensitiveTestReader) Read([]byte) (int, error) {
+	const bytesRead = 0
+	return bytesRead, errors.New("reading https://[::1]/?token=query-canary")
