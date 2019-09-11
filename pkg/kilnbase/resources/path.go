@@ -71,3 +71,6 @@ func (p Path) ContainsNonMapKeys() bool {
 		if part.MapKey == nil {
 			return true
 		}
+	}
+	return false
+}
