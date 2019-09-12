@@ -95,3 +95,7 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 	{
 		name:     "explicit docker.io with uppercase repository",
 		input:    "Docker.io/MyOrg/MyImage:Tag",
+		expected: "docker.io/MyOrg/MyImage:Tag",
+	},
+	{
+		name:     "DOCKER.IO with uppercase repository",
