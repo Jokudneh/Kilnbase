@@ -66,3 +66,6 @@ func NewKilnbaseCmd(o *KilnbaseOptions) *cobra.Command {
 	return cmd
 }
 
+type uiBlockWriter struct {
+	ui ui.UI
+}

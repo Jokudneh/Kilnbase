@@ -61,3 +61,7 @@ type ImageLayerDescriptor struct {
 	Digest    string
 	DiffID    string
 	Size      int64
+}
+
+type ConfigDescriptor struct {
+	Digest string

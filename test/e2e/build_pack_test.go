@@ -72,3 +72,7 @@ destinations:
 			break
 		}
 		out = strings.Replace(out, digestStr, "SHA256-REPLACED", -1)
+	}
+
+	expectedOut := env.WithRegistries(`---
+kind: Object
