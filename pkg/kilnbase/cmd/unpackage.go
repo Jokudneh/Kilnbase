@@ -56,3 +56,7 @@ Unpackage configuration and images from tarball
 	cmd.Flags().IntVar(&o.Concurrency, "concurrency", 5, "Set maximum number of concurrent imports")
 	return cmd
 }
+
+func (o *UnpackageOptions) Run() error {
+	logger := ctllog.NewLogger(os.Stderr)
+	warningLogger := logger.NewPrefixedWriter("Warning: ")

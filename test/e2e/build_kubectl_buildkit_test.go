@@ -80,3 +80,6 @@ kind: Sources
 sources:
 - image: docker.io/*username*/kilnbase-e2e-tests-build
   path: assets/simple-app
+  kubectlBuildkit: {}
+- image: docker.io/*username*/kilnbase-e2e-tests-build2
+  path: assets/simple-app
