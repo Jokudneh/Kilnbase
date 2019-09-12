@@ -58,3 +58,7 @@ func (i DescribedImageIndex) Image(digest regv1.Hash) (regv1.Image, error) {
 }
 
 func (i DescribedImageIndex) ImageIndex(digest regv1.Hash) (regv1.ImageIndex, error) {
+	for _, idx := range i.indexes {
+		idxDigest, err := idx.Digest()
+		if err != nil {
+			return nil, err

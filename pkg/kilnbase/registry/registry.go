@@ -119,3 +119,6 @@ func (i Registry) WriteIndex(ref regname.Reference, idx regv1.ImageIndex) error 
 	return nil
 }
 
+func (i Registry) WriteTag(dstRef regname.Tag, srcRef regname.Digest) error {
+	dstRef, err := regname.NewTag(dstRef.String(), i.refOpts...)
+	if err != nil {

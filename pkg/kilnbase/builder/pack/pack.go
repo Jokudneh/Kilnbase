@@ -77,3 +77,6 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 
 		err := cmd.Run()
 		if err != nil {
+			prefixedLogger.Write([]byte(fmt.Sprintf("error: %s\n", err)))
+			return ctlbdk.TmpRef{}, err
+		}
