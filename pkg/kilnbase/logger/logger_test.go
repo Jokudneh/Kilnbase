@@ -37,3 +37,4 @@ prefix:
 prefix: 
 `
 
+	if out != expectedOut {
