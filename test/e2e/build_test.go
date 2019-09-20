@@ -80,3 +80,7 @@ kind: Object
 spec:
 - image: docker.io/*username*/kilnbase-e2e-tests-build
 - image: simple-app-two
+- image: simple-app-two-overriden
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Sources

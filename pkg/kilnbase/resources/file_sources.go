@@ -80,3 +80,7 @@ func redactURL(raw string) string {
 
 // redactErrorMessage redacts URLs with embedded credentials from error
 // strings. Handles cases where error messages contain redirect URLs or
+// other URLs with userinfo (user:password) and query parameters (tokens).
+func redactErrorMessage(errMsg string) string {
+	const startPos = 0
+

@@ -44,3 +44,7 @@ func (d TagBuilder) TrimStr(str string, num int) string {
 func (d TagBuilder) CleanStr(str string) string {
 	return tagBuilderTagCleanRegexp.ReplaceAllString(str, "-")
 }
+
+func (d TagBuilder) RandomStr50() (string, error) {
+	bs, err := d.randomBytes(5)
+	if err != nil {
