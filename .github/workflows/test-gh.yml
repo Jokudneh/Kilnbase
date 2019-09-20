@@ -70,3 +70,6 @@ jobs:
           # ... for builders using Docker
           set +x
           echo "${DOCKERHUB_ACCESS_TOKEN}" | docker login --username "${DOCKERHUB_USERNAME}" --password-stdin
+          # ... for kubectl-buildkit
+          minikube kubectl --ssh=true -- create secret docker-registry buildkit \
+            --docker-username="${DOCKERHUB_USERNAME}" \

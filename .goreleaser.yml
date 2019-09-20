@@ -60,3 +60,4 @@ release:
   prerelease: auto
 
   # use to change the name of the release.
+  name_template: "{{.Tag}}"
