@@ -73,3 +73,5 @@ jobs:
           # ... for kubectl-buildkit
           minikube kubectl --ssh=true -- create secret docker-registry buildkit \
             --docker-username="${DOCKERHUB_USERNAME}" \
+            --docker-password="${DOCKERHUB_ACCESS_TOKEN}"
+          # ... for any other service account that pulls images from DockerHub

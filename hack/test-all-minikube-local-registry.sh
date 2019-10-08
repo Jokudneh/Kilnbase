@@ -29,3 +29,4 @@ cat <<EOF >buildkitd.toml
 [registry."${KILNBASE_E2E_DOCKERHUB_HOSTNAME}"]
   insecure = true
 EOF
+
