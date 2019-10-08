@@ -77,3 +77,4 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 
 	return stdoutStr, err
 }
+

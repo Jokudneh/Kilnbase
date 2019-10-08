@@ -62,3 +62,5 @@ func (i DescribedImageIndex) ImageIndex(digest regv1.Hash) (regv1.ImageIndex, er
 		idxDigest, err := idx.Digest()
 		if err != nil {
 			return nil, err
+		}
+		if idxDigest.String() == digest.String() {
