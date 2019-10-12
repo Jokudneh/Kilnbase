@@ -72,3 +72,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 	const (
 		sep = "_"
 	)
+
+	funcsMap := map[string]func(*envKeychainInfo, string) error{
+		"HOSTNAME": func(info *envKeychainInfo, val string) error {
+			registry, err := regname.NewRegistry(val, regname.StrictValidation)
