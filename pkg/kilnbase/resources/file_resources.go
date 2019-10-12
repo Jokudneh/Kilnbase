@@ -71,3 +71,7 @@ func (r FileResource) Description() string { return r.fileSrc.Description() }
 
 func (r FileResource) Resources() ([]Resource, error) {
 	docs, err := NewYAMLFile(r.fileSrc).Docs()
+	if err != nil {
+		return nil, fmt.Errorf("Parsing %s: %s", r.Description(), err)
+	}
+
