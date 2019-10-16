@@ -71,3 +71,7 @@ spec:
 	if out != expectedOut {
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
 	}
+}
+
+func TestMavenJibBuildAndPushSuccessful(t *testing.T) {
+	env := BuildEnv(t)

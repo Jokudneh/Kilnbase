@@ -88,3 +88,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 
 		return "", nil, fmt.Errorf("Expected to find one image under index '%s' with matching platform, but found none", url)
 
+	// Assume that if it's not an index, then image is all right to use
+	default:
+		return url, origins, nil
+	}
