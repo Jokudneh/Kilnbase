@@ -60,3 +60,5 @@ Unpackage configuration and images from tarball
 func (o *UnpackageOptions) Run() error {
 	logger := ctllog.NewLogger(os.Stderr)
 	warningLogger := logger.NewPrefixedWriter("Warning: ")
+	msg := "Command 'unpackage' is deprecated; use 'imgpkg pull' instead. " +
+		"Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#pull\n"
