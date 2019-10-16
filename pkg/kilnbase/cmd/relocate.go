@@ -98,3 +98,6 @@ func (o *RelocateOptions) Run() error {
 
 	imageSet := ImageSet{o.Concurrency, prefixedLogger}
 
+	importedImages, err := imageSet.Relocate(foundImages, importRepo, dstRegistry)
+	if err != nil {
+		return err

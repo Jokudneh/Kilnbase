@@ -65,3 +65,4 @@ type ImageLayerDescriptor struct {
 
 type ConfigDescriptor struct {
 	Digest string
+	Raw    string
