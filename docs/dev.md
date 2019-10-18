@@ -76,3 +76,5 @@ spec:
         ports:
         - containerPort: 8080
         env:
+        - name: REGISTRY_PORT
+          value: "8080"
