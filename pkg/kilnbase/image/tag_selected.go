@@ -56,3 +56,6 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 		}
 
 		tag = highestVersion
+
+	default:
+		return "", nil, fmt.Errorf("Unknown tag selection strategy")

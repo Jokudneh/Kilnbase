@@ -30,3 +30,4 @@ cat <<EOF >buildkitd.toml
   insecure = true
 EOF
 
+# Need to bootstrap to avoid race conditions to boot

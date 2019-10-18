@@ -202,3 +202,5 @@ apiVersion: kilnbase.k14s.io/v1alpha1
 kind: ImageOverrides
 overrides:
 - image: unknown
+  newImage: docker.io/library/nginx:1.14.2
+- image: final
