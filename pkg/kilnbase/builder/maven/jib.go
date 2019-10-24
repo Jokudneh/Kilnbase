@@ -128,3 +128,7 @@ func (*Jib) runMaven(directory string, targetImage string,
 	cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
 	cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
 
+	var numRawOpts int
+	if opts.RawOptions != nil {
+		numRawOpts = len(*opts.RawOptions)
+	}

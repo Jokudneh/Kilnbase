@@ -155,3 +155,5 @@ func (w *TarWriter) writeLayers() error {
 		var stream io.Reader
 		var currPos int64
 
+		if isSeekable {
+			currPos, err = seekableDst.Seek(0, 1)
