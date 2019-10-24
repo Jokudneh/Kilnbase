@@ -86,3 +86,7 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 			urlRepo, i.buildSource.Path, i.imgDst, *i.buildSource.KubectlBuildkit)
 		return url, origins, err
 
+	case i.buildSource.Ko != nil:
+		dockerTmpRef, err := i.ko.Build(urlRepo, i.buildSource.Path, i.buildSource.Ko.Build)
+		if err != nil {
+			return "", nil, err

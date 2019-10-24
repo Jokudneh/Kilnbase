@@ -84,3 +84,6 @@ func (r GitRepo) error(str string, args ...interface{}) error {
 }
 
 func (r GitRepo) runCmd(args []string) (string, string, error) {
+	var stdoutBuf, stderrBuf bytes.Buffer
+
+	cmd := exec.Command("git", args...)
