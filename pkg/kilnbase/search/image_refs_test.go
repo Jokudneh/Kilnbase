@@ -102,3 +102,6 @@ func TestImageRefsMatches(t *testing.T) {
 				},
 			}},
 			OutputImages: []string{"gcr.io/repo@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
+		},
+		// Matchers matching same values
+		{

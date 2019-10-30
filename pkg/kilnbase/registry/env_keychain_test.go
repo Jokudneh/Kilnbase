@@ -47,3 +47,4 @@ func TestEnvKeychainResolveNoMatchIsAnonymous(t *testing.T) {
 	target, err := regname.NewRegistry("myregistry.example.com",
 		regname.StrictValidation)
 	if err != nil {
+		t.Fatalf("building target registry: %s", err)

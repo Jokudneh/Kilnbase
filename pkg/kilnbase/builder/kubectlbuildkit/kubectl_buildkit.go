@@ -99,3 +99,6 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	digestMatches := kubectlBuildkitDigest.FindStringSubmatch(stderrBuf.String())
 	if len(digestMatches) != 3 {
 		return "", fmt.Errorf("Expected to find image digest in build output but did not")
+	}
+
+	// Since kubectl builtkit project targets both containerd and Docker daemon
