@@ -48,3 +48,7 @@ func TestEnvKeychainResolveNoMatchIsAnonymous(t *testing.T) {
 		regname.StrictValidation)
 	if err != nil {
 		t.Fatalf("building target registry: %s", err)
+	}
+
+	auth, err := k.Resolve(target)
+	if err != nil {

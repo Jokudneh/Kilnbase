@@ -75,3 +75,6 @@ var (
 )
 
 type failReader struct{}
+
+func (f failReader) Read(_ []byte) (int, error) {
+	return 0, errRead
