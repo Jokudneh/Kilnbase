@@ -72,3 +72,7 @@ func ReadCloserLevel(r io.ReadCloser, level int) io.ReadCloser {
 func UnzipReadCloser(r io.ReadCloser) (io.ReadCloser, error) {
 	gr, err := gzip.NewReader(r)
 	if err != nil {
+		return nil, err
+	}
+	return &and.ReadCloser{
+		Reader: gr,

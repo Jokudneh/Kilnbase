@@ -88,3 +88,6 @@ sources:
 - image: docker.io/*username*/kilnbase-e2e-tests-build
   path: assets/simple-app
 - image: simple-app-two
+  path: assets/simple-app
+# 'unused' should not be built
+- image: unused
