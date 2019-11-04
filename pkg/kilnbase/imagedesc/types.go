@@ -66,3 +66,7 @@ type ImageLayerDescriptor struct {
 type ConfigDescriptor struct {
 	Digest string
 	Raw    string
+}
+
+type ManifestDescriptor struct {
+	MediaType string
