@@ -157,3 +157,6 @@ func (w *TarWriter) writeLayers() error {
 
 		if isSeekable {
 			currPos, err = seekableDst.Seek(0, 1)
+			if err != nil {
+				return fmt.Errorf("Finding current position: %s", err)
+			}
