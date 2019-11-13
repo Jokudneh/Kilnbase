@@ -75,3 +75,5 @@ func (r FileResource) Resources() ([]Resource, error) {
 		return nil, fmt.Errorf("Parsing %s: %s", r.Description(), err)
 	}
 
+	var resources []Resource
+
