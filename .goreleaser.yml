@@ -63,3 +63,6 @@ release:
   name_template: "{{.Tag}}"
 
   # You can disable this pipe in order to not upload any artifacts.
+  # Defaults to false.
+  disable: false
+
