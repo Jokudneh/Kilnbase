@@ -79,3 +79,7 @@ func (k Kilnbase) RunWithOpts(args []string, opts RunOpts) (string, error) {
 }
 
 func (k Kilnbase) cmdDesc(args []string, opts RunOpts) string {
+	prefix := "kilnbase"
+	if opts.Redact {
+		return prefix + " -redacted-"
+	}

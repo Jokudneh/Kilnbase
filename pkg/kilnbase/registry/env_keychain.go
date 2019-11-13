@@ -76,3 +76,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 	funcsMap := map[string]func(*envKeychainInfo, string) error{
 		"HOSTNAME": func(info *envKeychainInfo, val string) error {
 			registry, err := regname.NewRegistry(val, regname.StrictValidation)
+			if err != nil {
+				return errors.New("Parsing registry hostname: invalid value; " +
+					"use a hostname such as gcr.io or index.docker.io " +
+					"without URL credentials, query or fragment")
