@@ -102,3 +102,5 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	}
 
 	// Since kubectl builtkit project targets both containerd and Docker daemon
+	// and Docker daemon does not support use of digests for locally loaded images
+	// we can only return digest ref when image is pushed to registry

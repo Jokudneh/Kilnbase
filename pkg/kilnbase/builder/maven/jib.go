@@ -132,3 +132,5 @@ func (*Jib) runMaven(directory string, targetImage string,
 	if opts.RawOptions != nil {
 		numRawOpts = len(*opts.RawOptions)
 	}
+	msg := fmt.Sprintf(
+		"running command: mvn compile jib:dockerBuild -Dimage=%s "+
