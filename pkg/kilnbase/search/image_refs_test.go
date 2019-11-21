@@ -105,3 +105,5 @@ func TestImageRefsMatches(t *testing.T) {
 		},
 		// Matchers matching same values
 		{
+			InputResource: map[string]interface{}{
+				"nested": map[string]interface{}{

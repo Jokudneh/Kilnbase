@@ -160,3 +160,4 @@ func (w *TarWriter) writeLayers() error {
 			if err != nil {
 				return fmt.Errorf("Finding current position: %s", err)
 			}
+		}
