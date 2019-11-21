@@ -72,3 +72,5 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 		switch {
 		case ext.None != nil:
 			return val, false
+
+		case ext.EntireString != nil:

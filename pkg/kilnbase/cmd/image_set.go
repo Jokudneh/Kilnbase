@@ -98,3 +98,5 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 			return nil, err
 		}
 	}
+
+	return importedImages, nil

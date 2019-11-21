@@ -26,3 +26,7 @@ sources:
 destinations:
 - image: emailservice
   newImage: docker.io/dkalinin/microservices-demo-emailservice
+- image: checkoutservice
+  newImage: docker.io/dkalinin/microservices-demo-checkoutservice
+- image: recommendationservice
+  newImage: docker.io/dkalinin/microservices-demo-recommendationservice
