@@ -22,3 +22,7 @@ sources:
 - image: loadgenerator
   path: src/loadgenerator
 - image: adservice
+  path: src/adservice
+destinations:
+- image: emailservice
+  newImage: docker.io/dkalinin/microservices-demo-emailservice
