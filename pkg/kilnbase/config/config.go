@@ -147,3 +147,5 @@ func NewConfigFromResource(res ctlres.Resource) (Config, error) {
 		return Config{}, err
 	}
 
+	var config Config
+

@@ -67,3 +67,5 @@ func (o *PackageOptions) Run() error {
 	if len(o.OutputPath) == 0 {
 		return fmt.Errorf("Expected 'output' flag to be non-empty")
 	}
+
+	prefixedLogger := logger.NewPrefixedWriter("package | ")

@@ -75,3 +75,6 @@ func (f tarFile) openChunk(path string) (io.ReadCloser, error) {
 func (f tarFileChunkReadCloser) Close() error {
 	// It seems that there is a race between go-containerregistry library
 	// and net/http's transport to close the request body. Specifically
+	// between net/http.(*transferWriter).writeBody(...) and
+	// gcrr.pkg/v1/remote.(*writer).streamBlob(...).
+	// Example trace: https://gist.github.com/cppforlife/aeeb989c83aebd061561d12524c6476b
