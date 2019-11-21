@@ -80,3 +80,6 @@ func (c Conf) ImageDestinations() []ImageDestination {
 }
 
 func (c Conf) SearchRules() []SearchRule {
+	result := append([]SearchRule{}, c.SearchRulesWithoutDefaults()...)
+
+	// Add default image rule at the end so that
