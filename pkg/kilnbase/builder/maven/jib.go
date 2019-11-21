@@ -134,3 +134,7 @@ func (*Jib) runMaven(directory string, targetImage string,
 	}
 	msg := fmt.Sprintf(
 		"running command: mvn compile jib:dockerBuild -Dimage=%s "+
+			"(%d raw option(s) not shown)\n",
+		targetImage, numRawOpts)
+	_, _ = prefixedLogger.Write([]byte(msg))
+

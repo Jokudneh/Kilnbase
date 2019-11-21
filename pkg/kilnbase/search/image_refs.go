@@ -74,3 +74,7 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 			return val, false
 
 		case ext.EntireString != nil:
+			valStr, ok := val.(string)
+			if !ok {
+				return val, false
+			}

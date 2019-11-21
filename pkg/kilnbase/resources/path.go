@@ -74,3 +74,7 @@ func (p Path) ContainsNonMapKeys() bool {
 	}
 	return false
 }
+
+func (p Path) MarshalJSON() ([]byte, error) {
+	var result []interface{}
+	for _, part := range p {
