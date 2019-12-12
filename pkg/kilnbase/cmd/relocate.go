@@ -101,3 +101,7 @@ func (o *RelocateOptions) Run() error {
 	importedImages, err := imageSet.Relocate(foundImages, importRepo, dstRegistry)
 	if err != nil {
 		return err
+	}
+
+	err = o.emitLockOutput(conf, importedImages)
+	if err != nil {

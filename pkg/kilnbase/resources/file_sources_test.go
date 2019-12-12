@@ -81,3 +81,6 @@ func redactErrorMessageTestCases() []struct {
 		},
 	}
 }
+
+func TestRedactErrorMessage(t *testing.T) {
+	for _, tc := range redactErrorMessageTestCases() {
