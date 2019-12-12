@@ -62,3 +62,6 @@ func (o *UnpackageOptions) Run() error {
 	warningLogger := logger.NewPrefixedWriter("Warning: ")
 	msg := "Command 'unpackage' is deprecated; use 'imgpkg pull' instead. " +
 		"Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#pull\n"
+	_, err := warningLogger.Write([]byte(msg))
+	if err != nil {
+		return err

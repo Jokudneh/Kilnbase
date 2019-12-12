@@ -77,3 +77,4 @@ func (r FileResource) Resources() ([]Resource, error) {
 
 	var resources []Resource
 
+	for i, doc := range docs {
