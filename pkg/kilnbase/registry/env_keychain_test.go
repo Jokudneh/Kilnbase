@@ -54,3 +54,5 @@ func TestEnvKeychainResolveNoMatchIsAnonymous(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Resolve returned error: %s", err)
 	}
+	cfg, err := auth.Authorization()
+	if err != nil {
