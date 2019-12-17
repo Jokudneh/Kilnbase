@@ -105,3 +105,6 @@ func (o *RelocateOptions) Run() error {
 
 	err = o.emitLockOutput(conf, importedImages)
 	if err != nil {
+		return err
+	}
+

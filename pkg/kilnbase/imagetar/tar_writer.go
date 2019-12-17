@@ -161,3 +161,7 @@ func (w *TarWriter) writeLayers() error {
 				return fmt.Errorf("Finding current position: %s", err)
 			}
 		}
+
+		if isInflattable {
+			stream = nil
+		} else {
