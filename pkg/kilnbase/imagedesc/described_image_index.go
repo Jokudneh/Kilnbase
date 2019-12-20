@@ -67,3 +67,4 @@ func (i DescribedImageIndex) ImageIndex(digest regv1.Hash) (regv1.ImageIndex, er
 			return idx, nil
 		}
 	}
+	return nil, fmt.Errorf("Expected to find index '%s' by digest", digest)
