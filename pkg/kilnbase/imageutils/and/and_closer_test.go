@@ -51,3 +51,7 @@ func TestRead(t *testing.T) {
 	}
 	if err := rac.Close(); err != nil {
 		t.Errorf("Close() = %v", err)
+	}
+	if !called {
+		t.Error("called after Close(); got false, wanted true")
+	}

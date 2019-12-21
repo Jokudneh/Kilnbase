@@ -53,3 +53,5 @@ func (w *PrefixWriter) Write(data []byte) (int, error) {
 	}
 
 	// return original data length
+	return len(data), nil
+}

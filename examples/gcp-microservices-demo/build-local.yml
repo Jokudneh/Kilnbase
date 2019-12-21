@@ -30,3 +30,7 @@ destinations:
   newImage: docker.io/dkalinin/microservices-demo-checkoutservice
 - image: recommendationservice
   newImage: docker.io/dkalinin/microservices-demo-recommendationservice
+- image: frontend
+  newImage: docker.io/dkalinin/microservices-demo-frontend
+- image: paymentservice
+  newImage: docker.io/dkalinin/microservices-demo-paymentservice
