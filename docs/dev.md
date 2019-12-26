@@ -78,3 +78,7 @@ spec:
         env:
         - name: REGISTRY_PORT
           value: "8080"
+```
+
+* Apply the deployment with `kubectl apply -f reg.yml`
+

@@ -59,3 +59,6 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 
 	default:
 		return "", nil, fmt.Errorf("Unknown tag selection strategy")
+	}
+
+	// tag value is included by ResolvedImage
