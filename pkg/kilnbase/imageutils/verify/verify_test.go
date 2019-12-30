@@ -68,3 +68,5 @@ func TestBadHash(t *testing.T) {
 		Hex:       "whatever",
 	}
 	_, err := ReadCloser(io.NopCloser(strings.NewReader("hi")), h)
+	if err == nil {
+		t.Errorf("ReadCloser() = %v, wanted err", err)

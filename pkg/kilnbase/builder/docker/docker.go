@@ -127,3 +127,7 @@ func (d Docker) Build(image, directory string, opts BuildOpts) (TmpRef, error) {
 }
 
 func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
+	prefixedLogger *ctllog.PrefixWriter) (TmpRef, error) {
+
+	tb := ctlb.TagBuilder{}
+
