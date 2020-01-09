@@ -79,3 +79,7 @@ func UnzipReadCloser(r io.ReadCloser) (io.ReadCloser, error) {
 		CloseFunc: func() error {
 			// If the unzip fails, then this seems to return the same
 			// error as the read.  We don't want this to interfere with
+			// us closing the main ReadCloser, since this could leave
+			// an open file descriptor (fails on Windows).
+			gr.Close()
+			return r.Close()
