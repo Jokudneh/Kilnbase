@@ -70,3 +70,6 @@ type ConfigDescriptor struct {
 
 type ManifestDescriptor struct {
 	MediaType string
+	Digest    string
+	Raw       string
+}
