@@ -62,3 +62,4 @@ func (i TagSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	}
 
 	// tag value is included by ResolvedImage
+	return NewResolvedImage(i.url+":"+tag, i.registry).URL()
