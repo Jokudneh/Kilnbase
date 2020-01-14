@@ -91,3 +91,7 @@ sources:
   path: assets/simple-app
 # 'unused' should not be built
 - image: unused
+  path: invalid-dir
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: ImageDestinations

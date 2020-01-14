@@ -100,3 +100,6 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 	}
 
 	return importedImages, nil
+}
+
+func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,

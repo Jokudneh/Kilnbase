@@ -84,3 +84,7 @@ func redactErrorMessageTestCases() []struct {
 
 func TestRedactErrorMessage(t *testing.T) {
 	for _, tc := range redactErrorMessageTestCases() {
+		t.Run(tc.name, func(t *testing.T) {
+			result := redactErrorMessage(tc.input)
+			if result != tc.expected {
+				t.Errorf("mismatch\ninput:    %s\n"+
