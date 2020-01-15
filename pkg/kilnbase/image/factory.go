@@ -97,3 +97,5 @@ func (f Factory) New(url string) Image {
 	if digestedImage := MaybeNewDigestedImage(url); digestedImage != nil {
 		resolvedImg = digestedImage
 	} else {
+		resolvedImg = NewResolvedImage(url, f.registry)
+	}

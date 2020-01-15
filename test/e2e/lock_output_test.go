@@ -133,3 +133,6 @@ searchRules:
 	path := "/tmp/kilnbase-test-lock-output-successful"
 	defer os.RemoveAll(path)
 
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false", "--lock-output=" + path}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})

@@ -131,3 +131,4 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 
 	tb := ctlb.TagBuilder{}
 
+	// Retag image with its sha256 to produce exact image ref if nothing has changed.
