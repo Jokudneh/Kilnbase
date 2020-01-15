@@ -48,3 +48,6 @@ func (d TagBuilder) CleanStr(str string) string {
 func (d TagBuilder) RandomStr50() (string, error) {
 	bs, err := d.randomBytes(5)
 	if err != nil {
+		return "", err
+	}
+	result := ""
