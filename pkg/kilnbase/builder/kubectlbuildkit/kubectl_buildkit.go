@@ -104,3 +104,7 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 	// Since kubectl builtkit project targets both containerd and Docker daemon
 	// and Docker daemon does not support use of digests for locally loaded images
 	// we can only return digest ref when image is pushed to registry
+	if imgDst != nil {
+		digestRefStr := imgDst.NewImage + "@sha256:" + digestMatches[2]
+
+		digestRef, err := regname.NewDigest(digestRefStr, regname.WeakValidation)
