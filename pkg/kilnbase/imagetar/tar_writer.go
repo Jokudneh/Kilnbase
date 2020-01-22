@@ -165,3 +165,4 @@ func (w *TarWriter) writeLayers() error {
 		if isInflattable {
 			stream = nil
 		} else {
+			foundLayer, err := w.ids.FindLayer(imgLayer)

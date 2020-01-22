@@ -88,3 +88,7 @@ func TestRedactErrorMessage(t *testing.T) {
 			result := redactErrorMessage(tc.input)
 			if result != tc.expected {
 				t.Errorf("mismatch\ninput:    %s\n"+
+					"expected: %s\ngot:      %s",
+					tc.input, tc.expected, result)
+			}
+		})

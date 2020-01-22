@@ -57,3 +57,6 @@ func contains(structs []imageStruct, st imageStruct) bool {
 }
 
 func newImageStructs(images []Image) []imageStruct {
+	var result []imageStruct
+	for _, img := range images {
+		st := newImageStruct(img)
