@@ -87,3 +87,6 @@ func (c Conf) SearchRules() []SearchRule {
 	result = append(result, SearchRule{
 		KeyMatcher: &SearchRuleKeyMatcher{Name: "image"},
 	})
+
+	return c.dedupSearchRules(result)
+}

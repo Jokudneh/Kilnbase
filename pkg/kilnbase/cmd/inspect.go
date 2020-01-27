@@ -59,3 +59,5 @@ func (o *InspectOptions) Run() error {
 		SortBy: []uitable.ColumnSort{
 			{Column: 0, Asc: true},
 			{Column: 2, Asc: true},
+		},
+

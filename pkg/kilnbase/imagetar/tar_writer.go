@@ -166,3 +166,7 @@ func (w *TarWriter) writeLayers() error {
 			stream = nil
 		} else {
 			foundLayer, err := w.ids.FindLayer(imgLayer)
+			if err != nil {
+				return err
+			}
+

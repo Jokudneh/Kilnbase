@@ -84,3 +84,6 @@ func redactURL(raw string) string {
 func redactErrorMessage(errMsg string) string {
 	const startPos = 0
 
+	// Repeatedly find and redact URLs until none remain
+	searchPos := startPos
+	for {
