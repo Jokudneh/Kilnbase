@@ -83,3 +83,4 @@ sources:
   kubectlBuildkit: {}
 - image: docker.io/*username*/kilnbase-e2e-tests-build2
   path: assets/simple-app
+  kubectlBuildkit: {}

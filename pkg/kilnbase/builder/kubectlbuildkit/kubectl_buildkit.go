@@ -108,3 +108,5 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 		digestRefStr := imgDst.NewImage + "@sha256:" + digestMatches[2]
 
 		digestRef, err := regname.NewDigest(digestRefStr, regname.WeakValidation)
+		if err != nil {
+			return "", fmt.Errorf("Validating destination digest ref '%s': %s", digestRefStr, err)

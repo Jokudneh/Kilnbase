@@ -61,3 +61,6 @@ func (o *InspectOptions) Run() error {
 			{Column: 2, Asc: true},
 		},
 
+		// Image URLs and other content is too long
+		FillFirstColumn: true,
+		Transpose:       true,
