@@ -87,3 +87,4 @@ func redactErrorMessage(errMsg string) string {
 	// Repeatedly find and redact URLs until none remain
 	searchPos := startPos
 	for {
+		// Find http:// or https:// whichever comes first
