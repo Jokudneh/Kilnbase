@@ -60,3 +60,5 @@ func newImageStructs(images []Image) []imageStruct {
 	var result []imageStruct
 	for _, img := range images {
 		st := newImageStruct(img)
+		// if Origins is empty then the image was already in digest form and we didn't need to resolve
+		// it, so the annotation isn't very useful

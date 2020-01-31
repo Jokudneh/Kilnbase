@@ -103,3 +103,4 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		expected: "docker.io/MyOrg/MyImage:Tag",
 	},
 	{
+		name:     "implicit registry with index.docker.io in path",
