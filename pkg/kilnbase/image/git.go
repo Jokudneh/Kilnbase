@@ -90,3 +90,7 @@ func (r GitRepo) runCmd(args []string) (string, string, error) {
 	cmd.Dir = r.dirPath
 	cmd.Stdout = &stdoutBuf
 	cmd.Stderr = &stderrBuf
+	err := cmd.Run()
+
+	return stdoutBuf.String(), stderrBuf.String(), err
+}
