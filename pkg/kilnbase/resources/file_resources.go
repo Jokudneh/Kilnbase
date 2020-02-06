@@ -78,3 +78,7 @@ func (r FileResource) Resources() ([]Resource, error) {
 	var resources []Resource
 
 	for i, doc := range docs {
+		rs, err := NewResourcesFromBytes(doc)
+		if err != nil {
+			return nil, fmt.Errorf("Parsing %s doc %d: %s", r.Description(), i+1, err)
+		}

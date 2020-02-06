@@ -64,3 +64,4 @@ func (o *InspectOptions) Run() error {
 		// Image URLs and other content is too long
 		FillFirstColumn: true,
 		Transpose:       true,
+	}
