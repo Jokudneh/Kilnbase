@@ -103,3 +103,4 @@ func TestGitRepoValidNotOnBranch(t *testing.T) {
 	defer os.RemoveAll(dir)
 
 	runCmd(t, "git", []string{"init", "."}, dir)
+	runCmd(t, "git", []string{"commit", "-am", "msg1", "--allow-empty"}, dir)
