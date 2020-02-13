@@ -65,3 +65,4 @@ func (o *InspectOptions) Run() error {
 		FillFirstColumn: true,
 		Transpose:       true,
 	}
+

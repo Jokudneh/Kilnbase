@@ -42,3 +42,5 @@ func (vc *verifyReader) Read(b []byte) (int, error) {
 		got := hex.EncodeToString(vc.hasher.Sum(make([]byte, 0, vc.hasher.Size())))
 		if want := vc.expected.Hex; got != want {
 			return n, fmt.Errorf("error verifying %s checksum; got %q, want %q",
+				vc.expected.Algorithm, got, want)
+		}

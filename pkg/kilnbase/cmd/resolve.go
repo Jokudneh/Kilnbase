@@ -141,3 +141,5 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 	err = o.emitLockOutput(conf, resolvedImages)
 	if err != nil {
 		return nil, err
+	}
+
