@@ -62,3 +62,5 @@ func newImageStructs(images []Image) []imageStruct {
 		st := newImageStruct(img)
 		// if Origins is empty then the image was already in digest form and we didn't need to resolve
 		// it, so the annotation isn't very useful
+		if len(st.Origins) > 0 {
+			// also check for duplicates before adding
