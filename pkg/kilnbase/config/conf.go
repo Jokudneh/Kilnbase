@@ -90,3 +90,7 @@ func (c Conf) SearchRules() []SearchRule {
 
 	return c.dedupSearchRules(result)
 }
+
+func (c Conf) SearchRulesWithoutDefaults() []SearchRule {
+	result := []SearchRule{}
+	for _, config := range c.configs {
