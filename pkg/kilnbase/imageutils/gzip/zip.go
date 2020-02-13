@@ -83,3 +83,4 @@ func UnzipReadCloser(r io.ReadCloser) (io.ReadCloser, error) {
 			// an open file descriptor (fails on Windows).
 			gr.Close()
 			return r.Close()
+		},
