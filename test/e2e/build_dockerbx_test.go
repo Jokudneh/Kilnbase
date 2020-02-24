@@ -74,3 +74,6 @@ sources:
 - image: docker.io/*username*/kilnbase-e2e-tests-build2
   path: assets/simple-app
   docker:
+    buildx:
+      # try out multi platform build
+      rawOptions: ["--platform=linux/amd64,linux/arm64,linux/arm/v7"]

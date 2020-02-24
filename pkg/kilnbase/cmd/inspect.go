@@ -66,3 +66,5 @@ func (o *InspectOptions) Run() error {
 		Transpose:       true,
 	}
 
+	for _, resWithImg := range foundImages {
+		originsDesc, err := resWithImg.OriginsDescription()
