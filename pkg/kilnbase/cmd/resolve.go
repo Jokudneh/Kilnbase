@@ -143,3 +143,6 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 		return nil, err
 	}
 
+	resBss, err := o.updateRefsInResources(nonConfigRs, conf, resolvedImages, imgFactory)
+	if err != nil {
+		return nil, fmt.Errorf("Updating resource references: %s", err)

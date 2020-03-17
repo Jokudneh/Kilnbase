@@ -110,3 +110,7 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 		digestRef, err := regname.NewDigest(digestRefStr, regname.WeakValidation)
 		if err != nil {
 			return "", fmt.Errorf("Validating destination digest ref '%s': %s", digestRefStr, err)
+		}
+
+		return digestRef.Name(), nil
+	}

@@ -80,3 +80,7 @@ func (f failReader) Read(_ []byte) (int, error) {
 	return 0, errRead
 }
 
+func TestReadErrors(t *testing.T) {
+	fr := failReader{}
+	if _, err := Is(fr); err != errRead {
+		t.Error("Is: expected errRead, got", err)

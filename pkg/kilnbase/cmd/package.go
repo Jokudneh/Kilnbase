@@ -69,3 +69,4 @@ func (o *PackageOptions) Run() error {
 	}
 
 	prefixedLogger := logger.NewPrefixedWriter("package | ")
+
