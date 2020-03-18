@@ -103,3 +103,5 @@ func (o *ImageSet) Import(imgOrIndexes []imagedesc.ImageOrIndex,
 }
 
 func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
+	existingRef regname.Digest, importRepo regname.Repository,
+	registry ctlreg.Registry) (regname.Digest, error) {

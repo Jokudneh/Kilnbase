@@ -138,3 +138,6 @@ func (*Jib) runMaven(directory string, targetImage string,
 		targetImage, numRawOpts)
 	_, _ = prefixedLogger.Write([]byte(msg))
 
+	return cmd.Run()
+}
+

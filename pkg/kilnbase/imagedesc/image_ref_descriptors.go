@@ -104,3 +104,5 @@ func (ids *ImageRefDescriptors) Descriptors() []ImageOrImageIndexDescriptor {
 
 func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc regv1.Descriptor) (ImageIndexDescriptor, error) {
 	td := ImageIndexDescriptor{
+		Refs:      []string{ref.Name()},
+		MediaType: string(regDesc.MediaType),

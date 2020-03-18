@@ -137,3 +137,7 @@ searchRules:
 		StdinReader: strings.NewReader(input),
 	})
 
+	kilnbaseVersionOutput, _ := kilnbase.RunWithOpts([]string{"version"}, RunOpts{})
+	kilnbaseVersion := strings.SplitAfter(kilnbaseVersionOutput, " ")[2]
+
+	expectedOut := `---
