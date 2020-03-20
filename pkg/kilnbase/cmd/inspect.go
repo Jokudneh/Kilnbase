@@ -68,3 +68,7 @@ func (o *InspectOptions) Run() error {
 
 	for _, resWithImg := range foundImages {
 		originsDesc, err := resWithImg.OriginsDescription()
+		if err != nil {
+			return err
+		}
+

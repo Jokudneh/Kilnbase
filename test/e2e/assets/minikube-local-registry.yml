@@ -73,3 +73,6 @@ data:
       cache:
         blobdescriptor: inmemory
       filesystem:
+        rootdirectory: /var/lib/registry
+    http:
+      addr: :5000
