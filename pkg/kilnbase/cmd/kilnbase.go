@@ -74,3 +74,4 @@ var _ io.Writer = uiBlockWriter{}
 
 func (w uiBlockWriter) Write(p []byte) (n int, err error) {
 	w.ui.PrintBlock(p)
+	return len(p), nil
