@@ -99,3 +99,7 @@ func (f Factory) New(url string) Image {
 	} else {
 		resolvedImg = NewResolvedImage(url, f.registry)
 	}
+	return NewPlatformSelectedImage(resolvedImg, platformSelection, f.registry)
+}
+
+func (f Factory) shouldOverride(url string) (ctlconf.ImageOverride, bool) {
