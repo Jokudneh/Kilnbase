@@ -84,3 +84,4 @@ func TestReadErrors(t *testing.T) {
 	fr := failReader{}
 	if _, err := Is(fr); err != errRead {
 		t.Error("Is: expected errRead, got", err)
+	}

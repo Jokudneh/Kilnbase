@@ -80,3 +80,6 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 			prefixedLogger.Write([]byte(fmt.Sprintf("error: %s\n", err)))
 			return ctlbdk.TmpRef{}, err
 		}
+
+		matches := packImageID.FindStringSubmatch(stdoutBuf.String())
+		if len(matches) != 3 {
