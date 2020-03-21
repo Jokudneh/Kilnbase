@@ -36,3 +36,4 @@ destinations:
   newImage: docker.io/dkalinin/microservices-demo-paymentservice
 - image: productcatalogservice
   newImage: docker.io/dkalinin/microservices-demo-productcatalogservice
+- image: cartservice

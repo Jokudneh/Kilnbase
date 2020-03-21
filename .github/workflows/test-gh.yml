@@ -75,3 +75,6 @@ jobs:
             --docker-username="${DOCKERHUB_USERNAME}" \
             --docker-password="${DOCKERHUB_ACCESS_TOKEN}"
           # ... for any other service account that pulls images from DockerHub
+          minikube kubectl --ssh=true -- create secret docker-registry dockerhub-credentials \
+            --docker-username="${DOCKERHUB_USERNAME}" \
+            --docker-password="${DOCKERHUB_ACCESS_TOKEN}"
