@@ -88,3 +88,6 @@ func redactErrorMessage(errMsg string) string {
 	searchPos := startPos
 	for {
 		// Find http:// or https:// whichever comes first
+		loc := urlSchemeRe.FindStringIndex(errMsg[searchPos:])
+		if loc == nil {
+			break

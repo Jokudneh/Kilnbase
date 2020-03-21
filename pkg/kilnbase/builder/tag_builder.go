@@ -51,3 +51,6 @@ func (d TagBuilder) RandomStr50() (string, error) {
 		return "", err
 	}
 	result := ""
+	for _, b := range bs {
+		result += fmt.Sprintf("%d", b)
+	}
