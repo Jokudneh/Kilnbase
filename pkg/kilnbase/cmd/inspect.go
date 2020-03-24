@@ -72,3 +72,5 @@ func (o *InspectOptions) Run() error {
 			return err
 		}
 
+		table.Rows = append(table.Rows, []uitable.Value{
+			uitable.NewValueString(resWithImg.URL),

@@ -79,3 +79,7 @@ jobs:
                       stream.on('end', function () {
                         checksums[asset.name]= hash.digest('hex');
                         resolve(`${asset.name}`);
+                      });
+                    });
+                  });
+                  await http_promise;
