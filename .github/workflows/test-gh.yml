@@ -78,3 +78,4 @@ jobs:
           minikube kubectl --ssh=true -- create secret docker-registry dockerhub-credentials \
             --docker-username="${DOCKERHUB_USERNAME}" \
             --docker-password="${DOCKERHUB_ACCESS_TOKEN}"
+          set -x
