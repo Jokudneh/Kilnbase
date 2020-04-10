@@ -141,3 +141,6 @@ func (*Jib) runMaven(directory string, targetImage string,
 	return cmd.Run()
 }
 
+func (*Jib) tagTarget(stableTmpRef ctlbdk.TmpRef, targetImage string,
+	prefixedLogger *ctllog.PrefixWriter) error {
+	var stdoutBuf, stderrBuf bytes.Buffer

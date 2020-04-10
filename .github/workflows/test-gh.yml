@@ -79,3 +79,5 @@ jobs:
             --docker-username="${DOCKERHUB_USERNAME}" \
             --docker-password="${DOCKERHUB_ACCESS_TOKEN}"
           set -x
+        else
+          echo "No DockerHub Access Token set; skipping Docker authentication. There may be rate limit errors."

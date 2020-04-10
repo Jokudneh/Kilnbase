@@ -53,3 +53,6 @@ image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
 		if maskedOut != expectedOut {
 			t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", maskedOut, expectedOut)
 		}
+
+		err := yaml.Unmarshal([]byte(out), &published)
+		if err != nil {
