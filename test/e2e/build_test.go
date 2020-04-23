@@ -96,3 +96,4 @@ sources:
 apiVersion: kilnbase.k14s.io/v1alpha1
 kind: ImageDestinations
 destinations:
+- image: docker.io/*username*/kilnbase-e2e-tests-build
