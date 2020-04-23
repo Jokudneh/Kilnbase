@@ -132,3 +132,7 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 	tb := ctlb.TagBuilder{}
 
 	// Retag image with its sha256 to produce exact image ref if nothing has changed.
+	// Seems that Docker doesn't like `kilnbase@sha256:...` format for local images.
+	// Image hint at the beginning for easier sorting.
+	stableTmpRef := TmpRef{"kilnbase:" + tb.CheckTagLen128(fmt.Sprintf(
+		"%s-%s",

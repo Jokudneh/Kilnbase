@@ -90,3 +90,5 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 		dockerTmpRef, err := i.ko.Build(urlRepo, i.buildSource.Path, i.buildSource.Ko.Build)
 		if err != nil {
 			return "", nil, err
+		}
+

@@ -109,3 +109,6 @@ func TestImageRefsMatches(t *testing.T) {
 				"nested": map[string]interface{}{
 					"key": "gcr.io/repo:something",
 				},
+			},
+			OutputResource: map[string]interface{}{
+				"nested": map[string]interface{}{
