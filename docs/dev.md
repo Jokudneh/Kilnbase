@@ -82,3 +82,5 @@ spec:
 
 * Apply the deployment with `kubectl apply -f reg.yml`
 
+* Expose it on port 5000 with
+`kubectl expose deployment registry --name=registry --type=LoadBalancer --port 80 --target-port 5000 -oyaml`

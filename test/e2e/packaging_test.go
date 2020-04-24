@@ -132,3 +132,4 @@ spec:
 - image: index.docker.io/library/mongo@sha256:633ec3ae6db954a65a1abadb482bae73375d0098005cb36a3851b32cd891b22e
 `
 
+	path := "/tmp/kilnbase-test-pkg-unpkg-successful-foreign-layers"
