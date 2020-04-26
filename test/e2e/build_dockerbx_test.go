@@ -77,3 +77,5 @@ sources:
     buildx:
       # try out multi platform build
       rawOptions: ["--platform=linux/amd64,linux/arm64,linux/arm/v7"]
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
