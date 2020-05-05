@@ -68,3 +68,6 @@ func (i DescribedImage) ConfigFile() (*regv1.ConfigFile, error) {
 func (i DescribedImage) RawConfigFile() ([]byte, error) {
 	return []byte(i.desc.Config.Raw), nil
 }
+
+// Digest returns the sha256 of this image's manifest.
+func (i DescribedImage) Digest() (regv1.Hash, error) {
