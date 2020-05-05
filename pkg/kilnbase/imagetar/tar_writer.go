@@ -170,3 +170,6 @@ func (w *TarWriter) writeLayers() error {
 				return err
 			}
 
+			stream, err = foundLayer.Open()
+			if err != nil {
+				return err
