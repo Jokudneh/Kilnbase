@@ -111,3 +111,4 @@ func (o *RelocateOptions) Run() error {
 	// Update previous image references with new references
 	resBss, err := o.updateRefsInResources(rs, conf, importedImages)
 	if err != nil {
+		return err
