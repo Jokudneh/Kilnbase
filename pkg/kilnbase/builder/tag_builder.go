@@ -54,3 +54,4 @@ func (d TagBuilder) RandomStr50() (string, error) {
 	for _, b := range bs {
 		result += fmt.Sprintf("%d", b)
 	}
+	// Timestamp at the beginning for easier sorting

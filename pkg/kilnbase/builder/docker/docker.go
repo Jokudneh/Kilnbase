@@ -136,3 +136,7 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 	// Image hint at the beginning for easier sorting.
 	stableTmpRef := TmpRef{"kilnbase:" + tb.CheckTagLen128(fmt.Sprintf(
 		"%s-%s",
+		tb.TrimStr(tb.CleanStr(image), 50),
+		tb.CheckLen(tb.CleanStr(imageID), 72),
+	))}
+
