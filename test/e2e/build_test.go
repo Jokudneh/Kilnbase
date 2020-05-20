@@ -99,3 +99,4 @@ destinations:
 - image: docker.io/*username*/kilnbase-e2e-tests-build
 - image: simple-app-two
   newImage: docker.io/*username*/kilnbase-e2e-tests-build
+# 'unused' will not be pushed
