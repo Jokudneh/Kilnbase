@@ -80,3 +80,4 @@ func TestMavenJibBuildAndPushSuccessful(t *testing.T) {
 	assetPath := "assets/maven-app"
 	secondAssetPath := "assets/maven-app-2"
 	if err := exec.Command("cp", "-r",
+		assetPath, secondAssetPath).Run(); err != nil {
