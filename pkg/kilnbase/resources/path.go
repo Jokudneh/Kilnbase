@@ -78,3 +78,7 @@ func (p Path) ContainsNonMapKeys() bool {
 func (p Path) MarshalJSON() ([]byte, error) {
 	var result []interface{}
 	for _, part := range p {
+		switch {
+		case part.MapKey != nil:
+			result = append(result, *part.MapKey)
+		case part.ArrayIndex != nil:

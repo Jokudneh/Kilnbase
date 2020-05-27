@@ -57,3 +57,6 @@ image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
 		err := yaml.Unmarshal([]byte(out), &published)
 		if err != nil {
 			t.Fatalf("Parsing output")
+		}
+	})
+
