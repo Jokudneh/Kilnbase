@@ -81,3 +81,7 @@ jobs:
           set -x
         else
           echo "No DockerHub Access Token set; skipping Docker authentication. There may be rate limit errors."
+        fi
+
+        # Ensure that there is no existing kilnbase installed
+        rm -f /tmp/bin/kilnbase

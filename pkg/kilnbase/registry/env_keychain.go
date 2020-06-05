@@ -81,3 +81,6 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 					"use a hostname such as gcr.io or index.docker.io " +
 					"without URL credentials, query or fragment")
 			}
+			info.Hostname = registry.RegistryStr()
+			return nil
+		},
