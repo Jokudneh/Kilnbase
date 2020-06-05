@@ -55,3 +55,5 @@ func TestRead(t *testing.T) {
 	if !called {
 		t.Error("called after Close(); got false, wanted true")
 	}
+}
+

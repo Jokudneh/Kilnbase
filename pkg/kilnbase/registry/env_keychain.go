@@ -80,3 +80,4 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 				return errors.New("Parsing registry hostname: invalid value; " +
 					"use a hostname such as gcr.io or index.docker.io " +
 					"without URL credentials, query or fragment")
+			}

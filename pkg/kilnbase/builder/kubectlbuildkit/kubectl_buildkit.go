@@ -114,3 +114,6 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 
 		return digestRef.Name(), nil
 	}
+
+	return tagRef, nil
+}
