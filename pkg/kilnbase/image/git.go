@@ -94,3 +94,5 @@ func (r GitRepo) runCmd(args []string) (string, string, error) {
 
 	return stdoutBuf.String(), stderrBuf.String(), err
 }
+
+// GitRedactedRemoteURL redacts userinfo, query and fragment information.
