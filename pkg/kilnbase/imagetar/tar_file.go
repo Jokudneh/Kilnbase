@@ -80,3 +80,6 @@ func (f tarFileChunkReadCloser) Close() error {
 	// Example trace: https://gist.github.com/cppforlife/aeeb989c83aebd061561d12524c6476b
 	// Following lines are used to identify locations where Close()
 	// method is being called during runtime.
+	//   fmt.Printf("%s: close\n>>>%s<<<\n\n", f.DebugId, debug.Stack())
+
+	err := f.Closer.Close()

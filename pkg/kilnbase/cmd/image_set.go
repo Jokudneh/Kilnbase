@@ -107,3 +107,6 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 	registry ctlreg.Registry) (regname.Digest, error) {
 
 	itemDigest, err := item.Digest()
+	if err != nil {
+		return regname.Digest{}, err
+	}

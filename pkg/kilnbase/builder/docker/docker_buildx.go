@@ -112,3 +112,4 @@ func (d Buildx) BuildAndOptionallyPush(
 	var stdoutBuf, stderrBuf bytes.Buffer
 	{
 		cmdArgs := []string{"buildx", "build", "--progress=plain"}
+
