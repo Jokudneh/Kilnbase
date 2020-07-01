@@ -204,3 +204,6 @@ overrides:
 - image: unknown
   newImage: docker.io/library/nginx:1.14.2
 - image: final
+  newImage: docker.io/library/nginx:1.14.2
+  preresolved: true
+`

@@ -84,3 +84,6 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 			info.Hostname = registry.RegistryStr()
 			return nil
 		},
+		"USERNAME": func(info *envKeychainInfo, val string) error {
+			info.Username = val
+			return nil

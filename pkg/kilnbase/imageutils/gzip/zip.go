@@ -84,3 +84,5 @@ func UnzipReadCloser(r io.ReadCloser) (io.ReadCloser, error) {
 			gr.Close()
 			return r.Close()
 		},
+	}, nil
+}
