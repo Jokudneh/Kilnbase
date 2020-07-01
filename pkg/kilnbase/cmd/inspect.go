@@ -74,3 +74,6 @@ func (o *InspectOptions) Run() error {
 
 		table.Rows = append(table.Rows, []uitable.Value{
 			uitable.NewValueString(resWithImg.URL),
+			uitable.NewValueString(originsDesc),
+			uitable.NewValueString(resWithImg.Resource.Description()),
+		})
