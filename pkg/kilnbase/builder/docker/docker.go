@@ -140,3 +140,5 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 		tb.CheckLen(tb.CleanStr(imageID), 72),
 	))}
 
+	{
+		var stdoutBuf, stderrBuf bytes.Buffer
