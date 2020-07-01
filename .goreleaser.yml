@@ -75,3 +75,5 @@ release:
     
     #### By downloading binary from the release
 
+    For instance, if you are using Linux on an AMD64 architecture:
+    ```shell

@@ -86,3 +86,7 @@ func UnzipReadCloser(r io.ReadCloser) (io.ReadCloser, error) {
 		},
 	}, nil
 }
+
+// Is detects whether the input stream is compressed.
+func Is(r io.Reader) (bool, error) {
+	magicHeader := make([]byte, 2)

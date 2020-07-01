@@ -151,3 +151,5 @@ func NewConfigFromResource(res ctlres.Resource) (Config, error) {
 
 	err = yaml.Unmarshal(bs, &config)
 	if err != nil {
+		return Config{}, fmt.Errorf("Unmarshaling %s: %s", res.Description(), err)
+	}
