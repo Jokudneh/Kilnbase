@@ -91,3 +91,4 @@ func redactErrorMessage(errMsg string) string {
 		loc := urlSchemeRe.FindStringIndex(errMsg[searchPos:])
 		if loc == nil {
 			break
+		}

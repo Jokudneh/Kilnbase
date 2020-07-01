@@ -86,3 +86,5 @@ func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 	}
 
 	un := unstructured.Unstructured{content}
+
+	if un.IsList() {
