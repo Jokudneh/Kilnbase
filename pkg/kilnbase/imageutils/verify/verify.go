@@ -44,3 +44,4 @@ func (vc *verifyReader) Read(b []byte) (int, error) {
 			return n, fmt.Errorf("error verifying %s checksum; got %q, want %q",
 				vc.expected.Algorithm, got, want)
 		}
+	}

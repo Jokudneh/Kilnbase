@@ -78,3 +78,5 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 			if !ok {
 				return val, false
 			}
+			return visitorFunc(valStr)
+
