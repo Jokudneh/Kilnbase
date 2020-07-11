@@ -129,3 +129,6 @@ func (i Registry) WriteTag(dstRef regname.Tag, srcRef regname.Digest) error {
 	if err != nil {
 		return err
 	}
+
+	err = i.retry(func() error {
+		desc, err := regremote.Get(srcRef, i.opts...)
