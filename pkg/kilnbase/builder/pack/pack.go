@@ -85,3 +85,5 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 		if len(matches) != 3 {
 			return ctlbdk.TmpRef{}, fmt.Errorf("Expected to find image ID in pack output but did not")
 		}
+
+		imageID = "sha256:" + matches[2]

@@ -65,3 +65,7 @@ func (o *UnpackageOptions) Run() error {
 	_, err := warningLogger.Write([]byte(msg))
 	if err != nil {
 		return err
+	}
+
+	if len(o.InputPath) == 0 {
+		return fmt.Errorf("Expected 'input' flag to be non-empty")

@@ -83,3 +83,4 @@ kind: ImageDestinations
 destinations:
 - image: docker.io/*username*/kilnbase-e2e-tests-build
 - image: docker.io/*username*/kilnbase-e2e-tests-build2
+`)
