@@ -70,3 +70,4 @@ func (o *PackageOptions) Run() error {
 
 	prefixedLogger := logger.NewPrefixedWriter("package | ")
 
+	rs, conf, err := o.FileFlags.ResourcesAndConfig()
