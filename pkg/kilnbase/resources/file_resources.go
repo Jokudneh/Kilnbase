@@ -82,3 +82,5 @@ func (r FileResource) Resources() ([]Resource, error) {
 		if err != nil {
 			return nil, fmt.Errorf("Parsing %s doc %d: %s", r.Description(), i+1, err)
 		}
+
+		resources = append(resources, rs...)
