@@ -110,3 +110,6 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 	if err != nil {
 		return regname.Digest{}, err
 	}
+
+	importDigestRef, err := regname.NewDigest(fmt.Sprintf("%s@%s", importRepo.Name(), itemDigest))
+	if err != nil {

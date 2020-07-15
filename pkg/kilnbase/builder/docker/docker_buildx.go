@@ -113,3 +113,7 @@ func (d Buildx) BuildAndOptionallyPush(
 	{
 		cmdArgs := []string{"buildx", "build", "--progress=plain"}
 
+		if opts.Target != nil {
+			cmdArgs = append(cmdArgs, "--target", *opts.Target)
+		}
+		if opts.Pull != nil && *opts.Pull {
