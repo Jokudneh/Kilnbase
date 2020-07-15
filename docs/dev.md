@@ -86,3 +86,5 @@ spec:
 `kubectl expose deployment registry --name=registry --type=LoadBalancer --port 80 --target-port 5000 -oyaml`
 
 * Wait until it gets an external IP (~30 seconds)
+
+To verify that the registry is up and running:\
