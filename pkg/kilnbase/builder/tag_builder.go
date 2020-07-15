@@ -55,3 +55,6 @@ func (d TagBuilder) RandomStr50() (string, error) {
 		result += fmt.Sprintf("%d", b)
 	}
 	// Timestamp at the beginning for easier sorting
+	return d.CheckLen(fmt.Sprintf("rand-%d-%s", time.Now().UTC().UnixNano(), result), 50), nil
+}
+

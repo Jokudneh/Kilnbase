@@ -80,3 +80,6 @@ data:
         X-Content-Type-Options: [nosniff]
       tls:
         certificate: /etc/docker/registry-tls/crt.pem
+        key: /etc/docker/registry-tls/key.pem
+    health:
+      storagedriver:

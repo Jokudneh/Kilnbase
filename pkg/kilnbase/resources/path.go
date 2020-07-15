@@ -82,3 +82,4 @@ func (p Path) MarshalJSON() ([]byte, error) {
 		case part.MapKey != nil:
 			result = append(result, *part.MapKey)
 		case part.ArrayIndex != nil:
+			result = append(result, part.ArrayIndex)
