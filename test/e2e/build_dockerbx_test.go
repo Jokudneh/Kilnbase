@@ -87,3 +87,5 @@ destinations:
 
 	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
 		StdinReader: strings.NewReader(input),
+	})
+
