@@ -45,3 +45,4 @@ func (vc *verifyReader) Read(b []byte) (int, error) {
 				vc.expected.Algorithm, got, want)
 		}
 	}
+	return n, err
