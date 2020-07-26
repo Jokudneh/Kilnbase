@@ -105,3 +105,4 @@ func (f Factory) New(url string) Image {
 func (f Factory) shouldOverride(url string) (ctlconf.ImageOverride, bool) {
 	urlMatcher := Matcher{url}
 	for _, override := range f.opts.Conf.ImageOverrides() {
+		if urlMatcher.Matches(override.ImageRef) {
