@@ -88,3 +88,4 @@ spec:
 * Wait until it gets an external IP (~30 seconds)
 
 To verify that the registry is up and running:\
+In [GKE](https://console.cloud.google.com/), navigate to Kubernetes Engine, then 'Services & Ingress'\

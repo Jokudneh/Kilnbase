@@ -117,3 +117,7 @@ func (d Buildx) BuildAndOptionallyPush(
 			cmdArgs = append(cmdArgs, "--target", *opts.Target)
 		}
 		if opts.Pull != nil && *opts.Pull {
+			cmdArgs = append(cmdArgs, "--pull")
+		}
+		if opts.NoCache != nil && *opts.NoCache {
+			cmdArgs = append(cmdArgs, "--no-cache")
