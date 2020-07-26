@@ -80,3 +80,5 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 			}
 			return visitorFunc(valStr)
 
+		case ext.JSON != nil:
+			return v.extractValueAsJSON(val, ext.JSON.SearchRules)

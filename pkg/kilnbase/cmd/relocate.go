@@ -112,3 +112,6 @@ func (o *RelocateOptions) Run() error {
 	resBss, err := o.updateRefsInResources(rs, conf, importedImages)
 	if err != nil {
 		return err
+	}
+
+	// Print all resources as one YAML stream
