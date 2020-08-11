@@ -56,3 +56,7 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 			} else if reflect.DeepEqual(m.rule.ValueMatcher.Image, value) {
 				valueMatched = true
 			}
+
+		case len(m.rule.ValueMatcher.ImageRepo) > 0:
+			if valueStr, ok := value.(string); ok {
+				repo, matchesImg := ctlimg.URLRepo(valueStr)

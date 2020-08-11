@@ -71,3 +71,5 @@ func (i DescribedImage) RawConfigFile() ([]byte, error) {
 
 // Digest returns the sha256 of this image's manifest.
 func (i DescribedImage) Digest() (regv1.Hash, error) {
+	return regv1.NewHash(i.desc.Manifest.Digest)
+}
