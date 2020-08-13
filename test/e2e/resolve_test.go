@@ -207,3 +207,7 @@ overrides:
   newImage: docker.io/library/nginx:1.14.2
   preresolved: true
 `
+
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})

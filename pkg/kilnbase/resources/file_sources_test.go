@@ -92,3 +92,5 @@ func TestRedactErrorMessage(t *testing.T) {
 					tc.input, tc.expected, result)
 			}
 		})
+	}
+}

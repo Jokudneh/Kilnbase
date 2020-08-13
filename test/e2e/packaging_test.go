@@ -135,3 +135,4 @@ spec:
 	path := "/tmp/kilnbase-test-pkg-unpkg-successful-foreign-layers"
 	defer os.RemoveAll(path)
 
+	out, _ := kilnbase.RunWithOpts([]string{"package", "-f", "-", "--output", path}, RunOpts{
