@@ -113,3 +113,7 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 
 	importDigestRef, err := regname.NewDigest(fmt.Sprintf("%s@%s", importRepo.Name(), itemDigest))
 	if err != nil {
+		return regname.Digest{}, fmt.Errorf("Building new digest image ref: %s", err)
+	}
+
+	// Seems like AWS ECR doesnt like using digests for manifest uploads

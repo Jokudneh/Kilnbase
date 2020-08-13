@@ -69,3 +69,7 @@ func (o *UnpackageOptions) Run() error {
 
 	if len(o.InputPath) == 0 {
 		return fmt.Errorf("Expected 'input' flag to be non-empty")
+	}
+	if len(o.Repository) == 0 {
+		return fmt.Errorf("Expected 'repository' flag to be non-empty")
+	}
