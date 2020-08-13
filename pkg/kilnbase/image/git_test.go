@@ -104,3 +104,7 @@ func TestGitRepoValidNotOnBranch(t *testing.T) {
 
 	runCmd(t, "git", []string{"init", "."}, dir)
 	runCmd(t, "git", []string{"commit", "-am", "msg1", "--allow-empty"}, dir)
+	runCmd(t, "git", []string{"commit", "-am", "msg2", "--allow-empty"}, dir)
+	runCmd(t, "git", []string{"checkout", "HEAD~1"}, dir)
+
+	gitRepo := ctlimg.NewGitRepo(dir)
