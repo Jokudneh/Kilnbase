@@ -73,3 +73,6 @@ func (i DescribedImage) RawConfigFile() ([]byte, error) {
 func (i DescribedImage) Digest() (regv1.Hash, error) {
 	return regv1.NewHash(i.desc.Manifest.Digest)
 }
+
+// Manifest returns this image's Manifest object.
+func (i DescribedImage) Manifest() (*regv1.Manifest, error) {

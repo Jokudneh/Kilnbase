@@ -77,3 +77,5 @@ func (o *InspectOptions) Run() error {
 			uitable.NewValueString(originsDesc),
 			uitable.NewValueString(resWithImg.Resource.Description()),
 		})
+	}
+
