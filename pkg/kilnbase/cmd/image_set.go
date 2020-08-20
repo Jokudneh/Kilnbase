@@ -117,3 +117,4 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 	}
 
 	// Seems like AWS ECR doesnt like using digests for manifest uploads
+	uploadTagRef, err := regname.NewTag(fmt.Sprintf("%s:kilnbase-%s-%s", importRepo.Name(), itemDigest.Algorithm, itemDigest.Hex))

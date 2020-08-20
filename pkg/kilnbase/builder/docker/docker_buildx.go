@@ -121,3 +121,4 @@ func (d Buildx) BuildAndOptionallyPush(
 		}
 		if opts.NoCache != nil && *opts.NoCache {
 			cmdArgs = append(cmdArgs, "--no-cache")
+		}
