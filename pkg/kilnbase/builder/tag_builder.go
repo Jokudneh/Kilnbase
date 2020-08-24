@@ -58,3 +58,5 @@ func (d TagBuilder) RandomStr50() (string, error) {
 	return d.CheckLen(fmt.Sprintf("rand-%d-%s", time.Now().UTC().UnixNano(), result), 50), nil
 }
 
+func (d TagBuilder) randomBytes(n int) ([]byte, error) {
+	bs := make([]byte, n)

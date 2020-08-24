@@ -88,3 +88,6 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 
 		imageID = "sha256:" + matches[2]
 	}
+
+	return d.docker.RetagStable(ctlbdk.NewTmpRef(imageID), image, imageID, prefixedLogger)
+}

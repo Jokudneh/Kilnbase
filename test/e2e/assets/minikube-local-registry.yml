@@ -83,3 +83,4 @@ data:
         key: /etc/docker/registry-tls/key.pem
     health:
       storagedriver:
+        enabled: true
