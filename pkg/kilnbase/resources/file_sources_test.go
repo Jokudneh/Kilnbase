@@ -94,3 +94,4 @@ func TestRedactErrorMessage(t *testing.T) {
 		})
 	}
 }
+

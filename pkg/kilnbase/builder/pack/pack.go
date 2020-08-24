@@ -87,3 +87,4 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 		}
 
 		imageID = "sha256:" + matches[2]
+	}

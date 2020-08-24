@@ -150,3 +150,5 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 
 	return resBss, nil
 }
+
+func (o *ResolveOptions) collectImageReferences(nonConfigRs []ctlres.Resource,

@@ -57,3 +57,7 @@ func TestRead(t *testing.T) {
 	}
 }
 
+func TestWrite(t *testing.T) {
+	w := bytes.NewBuffer([]byte{})
+	called := false
+
