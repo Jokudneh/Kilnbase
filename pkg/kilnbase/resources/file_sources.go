@@ -93,3 +93,7 @@ func redactErrorMessage(errMsg string) string {
 			break
 		}
 
+		// Adjust position to account for searchPos offset
+		idx := searchPos + loc[schemeStartIdx]
+
+		// Find URL boundary

@@ -89,3 +89,4 @@ func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 
 	if un.IsList() {
 		list, err := un.ToList()
+		if err != nil {
