@@ -59,3 +59,5 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 			rule:    imageMatcher("docker.io/IMG"),
 			value:   lowerCaseDockerIoImg,
 			matched: false,
+		},
+		{

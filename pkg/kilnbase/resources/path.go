@@ -83,3 +83,7 @@ func (p Path) MarshalJSON() ([]byte, error) {
 			result = append(result, *part.MapKey)
 		case part.ArrayIndex != nil:
 			result = append(result, part.ArrayIndex)
+		default:
+			panic("Unknown path part")
+		}
+	}
