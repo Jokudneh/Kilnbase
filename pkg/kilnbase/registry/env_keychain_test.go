@@ -60,3 +60,5 @@ func TestEnvKeychainResolveNoMatchIsAnonymous(t *testing.T) {
 	}
 	if cfg.Username != "" || cfg.Password != "" {
 		t.Fatalf("no env vars should give anonymous creds: got %+v",
+			cfg)
+	}

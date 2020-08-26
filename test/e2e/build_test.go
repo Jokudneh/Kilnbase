@@ -100,3 +100,7 @@ destinations:
 - image: simple-app-two
   newImage: docker.io/*username*/kilnbase-e2e-tests-build
 # 'unused' will not be pushed
+- image: unused
+  path: invalid-dir
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
