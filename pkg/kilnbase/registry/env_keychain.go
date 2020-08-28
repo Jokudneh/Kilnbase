@@ -91,3 +91,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 		"PASSWORD": func(info *envKeychainInfo, val string) error {
 			info.Password = val
 			return nil
+		},
+		"IDENTITY_TOKEN": func(info *envKeychainInfo, val string) error {
+			info.IdentityToken = val
+			return nil
