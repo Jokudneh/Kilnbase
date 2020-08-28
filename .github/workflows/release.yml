@@ -86,3 +86,6 @@ jobs:
                 }
               }
             }
+            console.log(checksums)
+
+            return `${checksums['kilnbase-darwin-amd64']}  ./kilnbase-darwin-amd64

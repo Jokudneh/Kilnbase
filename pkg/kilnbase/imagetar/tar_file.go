@@ -83,3 +83,6 @@ func (f tarFileChunkReadCloser) Close() error {
 	//   fmt.Printf("%s: close\n>>>%s<<<\n\n", f.DebugId, debug.Stack())
 
 	err := f.Closer.Close()
+	if err != nil {
+		// Ignore dup close error since closing file twice does
+		// not have any side-effects (except just being conceptually wrong)
