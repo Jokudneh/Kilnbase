@@ -61,3 +61,7 @@ func TestWrite(t *testing.T) {
 	w := bytes.NewBuffer([]byte{})
 	called := false
 
+	wac := &WriteCloser{
+		Writer: w,
+		CloseFunc: func() error {
+			called = true

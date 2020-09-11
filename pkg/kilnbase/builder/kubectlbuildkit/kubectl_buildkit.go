@@ -117,3 +117,6 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 
 	return tagRef, nil
 }
+
+func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) (string, error) {
+	tb := ctlb.TagBuilder{}
