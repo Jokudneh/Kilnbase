@@ -46,3 +46,6 @@ func (vc *verifyReader) Read(b []byte) (int, error) {
 		}
 	}
 	return n, err
+}
+
+// ReadCloser wraps the given io.ReadCloser to verify that its contents match

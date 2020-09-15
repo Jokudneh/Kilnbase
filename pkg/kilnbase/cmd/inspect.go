@@ -79,3 +79,4 @@ func (o *InspectOptions) Run() error {
 		})
 	}
 
+	o.ui.PrintTable(table)
