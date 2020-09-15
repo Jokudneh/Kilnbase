@@ -137,3 +137,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			want: false,
 		},
 		{ // OSVersion and Variant are specified in given but not in required.
+			// matchesPlatform expected to return true.

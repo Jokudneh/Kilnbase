@@ -84,3 +84,6 @@ data:
     health:
       storagedriver:
         enabled: true
+        interval: 10s
+        threshold: 3
+    # Custom: allows for foreign layers to be allowed in

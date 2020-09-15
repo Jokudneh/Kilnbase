@@ -79,3 +79,6 @@ release:
     ```shell
     # Download the binary
     curl -LO https://github.com/{{ .Env.GITHUB_REPOSITORY }}/releases/download/{{ .Tag }}/{{ .ProjectName }}-linux-amd64
+
+    # Move the binary in to your PATH
+    mv kapp-linux-amd64 /usr/local/bin/kilnbase
