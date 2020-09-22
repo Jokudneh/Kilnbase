@@ -89,3 +89,7 @@ spec:
 
 To verify that the registry is up and running:\
 In [GKE](https://console.cloud.google.com/), navigate to Kubernetes Engine, then 'Services & Ingress'\
+Confirm that there is an 'External load balancer' named 'registry' with an 'External Endpoint' and a link that returns a 200.\
+At the bottom of the details view (click on registry), see that port forwarding is set up with a 'target port' of 5000.
+
+That's all!  We should now be able to run regular commands against it:
