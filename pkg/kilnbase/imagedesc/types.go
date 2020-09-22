@@ -73,3 +73,4 @@ type ManifestDescriptor struct {
 	Digest    string
 	Raw       string
 }
+

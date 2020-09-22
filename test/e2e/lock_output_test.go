@@ -151,3 +151,6 @@ images:
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
 	}
 
+	expectedFileContents := strings.ReplaceAll(`apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Config
+minimumRequiredVersion: __ver__
