@@ -96,3 +96,7 @@ func (c Conf) SearchRulesWithoutDefaults() []SearchRule {
 	for _, config := range c.configs {
 		for _, key := range config.Keys {
 			result = append(result, SearchRule{
+				KeyMatcher: &SearchRuleKeyMatcher{Name: key},
+			})
+		}
+	}
