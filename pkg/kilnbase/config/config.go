@@ -156,3 +156,7 @@ func NewConfigFromResource(res ctlres.Resource) (Config, error) {
 
 	err = config.Validate()
 	if err != nil {
+		return Config{}, fmt.Errorf("Validating %s: %s", res.Description(), err)
+	}
+
+	for i, imageDst := range config.Destinations {

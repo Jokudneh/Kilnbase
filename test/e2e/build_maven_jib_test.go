@@ -84,3 +84,4 @@ func TestMavenJibBuildAndPushSuccessful(t *testing.T) {
 		t.Fatalf("failed to copy %s to %s: %v", assetPath, secondAssetPath, err)
 	}
 	defer func() {
+		if err := exec.Command("rm", "-rf", secondAssetPath).Run(); err != nil {
