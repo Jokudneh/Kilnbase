@@ -139,3 +139,7 @@ func TestMatchesPlatformSelection(t *testing.T) {
 		{ // OSVersion and Variant are specified in given but not in required.
 			// matchesPlatform expected to return true.
 			given: v1.Platform{
+				Architecture: "arm",
+				OS:           "linux",
+				OSVersion:    "10.0.10586",
+				OSFeatures:   []string{"win64k"},

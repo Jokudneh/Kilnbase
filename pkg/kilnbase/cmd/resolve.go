@@ -152,3 +152,4 @@ func (o *ResolveOptions) ResolveResources(logger *ctllog.Logger, pLogger *ctllog
 }
 
 func (o *ResolveOptions) collectImageReferences(nonConfigRs []ctlres.Resource,
+	conf ctlconf.Conf) (*UnprocessedImageURLs, error) {

@@ -101,3 +101,6 @@ func GitRedactedRemoteURL(url string) string {
 	url, _, _ = strings.Cut(url, "?")
 	url, _, _ = strings.Cut(url, "#")
 
+	pieces := strings.SplitN(url, "@", 2)
+	if len(pieces) == 1 {
+		return url
