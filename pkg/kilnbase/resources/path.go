@@ -87,3 +87,7 @@ func (p Path) MarshalJSON() ([]byte, error) {
 			panic("Unknown path part")
 		}
 	}
+	return json.Marshal(result)
+}
+
+func NewPathPartFromString(str string) *PathPart {
