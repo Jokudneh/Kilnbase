@@ -51,3 +51,5 @@ func (vc *verifyReader) Read(b []byte) (int, error) {
 // ReadCloser wraps the given io.ReadCloser to verify that its contents match
 // the provided v1.Hash before io.EOF is returned.
 func ReadCloser(r io.ReadCloser, h v1.Hash) (io.ReadCloser, error) {
+	w, err := v1.Hasher(h.Algorithm)
+	if err != nil {

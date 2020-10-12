@@ -76,3 +76,6 @@ func (i DescribedImage) Digest() (regv1.Hash, error) {
 
 // Manifest returns this image's Manifest object.
 func (i DescribedImage) Manifest() (*regv1.Manifest, error) {
+	var manifest *regv1.Manifest
+	err := json.Unmarshal([]byte(i.desc.Manifest.Raw), &manifest)
+	if err != nil {
