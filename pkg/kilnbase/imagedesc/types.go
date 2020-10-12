@@ -74,3 +74,7 @@ type ManifestDescriptor struct {
 	Raw       string
 }
 
+func (td ImageLayerDescriptor) IsDistributable() bool {
+	// Example layer representation for windows rootfs:
+	//   "mediaType": "application/vnd.docker.image.rootfs.foreign.diff.tar.gzip",
+	//   "size": 1654613376,

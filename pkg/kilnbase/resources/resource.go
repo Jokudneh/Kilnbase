@@ -92,3 +92,4 @@ func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 		if err != nil {
 			return nil, err
 		}
+
