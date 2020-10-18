@@ -115,3 +115,5 @@ func TestImageRefsMatches(t *testing.T) {
 					"key": "found:gcr.io/repo:something",
 				},
 			},
+			SearchRules: []ctlconf.SearchRule{{
+				KeyMatcher: &ctlconf.SearchRuleKeyMatcher{

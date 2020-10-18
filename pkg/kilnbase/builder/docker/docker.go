@@ -147,3 +147,7 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
 		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
 
+		err := cmd.Run()
+		if err != nil {
+			prefixedLogger.Write([]byte(fmt.Sprintf("tag error: %s\n", err)))
+			return TmpRef{}, err

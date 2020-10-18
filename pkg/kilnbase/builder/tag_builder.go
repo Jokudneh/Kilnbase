@@ -64,3 +64,4 @@ func (d TagBuilder) randomBytes(n int) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+	return bs, nil

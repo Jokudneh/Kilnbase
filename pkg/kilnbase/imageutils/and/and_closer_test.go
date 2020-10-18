@@ -65,3 +65,4 @@ func TestWrite(t *testing.T) {
 		Writer: w,
 		CloseFunc: func() error {
 			called = true
+			return nil
