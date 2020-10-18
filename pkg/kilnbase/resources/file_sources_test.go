@@ -95,3 +95,6 @@ func TestRedactErrorMessage(t *testing.T) {
 	}
 }
 
+func TestRedactURL(t *testing.T) {
+	testCases := []struct {
+		name     string
