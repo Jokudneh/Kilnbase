@@ -112,3 +112,5 @@ func TestGitRepoValidNotOnBranch(t *testing.T) {
 		t.Fatalf("Expected not-on-branch repo to be a git repo")
 	}
 	url, err := gitRepo.RemoteURL()
+	if err != nil || url != ctlimg.GitRepoRemoteURLUnknown {
+		t.Fatalf("Expected unknown remote url")
