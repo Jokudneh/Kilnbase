@@ -60,3 +60,7 @@ func (d TagBuilder) RandomStr50() (string, error) {
 
 func (d TagBuilder) randomBytes(n int) ([]byte, error) {
 	bs := make([]byte, n)
+	_, err := rand.Read(bs)
+	if err != nil {
+		return nil, err
+	}
