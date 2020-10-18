@@ -136,3 +136,7 @@ spec:
 	defer os.RemoveAll(path)
 
 	out, _ := kilnbase.RunWithOpts([]string{"package", "-f", "-", "--output", path}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})
+
+	expectedOut := ""

@@ -120,3 +120,5 @@ func (d KubectlBuildkit) BuildAndPush(image, directory string,
 
 func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) (string, error) {
 	tb := ctlb.TagBuilder{}
+
+	randPrefix50, err := tb.RandomStr50()
