@@ -88,3 +88,4 @@ func (f tarFileChunkReadCloser) Close() error {
 		// not have any side-effects (except just being conceptually wrong)
 		if strings.Contains(err.Error(), "file already closed") {
 			// fmt.Printf("%s: dup close\n\n", f.DebugId)
+			return nil

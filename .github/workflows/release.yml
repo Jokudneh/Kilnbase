@@ -89,3 +89,6 @@ jobs:
             console.log(checksums)
 
             return `${checksums['kilnbase-darwin-amd64']}  ./kilnbase-darwin-amd64
+            ${checksums['kilnbase-darwin-arm64']}  ./kilnbase-darwin-arm64
+            ${checksums['kilnbase-linux-amd64']}  ./kilnbase-linux-amd64
+            ${checksums['kilnbase-linux-arm64']}  ./kilnbase-linux-arm64

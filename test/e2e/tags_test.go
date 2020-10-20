@@ -61,3 +61,6 @@ image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
 	})
 
 	logger.Section("check that pushed tags have published digest", func() {
+		input := env.WithRegistries(`
+kind: Object
+spec:
