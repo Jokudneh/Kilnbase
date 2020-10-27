@@ -154,3 +154,4 @@ images:
 	expectedFileContents := strings.ReplaceAll(`apiVersion: kilnbase.k14s.io/v1alpha1
 kind: Config
 minimumRequiredVersion: __ver__
+overrides:

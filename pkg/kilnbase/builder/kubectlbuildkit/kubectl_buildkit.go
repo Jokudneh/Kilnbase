@@ -122,3 +122,4 @@ func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) 
 	tb := ctlb.TagBuilder{}
 
 	randPrefix50, err := tb.RandomStr50()
+	if err != nil {

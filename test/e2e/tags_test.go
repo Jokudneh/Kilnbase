@@ -64,3 +64,6 @@ image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
 		input := env.WithRegistries(`
 kind: Object
 spec:
+- image: docker.io/*username*/kilnbase-e2e-tests-build:staging
+- image: docker.io/*username*/kilnbase-e2e-tests-build:v1.0.0
+`)
