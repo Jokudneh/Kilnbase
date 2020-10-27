@@ -91,3 +91,6 @@ func (p Path) MarshalJSON() ([]byte, error) {
 }
 
 func NewPathPartFromString(str string) *PathPart {
+	return &PathPart{MapKey: &str}
+}
+

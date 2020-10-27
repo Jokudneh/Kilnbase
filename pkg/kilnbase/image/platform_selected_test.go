@@ -147,3 +147,5 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				Features:     []string{"sse4"},
 			},
 			required: ctlconf.PlatformSelection{
+				Architecture: "arm",
+				OS:           "linux",
