@@ -79,3 +79,6 @@ func (i DescribedImage) Manifest() (*regv1.Manifest, error) {
 	var manifest *regv1.Manifest
 	err := json.Unmarshal([]byte(i.desc.Manifest.Raw), &manifest)
 	if err != nil {
+		return nil, err
+	}
+	return manifest, nil

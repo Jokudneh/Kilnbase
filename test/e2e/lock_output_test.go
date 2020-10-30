@@ -155,3 +155,4 @@ images:
 kind: Config
 minimumRequiredVersion: __ver__
 overrides:
+- image: nginx:1.14.2

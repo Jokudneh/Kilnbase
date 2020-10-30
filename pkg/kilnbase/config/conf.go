@@ -103,3 +103,7 @@ func (c Conf) SearchRulesWithoutDefaults() []SearchRule {
 	for _, config := range c.configs {
 		result = append(result, config.SearchRules...)
 	}
+	return c.dedupSearchRules(result)
+}
+
+func (c Conf) dedupSearchRules(rules []SearchRule) []SearchRule {
