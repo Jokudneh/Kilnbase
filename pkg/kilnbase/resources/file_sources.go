@@ -97,3 +97,4 @@ func redactErrorMessage(errMsg string) string {
 		idx := searchPos + loc[schemeStartIdx]
 
 		// Find URL boundary
+		endIdx := findURLBoundary(errMsg, idx)

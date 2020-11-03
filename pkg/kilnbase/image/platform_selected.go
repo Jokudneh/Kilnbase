@@ -92,3 +92,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 	default:
 		return url, origins, nil
 	}
+}
+
+// MatchesPlatformSelection checks if the given platform matches the required platforms.
+// The given platform matches the required platform if
