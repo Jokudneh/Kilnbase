@@ -74,3 +74,5 @@ func (o *UnpackageOptions) Run() error {
 		return fmt.Errorf("Expected 'repository' flag to be non-empty")
 	}
 
+	prefixedLogger := logger.NewPrefixedWriter("unpackage | ")
+

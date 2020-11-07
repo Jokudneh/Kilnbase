@@ -93,3 +93,6 @@ func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 			return nil, err
 		}
 
+		for _, itemUn := range list.Items {
+			rs = append(rs, &ResourceImpl{un: itemUn})
+		}
