@@ -82,3 +82,7 @@ func (i DescribedImage) Manifest() (*regv1.Manifest, error) {
 		return nil, err
 	}
 	return manifest, nil
+}
+
+// RawManifest returns the serialized bytes of Manifest()
+func (i DescribedImage) RawManifest() ([]byte, error) {
