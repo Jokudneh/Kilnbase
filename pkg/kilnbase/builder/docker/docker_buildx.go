@@ -122,3 +122,7 @@ func (d Buildx) BuildAndOptionallyPush(
 		if opts.NoCache != nil && *opts.NoCache {
 			cmdArgs = append(cmdArgs, "--no-cache")
 		}
+		if opts.File != nil {
+			// Since docker command is executed with cwd of directory,
+			// Dockerfile path doesnt need to be joined with it
+			cmdArgs = append(cmdArgs, "--file", *opts.File)
