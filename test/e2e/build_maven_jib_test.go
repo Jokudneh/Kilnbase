@@ -85,3 +85,6 @@ func TestMavenJibBuildAndPushSuccessful(t *testing.T) {
 	}
 	defer func() {
 		if err := exec.Command("rm", "-rf", secondAssetPath).Run(); err != nil {
+			t.Logf("failed to remove %s: %v", secondAssetPath, err)
+		}
+	}()

@@ -94,3 +94,7 @@ func NewPathPartFromString(str string) *PathPart {
 	return &PathPart{MapKey: &str}
 }
 
+func NewPathPartFromIndex(i int) *PathPart {
+	return &PathPart{ArrayIndex: &PathPartArrayIndex{Index: &i}}
+}
+
