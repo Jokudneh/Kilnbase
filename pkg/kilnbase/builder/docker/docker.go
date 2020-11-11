@@ -151,3 +151,7 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 		if err != nil {
 			prefixedLogger.Write([]byte(fmt.Sprintf("tag error: %s\n", err)))
 			return TmpRef{}, err
+		}
+	}
+
+	// Remove temporary tag to be nice to `docker images` output.

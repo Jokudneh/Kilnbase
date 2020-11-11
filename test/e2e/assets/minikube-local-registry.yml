@@ -87,3 +87,7 @@ data:
         interval: 10s
         threshold: 3
     # Custom: allows for foreign layers to be allowed in
+    validation:
+      manifests:
+        urls:
+          allow:

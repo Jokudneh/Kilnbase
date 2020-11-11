@@ -126,3 +126,6 @@ func (d Buildx) BuildAndOptionallyPush(
 			// Since docker command is executed with cwd of directory,
 			// Dockerfile path doesnt need to be joined with it
 			cmdArgs = append(cmdArgs, "--file", *opts.File)
+		}
+		if opts.RawOptions != nil {
+			cmdArgs = append(cmdArgs, *opts.RawOptions...)
