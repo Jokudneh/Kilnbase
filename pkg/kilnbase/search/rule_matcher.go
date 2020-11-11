@@ -60,3 +60,7 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 		case len(m.rule.ValueMatcher.ImageRepo) > 0:
 			if valueStr, ok := value.(string); ok {
 				repo, matchesImg := ctlimg.URLRepo(valueStr)
+				ruleRepo := m.rule.ValueMatcher.ImageRepo
+				wantRepo := ctlbdk.LowerCaseRegistry(ruleRepo)
+				gotRepo := ctlbdk.LowerCaseRegistry(repo)
+				if matchesImg && wantRepo == gotRepo {
