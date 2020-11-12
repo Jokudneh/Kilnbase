@@ -66,3 +66,6 @@ func TestWrite(t *testing.T) {
 		CloseFunc: func() error {
 			called = true
 			return nil
+		},
+	}
+

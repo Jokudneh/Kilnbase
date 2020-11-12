@@ -135,3 +135,7 @@ func (i Registry) WriteTag(dstRef regname.Tag, srcRef regname.Digest) error {
 		if err != nil {
 			return err
 		}
+
+		return regremote.Tag(dstRef, desc, i.opts...)
+	})
+	if err != nil {
