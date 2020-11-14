@@ -67,3 +67,4 @@ spec:
 - image: docker.io/*username*/kilnbase-e2e-tests-build:staging
 - image: docker.io/*username*/kilnbase-e2e-tests-build:v1.0.0
 `)
+

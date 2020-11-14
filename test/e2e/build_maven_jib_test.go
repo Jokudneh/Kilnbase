@@ -88,3 +88,4 @@ func TestMavenJibBuildAndPushSuccessful(t *testing.T) {
 			t.Logf("failed to remove %s: %v", secondAssetPath, err)
 		}
 	}()
+
