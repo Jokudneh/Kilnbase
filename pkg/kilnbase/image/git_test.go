@@ -114,3 +114,7 @@ func TestGitRepoValidNotOnBranch(t *testing.T) {
 	url, err := gitRepo.RemoteURL()
 	if err != nil || url != ctlimg.GitRepoRemoteURLUnknown {
 		t.Fatalf("Expected unknown remote url")
+	}
+	sha, err := gitRepo.HeadSHA()
+	if err != nil || sha == ctlimg.GitRepoHeadSHANoCommits || len(sha) < 20 {
+		t.Fatalf("Expected head sha to succeed: %s; %s", err, sha)

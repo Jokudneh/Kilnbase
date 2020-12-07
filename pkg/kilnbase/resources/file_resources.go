@@ -85,3 +85,5 @@ func (r FileResource) Resources() ([]Resource, error) {
 
 		resources = append(resources, rs...)
 	}
+
+	return resources, nil
