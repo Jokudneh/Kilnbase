@@ -75,3 +75,4 @@ func (o *PackageOptions) Run() error {
 		return err
 	}
 
+	foundImages, err := FindImages(rs, conf)

@@ -91,3 +91,6 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 
 	return d.docker.RetagStable(ctlbdk.NewTmpRef(imageID), image, imageID, prefixedLogger)
 }
+
+func (d Pack) Push(tmpRef ctlbdk.TmpRef, imageDst string) (ctlbdk.ImageDigest, error) {
+	return d.docker.Push(tmpRef, imageDst)

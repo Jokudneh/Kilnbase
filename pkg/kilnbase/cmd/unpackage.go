@@ -76,3 +76,5 @@ func (o *UnpackageOptions) Run() error {
 
 	prefixedLogger := logger.NewPrefixedWriter("unpackage | ")
 
+	nonConfigRs, conf, err := o.FileFlags.ResourcesAndConfig()
+	if err != nil {

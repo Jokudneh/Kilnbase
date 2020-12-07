@@ -99,3 +99,6 @@ spec:
 - image: index.docker.io/*username*/kilnbase-test-relocate-successful-with-many-images@sha256:fc09ea0f969147a4843a564c5b677fbf3a6f94b56627d00b313b4c30d5fef094
 - image: index.docker.io/*username*/kilnbase-test-relocate-successful-with-many-images@sha256:ba446f8cf98bafdad4514fd492432dd180243cbc55a0b9c6bebfe31cb169033d
 - image: index.docker.io/*username*/kilnbase-test-relocate-successful-with-many-images@sha256:2e0b84c5fcb1e6e5cdb07a70210f2e462aa52119f7a330660a7444a938deefbb
+- image: index.docker.io/*username*/kilnbase-test-relocate-successful-with-many-images@sha256:9762d9a80b90a5efe299d4848057ac5c45fb384570b36f60aad38fe2b1704bd6
+- image: index.docker.io/*username*/kilnbase-test-relocate-successful-with-many-images@sha256:ad85cb5f5ad9a61a3f38277fed371df43ea0fc55d9073dfa8f4fc2e27c127603
+- image: index.docker.io/*username*/kilnbase-test-relocate-successful-with-many-images@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b
