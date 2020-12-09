@@ -68,3 +68,6 @@ spec:
 - image: docker.io/*username*/kilnbase-e2e-tests-build:v1.0.0
 `)
 
+		out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
+			StdinReader: strings.NewReader(input),
+		})

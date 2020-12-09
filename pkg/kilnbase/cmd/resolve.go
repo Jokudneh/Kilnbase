@@ -157,3 +157,6 @@ func (o *ResolveOptions) collectImageReferences(nonConfigRs []ctlres.Resource,
 
 	for _, res := range nonConfigRs {
 		imageRefs := ctlser.NewImageRefs(res.DeepCopyRaw(), conf.SearchRules())
+
+		imageRefs.Visit(func(imgURL string) (string, bool) {
+			imageURLs.Add(UnprocessedImageURL{imgURL})
