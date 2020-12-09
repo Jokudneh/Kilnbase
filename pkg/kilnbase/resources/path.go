@@ -98,3 +98,7 @@ func NewPathPartFromIndex(i int) *PathPart {
 	return &PathPart{ArrayIndex: &PathPartArrayIndex{Index: &i}}
 }
 
+func NewPathPartFromIndexAll() *PathPart {
+	trueBool := true
+	return &PathPart{ArrayIndex: &PathPartArrayIndex{All: &trueBool}}
+}

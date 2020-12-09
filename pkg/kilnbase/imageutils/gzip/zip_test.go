@@ -89,3 +89,6 @@ func TestReadErrors(t *testing.T) {
 	frc := io.NopCloser(fr)
 	if _, err := UnzipReadCloser(frc); err != errRead {
 		t.Error("UnzipReadCloser: expected errRead, got", err)
+	}
+
+	zr := ReadCloser(io.NopCloser(fr))
