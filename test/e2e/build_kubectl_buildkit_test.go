@@ -96,3 +96,7 @@ destinations:
 		StdinReader: strings.NewReader(input),
 	})
 
+	// Expecting same sha256 multiple times
+	out = strings.Replace(out, regexp.MustCompile("sha256:[a-z0-9]{64}").FindString(out), "SHA256-REPLACED", -1)
+
+	expectedOut := env.WithRegistries(`---

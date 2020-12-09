@@ -96,3 +96,5 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 
 // MatchesPlatformSelection checks if the given platform matches the required platforms.
 // The given platform matches the required platform if
+// - architecture and OS are identical.
+// - OS version and variant are identical if provided.
