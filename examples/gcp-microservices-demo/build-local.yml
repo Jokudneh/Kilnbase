@@ -39,3 +39,5 @@ destinations:
 - image: cartservice
   newImage: docker.io/dkalinin/microservices-demo-cartservice
 - image: loadgenerator
+  newImage: docker.io/dkalinin/microservices-demo-loadgenerator
+- image: currencyservice

@@ -100,3 +100,5 @@ func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 		rs = append(rs, &ResourceImpl{un: un})
 	}
 
+	return rs, nil
+}
