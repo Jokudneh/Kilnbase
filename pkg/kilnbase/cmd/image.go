@@ -65,3 +65,7 @@ func newImageStructs(images []Image) []imageStruct {
 		if len(st.Origins) > 0 {
 			// also check for duplicates before adding
 			if !contains(result, st) {
+				result = append(result, st)
+			}
+		}
+	}

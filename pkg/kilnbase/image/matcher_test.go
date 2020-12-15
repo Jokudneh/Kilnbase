@@ -84,3 +84,6 @@ func TestMatcherMatches(t *testing.T) {
 			Matched:  true,
 		},
 
+		// Normalization is not supported
+		{
+			ImageRef: ctlconf.ImageRef{ImageRepo: "index.docker.io/img"},

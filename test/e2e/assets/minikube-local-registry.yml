@@ -99,3 +99,4 @@ metadata:
   name: registry-ca-cert
 spec:
   isCA: true
+---
