@@ -102,3 +102,6 @@ func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 
 	return rs, nil
 }
+
+func (r *ResourceImpl) GroupVersionResource() schema.GroupVersionResource { return r.gvr }
+

@@ -125,3 +125,5 @@ func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) 
 	if err != nil {
 		return "", fmt.Errorf("Generating tmp image suffix: %s", err)
 	}
+
+	tag := tb.CheckTagLen128(fmt.Sprintf(
