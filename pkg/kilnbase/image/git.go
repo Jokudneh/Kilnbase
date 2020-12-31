@@ -107,3 +107,4 @@ func GitRedactedRemoteURL(url string) string {
 	}
 	if pieces[0] == "git" {
 		return url
+	}
