@@ -92,3 +92,6 @@ func TestReadErrors(t *testing.T) {
 	}
 
 	zr := ReadCloser(io.NopCloser(fr))
+	if _, err := zr.Read(nil); err != errRead {
+		t.Error("ReadCloser: expected errRead, got", err)
+	}
