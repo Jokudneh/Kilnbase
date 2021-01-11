@@ -173,3 +173,7 @@ func (w *TarWriter) writeLayers() error {
 			stream, err = foundLayer.Open()
 			if err != nil {
 				return err
+			}
+		}
+
+		err = w.writeTarEntry(w.tf, name, stream, imgLayer.Size)

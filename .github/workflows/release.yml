@@ -92,3 +92,5 @@ jobs:
             ${checksums['kilnbase-darwin-arm64']}  ./kilnbase-darwin-arm64
             ${checksums['kilnbase-linux-amd64']}  ./kilnbase-linux-amd64
             ${checksums['kilnbase-linux-arm64']}  ./kilnbase-linux-arm64
+            ${checksums['kilnbase-windows-amd64.exe']}  ./kilnbase-windows-amd64.exe
+            ${checksums['kilnbase-windows-arm64.exe']}  ./kilnbase-windows-arm64.exe`

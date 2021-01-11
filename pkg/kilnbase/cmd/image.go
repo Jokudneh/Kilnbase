@@ -69,3 +69,6 @@ func newImageStructs(images []Image) []imageStruct {
 			}
 		}
 	}
+	return result
+}
+
