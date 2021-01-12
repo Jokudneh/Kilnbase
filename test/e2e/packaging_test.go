@@ -141,3 +141,6 @@ spec:
 
 	expectedOut := ""
 
+	if out != expectedOut {
+		t.Fatalf("Expected package output >>>%s<<< to match >>>%s<<<", out, expectedOut)
+	}

@@ -102,3 +102,5 @@ func TestRedactURL(t *testing.T) {
 		expected string
 	}{
 		{
+			name:     "http with userinfo",
+			input:    "http://user:password@example.com/path",
