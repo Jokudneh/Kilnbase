@@ -69,3 +69,6 @@ func TestWrite(t *testing.T) {
 		},
 	}
 
+	want := "asdf"
+	if _, err := wac.Write([]byte(want)); err != nil {
+		t.Errorf("Write(%q); = %v", want, err)
