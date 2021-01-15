@@ -61,3 +61,6 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 			matched: false,
 		},
 		{
+			desc:    "image: non-string value falls back to exact cmp",
+			rule:    imageMatcher(lowerCaseDockerIoImg),
+			value:   nonStringTestValue,
