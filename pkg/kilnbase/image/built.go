@@ -95,3 +95,7 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 		return i.optionalPushWithDocker(dockerTmpRef, origins)
 
 	case i.buildSource.Bazel != nil:
+		dockerTmpRef, err := i.bazel.Run(urlRepo, i.buildSource.Path, i.buildSource.Bazel.Run)
+		if err != nil {
+			return "", nil, err
+		}
