@@ -107,3 +107,7 @@ func (c Conf) SearchRulesWithoutDefaults() []SearchRule {
 }
 
 func (c Conf) dedupSearchRules(rules []SearchRule) []SearchRule {
+	var result []SearchRule
+	for _, rule := range rules {
+		var alreadySaved bool
+		for _, savedRule := range result {
