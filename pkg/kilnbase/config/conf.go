@@ -111,3 +111,6 @@ func (c Conf) dedupSearchRules(rules []SearchRule) []SearchRule {
 	for _, rule := range rules {
 		var alreadySaved bool
 		for _, savedRule := range result {
+			if reflect.DeepEqual(rule, savedRule) {
+				alreadySaved = true
+				break
