@@ -155,3 +155,7 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 	}
 
 	// Remove temporary tag to be nice to `docker images` output.
+	// (No point in "untagging" digest reference)
+	if !strings.HasPrefix(tmpRef.AsString(), "sha256:") {
+		var stdoutBuf, stderrBuf bytes.Buffer
+

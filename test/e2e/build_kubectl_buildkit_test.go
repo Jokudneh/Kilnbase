@@ -100,3 +100,5 @@ destinations:
 	out = strings.Replace(out, regexp.MustCompile("sha256:[a-z0-9]{64}").FindString(out), "SHA256-REPLACED", -1)
 
 	expectedOut := env.WithRegistries(`---
+kind: Object
+spec:

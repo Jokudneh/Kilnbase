@@ -82,3 +82,6 @@ func (o *InspectOptions) Run() error {
 	o.ui.PrintTable(table)
 
 	return nil
+}
+
+func (o *InspectOptions) findImages(rs []ctlres.Resource,
