@@ -84,3 +84,7 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 			return v.extractValueAsJSON(val, ext.JSON.SearchRules)
 
 		case ext.YAML != nil:
+			// Prefer to decode as JSON since JSON is valid YAML.
+			// Only works for a single YAML document value.
+			val, updated := v.extractValueAsJSON(val, ext.YAML.SearchRules)
+			if updated {
