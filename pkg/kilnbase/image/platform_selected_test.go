@@ -156,3 +156,7 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			},
 			want: true,
 		},
+		{ // Ensure the optional field OSVersion & Variant match exactly if specified as required.
+			given: v1.Platform{
+				Architecture: "amd64",
+				OS:           "linux",
