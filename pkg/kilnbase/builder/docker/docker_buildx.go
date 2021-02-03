@@ -129,3 +129,4 @@ func (d Buildx) BuildAndOptionallyPush(
 		}
 		if opts.RawOptions != nil {
 			cmdArgs = append(cmdArgs, *opts.RawOptions...)
+		}
