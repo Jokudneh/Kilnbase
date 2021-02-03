@@ -108,3 +108,7 @@ func (f Factory) shouldOverride(url string) (ctlconf.ImageOverride, bool) {
 		if urlMatcher.Matches(override.ImageRef) {
 			return override, true
 		}
+	}
+	return ctlconf.ImageOverride{}, false
+}
+

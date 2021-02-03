@@ -106,3 +106,6 @@ func NewResourcesFromBytes(data []byte) ([]Resource, error) {
 func (r *ResourceImpl) GroupVersionResource() schema.GroupVersionResource { return r.gvr }
 
 func (r *ResourceImpl) Kind() string       { return r.un.GetKind() }
+func (r *ResourceImpl) APIVersion() string { return r.un.GetAPIVersion() }
+
+func (r *ResourceImpl) APIGroup() string {

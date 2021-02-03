@@ -102,3 +102,7 @@ func NewPathPartFromIndexAll() *PathPart {
 	trueBool := true
 	return &PathPart{ArrayIndex: &PathPartArrayIndex{All: &trueBool}}
 }
+
+func (p *PathPart) AsString() string {
+	switch {
+	case p.MapKey != nil:
