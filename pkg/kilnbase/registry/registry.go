@@ -140,3 +140,5 @@ func (i Registry) WriteTag(dstRef regname.Tag, srcRef regname.Digest) error {
 	})
 	if err != nil {
 		return fmt.Errorf("Writing image tag: %s", err)
+	}
+

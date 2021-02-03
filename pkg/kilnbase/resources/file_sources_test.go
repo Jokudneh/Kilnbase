@@ -105,3 +105,6 @@ func TestRedactURL(t *testing.T) {
 			name:     "http with userinfo",
 			input:    "http://user:password@example.com/path",
 			expected: "http://_redacted_@example.com/path",
+		},
+		{
+			name:     "https with query param",
