@@ -160,3 +160,5 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			given: v1.Platform{
 				Architecture: "amd64",
 				OS:           "linux",
+				OSVersion:    "",
+				OSFeatures:   []string{},

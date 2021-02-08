@@ -130,3 +130,7 @@ func (d Buildx) BuildAndOptionallyPush(
 		if opts.RawOptions != nil {
 			cmdArgs = append(cmdArgs, *opts.RawOptions...)
 		}
+
+		cmdArgs = append(cmdArgs, "--tag", tagRef, ".")
+
+		// Load built image into Docker daemon, otherwise it's not being used anywhere
