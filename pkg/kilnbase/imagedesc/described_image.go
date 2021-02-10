@@ -89,3 +89,7 @@ func (i DescribedImage) RawManifest() ([]byte, error) {
 	return []byte(i.desc.Manifest.Raw), nil
 }
 
+func (i DescribedImage) Size() (int64, error) {
+	return int64(len(i.desc.Manifest.Raw)), nil
+}
+
