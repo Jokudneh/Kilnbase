@@ -162,3 +162,4 @@ func NewConfigFromResource(res ctlres.Resource) (Config, error) {
 	for i, imageDst := range config.Destinations {
 		if len(imageDst.NewImage) == 0 {
 			imageDst.NewImage = imageDst.Image
+		}

@@ -134,3 +134,7 @@ func (d Buildx) BuildAndOptionallyPush(
 		cmdArgs = append(cmdArgs, "--tag", tagRef, ".")
 
 		// Load built image into Docker daemon, otherwise it's not being used anywhere
+		if imgDst != nil {
+			cmdArgs = append(cmdArgs, "--push")
+		} else {
+			cmdArgs = append(cmdArgs, "--load")

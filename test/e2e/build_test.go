@@ -112,3 +112,6 @@ overrides:
 
 	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
 		StdinReader: strings.NewReader(input),
+	})
+
+	reSHA := regexp.MustCompile("sha256:[a-z0-9]{64}")
