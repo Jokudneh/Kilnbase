@@ -221,3 +221,6 @@ spec:
 
 	require.YAMLEq(t, expectedOut, out)
 }
+
+func TestResolveWithImageMap(t *testing.T) {
+	env := BuildEnv(t)

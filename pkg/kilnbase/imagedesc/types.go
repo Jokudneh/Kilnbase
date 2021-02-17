@@ -78,3 +78,4 @@ func (td ImageLayerDescriptor) IsDistributable() bool {
 	// Example layer representation for windows rootfs:
 	//   "mediaType": "application/vnd.docker.image.rootfs.foreign.diff.tar.gzip",
 	//   "size": 1654613376,
+	//   "digest": "sha256:31f9df80631e7b5d379647ee7701ff50e009bd2c03b30a67a0a8e7bba4a26f94",
