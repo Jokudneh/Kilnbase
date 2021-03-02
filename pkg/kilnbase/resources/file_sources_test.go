@@ -108,3 +108,7 @@ func TestRedactURL(t *testing.T) {
 		},
 		{
 			name:     "https with query param",
+			input:    "https://example.com/api?token=secret123",
+			expected: "https://example.com/api?_redacted_",
+		},
+		{

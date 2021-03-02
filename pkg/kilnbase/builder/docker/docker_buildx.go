@@ -138,3 +138,5 @@ func (d Buildx) BuildAndOptionallyPush(
 			cmdArgs = append(cmdArgs, "--push")
 		} else {
 			cmdArgs = append(cmdArgs, "--load")
+		}
+
