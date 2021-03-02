@@ -160,3 +160,7 @@ func (o *ResolveOptions) collectImageReferences(nonConfigRs []ctlres.Resource,
 
 		imageRefs.Visit(func(imgURL string) (string, bool) {
 			imageURLs.Add(UnprocessedImageURL{imgURL})
+			return "", false
+		})
+	}
+
