@@ -101,3 +101,5 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 // - features and OS features of the required platform are subsets of those of the given platform.
 // Adapted from https://github.com/google/go-containerregistry/blob/570ba6c88a5041afebd4599981d849af96f5dba9/pkg/v1/remote/index.go#L263
 func MatchesPlatformSelection(given regv1.Platform, required ctlconf.PlatformSelection) bool {
+	// Required fields that must be identical.
+	if given.Architecture != required.Architecture || given.OS != required.OS {
