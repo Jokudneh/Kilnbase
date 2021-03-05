@@ -164,3 +164,6 @@ func (o *ResolveOptions) collectImageReferences(nonConfigRs []ctlres.Resource,
 		})
 	}
 
+	return imageURLs, nil
+}
+

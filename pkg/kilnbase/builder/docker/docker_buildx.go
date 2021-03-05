@@ -140,3 +140,4 @@ func (d Buildx) BuildAndOptionallyPush(
 			cmdArgs = append(cmdArgs, "--load")
 		}
 
+		cmd := exec.Command("docker", cmdArgs...)
