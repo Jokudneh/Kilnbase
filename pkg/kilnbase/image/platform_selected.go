@@ -103,3 +103,7 @@ func (i PlatformSelectedImage) URL() (string, []ctlconf.Origin, error) {
 func MatchesPlatformSelection(given regv1.Platform, required ctlconf.PlatformSelection) bool {
 	// Required fields that must be identical.
 	if given.Architecture != required.Architecture || given.OS != required.OS {
+		return false
+	}
+
+	// Optional fields that may be empty, but must be identical if provided.
