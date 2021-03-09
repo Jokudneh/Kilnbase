@@ -120,3 +120,4 @@ func (o *RelocateOptions) Run() error {
 		o.ui.PrintBlock(resBs)
 	}
 
+	return nil
