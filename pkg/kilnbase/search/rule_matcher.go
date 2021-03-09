@@ -64,3 +64,7 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 				wantRepo := ctlbdk.LowerCaseRegistry(ruleRepo)
 				gotRepo := ctlbdk.LowerCaseRegistry(repo)
 				if matchesImg && wantRepo == gotRepo {
+					valueMatched = true
+				}
+			}
+

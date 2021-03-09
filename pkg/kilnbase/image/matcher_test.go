@@ -91,3 +91,4 @@ func TestMatcherMatches(t *testing.T) {
 			Matched:  false,
 		},
 
+		// Registry hostname is case-insensitive (RFC 1035/1123): a
