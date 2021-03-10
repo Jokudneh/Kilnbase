@@ -144,3 +144,7 @@ spec:
 	if out != expectedOut {
 		t.Fatalf("Expected package output >>>%s<<< to match >>>%s<<<", out, expectedOut)
 	}
+
+	out, _ = kilnbase.RunWithOpts([]string{"unpackage", "-f", "-", "--input", path, "--repository", env.WithRegistries("docker.io/*username*/kilnbase-test-pkg-unpkg")}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})

@@ -112,3 +112,5 @@ func (r *ResourceImpl) APIGroup() string {
 	pieces := strings.Split(r.APIVersion(), "/")
 	if len(pieces) > 2 {
 		panic(fmt.Errorf("Expected version to be of format group/version: was %s", r.APIVersion())) // TODO panic
+	}
+	if len(pieces) == 1 {
