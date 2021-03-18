@@ -78,3 +78,6 @@ func (o *UnpackageOptions) Run() error {
 
 	nonConfigRs, conf, err := o.FileFlags.ResourcesAndConfig()
 	if err != nil {
+		return err
+	}
+

@@ -114,3 +114,6 @@ func (r *ResourceImpl) APIGroup() string {
 		panic(fmt.Errorf("Expected version to be of format group/version: was %s", r.APIVersion())) // TODO panic
 	}
 	if len(pieces) == 1 {
+		return "" // core API group
+	}
+	return pieces[0]

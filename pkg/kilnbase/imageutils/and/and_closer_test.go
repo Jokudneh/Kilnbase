@@ -73,3 +73,6 @@ func TestWrite(t *testing.T) {
 	if _, err := wac.Write([]byte(want)); err != nil {
 		t.Errorf("Write(%q); = %v", want, err)
 	}
+
+	if called {
+		t.Error("called before Close(); got true, wanted false")
