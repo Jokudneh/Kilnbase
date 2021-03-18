@@ -100,3 +100,5 @@ metadata:
 spec:
   isCA: true
 ---
+apiVersion: secretgen.k14s.io/v1alpha1
+kind: Certificate
