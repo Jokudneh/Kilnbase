@@ -102,3 +102,4 @@ spec:
 ---
 apiVersion: secretgen.k14s.io/v1alpha1
 kind: Certificate
+metadata:
