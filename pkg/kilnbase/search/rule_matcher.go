@@ -68,3 +68,6 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 				}
 			}
 
+		default:
+			panic("Unknown search rule value matcher")
+		}

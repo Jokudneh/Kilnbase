@@ -127,3 +127,6 @@ func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) 
 	}
 
 	tag := tb.CheckTagLen128(fmt.Sprintf(
+		"%s-%s",
+		randPrefix50,
+		tb.TrimStr(tb.CleanStr(image), 50),
