@@ -115,3 +115,6 @@ func TestRedactURL(t *testing.T) {
 			name: "both userinfo and query",
 			input: "http://admin:secret@api.example/call?" +
 				"token=abc&session=xyz",
+			expected: "http://_redacted_@api.example/call?_redacted_",
+		},
+		{

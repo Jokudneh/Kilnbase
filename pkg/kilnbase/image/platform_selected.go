@@ -107,3 +107,5 @@ func MatchesPlatformSelection(given regv1.Platform, required ctlconf.PlatformSel
 	}
 
 	// Optional fields that may be empty, but must be identical if provided.
+	if required.OSVersion != "" && given.OSVersion != required.OSVersion {
+		return false
