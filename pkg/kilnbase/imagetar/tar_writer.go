@@ -180,3 +180,7 @@ func (w *TarWriter) writeLayers() error {
 		if err != nil {
 			return fmt.Errorf("Writing tar entry: %s", err)
 		}
+
+		writtenLayers[name] = writtenLayer{
+			Name:   name,
+			Layer:  imgLayer,

@@ -106,3 +106,6 @@ func NewPathPartFromIndexAll() *PathPart {
 func (p *PathPart) AsString() string {
 	switch {
 	case p.MapKey != nil:
+		return *p.MapKey
+	case p.ArrayIndex != nil && p.ArrayIndex.Index != nil:
+		return fmt.Sprintf("%d", *p.ArrayIndex.Index)
