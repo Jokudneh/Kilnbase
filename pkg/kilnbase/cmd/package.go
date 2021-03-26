@@ -80,3 +80,6 @@ func (o *PackageOptions) Run() error {
 		return err
 	}
 
+	registry, err := ctlreg.NewRegistry(o.RegistryFlags.AsRegistryOpts())
+	if err != nil {
+		return err

@@ -118,3 +118,6 @@ func TestRedactURL(t *testing.T) {
 			expected: "http://_redacted_@api.example/call?_redacted_",
 		},
 		{
+			name:     "no credentials",
+			input:    "https://public.example/resource",
+			expected: "https://public.example/resource",
