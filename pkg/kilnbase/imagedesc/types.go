@@ -82,3 +82,7 @@ func (td ImageLayerDescriptor) IsDistributable() bool {
 	//   "urls": ["https://mcr.microsoft.com/v2/windows/servercore/blobs/sha256:31f9df80631e7b5d379647ee7701ff50e009bd2c03b30a67a0a8e7bba4a26f94"]
 	return regv1types.MediaType(td.MediaType).IsDistributable()
 }
+
+func (td ImageOrImageIndexDescriptor) SortKey() string {
+	switch {
+	case td.ImageIndex != nil:
