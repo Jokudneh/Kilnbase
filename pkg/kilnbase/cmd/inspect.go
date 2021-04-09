@@ -87,3 +87,6 @@ func (o *InspectOptions) Run() error {
 func (o *InspectOptions) findImages(rs []ctlres.Resource,
 	conf ctlconf.Conf) ([]foundResourceWithImage, error) {
 
+	foundImages := []foundResourceWithImage{}
+
+	for _, res := range rs {
