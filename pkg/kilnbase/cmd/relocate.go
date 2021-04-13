@@ -124,3 +124,4 @@ func (o *RelocateOptions) Run() error {
 }
 
 func (o *RelocateOptions) updateRefsInResources(
+	nonConfigRs []ctlres.Resource, conf ctlconf.Conf,
