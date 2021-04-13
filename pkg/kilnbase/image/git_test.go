@@ -120,3 +120,4 @@ func TestGitRepoValidNotOnBranch(t *testing.T) {
 		t.Fatalf("Expected head sha to succeed: %s; %s", err, sha)
 	}
 	_, err = gitRepo.HeadTags()
+	if err != nil {

@@ -115,3 +115,5 @@ overrides:
 	})
 
 	reSHA := regexp.MustCompile("sha256:[a-z0-9]{64}")
+	out = reSHA.ReplaceAllString(out, "SHA256-REPLACED")
+
