@@ -110,3 +110,6 @@ func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc r
 	}
 
 	imgIndex, err := ids.registry.Index(ref)
+	if err != nil {
+		return td, err
+	}

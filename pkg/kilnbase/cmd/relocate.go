@@ -121,3 +121,6 @@ func (o *RelocateOptions) Run() error {
 	}
 
 	return nil
+}
+
+func (o *RelocateOptions) updateRefsInResources(
