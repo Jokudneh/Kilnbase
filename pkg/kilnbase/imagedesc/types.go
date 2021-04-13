@@ -86,3 +86,7 @@ func (td ImageLayerDescriptor) IsDistributable() bool {
 func (td ImageOrImageIndexDescriptor) SortKey() string {
 	switch {
 	case td.ImageIndex != nil:
+		return td.ImageIndex.SortKey()
+	case td.Image != nil:
+		return td.Image.SortKey()
+	default:

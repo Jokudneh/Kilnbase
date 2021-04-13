@@ -159,3 +159,4 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 	if !strings.HasPrefix(tmpRef.AsString(), "sha256:") {
 		var stdoutBuf, stderrBuf bytes.Buffer
 
+		cmd := exec.Command("docker", "rmi", tmpRef.AsString())

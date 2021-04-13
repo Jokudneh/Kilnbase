@@ -90,3 +90,6 @@ func (o *InspectOptions) findImages(rs []ctlres.Resource,
 	foundImages := []foundResourceWithImage{}
 
 	for _, res := range rs {
+		imageRefs := ctlser.NewImageRefs(res.DeepCopyRaw(), conf.SearchRules())
+
+		imageRefs.Visit(func(imgURL string) (string, bool) {
