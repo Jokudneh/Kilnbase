@@ -184,3 +184,6 @@ func (w *TarWriter) writeLayers() error {
 		writtenLayers[name] = writtenLayer{
 			Name:   name,
 			Layer:  imgLayer,
+			Offset: currPos,
+		}
+	}

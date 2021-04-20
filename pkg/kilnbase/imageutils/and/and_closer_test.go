@@ -79,3 +79,7 @@ func TestWrite(t *testing.T) {
 	}
 	if err := wac.Close(); err != nil {
 		t.Errorf("Close() = %v", err)
+	}
+	if !called {
+		t.Error("called after Close(); got false, wanted true")
+	}
