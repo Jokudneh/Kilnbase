@@ -98,3 +98,6 @@ jobs:
       - name: Verify checksums signature
         run: |
           cosign verify-blob \
+            --cert dist/checksums.txt.pem \
+            --signature dist/checksums.txt.sig \
+            --certificate-identity-regexp=https://github.com/${{ github.repository_owner }} \
