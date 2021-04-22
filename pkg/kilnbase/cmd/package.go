@@ -83,3 +83,6 @@ func (o *PackageOptions) Run() error {
 	registry, err := ctlreg.NewRegistry(o.RegistryFlags.AsRegistryOpts())
 	if err != nil {
 		return err
+	}
+
+	imageSet := TarImageSet{ImageSet{o.Concurrency, prefixedLogger}, o.Concurrency, prefixedLogger}

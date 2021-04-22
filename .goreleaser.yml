@@ -82,3 +82,7 @@ release:
 
     # Move the binary in to your PATH
     mv kapp-linux-amd64 /usr/local/bin/kilnbase
+
+    # Make the binary executable
+    chmod +x /usr/local/bin/kilnbase
+    ```

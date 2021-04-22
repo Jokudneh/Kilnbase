@@ -121,3 +121,6 @@ func TestRedactURL(t *testing.T) {
 			name:     "no credentials",
 			input:    "https://public.example/resource",
 			expected: "https://public.example/resource",
+		},
+		{
+			name:     "url without userinfo",

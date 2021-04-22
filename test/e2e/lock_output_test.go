@@ -163,3 +163,7 @@ overrides:
   preresolved: true
 searchRules:
 - keyMatcher:
+    name: sidecarImage
+- keyMatcher:
+    path:
+    - images
