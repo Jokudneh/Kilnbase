@@ -88,3 +88,5 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 			// Only works for a single YAML document value.
 			val, updated := v.extractValueAsJSON(val, ext.YAML.SearchRules)
 			if updated {
+				return val, updated
+			}
