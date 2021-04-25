@@ -160,3 +160,7 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 		var stdoutBuf, stderrBuf bytes.Buffer
 
 		cmd := exec.Command("docker", "rmi", tmpRef.AsString())
+		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
+
+		err := cmd.Run()

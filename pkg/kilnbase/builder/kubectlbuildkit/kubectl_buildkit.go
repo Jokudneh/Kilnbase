@@ -130,3 +130,7 @@ func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) 
 		"%s-%s",
 		randPrefix50,
 		tb.TrimStr(tb.CleanStr(image), 50),
+	))
+
+	if imgDst != nil {
+		tagRef := imgDst.NewImage + ":" + tag
