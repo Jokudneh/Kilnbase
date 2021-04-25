@@ -72,3 +72,6 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 			panic("Unknown search rule value matcher")
 		}
 	} else {
+		valueMatched = true
+	}
+
