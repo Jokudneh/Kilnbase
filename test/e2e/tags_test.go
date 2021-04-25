@@ -75,3 +75,5 @@ spec:
 		expectedOut := fmt.Sprintf(`---
 kind: Object
 spec:
+- image: %s
+- image: %s

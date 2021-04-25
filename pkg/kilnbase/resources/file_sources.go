@@ -98,3 +98,5 @@ func redactErrorMessage(errMsg string) string {
 
 		// Find URL boundary
 		endIdx := findURLBoundary(errMsg, idx)
+
+		// Redact the URL in place
