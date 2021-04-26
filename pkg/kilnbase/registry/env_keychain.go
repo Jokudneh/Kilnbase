@@ -98,3 +98,5 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 		},
 		"REGISTRY_TOKEN": func(info *envKeychainInfo, val string) error {
 			info.RegistryToken = val
+			return nil
+		},

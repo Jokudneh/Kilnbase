@@ -95,3 +95,6 @@ func TestReadErrors(t *testing.T) {
 	if _, err := zr.Read(nil); err != errRead {
 		t.Error("ReadCloser: expected errRead, got", err)
 	}
+
+	zr = ReadCloserLevel(io.NopCloser(strings.NewReader("zip me")), -10)
+	if _, err := zr.Read(nil); err == nil {
