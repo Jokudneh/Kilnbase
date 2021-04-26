@@ -100,3 +100,7 @@ func redactErrorMessage(errMsg string) string {
 		endIdx := findURLBoundary(errMsg, idx)
 
 		// Redact the URL in place
+		urlStr := errMsg[idx:endIdx]
+		redacted := redactURL(urlStr)
+		errMsg = errMsg[:idx] + redacted + errMsg[endIdx:]
+

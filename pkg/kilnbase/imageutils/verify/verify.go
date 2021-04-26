@@ -57,3 +57,7 @@ func ReadCloser(r io.ReadCloser, h v1.Hash) (io.ReadCloser, error) {
 	}
 	r2 := io.TeeReader(r, w)
 	return &and.ReadCloser{
+		Reader: &verifyReader{
+			inner:    r2,
+			hasher:   w,
+			expected: h,
