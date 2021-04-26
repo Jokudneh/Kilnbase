@@ -93,3 +93,5 @@ func (i DescribedImage) Size() (int64, error) {
 	return int64(len(i.desc.Manifest.Raw)), nil
 }
 
+// LayerByDigest returns a Layer for interacting with a particular layer of
+// the image, looking it up by "digest" (the compressed hash).

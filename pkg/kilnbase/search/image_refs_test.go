@@ -120,3 +120,5 @@ func TestImageRefsMatches(t *testing.T) {
 					Name: "key",
 				},
 			}, {
+				KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
+					Name: "key",
