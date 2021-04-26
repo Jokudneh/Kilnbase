@@ -143,3 +143,5 @@ func (i Registry) WriteTag(dstRef regname.Tag, srcRef regname.Digest) error {
 	}
 
 	return nil
+}
+

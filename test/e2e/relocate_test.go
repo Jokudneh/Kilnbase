@@ -110,3 +110,7 @@ spec:
 - image: index.docker.io/*username*/kilnbase-test-relocate-successful-with-many-images@sha256:0f10d093fbb4437e071dcf31411ef344b4059bf26494e4b23e2625a7d9d4e77e
 - image: index.docker.io/*username*/kilnbase-test-relocate-successful-with-many-images@sha256:e3174186628b401e4a441b78513ba06e957644267332436be0c77dd7af9bdddc
 `)
+	if out != expectedOut {
+		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
+	}
+}

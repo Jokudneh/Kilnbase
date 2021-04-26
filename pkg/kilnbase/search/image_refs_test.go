@@ -122,3 +122,7 @@ func TestImageRefsMatches(t *testing.T) {
 			}, {
 				KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
 					Name: "key",
+				},
+			}},
+			OutputImages: []string{"gcr.io/repo:something"},
+		},

@@ -125,3 +125,6 @@ func (o *RelocateOptions) Run() error {
 
 func (o *RelocateOptions) updateRefsInResources(
 	nonConfigRs []ctlres.Resource, conf ctlconf.Conf,
+	resolvedImages *ProcessedImages) ([][]byte, error) {
+
+	var missingImageErrs []error
