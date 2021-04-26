@@ -100,3 +100,6 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 			info.RegistryToken = val
 			return nil
 		},
+	}
+
+	defaultInfo := envKeychainInfo{}

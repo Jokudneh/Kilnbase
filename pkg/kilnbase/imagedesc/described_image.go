@@ -95,3 +95,5 @@ func (i DescribedImage) Size() (int64, error) {
 
 // LayerByDigest returns a Layer for interacting with a particular layer of
 // the image, looking it up by "digest" (the compressed hash).
+func (i DescribedImage) LayerByDigest(digest regv1.Hash) (regv1.Layer, error) {
+	for _, layerTD := range i.desc.Layers {
