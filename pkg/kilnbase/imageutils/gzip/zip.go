@@ -95,3 +95,5 @@ func Is(r io.Reader) (bool, error) {
 		return false, nil
 	}
 	if err != nil {
+		return false, err
+	}

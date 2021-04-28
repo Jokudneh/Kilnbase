@@ -86,3 +86,6 @@ func (o *PackageOptions) Run() error {
 	}
 
 	imageSet := TarImageSet{ImageSet{o.Concurrency, prefixedLogger}, o.Concurrency, prefixedLogger}
+
+	return imageSet.Export(foundImages, o.OutputPath, registry)
+}
