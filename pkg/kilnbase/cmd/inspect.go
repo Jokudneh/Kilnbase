@@ -93,3 +93,4 @@ func (o *InspectOptions) findImages(rs []ctlres.Resource,
 		imageRefs := ctlser.NewImageRefs(res.DeepCopyRaw(), conf.SearchRules())
 
 		imageRefs.Visit(func(imgURL string) (string, bool) {
+			foundImages = append(foundImages, foundResourceWithImage{URL: imgURL, Resource: res})

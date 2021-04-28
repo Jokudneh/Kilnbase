@@ -103,3 +103,5 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 	}
 
 	defaultInfo := envKeychainInfo{}
+	infos := map[string]envKeychainInfo{}
+

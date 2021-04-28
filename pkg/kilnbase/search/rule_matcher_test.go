@@ -66,3 +66,6 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 			value:   nonStringTestValue,
 			matched: false,
 		},
+		{
+			desc:    "imageRepo: mismatched hostname case still matches",
+			rule:    repoMatcher("DOCKER.IO/img"),
