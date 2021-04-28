@@ -105,3 +105,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 	defaultInfo := envKeychainInfo{}
 	infos := map[string]envKeychainInfo{}
 
+	for _, env := range os.Environ() {
+		pieces := strings.SplitN(env, "=", 2)
+		if len(pieces) != 2 {
+			continue

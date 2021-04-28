@@ -187,3 +187,7 @@ func (w *TarWriter) writeLayers() error {
 			Offset: currPos,
 		}
 	}
+
+	err := w.tf.Flush()
+	if err != nil {
+		return err

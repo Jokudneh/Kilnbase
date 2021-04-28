@@ -116,3 +116,6 @@ func (f Factory) shouldBuild(url string) (ctlconf.Source, bool) {
 	urlMatcher := Matcher{url}
 	for _, src := range f.opts.Conf.Sources() {
 		if urlMatcher.Matches(src.ImageRef) {
+			return src, true
+		}
+	}
