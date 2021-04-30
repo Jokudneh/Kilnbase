@@ -123,3 +123,6 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 	}
 
 	o.logger.Write([]byte(fmt.Sprintf("importing %s -> %s...\n", existingRef.Name(), importDigestRef.Name())))
+
+	switch {
+	case item.Image != nil:

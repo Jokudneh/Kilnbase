@@ -119,3 +119,7 @@ func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc r
 		return td, err
 	}
 
+	td.Raw = string(rawManifest)
+
+	imgIndexManifest, err := imgIndex.IndexManifest()
+	if err != nil {
