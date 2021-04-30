@@ -61,3 +61,5 @@ func ReadCloser(r io.ReadCloser, h v1.Hash) (io.ReadCloser, error) {
 			inner:    r2,
 			hasher:   w,
 			expected: h,
+		},
+		CloseFunc: r.Close,
