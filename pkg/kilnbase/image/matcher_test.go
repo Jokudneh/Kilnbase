@@ -93,3 +93,7 @@ func TestMatcherMatches(t *testing.T) {
 
 		// Registry hostname is case-insensitive (RFC 1035/1123): a
 		// mismatched hostname case between the manifest-scanned ImageRef and
+		// the user-authored config URL must still match.
+		{
+			ImageRef: ctlconf.ImageRef{Image: "Docker.IO/img"},
+			URL:      "docker.io/img",
