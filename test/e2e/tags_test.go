@@ -78,3 +78,4 @@ spec:
 - image: %s
 - image: %s
 `, published["image"], published["image"])
+

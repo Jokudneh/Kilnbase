@@ -92,3 +92,4 @@ func TestMatcherMatches(t *testing.T) {
 		},
 
 		// Registry hostname is case-insensitive (RFC 1035/1123): a
+		// mismatched hostname case between the manifest-scanned ImageRef and
