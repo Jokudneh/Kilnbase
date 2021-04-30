@@ -89,3 +89,7 @@ func (o *PackageOptions) Run() error {
 
 	return imageSet.Export(foundImages, o.OutputPath, registry)
 }
+
+func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageURLs, error) {
+
+	foundImages := NewUnprocessedImageURLs()

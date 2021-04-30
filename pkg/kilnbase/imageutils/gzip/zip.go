@@ -97,3 +97,4 @@ func Is(r io.Reader) (bool, error) {
 	if err != nil {
 		return false, err
 	}
+	return bytes.Equal(magicHeader, gzipMagicHeader), nil
