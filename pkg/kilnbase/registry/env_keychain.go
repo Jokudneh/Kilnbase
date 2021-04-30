@@ -109,3 +109,5 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 		pieces := strings.SplitN(env, "=", 2)
 		if len(pieces) != 2 {
 			continue
+		}
+
