@@ -89,3 +89,5 @@ func TestMavenJibBuildAndPushSuccessful(t *testing.T) {
 		}
 	}()
 
+	input := env.WithRegistries(fmt.Sprintf(`
+kind: Object
