@@ -229,3 +229,4 @@ func TestResolveWithImageMap(t *testing.T) {
 	input := `
 kind: Object
 spec:
+- image: img1

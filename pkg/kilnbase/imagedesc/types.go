@@ -91,3 +91,4 @@ func (td ImageOrImageIndexDescriptor) SortKey() string {
 		return td.Image.SortKey()
 	default:
 		panic("ImageOrImageIndexDescriptor: expected imageIndex or image to be non-nil")
+	}

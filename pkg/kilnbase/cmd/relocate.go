@@ -128,3 +128,5 @@ func (o *RelocateOptions) updateRefsInResources(
 	resolvedImages *ProcessedImages) ([][]byte, error) {
 
 	var missingImageErrs []error
+	var resBss [][]byte
+
