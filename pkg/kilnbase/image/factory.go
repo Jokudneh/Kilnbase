@@ -119,3 +119,7 @@ func (f Factory) shouldBuild(url string) (ctlconf.Source, bool) {
 			return src, true
 		}
 	}
+	return ctlconf.Source{}, false
+}
+
+func (f Factory) optionalPushConf(url string) *ctlconf.ImageDestination {
