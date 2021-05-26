@@ -167,3 +167,6 @@ func NewConfigFromResource(res ctlres.Resource) (Config, error) {
 	}
 
 	return config, nil
+}
+
+func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {

@@ -73,3 +73,4 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 			matched: true,
 		},
 		{
+			desc:    "imageRepo: repo path case remains significant",
