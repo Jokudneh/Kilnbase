@@ -134,3 +134,6 @@ func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) 
 
 	if imgDst != nil {
 		tagRef := imgDst.NewImage + ":" + tag
+
+		_, err := regname.NewTag(tagRef, regname.WeakValidation)
+		if err != nil {

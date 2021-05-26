@@ -90,3 +90,5 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 			if updated {
 				return val, updated
 			}
+
+			return v.extractValueAsYAML(val, ext.YAML.SearchRules)
