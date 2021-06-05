@@ -83,3 +83,5 @@ func TestWrite(t *testing.T) {
 	if !called {
 		t.Error("called after Close(); got false, wanted true")
 	}
+
+	if got := w.String(); got != want {

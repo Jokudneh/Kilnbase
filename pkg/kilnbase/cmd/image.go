@@ -75,3 +75,4 @@ func newImageStructs(images []Image) []imageStruct {
 func newImageStruct(image Image) imageStruct {
 	result := imageStruct{URL: image.URL}
 	for _, origin := range image.Origins {
+		result.Origins = append(result.Origins, origin)

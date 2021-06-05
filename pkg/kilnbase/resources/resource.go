@@ -117,3 +117,4 @@ func (r *ResourceImpl) APIGroup() string {
 		return "" // core API group
 	}
 	return pieces[0]
+}
