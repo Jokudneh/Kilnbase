@@ -156,3 +156,5 @@ spec:
 `)
 
 	if out != expectedOut {
+		t.Fatalf("Expected unpackage output >>>%s<<< to match >>>%s<<<", out, expectedOut)
+	}

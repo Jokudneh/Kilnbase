@@ -92,3 +92,6 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 			}
 
 			return v.extractValueAsYAML(val, ext.YAML.SearchRules)
+
+		default:
+			panic("Unknown extraction type")
