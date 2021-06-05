@@ -97,3 +97,5 @@ func TestMatcherMatches(t *testing.T) {
 		{
 			ImageRef: ctlconf.ImageRef{Image: "Docker.IO/img"},
 			URL:      "docker.io/img",
+			Matched:  true,
+		}, {

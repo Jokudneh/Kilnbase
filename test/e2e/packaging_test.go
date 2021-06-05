@@ -153,3 +153,6 @@ spec:
 kind: Object
 spec:
 - image: index.docker.io/*username*/kilnbase-test-pkg-unpkg@sha256:633ec3ae6db954a65a1abadb482bae73375d0098005cb36a3851b32cd891b22e
+`)
+
+	if out != expectedOut {
