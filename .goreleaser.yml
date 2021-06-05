@@ -86,3 +86,5 @@ release:
     # Make the binary executable
     chmod +x /usr/local/bin/kilnbase
     ```
+
+    #### Via Homebrew (macOS or Linux)
