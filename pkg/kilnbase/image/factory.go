@@ -123,3 +123,4 @@ func (f Factory) shouldBuild(url string) (ctlconf.Source, bool) {
 }
 
 func (f Factory) optionalPushConf(url string) *ctlconf.ImageDestination {
+	urlMatcher := Matcher{url}
