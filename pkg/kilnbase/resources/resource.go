@@ -118,3 +118,6 @@ func (r *ResourceImpl) APIGroup() string {
 	}
 	return pieces[0]
 }
+
+func (r *ResourceImpl) Namespace() string { return r.un.GetNamespace() }
+

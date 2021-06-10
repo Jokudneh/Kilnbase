@@ -141,3 +141,4 @@ func (d Buildx) BuildAndOptionallyPush(
 		}
 
 		cmd := exec.Command("docker", cmdArgs...)
+		cmd.Dir = directory

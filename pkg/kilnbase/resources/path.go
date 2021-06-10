@@ -109,3 +109,7 @@ func (p *PathPart) AsString() string {
 		return *p.MapKey
 	case p.ArrayIndex != nil && p.ArrayIndex.Index != nil:
 		return fmt.Sprintf("%d", *p.ArrayIndex.Index)
+	case p.ArrayIndex != nil && p.ArrayIndex.All != nil:
+		return "(all)"
+	default:
+		panic("Unknown path part")
