@@ -104,3 +104,7 @@ func redactErrorMessage(errMsg string) string {
 		redacted := redactURL(urlStr)
 		errMsg = errMsg[:idx] + redacted + errMsg[endIdx:]
 
+		// Continue searching from end of redacted URL
+		searchPos = idx + len(redacted)
+	}
+	return errMsg

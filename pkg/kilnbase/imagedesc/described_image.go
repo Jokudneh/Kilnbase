@@ -102,3 +102,7 @@ func (i DescribedImage) LayerByDigest(digest regv1.Hash) (regv1.Layer, error) {
 			if err != nil {
 				return nil, err
 			}
+			return NewDescribedLayer(layerTD, layerFile), nil
+		}
+	}
+	return nil, fmt.Errorf("Expected to find layer '%s' by digest", digest)

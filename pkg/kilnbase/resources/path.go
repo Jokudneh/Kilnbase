@@ -113,3 +113,7 @@ func (p *PathPart) AsString() string {
 		return "(all)"
 	default:
 		panic("Unknown path part")
+	}
+}
+
+func (p *PathPart) UnmarshalJSON(data []byte) error {
