@@ -91,3 +91,7 @@ func TestMavenJibBuildAndPushSuccessful(t *testing.T) {
 
 	input := env.WithRegistries(fmt.Sprintf(`
 kind: Object
+spec:
+- image: docker.io/*username*/kilnbase-e2e-tests-build
+- image: docker.io/*username*/kilnbase-e2e-tests-build2
+---

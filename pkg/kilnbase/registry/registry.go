@@ -148,3 +148,5 @@ func (i Registry) WriteTag(dstRef regname.Tag, srcRef regname.Digest) error {
 func (i Registry) ListTags(repo regname.Repository) ([]string, error) {
 	repo, err := regname.NewRepository(repo.Name(), i.refOpts...)
 	if err != nil {
+		return nil, err
+	}

@@ -111,3 +111,4 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 			continue
 		}
 
+		var matched bool

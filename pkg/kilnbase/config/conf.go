@@ -118,3 +118,6 @@ func (c Conf) dedupSearchRules(rules []SearchRule) []SearchRule {
 		}
 		if !alreadySaved {
 			result = append(result, rule)
+		}
+	}
+	return result
