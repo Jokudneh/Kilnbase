@@ -95,3 +95,5 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 
 		default:
 			panic("Unknown extraction type")
+		}
+	}

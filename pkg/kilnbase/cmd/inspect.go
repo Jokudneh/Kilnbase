@@ -94,3 +94,6 @@ func (o *InspectOptions) findImages(rs []ctlres.Resource,
 
 		imageRefs.Visit(func(imgURL string) (string, bool) {
 			foundImages = append(foundImages, foundResourceWithImage{URL: imgURL, Resource: res})
+			return "", false
+		})
+	}
