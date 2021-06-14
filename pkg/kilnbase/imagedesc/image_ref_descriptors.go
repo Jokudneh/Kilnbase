@@ -127,3 +127,4 @@ func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc r
 	}
 
 	for _, manDesc := range imgIndexManifest.Manifests {
+		if ids.isImageIndex(manDesc) {
