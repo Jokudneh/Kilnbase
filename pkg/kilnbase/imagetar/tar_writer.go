@@ -194,3 +194,7 @@ func (w *TarWriter) writeLayers() error {
 	}
 
 	if isInflattable {
+		return w.fillInLayers(writtenLayers)
+	}
+
+	return nil

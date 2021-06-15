@@ -94,3 +94,6 @@ func (td ImageOrImageIndexDescriptor) SortKey() string {
 	}
 }
 
+func (td ImageIndexDescriptor) SortKey() string { return td.Digest }
+func (td ImageDescriptor) SortKey() string      { return td.Manifest.Digest + "/" + td.Config.Digest }
+

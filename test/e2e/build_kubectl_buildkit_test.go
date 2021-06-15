@@ -110,3 +110,6 @@ spec:
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
 	}
 }
+
+// This function was created ensure that a builder was present in the cluster
+// before we try to run these tests.
