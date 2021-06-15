@@ -137,3 +137,4 @@ func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) 
 
 		_, err := regname.NewTag(tagRef, regname.WeakValidation)
 		if err != nil {
+			return "", fmt.Errorf("Validating destination tag ref '%s': %s", tagRef, err)

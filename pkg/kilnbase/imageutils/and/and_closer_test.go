@@ -85,3 +85,5 @@ func TestWrite(t *testing.T) {
 	}
 
 	if got := w.String(); got != want {
+		t.Errorf("w.String(); got %q, want %q", got, want)
+	}
