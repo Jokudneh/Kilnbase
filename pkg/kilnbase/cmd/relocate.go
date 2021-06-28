@@ -130,3 +130,6 @@ func (o *RelocateOptions) updateRefsInResources(
 	var missingImageErrs []error
 	var resBss [][]byte
 
+	for _, res := range nonConfigRs {
+		resContents := res.DeepCopyRaw()
+		imageRefs := ctlser.NewImageRefs(resContents, conf.SearchRules())

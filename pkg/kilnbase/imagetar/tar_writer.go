@@ -203,3 +203,6 @@ func (w *TarWriter) writeLayers() error {
 func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 	var sortedWritterLayers []writtenLayer
 
+	for _, writtenLayer := range writtenLayers {
+		sortedWritterLayers = append(sortedWritterLayers, writtenLayer)
+	}
