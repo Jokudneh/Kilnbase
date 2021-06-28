@@ -108,3 +108,4 @@ func redactErrorMessage(errMsg string) string {
 		searchPos = idx + len(redacted)
 	}
 	return errMsg
+}

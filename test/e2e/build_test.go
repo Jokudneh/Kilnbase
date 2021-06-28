@@ -118,3 +118,4 @@ overrides:
 	out = reSHA.ReplaceAllString(out, "SHA256-REPLACED")
 
 	expectedOut := env.WithRegistries(`---
+kind: Object
