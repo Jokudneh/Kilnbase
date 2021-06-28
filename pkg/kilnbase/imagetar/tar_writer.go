@@ -198,3 +198,5 @@ func (w *TarWriter) writeLayers() error {
 	}
 
 	return nil
+}
+
