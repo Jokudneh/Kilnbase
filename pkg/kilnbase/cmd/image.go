@@ -79,3 +79,4 @@ func newImageStruct(image Image) imageStruct {
 	}
 	return result
 }
+
