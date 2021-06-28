@@ -81,3 +81,4 @@ func (o *UnpackageOptions) Run() error {
 		return err
 	}
 
+	importRepo, err := regname.NewRepository(o.Repository)

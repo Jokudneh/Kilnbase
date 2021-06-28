@@ -142,3 +142,6 @@ func (d Buildx) BuildAndOptionallyPush(
 
 		cmd := exec.Command("docker", cmdArgs...)
 		cmd.Dir = directory
+		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
+

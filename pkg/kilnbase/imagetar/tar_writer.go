@@ -200,3 +200,6 @@ func (w *TarWriter) writeLayers() error {
 	return nil
 }
 
+func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
+	var sortedWritterLayers []writtenLayer
+
