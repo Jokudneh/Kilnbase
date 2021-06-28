@@ -93,3 +93,5 @@ func (o *PackageOptions) Run() error {
 func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageURLs, error) {
 
 	foundImages := NewUnprocessedImageURLs()
+
+	for _, res := range allRs {
