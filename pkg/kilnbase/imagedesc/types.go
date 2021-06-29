@@ -101,3 +101,7 @@ func (t ImageOrIndex) Digest() (regv1.Hash, error) {
 	switch {
 	case t.Image != nil:
 		return (*t.Image).Digest()
+	case t.Index != nil:
+		return (*t.Index).Digest()
+	default:
+		panic("Unknown item")

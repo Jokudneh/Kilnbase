@@ -116,3 +116,6 @@ func MatchesPlatformSelection(given regv1.Platform, required ctlconf.PlatformSel
 
 	// Verify required platform's features are a subset of given platform's features.
 	if !isSubset(given.OSFeatures, required.OSFeatures) {
+		return false
+	}
+	if !isSubset(given.Features, required.Features) {

@@ -113,3 +113,6 @@ spec:
 
 // This function was created ensure that a builder was present in the cluster
 // before we try to run these tests.
+// If a builder does not exist the build command will try to create one.
+// The problem is that we run multiple build commands in parallel which cause
+// a race condition described in
