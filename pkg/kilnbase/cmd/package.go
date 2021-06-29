@@ -95,3 +95,5 @@ func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageUR
 	foundImages := NewUnprocessedImageURLs()
 
 	for _, res := range allRs {
+		imageRefs := ctlser.NewImageRefs(res.DeepCopyRaw(), conf.SearchRules())
+

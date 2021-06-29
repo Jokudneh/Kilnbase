@@ -167,3 +167,5 @@ func (o *ResolveOptions) collectImageReferences(nonConfigRs []ctlres.Resource,
 	return imageURLs, nil
 }
 
+func (o *ResolveOptions) resolveImages(imageURLs *UnprocessedImageURLs, imgFactory ctlimg.Factory) (*ProcessedImages, error) {
+	queue := NewImageQueue(imgFactory)
