@@ -206,3 +206,6 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 	for _, writtenLayer := range writtenLayers {
 		sortedWritterLayers = append(sortedWritterLayers, writtenLayer)
 	}
+
+	// Prefer larger sizes first
+	sort.Slice(sortedWritterLayers, func(i, j int) bool {

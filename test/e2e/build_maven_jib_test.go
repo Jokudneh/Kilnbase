@@ -103,3 +103,6 @@ sources:
   maven:
     run:
       target: .
+- image: docker.io/*username*/kilnbase-e2e-tests-build2
+  path: %s
+  maven:
