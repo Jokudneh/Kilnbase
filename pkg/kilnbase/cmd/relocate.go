@@ -133,3 +133,5 @@ func (o *RelocateOptions) updateRefsInResources(
 	for _, res := range nonConfigRs {
 		resContents := res.DeepCopyRaw()
 		imageRefs := ctlser.NewImageRefs(resContents, conf.SearchRules())
+
+		imageRefs.Visit(func(imgURL string) (string, bool) {

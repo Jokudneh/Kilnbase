@@ -80,3 +80,6 @@ func newImageStruct(image Image) imageStruct {
 	return result
 }
 
+func newImages(structs []imageStruct) []Image {
+	var result []Image
+	for _, st := range structs {

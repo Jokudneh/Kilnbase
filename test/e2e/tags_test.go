@@ -79,3 +79,6 @@ spec:
 - image: %s
 `, published["image"], published["image"])
 
+		if out != expectedOut {
+			t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
+		}
