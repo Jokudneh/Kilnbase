@@ -230,3 +230,6 @@ func TestResolveWithImageMap(t *testing.T) {
 kind: Object
 spec:
 - image: img1
+- image: img2:1.14.2
+- image: img3
+`

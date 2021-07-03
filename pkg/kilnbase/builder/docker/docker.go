@@ -168,3 +168,7 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 			prefixedLogger.Write([]byte(fmt.Sprintf("untag error: %s\n", err)))
 			return TmpRef{}, err
 		}
+	}
+
+	return stableTmpRef, nil
+}
