@@ -148,3 +148,6 @@ func (*Jib) tagTarget(stableTmpRef ctlbdk.TmpRef, targetImage string,
 	cmd := exec.Command("docker", "tag",
 		stableTmpRef.AsString(), targetImage)
 	cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+	cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
+
+	return cmd.Run()
