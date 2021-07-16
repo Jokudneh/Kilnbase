@@ -105,3 +105,7 @@ func (t ImageOrIndex) Digest() (regv1.Hash, error) {
 		return (*t.Index).Digest()
 	default:
 		panic("Unknown item")
+	}
+}
+
+func (t ImageOrIndex) Ref() string {

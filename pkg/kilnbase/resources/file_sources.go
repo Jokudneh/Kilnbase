@@ -109,3 +109,5 @@ func redactErrorMessage(errMsg string) string {
 	}
 	return errMsg
 }
+
+// findURLBoundary finds where a URL ends (at space, quote, bracket, etc).
