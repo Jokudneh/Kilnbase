@@ -145,3 +145,6 @@ func (*Jib) tagTarget(stableTmpRef ctlbdk.TmpRef, targetImage string,
 	prefixedLogger *ctllog.PrefixWriter) error {
 	var stdoutBuf, stderrBuf bytes.Buffer
 
+	cmd := exec.Command("docker", "tag",
+		stableTmpRef.AsString(), targetImage)
+	cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)

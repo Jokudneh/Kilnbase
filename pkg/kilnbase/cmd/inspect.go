@@ -97,3 +97,7 @@ func (o *InspectOptions) findImages(rs []ctlres.Resource,
 			return "", false
 		})
 	}
+
+	return foundImages, nil
+}
+
