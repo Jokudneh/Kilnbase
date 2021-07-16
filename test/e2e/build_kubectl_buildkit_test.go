@@ -116,3 +116,4 @@ spec:
 // If a builder does not exist the build command will try to create one.
 // The problem is that we run multiple build commands in parallel which cause
 // a race condition described in
+// https://github.com/jokudneh/buildkit-cli-for-kubectl/issues/55

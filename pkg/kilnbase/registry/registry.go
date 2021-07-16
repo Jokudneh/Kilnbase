@@ -150,3 +150,7 @@ func (i Registry) ListTags(repo regname.Repository) ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	return regremote.List(repo, i.opts...)
+}
+
