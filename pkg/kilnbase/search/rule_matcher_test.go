@@ -80,3 +80,6 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 		},
 	}
 
+	for _, ex := range exs {
+		matcher := ctlsearch.NewRulesMatcher([]ctlconf.SearchRule{ex.rule})
+
