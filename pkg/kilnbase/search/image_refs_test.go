@@ -126,3 +126,6 @@ func TestImageRefsMatches(t *testing.T) {
 			}},
 			OutputImages: []string{"gcr.io/repo:something"},
 		},
+		// JSON extraction
+		{
+			InputResource: map[string]interface{}{

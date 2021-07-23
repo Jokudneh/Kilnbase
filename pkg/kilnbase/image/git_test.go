@@ -121,3 +121,6 @@ func TestGitRepoValidNotOnBranch(t *testing.T) {
 	}
 	_, err = gitRepo.HeadTags()
 	if err != nil {
+		t.Fatalf("Expected head tags to succeed")
+	}
+	_, err = gitRepo.IsDirty()
