@@ -123,3 +123,5 @@ spec:
 - image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
 - image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
 - image: index.docker.io/*username*/kilnbase-e2e-tests-build@SHA256-REPLACED
+`)
+

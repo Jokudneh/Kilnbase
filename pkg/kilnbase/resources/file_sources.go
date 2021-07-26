@@ -111,3 +111,7 @@ func redactErrorMessage(errMsg string) string {
 }
 
 // findURLBoundary finds where a URL ends (at space, quote, bracket, etc).
+func findURLBoundary(s string, start int) int {
+	bracketOpen := false
+	for i := start; i < len(s); i++ {
+		switch s[i] {
