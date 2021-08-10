@@ -131,3 +131,5 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 			return regname.Digest{}, fmt.Errorf("Importing image as %s: %s", importDigestRef.Name(), err)
 		}
 
+	case item.Index != nil:
+		err = registry.WriteIndex(uploadTagRef, *item.Index)

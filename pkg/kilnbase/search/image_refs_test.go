@@ -129,3 +129,7 @@ func TestImageRefsMatches(t *testing.T) {
 		// JSON extraction
 		{
 			InputResource: map[string]interface{}{
+				"nested": map[string]interface{}{
+					"key": `{"nestedimage":"nginx1"}`,
+				},
+				"nestedimage": "nginx2",
