@@ -133,3 +133,4 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 
 	case item.Index != nil:
 		err = registry.WriteIndex(uploadTagRef, *item.Index)
+		if err != nil {

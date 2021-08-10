@@ -167,3 +167,7 @@ searchRules:
 - keyMatcher:
     path:
     - images
+    - allIndexes: true
+    - index: 0
+`, "__ver__", strings.TrimSuffix(kilnbaseVersion, "\n"))
+
