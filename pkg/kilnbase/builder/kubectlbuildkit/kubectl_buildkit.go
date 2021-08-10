@@ -139,3 +139,5 @@ func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) 
 		if err != nil {
 			return "", fmt.Errorf("Validating destination tag ref '%s': %s", tagRef, err)
 		}
+
+		return tagRef, nil

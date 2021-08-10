@@ -119,3 +119,7 @@ func (p *PathPart) AsString() string {
 func (p *PathPart) UnmarshalJSON(data []byte) error {
 	var str string
 	var idx PathPartArrayIndex
+
+	switch {
+	case json.Unmarshal(data, &str) == nil:
+		p.MapKey = &str

@@ -123,3 +123,5 @@ func (r *ResourceImpl) Namespace() string { return r.un.GetNamespace() }
 
 func (r *ResourceImpl) Name() string {
 	name := r.un.GetName()
+	if len(name) > 0 {
+		return name

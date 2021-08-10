@@ -112,3 +112,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 		}
 
 		var matched bool
+
+		for key, updateFunc := range funcsMap {
+			switch {
+			case pieces[0] == k.globalPrefix+sep+key:
