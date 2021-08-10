@@ -100,3 +100,7 @@ func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageUR
 		imageRefs.Visit(func(imgURL string) (string, bool) {
 			foundImages.Add(UnprocessedImageURL{imgURL})
 			return "", false
+		})
+	}
+
+	// Include preresolved images since we want to

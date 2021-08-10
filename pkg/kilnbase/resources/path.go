@@ -123,3 +123,7 @@ func (p *PathPart) UnmarshalJSON(data []byte) error {
 	switch {
 	case json.Unmarshal(data, &str) == nil:
 		p.MapKey = &str
+	case json.Unmarshal(data, &idx) == nil:
+		p.ArrayIndex = &idx
+	default:
+		return fmt.Errorf("Unknown path part")
