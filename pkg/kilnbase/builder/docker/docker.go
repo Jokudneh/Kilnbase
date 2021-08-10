@@ -172,3 +172,7 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 
 	return stableTmpRef, nil
 }
+
+func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
+	prefixedLogger := d.logger.NewPrefixedWriter(imageDst + " | ")
+
