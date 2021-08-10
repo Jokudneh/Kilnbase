@@ -115,3 +115,5 @@ spec:
 	}
 }
 
+func TestRelocateLockSuccessful(t *testing.T) {
+	env := BuildEnv(t)
