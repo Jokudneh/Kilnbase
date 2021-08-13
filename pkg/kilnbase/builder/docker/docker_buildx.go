@@ -145,3 +145,6 @@ func (d Buildx) BuildAndOptionallyPush(
 		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
 		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
 
+		err := cmd.Run()
+		if err != nil {
+			if strings.Contains(stderrBuf.String(), dockerBuildxPushErr) {

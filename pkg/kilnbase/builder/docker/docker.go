@@ -176,3 +176,7 @@ func (d Docker) RetagStable(tmpRef TmpRef, image, imageID string,
 func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 	prefixedLogger := d.logger.NewPrefixedWriter(imageDst + " | ")
 
+	tb := ctlb.TagBuilder{}
+
+	// Generate random tag for pushed image.
+	// TODO we are technically polluting registry with new tags.

@@ -117,3 +117,7 @@ spec:
 // The problem is that we run multiple build commands in parallel which cause
 // a race condition described in
 // https://github.com/jokudneh/buildkit-cli-for-kubectl/issues/55
+// When this issue gets solved we should be able to remove this function
+func createBuilder(t *testing.T) {
+	cmd := exec.Command("kubectl", "buildkit", "create")
+
