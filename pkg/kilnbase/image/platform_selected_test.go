@@ -164,3 +164,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				OSFeatures:   []string{},
 				Variant:      "",
 				Features:     []string{},
+			},
