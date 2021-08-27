@@ -127,3 +127,6 @@ func (p *PathPart) UnmarshalJSON(data []byte) error {
 		p.ArrayIndex = &idx
 	default:
 		return fmt.Errorf("Unknown path part")
+	}
+	return nil
+}

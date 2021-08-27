@@ -116,3 +116,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 		for key, updateFunc := range funcsMap {
 			switch {
 			case pieces[0] == k.globalPrefix+sep+key:
+				matched = true
+				err := updateFunc(&defaultInfo, pieces[1])
+				if err != nil {
+					k.collectErr = err
