@@ -125,3 +125,7 @@ func (r *ResourceImpl) Name() string {
 	name := r.un.GetName()
 	if len(name) > 0 {
 		return name
+	}
+	genName := r.un.GetGenerateName()
+	if len(genName) > 0 {
+		return genName + "*"

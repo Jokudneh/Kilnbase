@@ -101,3 +101,6 @@ func (o *InspectOptions) findImages(rs []ctlres.Resource,
 	return foundImages, nil
 }
 
+type foundResourceWithImage struct {
+	URL      string
+	Resource ctlres.Resource

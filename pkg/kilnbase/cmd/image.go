@@ -83,3 +83,5 @@ func newImageStruct(image Image) imageStruct {
 func newImages(structs []imageStruct) []Image {
 	var result []Image
 	for _, st := range structs {
+		result = append(result, Image{URL: st.URL, originsRaw: st.Origins})
+	}
