@@ -120,3 +120,7 @@ func TestRelocateLockSuccessful(t *testing.T) {
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
 	input := `
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Config
+overrides:
+# ignored because it's not preresolved

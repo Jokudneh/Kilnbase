@@ -120,3 +120,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 				err := updateFunc(&defaultInfo, pieces[1])
 				if err != nil {
 					k.collectErr = err
+					return nil, k.collectErr
+				}
+
+			case strings.HasPrefix(pieces[0], k.globalPrefix+sep+key+sep):

@@ -135,3 +135,6 @@ func (o *RelocateOptions) updateRefsInResources(
 		imageRefs := ctlser.NewImageRefs(resContents, conf.SearchRules())
 
 		imageRefs.Visit(func(imgURL string) (string, bool) {
+			outputImg, found := resolvedImages.FindByURL(UnprocessedImageURL{imgURL})
+			if found {
+				return outputImg.URL, true

@@ -171,3 +171,4 @@ func (o *ResolveOptions) resolveImages(imageURLs *UnprocessedImageURLs, imgFacto
 	queue := NewImageQueue(imgFactory)
 
 	resolvedImages, err := queue.Run(imageURLs, o.BuildConcurrency)
+	if err != nil {
