@@ -121,3 +121,5 @@ spec:
 func createBuilder(t *testing.T) {
 	cmd := exec.Command("kubectl", "buildkit", "create")
 
+	err := cmd.Run()
+	if err != nil {

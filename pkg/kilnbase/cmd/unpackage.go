@@ -84,3 +84,7 @@ func (o *UnpackageOptions) Run() error {
 	importRepo, err := regname.NewRepository(o.Repository)
 	if err != nil {
 		return fmt.Errorf("Building import repository ref: %s", err)
+	}
+
+	registry, err := ctlreg.NewRegistry(o.RegistryFlags.AsRegistryOpts())
+	if err != nil {
