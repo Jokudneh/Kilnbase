@@ -89,3 +89,6 @@ release:
 
     #### Via Homebrew (macOS or Linux)
     ```shell
+    $ brew tap kilnbase-dev/kilnbase
+    $ brew install kilnbase
+    $ kilnbase version  
