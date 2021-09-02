@@ -127,3 +127,7 @@ spec:
 
 	if out != expectedOut {
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
+	}
+}
+
+// Should use base image repo for "nice description" within a tag

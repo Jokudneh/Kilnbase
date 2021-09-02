@@ -148,3 +148,5 @@ func (d Buildx) BuildAndOptionallyPush(
 		err := cmd.Run()
 		if err != nil {
 			if strings.Contains(stderrBuf.String(), dockerBuildxPushErr) {
+				prefixedLogger.Write([]byte("(hint: Specify image destination as multi-platform builds are not supported on local Docker)\n"))
+			}
