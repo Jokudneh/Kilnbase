@@ -138,3 +138,4 @@ func TestImageRefsMatches(t *testing.T) {
 				"nested": map[string]interface{}{
 					"key": `{"nestedimage":"found:nginx1"}`,
 				},
+				"nestedimage": "nginx2",

@@ -88,3 +88,5 @@ func (o *UnpackageOptions) Run() error {
 
 	registry, err := ctlreg.NewRegistry(o.RegistryFlags.AsRegistryOpts())
 	if err != nil {
+		return err
+	}

@@ -92,3 +92,7 @@ release:
     $ brew tap kilnbase-dev/kilnbase
     $ brew install kilnbase
     $ kilnbase version  
+    ```
+
+    ### Verify checksums file signature
+

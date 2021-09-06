@@ -83,3 +83,6 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 	for _, ex := range exs {
 		matcher := ctlsearch.NewRulesMatcher([]ctlconf.SearchRule{ex.rule})
 
+		matched, _ := matcher.Matches(nil, ex.value)
+		if matched != ex.matched {
+			t.Errorf("%s: expected matched=%v, got %v",
