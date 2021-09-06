@@ -86,3 +86,6 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 		matched, _ := matcher.Matches(nil, ex.value)
 		if matched != ex.matched {
 			t.Errorf("%s: expected matched=%v, got %v",
+				ex.desc, ex.matched, matched)
+		}
+	}

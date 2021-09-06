@@ -106,3 +106,7 @@ func TestMatcherMatches(t *testing.T) {
 			ImageRef: ctlconf.ImageRef{ImageRepo: "DOCKER.IO/img"},
 			URL:      "docker.io/img:tag",
 			Matched:  true,
+		}, {
+			ImageRef: ctlconf.ImageRef{ImageRepo: "Localhost:3000/org/img"},
+			URL:      "localhost:3000/org/img:tag",
+			Matched:  true,
