@@ -138,3 +138,4 @@ func (o *RelocateOptions) updateRefsInResources(
 			outputImg, found := resolvedImages.FindByURL(UnprocessedImageURL{imgURL})
 			if found {
 				return outputImg.URL, true
+			}
