@@ -111,3 +111,6 @@ func TestMatcherMatches(t *testing.T) {
 			URL:      "localhost:3000/org/img:tag",
 			Matched:  true,
 		},
+
+		// Repository path case remains significant (documented design,
+		// unlike the registry hostname segment above).
