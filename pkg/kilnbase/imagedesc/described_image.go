@@ -108,3 +108,5 @@ func (i DescribedImage) LayerByDigest(digest regv1.Hash) (regv1.Layer, error) {
 	return nil, fmt.Errorf("Expected to find layer '%s' by digest", digest)
 }
 
+// LayerByDiffID is an analog to LayerByDigest, looking up by "diff id"
+// (the uncompressed hash).
