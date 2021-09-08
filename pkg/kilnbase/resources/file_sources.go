@@ -119,3 +119,7 @@ func findURLBoundary(s string, start int) int {
 			bracketOpen = true
 		case ']':
 			if !bracketOpen {
+				return i
+			}
+			bracketOpen = false
+		case '"', '\'', ' ', ')', ',':

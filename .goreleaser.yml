@@ -96,3 +96,5 @@ release:
 
     ### Verify checksums file signature
 
+    The checksums file provided within the artifacts attached to this release is signed using [Cosign](https://docs.sigstore.dev/cosign/overview/) with GitHub OIDC(Refer [this](https://docs.sigstore.dev/system_config/installation/) page for cosign installation). To validate the signature of this file, run the following commands:
+
