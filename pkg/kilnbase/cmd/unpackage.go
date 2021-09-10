@@ -90,3 +90,5 @@ func (o *UnpackageOptions) Run() error {
 	if err != nil {
 		return err
 	}
+
+	imageSet := TarImageSet{ImageSet{o.Concurrency, prefixedLogger}, o.Concurrency, prefixedLogger}
