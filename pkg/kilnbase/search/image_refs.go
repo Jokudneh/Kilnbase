@@ -99,3 +99,7 @@ func (v ImageRefsVisitorFunc) extractValueFunc(visitorFunc ImageRefsVisitorFunc)
 	}
 }
 
+func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
+	searchRules []ctlconf.SearchRule) (interface{}, bool) {
+
+	valStr, ok := val.(string)

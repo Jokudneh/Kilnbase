@@ -106,3 +106,7 @@ sources:
 - image: docker.io/*username*/kilnbase-e2e-tests-build2
   path: %s
   maven:
+    run:
+      target: .
+---
+apiVersion: kilnbase.k14s.io/v1alpha1

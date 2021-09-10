@@ -104,3 +104,7 @@ func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageUR
 	}
 
 	// Include preresolved images since we want to
+	// be able to package up lock files.
+	for _, override := range conf.ImageOverrides() {
+		if override.Preresolved {
+			foundImages.Add(UnprocessedImageURL{override.NewImage})

@@ -125,3 +125,5 @@ func TestRedactURL(t *testing.T) {
 		{
 			name:     "url without userinfo",
 			input:    "https://example.com/secure/path",
+			expected: "https://example.com/secure/path",
+		},
