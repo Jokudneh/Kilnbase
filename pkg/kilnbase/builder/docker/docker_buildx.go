@@ -154,3 +154,5 @@ func (d Buildx) BuildAndOptionallyPush(
 			return "", err
 		}
 	}
+
+	if imgDst != nil {
