@@ -114,3 +114,4 @@ func TestMatcherMatches(t *testing.T) {
 
 		// Repository path case remains significant (documented design,
 		// unlike the registry hostname segment above).
+		{
