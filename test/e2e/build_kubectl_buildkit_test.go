@@ -123,3 +123,5 @@ func createBuilder(t *testing.T) {
 
 	err := cmd.Run()
 	if err != nil {
+		t.Fatalf("error: %s\n", err)
+	}

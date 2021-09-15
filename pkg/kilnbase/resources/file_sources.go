@@ -125,3 +125,4 @@ func findURLBoundary(s string, start int) int {
 		case '"', '\'', ' ', ')', ',':
 			return i
 		default:
+			continue

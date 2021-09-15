@@ -109,3 +109,6 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
           set -e -x
+          VERSION=`echo ${{ github.ref }}  | grep -Eo '[0-9].*'`
+
+          ./hack/build-binaries.sh "$VERSION" > ./go-checksums
