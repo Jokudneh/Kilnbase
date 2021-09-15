@@ -106,3 +106,7 @@ type foundResourceWithImage struct {
 	Resource ctlres.Resource
 }
 
+func (s foundResourceWithImage) OriginsDescription() (string, error) {
+	images, err := NewResourceWithImages(s.Resource.DeepCopyRaw(), nil).Images()
+	if err != nil {
+		return "", err
