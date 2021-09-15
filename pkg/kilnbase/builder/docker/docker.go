@@ -181,3 +181,7 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 	// Generate random tag for pushed image.
 	// TODO we are technically polluting registry with new tags.
 	// Unfortunately we do not know digest upfront so cannot use kilnbase-sha256-... format.
+	imageDstTagged, err := regname.NewTag(imageDst, regname.WeakValidation)
+	badNameErr := (*regname.ErrBadName)(nil)
+	if err == nil {
+		randSuffix, err := tb.RandomStr50()
