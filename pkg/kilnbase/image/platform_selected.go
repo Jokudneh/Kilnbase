@@ -124,3 +124,4 @@ func MatchesPlatformSelection(given regv1.Platform, required ctlconf.PlatformSel
 
 	return true
 }
+

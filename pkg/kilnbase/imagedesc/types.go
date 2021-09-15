@@ -110,3 +110,4 @@ func (t ImageOrIndex) Digest() (regv1.Hash, error) {
 
 func (t ImageOrIndex) Ref() string {
 	switch {
+	case t.Image != nil:
