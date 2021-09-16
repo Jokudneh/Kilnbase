@@ -115,3 +115,7 @@ func TestMatcherMatches(t *testing.T) {
 		// Repository path case remains significant (documented design,
 		// unlike the registry hostname segment above).
 		{
+			ImageRef: ctlconf.ImageRef{ImageRepo: "docker.io/IMG"},
+			URL:      "docker.io/img",
+			Matched:  false,
+		},
