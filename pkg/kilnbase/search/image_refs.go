@@ -103,3 +103,6 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 	searchRules []ctlconf.SearchRule) (interface{}, bool) {
 
 	valStr, ok := val.(string)
+	if !ok {
+		return val, false
+	}

@@ -111,3 +111,7 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 		dockerTmpRef, err := i.jib.Run(
 			urlRepo, i.buildSource.Path, i.buildSource.Maven.Run)
 		if err != nil {
+			return "", nil, err
+		}
+
+		return i.optionalPushWithDocker(dockerTmpRef, origins)
