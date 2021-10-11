@@ -131,3 +131,7 @@ spec:
 }
 
 // Should use base image repo for "nice description" within a tag
+// to avoid having tags that are too long.
+func TestDockerBuildSuccessfulWithImageRepo(t *testing.T) {
+	env := BuildEnv(t)
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}

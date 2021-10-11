@@ -108,3 +108,5 @@ func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageUR
 	for _, override := range conf.ImageOverrides() {
 		if override.Preresolved {
 			foundImages.Add(UnprocessedImageURL{override.NewImage})
+		}
+	}

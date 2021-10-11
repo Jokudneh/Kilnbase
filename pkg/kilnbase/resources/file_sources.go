@@ -126,3 +126,5 @@ func findURLBoundary(s string, start int) int {
 			return i
 		default:
 			continue
+		}
+	}
