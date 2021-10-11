@@ -185,3 +185,7 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 	badNameErr := (*regname.ErrBadName)(nil)
 	if err == nil {
 		randSuffix, err := tb.RandomStr50()
+		if err != nil {
+			return ImageDigest{}, fmt.Errorf("Generating image dst suffix: %s", err)
+		}
+

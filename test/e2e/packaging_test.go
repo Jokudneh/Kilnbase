@@ -162,3 +162,5 @@ spec:
 
 func TestPkgUnpkgSuccessfulWithManyImages(t *testing.T) {
 	env := BuildEnv(t)
+
+	if env.SkipStressTests {
