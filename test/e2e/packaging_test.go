@@ -164,3 +164,7 @@ func TestPkgUnpkgSuccessfulWithManyImages(t *testing.T) {
 	env := BuildEnv(t)
 
 	if env.SkipStressTests {
+		fmt.Printf("This is a stress test; skipping.")
+		return
+	}
+

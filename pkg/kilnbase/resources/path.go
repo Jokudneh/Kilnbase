@@ -130,3 +130,5 @@ func (p *PathPart) UnmarshalJSON(data []byte) error {
 	}
 	return nil
 }
+
+func (p Path) Matches(p2 Path) bool {

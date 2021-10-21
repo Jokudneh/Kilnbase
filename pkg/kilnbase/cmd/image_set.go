@@ -137,3 +137,4 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 			return regname.Digest{}, fmt.Errorf("Importing image index as %s: %s", importDigestRef.Name(), err)
 		}
 
+	default:

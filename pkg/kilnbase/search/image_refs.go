@@ -106,3 +106,7 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 	if !ok {
 		return val, false
 	}
+
+	var decodedVal interface{}
+
+	err := json.Unmarshal([]byte(valStr), &decodedVal)
