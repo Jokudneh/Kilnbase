@@ -139,3 +139,7 @@ func (o *RelocateOptions) updateRefsInResources(
 			if found {
 				return outputImg.URL, true
 			}
+			missingImageErrs = append(missingImageErrs, fmt.Errorf("Expected to find image for '%s'", imgURL))
+			return "", false
+		})
+

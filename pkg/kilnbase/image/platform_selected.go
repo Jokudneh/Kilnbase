@@ -125,3 +125,5 @@ func MatchesPlatformSelection(given regv1.Platform, required ctlconf.PlatformSel
 	return true
 }
 
+// isSubset checks if the required array of strings is a subset of the given lst.
+func isSubset(lst, required []string) bool {

@@ -128,3 +128,7 @@ func findURLBoundary(s string, start int) int {
 			continue
 		}
 	}
+	return len(s)
+}
+
+func (s HTTPFileSource) Description() string {

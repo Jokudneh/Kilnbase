@@ -171,3 +171,7 @@ searchRules:
     - index: 0
 `, "__ver__", strings.TrimSuffix(kilnbaseVersion, "\n"))
 
+	bs, err := ioutil.ReadFile(path)
+	if err != nil {
+		t.Fatalf(failedReading, path)
+	}
