@@ -171,3 +171,7 @@ func NewConfigFromResource(res ctlres.Resource) (Config, error) {
 
 func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 	iLockBytes, err := res.AsYAMLBytes()
+	if err != nil {
+		return Config{}, err
+	}
+

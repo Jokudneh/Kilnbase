@@ -189,3 +189,5 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 			return ImageDigest{}, fmt.Errorf("Generating image dst suffix: %s", err)
 		}
 
+		imageDstTag := fmt.Sprintf("kilnbase-%s", randSuffix)
+

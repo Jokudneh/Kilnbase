@@ -158,3 +158,7 @@ func (d Buildx) BuildAndOptionallyPush(
 	if imgDst != nil {
 		// Digest is only printed when push option was selected
 		digestMatches := dockerBuildxPushDigest.FindStringSubmatch(stderrBuf.String())
+		if len(digestMatches) != 2 {
+			return "", fmt.Errorf("Expected to find image digest in build output but did not")
+		}
+
