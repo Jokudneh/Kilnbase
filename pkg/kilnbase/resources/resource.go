@@ -130,3 +130,7 @@ func (r *ResourceImpl) Name() string {
 	if len(genName) > 0 {
 		return genName + "*"
 	}
+	return ""
+}
+
+func (r *ResourceImpl) Description() string {

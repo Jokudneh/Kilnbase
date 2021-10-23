@@ -128,3 +128,4 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 				prefix := strings.TrimPrefix(pieces[0], k.globalPrefix+sep+key+sep)
 				info := infos[prefix]
 				err := updateFunc(&info, pieces[1])
+				if err != nil {
