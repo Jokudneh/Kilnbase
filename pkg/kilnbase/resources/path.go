@@ -132,3 +132,6 @@ func (p *PathPart) UnmarshalJSON(data []byte) error {
 }
 
 func (p Path) Matches(p2 Path) bool {
+	if len(p) != len(p2) {
+		return false
+	}

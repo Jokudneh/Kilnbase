@@ -138,3 +138,7 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 		}
 
 	default:
+		panic("Unknown item")
+	}
+
+	// Verify that imported image still has the same digest as we expect.
