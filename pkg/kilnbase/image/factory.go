@@ -126,3 +126,6 @@ func (f Factory) optionalPushConf(url string) *ctlconf.ImageDestination {
 	urlMatcher := Matcher{url}
 	for _, dst := range f.opts.Conf.ImageDestinations() {
 		if urlMatcher.Matches(dst.ImageRef) {
+			return &dst
+		}
+	}

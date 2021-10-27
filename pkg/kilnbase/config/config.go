@@ -175,3 +175,7 @@ func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 		return Config{}, err
 	}
 
+	imagesLock, err := lockconfig.NewImagesLockFromBytes(iLockBytes)
+	if err != nil {
+		return Config{}, fmt.Errorf("Unmarshaling %s as ImagesLock: %s", res.Description(), err)
+	}

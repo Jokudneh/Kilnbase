@@ -143,3 +143,4 @@ func (o *RelocateOptions) updateRefsInResources(
 			return "", false
 		})
 
+		resBs, err := yaml.Marshal(resContents)
