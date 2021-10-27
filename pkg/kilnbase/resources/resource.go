@@ -134,3 +134,4 @@ func (r *ResourceImpl) Name() string {
 }
 
 func (r *ResourceImpl) Description() string {
+	// TODO proper kind to resource conversion

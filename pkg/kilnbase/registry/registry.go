@@ -157,3 +157,5 @@ func (i Registry) ListTags(repo regname.Repository) ([]string, error) {
 func newHTTPTransport(opts Opts) (*http.Transport, error) {
 	pool, err := x509.SystemCertPool()
 	if err != nil {
+		pool = x509.NewCertPool()
+	}
