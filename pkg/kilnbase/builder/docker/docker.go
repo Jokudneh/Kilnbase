@@ -191,3 +191,6 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 
 		imageDstTag := fmt.Sprintf("kilnbase-%s", randSuffix)
 
+		imageDstTagged, err = regname.NewTag(imageDst+":"+imageDstTag, regname.WeakValidation)
+		if err != nil {
+			return ImageDigest{}, fmt.Errorf(

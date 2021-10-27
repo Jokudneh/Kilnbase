@@ -209,3 +209,5 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 
 	// Prefer larger sizes first
 	sort.Slice(sortedWritterLayers, func(i, j int) bool {
+		return sortedWritterLayers[i].Layer.Size >= sortedWritterLayers[j].Layer.Size
+	})
