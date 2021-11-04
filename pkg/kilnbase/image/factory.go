@@ -129,3 +129,4 @@ func (f Factory) optionalPushConf(url string) *ctlconf.ImageDestination {
 			return &dst
 		}
 	}
+	return nil

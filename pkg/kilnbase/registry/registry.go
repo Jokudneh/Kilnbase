@@ -159,3 +159,5 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 	if err != nil {
 		pool = x509.NewCertPool()
 	}
+
+	if len(opts.CACertPaths) > 0 {
