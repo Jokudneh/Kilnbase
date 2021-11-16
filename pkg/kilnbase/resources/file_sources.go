@@ -133,3 +133,6 @@ func findURLBoundary(s string, start int) int {
 
 func (s HTTPFileSource) Description() string {
 	return fmt.Sprintf("HTTP URL '%s'", redactURL(s.url))
+}
+
+func (s HTTPFileSource) Bytes() ([]byte, error) {
