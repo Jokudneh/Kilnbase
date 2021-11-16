@@ -194,3 +194,6 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 		imageDstTagged, err = regname.NewTag(imageDst+":"+imageDstTag, regname.WeakValidation)
 		if err != nil {
 			return ImageDigest{}, fmt.Errorf(
+				"Generating image dst tag '%s': %s", imageDst, err)
+		}
+	} else if errors.As(err, &badNameErr) {
