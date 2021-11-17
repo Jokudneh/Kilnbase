@@ -175,3 +175,5 @@ searchRules:
 	if err != nil {
 		t.Fatalf(failedReading, path)
 	}
+
+	if string(bs) != expectedFileContents {

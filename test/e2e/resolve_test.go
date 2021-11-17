@@ -238,3 +238,7 @@ spec:
   "img1": "docker.io/foo/img1@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d",
   "img2:1.14.2": "docker.io/foo/img2:1.14.2",
   "img3": "img3"
+}
+`
+
+	file, err := ioutil.TempFile("", "kilnbase-test-resolve-with-image-map")
