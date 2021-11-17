@@ -117,3 +117,6 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 		return i.optionalPushWithDocker(dockerTmpRef, origins)
 
 	// Fall back on Docker by default
+	default:
+		if i.buildSource.Docker == nil {
+			i.buildSource.Docker = &ctlconf.SourceDockerOpts{}
