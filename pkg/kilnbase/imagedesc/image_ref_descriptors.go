@@ -130,3 +130,5 @@ func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc r
 		if ids.isImageIndex(manDesc) {
 			imgIndexTd, err := ids.buildImageIndex(ids.buildRef(ref, manDesc.Digest.String()), manDesc)
 			if err != nil {
+				return ImageIndexDescriptor{}, err
+			}

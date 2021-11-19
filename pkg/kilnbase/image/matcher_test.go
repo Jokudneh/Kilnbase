@@ -119,3 +119,4 @@ func TestMatcherMatches(t *testing.T) {
 			URL:      "docker.io/img",
 			Matched:  false,
 		},
+	}
