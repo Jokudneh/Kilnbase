@@ -120,3 +120,6 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 	default:
 		if i.buildSource.Docker == nil {
 			i.buildSource.Docker = &ctlconf.SourceDockerOpts{}
+		}
+
+		opts := ctlbdk.BuildOpts{
