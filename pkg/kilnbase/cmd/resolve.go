@@ -174,3 +174,7 @@ func (o *ResolveOptions) resolveImages(imageURLs *UnprocessedImageURLs, imgFacto
 	if err != nil {
 		return nil, err
 	}
+
+	return resolvedImages, nil
+}
+

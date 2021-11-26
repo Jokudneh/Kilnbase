@@ -110,3 +110,7 @@ func (s foundResourceWithImage) OriginsDescription() (string, error) {
 	images, err := NewResourceWithImages(s.Resource.DeepCopyRaw(), nil).Images()
 	if err != nil {
 		return "", err
+	}
+
+	image, found := Images(images).ForImage(s.URL)
+	if !found {
