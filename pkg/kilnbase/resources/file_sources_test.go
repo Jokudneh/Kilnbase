@@ -127,3 +127,7 @@ func TestRedactURL(t *testing.T) {
 			input:    "https://example.com/secure/path",
 			expected: "https://example.com/secure/path",
 		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {

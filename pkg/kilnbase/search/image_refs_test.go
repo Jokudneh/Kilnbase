@@ -146,3 +146,7 @@ func TestImageRefsMatches(t *testing.T) {
 				},
 				UpdateStrategy: &ctlconf.SearchRuleUpdateStrategy{
 					JSON: &ctlconf.SearchRuleUpdateStrategyJSON{
+						SearchRules: []ctlconf.SearchRule{{
+							KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
+								Name: "nestedimage",
+							}},

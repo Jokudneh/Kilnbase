@@ -168,3 +168,5 @@ func TestPkgUnpkgSuccessfulWithManyImages(t *testing.T) {
 		return
 	}
 
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
+
