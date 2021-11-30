@@ -113,3 +113,4 @@ func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageUR
 
 	for _, img := range foundImages.All() {
 		_, err := regname.NewDigest(img.URL)
+		if err != nil {

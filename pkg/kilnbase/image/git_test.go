@@ -128,3 +128,5 @@ func TestGitRepoValidNotOnBranch(t *testing.T) {
 		t.Fatalf("Expected dirty to succeed")
 	}
 }
+
+func TestGitRepoValidSubDir(t *testing.T) {

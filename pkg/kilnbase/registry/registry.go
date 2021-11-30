@@ -161,3 +161,5 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 	}
 
 	if len(opts.CACertPaths) > 0 {
+		for _, path := range opts.CACertPaths {
+			if certs, err := os.ReadFile(path); err != nil {
