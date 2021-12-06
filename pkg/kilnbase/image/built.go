@@ -123,3 +123,5 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 		}
 
 		opts := ctlbdk.BuildOpts{
+			Target:     i.buildSource.Docker.Build.Target,
+			Pull:       i.buildSource.Docker.Build.Pull,
