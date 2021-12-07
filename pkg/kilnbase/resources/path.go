@@ -135,3 +135,4 @@ func (p Path) Matches(p2 Path) bool {
 	if len(p) != len(p2) {
 		return false
 	}
+	for i := range p {
