@@ -148,3 +148,7 @@ func (o *RelocateOptions) updateRefsInResources(
 			return nil, err
 		}
 
+		resBss = append(resBss, resBs)
+	}
+
+	err := errFromErrs(missingImageErrs)

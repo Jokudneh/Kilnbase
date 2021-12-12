@@ -150,3 +150,5 @@ func TestImageRefsMatches(t *testing.T) {
 							KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
 								Name: "nestedimage",
 							}},
+						},
+					},
