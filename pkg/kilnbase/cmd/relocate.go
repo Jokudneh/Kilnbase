@@ -146,3 +146,5 @@ func (o *RelocateOptions) updateRefsInResources(
 		resBs, err := yaml.Marshal(resContents)
 		if err != nil {
 			return nil, err
+		}
+
