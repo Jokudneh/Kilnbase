@@ -178,3 +178,4 @@ func (o *ResolveOptions) resolveImages(imageURLs *UnprocessedImageURLs, imgFacto
 	return resolvedImages, nil
 }
 
+func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,

@@ -129,3 +129,5 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 				info := infos[prefix]
 				err := updateFunc(&info, pieces[1])
 				if err != nil {
+					k.collectErr = err
+					return nil, k.collectErr
