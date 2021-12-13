@@ -130,3 +130,4 @@ func TestGitRepoValidNotOnBranch(t *testing.T) {
 }
 
 func TestGitRepoValidSubDir(t *testing.T) {
+	dir, err := os.MkdirTemp("", "kilnbase-git-repo")
