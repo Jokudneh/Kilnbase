@@ -131,3 +131,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 				if err != nil {
 					k.collectErr = err
 					return nil, k.collectErr
+				}
+				infos[prefix] = info
+			}
+		}

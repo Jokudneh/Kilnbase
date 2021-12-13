@@ -212,3 +212,5 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 		return sortedWritterLayers[i].Layer.Size >= sortedWritterLayers[j].Layer.Size
 	})
 
+	errCh := make(chan error, len(writtenLayers))
+	writeThrottle := util.NewThrottle(w.opts.Concurrency)

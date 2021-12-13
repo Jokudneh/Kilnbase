@@ -177,3 +177,6 @@ searchRules:
 	}
 
 	if string(bs) != expectedFileContents {
+		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", bs, expectedFileContents)
+	}
+
