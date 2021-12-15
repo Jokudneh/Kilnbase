@@ -152,3 +152,5 @@ func TestImageRefsMatches(t *testing.T) {
 							}},
 						},
 					},
+				},
+			}},
