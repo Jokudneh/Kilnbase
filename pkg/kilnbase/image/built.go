@@ -126,3 +126,4 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 			Target:     i.buildSource.Docker.Build.Target,
 			Pull:       i.buildSource.Docker.Build.Pull,
 			NoCache:    i.buildSource.Docker.Build.NoCache,
+			File:       i.buildSource.Docker.Build.File,

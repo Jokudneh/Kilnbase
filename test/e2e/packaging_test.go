@@ -172,3 +172,5 @@ func TestPkgUnpkgSuccessfulWithManyImages(t *testing.T) {
 
 	input := `
 apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Config
+minimumRequiredVersion: 0.20.0
