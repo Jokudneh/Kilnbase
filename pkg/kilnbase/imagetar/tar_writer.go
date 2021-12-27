@@ -214,3 +214,5 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 
 	errCh := make(chan error, len(writtenLayers))
 	writeThrottle := util.NewThrottle(w.opts.Concurrency)
+
+	// Fill in actual data

@@ -179,3 +179,7 @@ func (o *ResolveOptions) resolveImages(imageURLs *UnprocessedImageURLs, imgFacto
 }
 
 func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
+	conf ctlconf.Conf, resolvedImages *ProcessedImages,
+	_ ctlimg.Factory) ([][]byte, error) {
+
+	var errs []error
