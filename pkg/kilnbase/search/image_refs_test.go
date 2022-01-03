@@ -154,3 +154,6 @@ func TestImageRefsMatches(t *testing.T) {
 					},
 				},
 			}},
+			OutputImages: []string{"nginx1"},
+		},
+		// YAML extraction
