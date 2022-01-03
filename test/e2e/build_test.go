@@ -139,3 +139,7 @@ func TestDockerBuildSuccessfulWithImageRepo(t *testing.T) {
 	input := env.WithRegistries(`
 kind: Object
 spec:
+- image: kilnbase:simple-app-sha256-402e53420e6919c713b16ed78f09d2024ba25ebf424776072cd253cf044b544f
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Sources

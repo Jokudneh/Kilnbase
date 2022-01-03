@@ -135,3 +135,6 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 				infos[prefix] = info
 			}
 		}
+
+		if !matched && strings.HasPrefix(pieces[0], k.globalPrefix+sep) {
+			k.collectErr = fmt.Errorf("Unknown env variable '%s'", pieces[0])

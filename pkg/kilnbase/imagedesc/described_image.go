@@ -111,3 +111,7 @@ func (i DescribedImage) LayerByDigest(digest regv1.Hash) (regv1.Layer, error) {
 // LayerByDiffID is an analog to LayerByDigest, looking up by "diff id"
 // (the uncompressed hash).
 func (i DescribedImage) LayerByDiffID(diffID regv1.Hash) (regv1.Layer, error) {
+	for _, layerTD := range i.desc.Layers {
+		if layerTD.DiffID == diffID.String() {
+			layerFile, err := i.layerProvider.FindLayer(layerTD)
+			if err != nil {

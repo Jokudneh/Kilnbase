@@ -116,3 +116,4 @@ func (t ImageOrIndex) Ref() string {
 		return (*t.Index).Ref()
 	default:
 		panic("Unknown item")
+	}
