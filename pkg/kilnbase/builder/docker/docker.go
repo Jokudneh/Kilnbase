@@ -197,3 +197,7 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 				"Generating image dst tag '%s': %s", imageDst, err)
 		}
 	} else if errors.As(err, &badNameErr) {
+		imageDstTagged, err = regname.NewTag(LowerCaseRegistry(imageDst))
+		if err != nil {
+			newError := fmt.Errorf(
+				"Lower casing repository '%s' still failed: %w", imageDst, err)

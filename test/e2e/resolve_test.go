@@ -244,3 +244,5 @@ spec:
 	file, err := ioutil.TempFile("", "kilnbase-test-resolve-with-image-map")
 	if err != nil {
 		t.Fatalf("temp file err: %s", err)
+	}
+
