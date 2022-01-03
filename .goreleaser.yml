@@ -100,3 +100,5 @@ release:
 
     ```shell
     # Download the checksums file, certificate and signature
+    curl -LO https://github.com/{{ .Env.GITHUB_REPOSITORY }}/releases/download/{{ .Tag }}/checksums.txt
+    curl -LO https://github.com/{{ .Env.GITHUB_REPOSITORY }}/releases/download/{{ .Tag }}/checksums.txt.pem
