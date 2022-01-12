@@ -162,3 +162,6 @@ func (d Buildx) BuildAndOptionallyPush(
 			return "", fmt.Errorf("Expected to find image digest in build output but did not")
 		}
 
+		digestRefStr := imgDst.NewImage + "@sha256:" + digestMatches[1]
+
+		digestRef, err := regname.NewDigest(digestRefStr, regname.WeakValidation)

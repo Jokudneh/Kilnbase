@@ -114,3 +114,5 @@ func (s foundResourceWithImage) OriginsDescription() (string, error) {
 
 	image, found := Images(images).ForImage(s.URL)
 	if !found {
+		return "", nil
+	}
