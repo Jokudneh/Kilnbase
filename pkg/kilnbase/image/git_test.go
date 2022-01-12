@@ -135,3 +135,7 @@ func TestGitRepoValidSubDir(t *testing.T) {
 		t.Fatalf("Making tmp dir: %s", err)
 	}
 
+	defer os.RemoveAll(dir)
+
+	runCmd(t, "git", []string{"init", "."}, dir)
+	runCmd(t, "git", []string{"commit", "-am", "msg1", "--allow-empty"}, dir)
