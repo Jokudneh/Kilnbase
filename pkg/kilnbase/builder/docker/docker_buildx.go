@@ -165,3 +165,5 @@ func (d Buildx) BuildAndOptionallyPush(
 		digestRefStr := imgDst.NewImage + "@sha256:" + digestMatches[1]
 
 		digestRef, err := regname.NewDigest(digestRefStr, regname.WeakValidation)
+		if err != nil {
+			return "", fmt.Errorf("Validating destination digest ref '%s': %s", digestRefStr, err)

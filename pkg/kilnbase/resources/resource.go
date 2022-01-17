@@ -136,3 +136,6 @@ func (r *ResourceImpl) Name() string {
 func (r *ResourceImpl) Description() string {
 	// TODO proper kind to resource conversion
 	result := fmt.Sprintf("%s/%s (%s)", strings.ToLower(r.Kind()), r.Name(), r.APIVersion())
+
+	if len(r.Namespace()) > 0 {
+		result += " namespace: " + r.Namespace()
