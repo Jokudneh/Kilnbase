@@ -180,3 +180,4 @@ searchRules:
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", bs, expectedFileContents)
 	}
 
+	out, _ = kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false", "-f", path}, RunOpts{
