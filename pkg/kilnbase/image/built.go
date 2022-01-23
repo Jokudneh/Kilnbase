@@ -131,3 +131,4 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 			RawOptions: i.buildSource.Docker.Build.RawOptions,
 		}
 
+		dockerTmpRef, err := i.docker.Build(urlRepo, i.buildSource.Path, opts)

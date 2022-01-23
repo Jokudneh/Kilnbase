@@ -144,3 +144,5 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 	// Verify that imported image still has the same digest as we expect.
 	// Being a little bit paranoid here because tag ref is used for import
 	// instead of plain digest ref, because AWS ECR doesnt like digests
+	// during manifest upload.
+	err = o.verifyTagDigest(uploadTagRef, importDigestRef, registry)

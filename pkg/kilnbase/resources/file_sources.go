@@ -136,3 +136,4 @@ func (s HTTPFileSource) Description() string {
 }
 
 func (s HTTPFileSource) Bytes() ([]byte, error) {
+	resp, err := http.Get(s.url)
