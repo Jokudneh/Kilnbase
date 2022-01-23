@@ -179,3 +179,7 @@ func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 	if err != nil {
 		return Config{}, fmt.Errorf("Unmarshaling %s as ImagesLock: %s", res.Description(), err)
 	}
+
+	overridesConfig := NewConfig()
+
+	for _, image := range imagesLock.Images {

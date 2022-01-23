@@ -139,3 +139,7 @@ func TestGitRepoValidSubDir(t *testing.T) {
 
 	runCmd(t, "git", []string{"init", "."}, dir)
 	runCmd(t, "git", []string{"commit", "-am", "msg1", "--allow-empty"}, dir)
+
+	subDir := filepath.Join(dir, "sub-dir")
+	err = os.Mkdir(subDir, os.ModePerm)
+	if err != nil {

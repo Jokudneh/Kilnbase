@@ -115,3 +115,4 @@ func (i DescribedImage) LayerByDiffID(diffID regv1.Hash) (regv1.Layer, error) {
 		if layerTD.DiffID == diffID.String() {
 			layerFile, err := i.layerProvider.FindLayer(layerTD)
 			if err != nil {
+				return nil, err
