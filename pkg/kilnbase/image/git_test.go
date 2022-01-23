@@ -143,3 +143,6 @@ func TestGitRepoValidSubDir(t *testing.T) {
 	subDir := filepath.Join(dir, "sub-dir")
 	err = os.Mkdir(subDir, os.ModePerm)
 	if err != nil {
+		t.Fatalf("Making subdir: %s", err)
+	}
+
