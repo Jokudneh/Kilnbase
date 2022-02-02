@@ -139,3 +139,7 @@ func (r *ResourceImpl) Description() string {
 
 	if len(r.Namespace()) > 0 {
 		result += " namespace: " + r.Namespace()
+	} else {
+		result += " cluster"
+	}
+
