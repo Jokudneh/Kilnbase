@@ -181,3 +181,6 @@ searchRules:
 	}
 
 	out, _ = kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false", "-f", path}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})
+
