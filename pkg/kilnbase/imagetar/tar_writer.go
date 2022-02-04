@@ -216,3 +216,7 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 	writeThrottle := util.NewThrottle(w.opts.Concurrency)
 
 	// Fill in actual data
+	for _, writtenLayer := range sortedWritterLayers {
+		writtenLayer := writtenLayer // copy
+
+		go func() {
