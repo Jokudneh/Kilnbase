@@ -146,3 +146,7 @@ func TestGitRepoValidSubDir(t *testing.T) {
 		t.Fatalf("Making subdir: %s", err)
 	}
 
+	gitRepo := ctlimg.NewGitRepo(subDir)
+	if gitRepo.IsValid() != true {
+		t.Fatalf("Expected not-on-branch repo to be a git repo")
+	}

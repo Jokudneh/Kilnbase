@@ -116,3 +116,4 @@ jobs:
           diff ./go-checksums <(cat <<EOF
           ${{steps.get-checksums-from-draft-release.outputs.result}}
           EOF
+          )

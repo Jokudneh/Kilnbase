@@ -220,3 +220,7 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 		writtenLayer := writtenLayer // copy
 
 		go func() {
+			writeThrottle.Take()
+			defer writeThrottle.Done()
+
+			errCh <- w.retry(func() error {
