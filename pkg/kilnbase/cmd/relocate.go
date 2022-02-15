@@ -152,3 +152,6 @@ func (o *RelocateOptions) updateRefsInResources(
 	}
 
 	err := errFromErrs(missingImageErrs)
+	if err != nil {
+		return nil, err
+	}

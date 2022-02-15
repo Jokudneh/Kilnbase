@@ -117,3 +117,6 @@ func (i DescribedImage) LayerByDiffID(diffID regv1.Hash) (regv1.Layer, error) {
 			if err != nil {
 				return nil, err
 			}
+			return NewDescribedLayer(layerTD, layerFile), nil
+		}
+	}

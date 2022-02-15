@@ -167,3 +167,4 @@ func (d Buildx) BuildAndOptionallyPush(
 		digestRef, err := regname.NewDigest(digestRefStr, regname.WeakValidation)
 		if err != nil {
 			return "", fmt.Errorf("Validating destination digest ref '%s': %s", digestRefStr, err)
+		}
