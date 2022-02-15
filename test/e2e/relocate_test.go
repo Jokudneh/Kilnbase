@@ -131,3 +131,4 @@ overrides:
   preresolved: true
 `
 
+	path := "/tmp/kilnbase-test-pkg-unpkg-with-lock-successful"
