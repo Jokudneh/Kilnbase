@@ -173,3 +173,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				Variant:      "armv6l",
 				Features:     []string{"sse4"},
 			},
+			want: false,
