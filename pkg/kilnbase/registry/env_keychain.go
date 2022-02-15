@@ -141,3 +141,6 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 			return nil, k.collectErr
 		}
 	}
+
+	var result []envKeychainInfo
+

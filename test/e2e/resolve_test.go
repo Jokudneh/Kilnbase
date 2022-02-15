@@ -246,3 +246,5 @@ spec:
 		t.Fatalf("temp file err: %s", err)
 	}
 
+	file.Close()
+	defer os.RemoveAll(file.Name())
