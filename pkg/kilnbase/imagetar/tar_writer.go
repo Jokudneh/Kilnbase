@@ -224,3 +224,5 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 			defer writeThrottle.Done()
 
 			errCh <- w.retry(func() error {
+				return w.fillInLayer(writtenLayer)
+			})
