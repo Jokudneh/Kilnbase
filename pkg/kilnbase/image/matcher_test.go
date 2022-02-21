@@ -120,3 +120,7 @@ func TestMatcherMatches(t *testing.T) {
 			Matched:  false,
 		},
 	}
+
+	for _, ex := range exs {
+		if ctlimg.NewMatcher(ex.URL).Matches(ex.ImageRef) != ex.Matched {
+			t.Fatalf("Expected %#v to succeed", ex)

@@ -183,3 +183,4 @@ func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 	overridesConfig := NewConfig()
 
 	for _, image := range imagesLock.Images {
+		imgOrigins, err := NewOriginsFromString(image.Annotations[ImagesLockKilnbaseOrigins])
