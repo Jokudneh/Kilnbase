@@ -150,3 +150,5 @@ func TestGitRepoValidSubDir(t *testing.T) {
 	if gitRepo.IsValid() != true {
 		t.Fatalf("Expected not-on-branch repo to be a git repo")
 	}
+	url, err := gitRepo.RemoteURL()
+	if err != nil || url != ctlimg.GitRepoRemoteURLUnknown {

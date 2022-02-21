@@ -146,3 +146,5 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 	// instead of plain digest ref, because AWS ECR doesnt like digests
 	// during manifest upload.
 	err = o.verifyTagDigest(uploadTagRef, importDigestRef, registry)
+	if err != nil {
+		return regname.Digest{}, err

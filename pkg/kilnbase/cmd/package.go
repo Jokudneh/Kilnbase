@@ -114,3 +114,5 @@ func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageUR
 	for _, img := range foundImages.All() {
 		_, err := regname.NewDigest(img.URL)
 		if err != nil {
+			return nil, fmt.Errorf("Expected image '%s' to be in digest form (i.e. image@digest)", img.URL)
+		}
