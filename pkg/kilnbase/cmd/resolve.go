@@ -185,3 +185,4 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 	var errs []error
 	var resBss [][]byte
 
+	for _, res := range nonConfigRs {

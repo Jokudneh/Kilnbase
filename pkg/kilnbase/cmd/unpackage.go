@@ -93,3 +93,4 @@ func (o *UnpackageOptions) Run() error {
 
 	imageSet := TarImageSet{ImageSet{o.Concurrency, prefixedLogger}, o.Concurrency, prefixedLogger}
 
+	// Import images used in the manifests

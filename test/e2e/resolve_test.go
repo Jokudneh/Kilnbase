@@ -248,3 +248,5 @@ spec:
 
 	file.Close()
 	defer os.RemoveAll(file.Name())
+
+	err = ioutil.WriteFile(file.Name(), []byte(imageMapData), os.ModePerm)

@@ -107,3 +107,6 @@ release:
     # Verify the checksums file
     cosign verify-blob checksums.txt \
       --certificate checksums.txt.pem \
+      --signature checksums.txt.sig \
+      --certificate-identity-regexp=https://github.com/{{ .Env.GITHUB_REPOSITORY_OWNER }} \
+      --certificate-oidc-issuer=https://token.actions.githubusercontent.com
