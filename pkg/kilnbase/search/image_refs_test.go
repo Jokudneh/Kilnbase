@@ -165,3 +165,7 @@ func TestImageRefsMatches(t *testing.T) {
 				"nestedimage": "nginx2",
 				"key": `
 nestedimage: nginx3
+---
+---
+null
+---

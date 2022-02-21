@@ -111,3 +111,7 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 
 	err := json.Unmarshal([]byte(valStr), &decodedVal)
 	if err != nil {
+		return val, false
+	}
+
+	v.Apply(decodedVal, searchRules)
