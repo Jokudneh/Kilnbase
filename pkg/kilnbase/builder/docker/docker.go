@@ -202,3 +202,7 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 			newError := fmt.Errorf(
 				"Lower casing repository '%s' still failed: %w", imageDst, err)
 			return ImageDigest{}, newError
+		}
+	}
+
+	imageDst = imageDstTagged.Name()
