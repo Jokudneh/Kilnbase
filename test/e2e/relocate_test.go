@@ -132,3 +132,4 @@ overrides:
 `
 
 	path := "/tmp/kilnbase-test-pkg-unpkg-with-lock-successful"
+	defer os.RemoveAll(path)
