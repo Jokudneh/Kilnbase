@@ -226,3 +226,4 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 			errCh <- w.retry(func() error {
 				return w.fillInLayer(writtenLayer)
 			})
+		}()

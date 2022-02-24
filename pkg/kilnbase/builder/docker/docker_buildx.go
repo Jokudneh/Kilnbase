@@ -168,3 +168,5 @@ func (d Buildx) BuildAndOptionallyPush(
 		if err != nil {
 			return "", fmt.Errorf("Validating destination digest ref '%s': %s", digestRefStr, err)
 		}
+
+		return digestRef.Name(), nil
