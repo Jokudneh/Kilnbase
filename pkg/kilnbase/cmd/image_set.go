@@ -148,3 +148,7 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 	err = o.verifyTagDigest(uploadTagRef, importDigestRef, registry)
 	if err != nil {
 		return regname.Digest{}, err
+	}
+
+	return importDigestRef, nil
+}

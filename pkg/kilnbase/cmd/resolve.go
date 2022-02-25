@@ -186,3 +186,5 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 	var resBss [][]byte
 
 	for _, res := range nonConfigRs {
+		resContents := res.DeepCopyRaw()
+		images := []Image{}

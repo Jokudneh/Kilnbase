@@ -144,3 +144,4 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 
 	var result []envKeychainInfo
 
+	if defaultInfo != (envKeychainInfo{}) {

@@ -173,3 +173,5 @@ nestedimage: nginx4
 `,
 			},
 			OutputResource: map[string]interface{}{
+				"nested": map[string]interface{}{
+					"key": `{"nestedimage":"found:nginx1"}`,
