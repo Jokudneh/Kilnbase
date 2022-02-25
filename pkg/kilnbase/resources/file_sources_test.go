@@ -133,3 +133,7 @@ func TestRedactURL(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			result := redactURL(tc.input)
 			if result != tc.expected {
+				t.Errorf("redactURL mismatch\n"+
+					"input:    %s\nexpected: %s\ngot:      %s",
+					tc.input, tc.expected, result)
+			}
