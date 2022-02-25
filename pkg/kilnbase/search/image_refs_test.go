@@ -169,3 +169,7 @@ nestedimage: nginx3
 ---
 null
 ---
+nestedimage: nginx4
+`,
+			},
+			OutputResource: map[string]interface{}{
