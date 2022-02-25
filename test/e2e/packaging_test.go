@@ -189,3 +189,7 @@ overrides:
   preresolved: true
 - image: docker.io/istio/citadel:1.4.5
   newImage: index.docker.io/istio/citadel@sha256:420a331a528886aca47bed5b8c549c78d594e52d771f876f3137d3557207712f
+  preresolved: true
+- image: docker.io/istio/galley:1.4.5
+  newImage: index.docker.io/istio/galley@sha256:26e744bdfd3db289d4cfc9be63e38e7c7a424a9f76d1224cbdbbe58374229b68
+  preresolved: true

@@ -135,3 +135,6 @@ func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc r
 			td.Indexes = append(td.Indexes, imgIndexTd)
 		} else {
 			imgTd, err := ids.buildImage(ids.buildRef(ref, manDesc.Digest.String()))
+			if err != nil {
+				return ImageIndexDescriptor{}, err
+			}
