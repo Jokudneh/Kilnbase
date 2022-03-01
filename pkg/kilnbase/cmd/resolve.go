@@ -188,3 +188,7 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 	for _, res := range nonConfigRs {
 		resContents := res.DeepCopyRaw()
 		images := []Image{}
+		imageRefs := ctlser.NewImageRefs(resContents, conf.SearchRules())
+
+		imageRefs.Visit(func(imgURL string) (string, bool) {
+			img, found := resolvedImages.FindByURL(UnprocessedImageURL{imgURL})

@@ -138,3 +138,6 @@ func (s HTTPFileSource) Description() string {
 func (s HTTPFileSource) Bytes() ([]byte, error) {
 	resp, err := http.Get(s.url)
 	if err != nil {
+		errMsg := redactErrorMessage(err.Error())
+		return nil, fmt.Errorf("Requesting URL '%s': %s",
+			redactURL(s.url), errMsg)
