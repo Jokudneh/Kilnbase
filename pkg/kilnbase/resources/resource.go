@@ -143,3 +143,7 @@ func (r *ResourceImpl) Description() string {
 		result += " cluster"
 	}
 
+	return result
+}
+
+func (r *ResourceImpl) Annotations() map[string]string { return r.un.GetAnnotations() }
