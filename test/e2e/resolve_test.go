@@ -250,3 +250,5 @@ spec:
 	defer os.RemoveAll(file.Name())
 
 	err = ioutil.WriteFile(file.Name(), []byte(imageMapData), os.ModePerm)
+	if err != nil {
+		t.Fatalf("write image map err: %s", err)

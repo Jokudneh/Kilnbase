@@ -193,3 +193,5 @@ overrides:
 - image: docker.io/istio/galley:1.4.5
   newImage: index.docker.io/istio/galley@sha256:26e744bdfd3db289d4cfc9be63e38e7c7a424a9f76d1224cbdbbe58374229b68
   preresolved: true
+- image: docker.io/istio/mixer:1.4.5
+  newImage: index.docker.io/istio/mixer@sha256:ff6f39732c31999911790b00b484a471b6fe87192223d3266b0b6e752a374287

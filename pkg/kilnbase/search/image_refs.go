@@ -115,3 +115,5 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 	}
 
 	v.Apply(decodedVal, searchRules)
+
+	valBs, err := json.Marshal(decodedVal)
