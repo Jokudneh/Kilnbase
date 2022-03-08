@@ -152,3 +152,5 @@ func TestGitRepoValidSubDir(t *testing.T) {
 	}
 	url, err := gitRepo.RemoteURL()
 	if err != nil || url != ctlimg.GitRepoRemoteURLUnknown {
+		t.Fatalf("Expected unknown remote url")
+	}

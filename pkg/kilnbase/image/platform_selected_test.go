@@ -178,3 +178,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 		{ // Checking subset validity when required less features than given features.
 			// matchesPlatform expected to return true.
 			given: v1.Platform{
+				Architecture: "",
