@@ -141,3 +141,6 @@ func (s HTTPFileSource) Bytes() ([]byte, error) {
 		errMsg := redactErrorMessage(err.Error())
 		return nil, fmt.Errorf("Requesting URL '%s': %s",
 			redactURL(s.url), errMsg)
+	}
+
+	defer resp.Body.Close()

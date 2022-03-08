@@ -137,3 +137,5 @@ func TestRedactURL(t *testing.T) {
 					"input:    %s\nexpected: %s\ngot:      %s",
 					tc.input, tc.expected, result)
 			}
+		})
+	}
