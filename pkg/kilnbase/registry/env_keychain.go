@@ -145,3 +145,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 	var result []envKeychainInfo
 
 	if defaultInfo != (envKeychainInfo{}) {
+		result = append(result, defaultInfo)
+	}
+	for _, info := range infos {
+		result = append(result, info)

@@ -152,3 +152,5 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 
 	return importDigestRef, nil
 }
+
+func (o *ImageSet) verifyTagDigest(
