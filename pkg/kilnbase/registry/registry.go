@@ -168,3 +168,5 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 				return nil, fmt.Errorf(
 					"Failed to add CA certificates from '%s'", path)
 			}
+		}
+	}

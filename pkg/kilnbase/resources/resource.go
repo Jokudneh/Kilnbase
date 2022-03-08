@@ -147,3 +147,5 @@ func (r *ResourceImpl) Description() string {
 }
 
 func (r *ResourceImpl) Annotations() map[string]string { return r.un.GetAnnotations() }
+func (r *ResourceImpl) Labels() map[string]string      { return r.un.GetLabels() }
+
