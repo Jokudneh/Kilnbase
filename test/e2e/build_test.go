@@ -146,3 +146,5 @@ kind: Sources
 sources:
 - imageRepo: kilnbase
   path: assets/simple-app
+`)
+
