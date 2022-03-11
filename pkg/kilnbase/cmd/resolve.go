@@ -194,3 +194,4 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 			img, found := resolvedImages.FindByURL(UnprocessedImageURL{imgURL})
 			if !found {
 				errs = append(errs, fmt.Errorf("Expected to find image for '%s'", imgURL))
+				return "", false
