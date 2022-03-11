@@ -144,3 +144,6 @@ func (s HTTPFileSource) Bytes() ([]byte, error) {
 	}
 
 	defer resp.Body.Close()
+
+	result, err := io.ReadAll(resp.Body)
+	if err != nil {

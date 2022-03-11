@@ -177,3 +177,7 @@ nestedimage: nginx4
 					"key": `{"nestedimage":"found:nginx1"}`,
 				},
 				"nestedimage": "nginx2",
+				"key": `---
+nestedimage: found:nginx3
+---
+nestedimage: found:nginx4
