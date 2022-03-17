@@ -147,3 +147,7 @@ func (s HTTPFileSource) Bytes() ([]byte, error) {
 
 	result, err := io.ReadAll(resp.Body)
 	if err != nil {
+		return nil, fmt.Errorf("Reading URL '%s': %s",
+			redactURL(s.url), redactErrorMessage(err.Error()))
+	}
+
