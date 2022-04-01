@@ -170,3 +170,4 @@ func (d Buildx) BuildAndOptionallyPush(
 		}
 
 		return digestRef.Name(), nil
+	}

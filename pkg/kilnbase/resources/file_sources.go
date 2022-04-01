@@ -151,3 +151,5 @@ func (s HTTPFileSource) Bytes() ([]byte, error) {
 			redactURL(s.url), redactErrorMessage(err.Error()))
 	}
 
+	return result, nil
+}
