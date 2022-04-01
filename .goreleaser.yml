@@ -117,3 +117,7 @@ release:
     To verify the integrity of the downloaded binary, you can utilize the checksums file after having validated its signature.
     ```shell
     # Verify the binary using the checksums file
+    sha256sum -c checksums.txt --ignore-missing
+    ```
+    </details>
+
