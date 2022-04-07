@@ -121,3 +121,5 @@ destinations:
 		RunOpts{StdinReader: strings.NewReader(input)},
 	)
 
+	reSHACol := regexp.MustCompile("sha256:[a-z0-9]{64}")
+	shaStr := reSHACol.FindString(out)
