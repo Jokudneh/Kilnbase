@@ -117,3 +117,6 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 	v.Apply(decodedVal, searchRules)
 
 	valBs, err := json.Marshal(decodedVal)
+	if err != nil {
+		panic(fmt.Sprintf("ObjVisitor: Encoding as JSON: %s", err))
+	}

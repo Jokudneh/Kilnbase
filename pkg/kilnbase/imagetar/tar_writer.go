@@ -227,3 +227,7 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 				return w.fillInLayer(writtenLayer)
 			})
 		}()
+	}
+
+	for i := 0; i < len(writtenLayers); i++ {
+		err := <-errCh

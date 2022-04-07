@@ -171,3 +171,5 @@ func (d Buildx) BuildAndOptionallyPush(
 
 		return digestRef.Name(), nil
 	}
+
+	// Work with locally stored image in Docker daemon
