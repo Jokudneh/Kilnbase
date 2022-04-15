@@ -188,3 +188,7 @@ searchRules:
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
 	}
 }
+
+func TestImgpkgLockOutputSuccessful(t *testing.T) {
+	env := BuildEnv(t)
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}

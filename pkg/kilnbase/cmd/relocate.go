@@ -155,3 +155,4 @@ func (o *RelocateOptions) updateRefsInResources(
 	if err != nil {
 		return nil, err
 	}
+
