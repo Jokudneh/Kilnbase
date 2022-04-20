@@ -96,3 +96,6 @@ func (o *UnpackageOptions) Run() error {
 	// Import images used in the manifests
 	importedImages, err := imageSet.Import(o.InputPath, importRepo, registry)
 	if err != nil {
+		return err
+	}
+
