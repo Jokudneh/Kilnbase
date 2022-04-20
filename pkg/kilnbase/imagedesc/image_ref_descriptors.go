@@ -140,3 +140,7 @@ func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc r
 			}
 			td.Images = append(td.Images, imgTd)
 		}
+	}
+
+	return td, nil
+}
