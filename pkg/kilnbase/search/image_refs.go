@@ -120,3 +120,4 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 	if err != nil {
 		panic(fmt.Sprintf("ObjVisitor: Encoding as JSON: %s", err))
 	}
+

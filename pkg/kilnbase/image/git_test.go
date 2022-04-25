@@ -158,3 +158,7 @@ func TestGitRepoValidSubDir(t *testing.T) {
 	if err != nil || sha == ctlimg.GitRepoHeadSHANoCommits || len(sha) < 20 {
 		t.Fatalf("Expected head sha to succeed: %s; %s", err, sha)
 	}
+	_, err = gitRepo.HeadTags()
+	if err != nil {
+		t.Fatalf("Expected head tags to succeed")
+	}

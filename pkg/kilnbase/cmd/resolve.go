@@ -199,3 +199,5 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 
 			if o.ImagesAnnotation {
 				images = append(images, img)
+			}
+
