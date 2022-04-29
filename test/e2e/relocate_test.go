@@ -133,3 +133,7 @@ overrides:
 
 	path := "/tmp/kilnbase-test-pkg-unpkg-with-lock-successful"
 	defer os.RemoveAll(path)
+
+	relocatedLockPath := path + "-relocated"
+	defer os.RemoveAll(relocatedLockPath)
+
