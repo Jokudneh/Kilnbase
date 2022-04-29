@@ -173,3 +173,7 @@ func (d Buildx) BuildAndOptionallyPush(
 	}
 
 	// Work with locally stored image in Docker daemon
+	inspectData, err := d.docker.Inspect(tagRef)
+	if err != nil {
+		prefixedLogger.Write([]byte(fmt.Sprintf("inspect error: %s\n", err)))
+		return "", err

@@ -153,3 +153,7 @@ func (s HTTPFileSource) Bytes() ([]byte, error) {
 
 	return result, nil
 }
+
+type BytesSource struct {
+	bs []byte
+}
