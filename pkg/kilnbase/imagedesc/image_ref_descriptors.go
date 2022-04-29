@@ -144,3 +144,5 @@ func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc r
 
 	return td, nil
 }
+
+func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescriptor, error) {

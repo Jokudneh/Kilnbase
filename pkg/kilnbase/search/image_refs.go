@@ -121,3 +121,4 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 		panic(fmt.Sprintf("ObjVisitor: Encoding as JSON: %s", err))
 	}
 
+	return string(valBs), true

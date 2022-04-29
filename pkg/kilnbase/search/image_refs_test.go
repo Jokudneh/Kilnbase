@@ -181,3 +181,7 @@ nestedimage: nginx4
 nestedimage: found:nginx3
 ---
 nestedimage: found:nginx4
+`,
+			},
+			SearchRules: []ctlconf.SearchRule{{
+				KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
