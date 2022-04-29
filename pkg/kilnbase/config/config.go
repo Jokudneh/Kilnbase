@@ -184,3 +184,6 @@ func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 
 	for _, image := range imagesLock.Images {
 		imgOrigins, err := NewOriginsFromString(image.Annotations[ImagesLockKilnbaseOrigins])
+		if err != nil {
+			return Config{}, fmt.Errorf(
+				"Unmarshaling %s as %s annotation: %s",

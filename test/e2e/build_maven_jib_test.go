@@ -123,3 +123,7 @@ destinations:
 
 	reSHACol := regexp.MustCompile("sha256:[a-z0-9]{64}")
 	shaStr := reSHACol.FindString(out)
+	out = strings.Replace(out, shaStr, "SHA256-REPLACED", -1)
+
+	expectedOut := env.WithRegistries(`---
+kind: Object
