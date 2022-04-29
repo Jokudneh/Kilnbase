@@ -146,3 +146,7 @@ func (ids *ImageRefDescriptors) buildImageIndex(ref regname.Reference, regDesc r
 }
 
 func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescriptor, error) {
+	td := ImageDescriptor{}
+
+	img, err := ids.registry.Image(ref)
+	if err != nil {

@@ -122,3 +122,5 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 	}
 
 	return string(valBs), true
+}
+
