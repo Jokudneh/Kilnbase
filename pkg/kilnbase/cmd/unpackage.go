@@ -99,3 +99,5 @@ func (o *UnpackageOptions) Run() error {
 		return err
 	}
 
+	err = o.emitLockOutput(conf, importedImages)
+	if err != nil {

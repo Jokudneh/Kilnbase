@@ -174,3 +174,5 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 	// Copied from https://github.com/golang/go/blob/release-branch.go1.12/src/net/http/transport.go#L42-L53
 	// We want to use the DefaultTransport but change its TLSClientConfig. There
 	// isn't a clean way to do this yet: https://github.com/golang/go/issues/26013
+	return &http.Transport{
+		Proxy: http.ProxyFromEnvironment,
