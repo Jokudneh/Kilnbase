@@ -162,3 +162,5 @@ func TestGitRepoValidSubDir(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Expected head tags to succeed")
 	}
+	_, err = gitRepo.IsDirty()
+	if err != nil {

@@ -127,3 +127,4 @@ destinations:
 
 	expectedOut := env.WithRegistries(`---
 kind: Object
+spec:

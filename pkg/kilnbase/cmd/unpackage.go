@@ -101,3 +101,7 @@ func (o *UnpackageOptions) Run() error {
 
 	err = o.emitLockOutput(conf, importedImages)
 	if err != nil {
+		return err
+	}
+
+	// Update previous image references with new references
