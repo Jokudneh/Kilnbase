@@ -164,3 +164,4 @@ func TestGitRepoValidSubDir(t *testing.T) {
 	}
 	_, err = gitRepo.IsDirty()
 	if err != nil {
+		t.Fatalf("Expected dirty to succeed")

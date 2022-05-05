@@ -149,3 +149,7 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 	}
 	for _, info := range infos {
 		result = append(result, info)
+	}
+
+	k.infos = result
+	k.collected = true

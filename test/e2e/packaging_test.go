@@ -199,3 +199,6 @@ overrides:
 - image: docker.io/istio/node-agent-k8s:1.4.5
   newImage: index.docker.io/istio/node-agent-k8s@sha256:7e17ab509777a54f3c0dfb4518692a9ca179d1e8c41df87dc81a734339b37152
   preresolved: true
+- image: docker.io/istio/pilot:1.4.5
+  newImage: index.docker.io/istio/pilot@sha256:2bca5900d6bf20d5f0bf2b6673bc4d2885bab8cca2a9060336a0024930665b59
+  preresolved: true
