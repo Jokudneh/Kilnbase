@@ -134,3 +134,6 @@ func isSubset(lst, required []string) bool {
 
 	for _, value := range required {
 		if _, ok := set[value]; !ok {
+			return false
+		}
+	}

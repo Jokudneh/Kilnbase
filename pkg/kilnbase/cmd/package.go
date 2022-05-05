@@ -117,3 +117,5 @@ func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageUR
 			return nil, fmt.Errorf("Expected image '%s' to be in digest form (i.e. image@digest)", img.URL)
 		}
 	}
+
+	return foundImages, nil

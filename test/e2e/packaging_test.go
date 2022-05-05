@@ -198,3 +198,4 @@ overrides:
   preresolved: true
 - image: docker.io/istio/node-agent-k8s:1.4.5
   newImage: index.docker.io/istio/node-agent-k8s@sha256:7e17ab509777a54f3c0dfb4518692a9ca179d1e8c41df87dc81a734339b37152
+  preresolved: true
