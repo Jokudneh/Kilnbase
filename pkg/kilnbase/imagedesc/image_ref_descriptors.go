@@ -150,3 +150,7 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 
 	img, err := ids.registry.Image(ref)
 	if err != nil {
+		return td, err
+	}
+
+	cfgDigest, err := img.ConfigName()
