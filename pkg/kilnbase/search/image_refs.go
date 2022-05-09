@@ -124,3 +124,4 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 	return string(valBs), true
 }
 
+func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},

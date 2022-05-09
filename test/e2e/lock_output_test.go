@@ -196,3 +196,6 @@ func TestImgpkgLockOutputSuccessful(t *testing.T) {
 	input := `
 images:
 - image: nginx:1.14.2
+- image: sample-app
+- sidecarImage: sample-app
+- - sample-app
