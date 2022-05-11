@@ -150,3 +150,4 @@ func (r *ResourceImpl) Annotations() map[string]string { return r.un.GetAnnotati
 func (r *ResourceImpl) Labels() map[string]string      { return r.un.GetLabels() }
 
 func (r *ResourceImpl) Equal(res Resource) bool {
+	if typedRes, ok := res.(*ResourceImpl); ok {

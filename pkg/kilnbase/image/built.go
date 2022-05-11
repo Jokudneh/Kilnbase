@@ -133,3 +133,7 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 
 		dockerTmpRef, err := i.docker.Build(urlRepo, i.buildSource.Path, opts)
 		if err != nil {
+			return "", nil, err
+		}
+
+		return i.optionalPushWithDocker(dockerTmpRef, origins)
