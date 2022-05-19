@@ -117,3 +117,4 @@ func (s foundResourceWithImage) OriginsDescription() (string, error) {
 		return "", nil
 	}
 
+	return image.Description(), nil

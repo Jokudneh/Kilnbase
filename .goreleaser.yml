@@ -127,3 +127,6 @@ changelog:
   skip: false
 
   # Sorts the changelog by the commit's messages.
+  # Could either be asc, desc or empty
+  # Default is empty
+  sort: asc
