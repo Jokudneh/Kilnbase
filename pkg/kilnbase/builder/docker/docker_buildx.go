@@ -177,3 +177,5 @@ func (d Buildx) BuildAndOptionallyPush(
 	if err != nil {
 		prefixedLogger.Write([]byte(fmt.Sprintf("inspect error: %s\n", err)))
 		return "", err
+	}
+

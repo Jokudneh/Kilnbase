@@ -105,3 +105,6 @@ func (o *UnpackageOptions) Run() error {
 	}
 
 	// Update previous image references with new references
+	resBss, err := o.updateRefsInResources(nonConfigRs, conf, importedImages)
+	if err != nil {
+		return err
