@@ -138,3 +138,4 @@ func (p Path) Matches(p2 Path) bool {
 	for i := range p {
 		if !p[i].Matches(p2[i]) {
 			return false
+		}

@@ -202,3 +202,7 @@ overrides:
 - image: docker.io/istio/pilot:1.4.5
   newImage: index.docker.io/istio/pilot@sha256:2bca5900d6bf20d5f0bf2b6673bc4d2885bab8cca2a9060336a0024930665b59
   preresolved: true
+- image: docker.io/istio/proxyv2:1.4.5
+  newImage: index.docker.io/istio/proxyv2@sha256:fc09ea0f969147a4843a564c5b677fbf3a6f94b56627d00b313b4c30d5fef094
+  preresolved: true
+- image: docker.io/istio/sidecar_injector:1.4.5
