@@ -137,3 +137,5 @@ overrides:
 	relocatedLockPath := path + "-relocated"
 	defer os.RemoveAll(relocatedLockPath)
 
+	out, _ := kilnbase.RunWithOpts([]string{"relocate", "-f", "-", "--repository", env.WithRegistries("docker.io/*username*/kilnbase-test-relocate-lock"), "--lock-output", relocatedLockPath}, RunOpts{
+		StdinReader: strings.NewReader(input),

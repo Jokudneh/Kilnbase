@@ -137,3 +137,5 @@ func isSubset(lst, required []string) bool {
 			return false
 		}
 	}
+
+	return true

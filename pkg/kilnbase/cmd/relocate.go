@@ -156,3 +156,7 @@ func (o *RelocateOptions) updateRefsInResources(
 		return nil, err
 	}
 
+	return resBss, nil
+}
+
+func (o *RelocateOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *ProcessedImages) error {
