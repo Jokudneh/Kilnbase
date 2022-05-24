@@ -108,3 +108,4 @@ func (o *UnpackageOptions) Run() error {
 	resBss, err := o.updateRefsInResources(nonConfigRs, conf, importedImages)
 	if err != nil {
 		return err
+	}
