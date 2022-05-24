@@ -161,3 +161,4 @@ type BytesSource struct {
 var _ FileSource = BytesSource{}
 
 func NewBytesSource(bs []byte) BytesSource { return BytesSource{bs} }
+

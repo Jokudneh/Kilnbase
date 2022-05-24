@@ -176,3 +176,7 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 	// isn't a clean way to do this yet: https://github.com/golang/go/issues/26013
 	return &http.Transport{
 		Proxy: http.ProxyFromEnvironment,
+		DialContext: (&net.Dialer{
+			Timeout:   30 * time.Second,
+			KeepAlive: 30 * time.Second,
+			DualStack: true,
