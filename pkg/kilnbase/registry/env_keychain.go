@@ -153,3 +153,5 @@ func (k *EnvKeychain) collect() ([]envKeychainInfo, error) {
 
 	k.infos = result
 	k.collected = true
+
+	return append([]envKeychainInfo{}, k.infos...), nil

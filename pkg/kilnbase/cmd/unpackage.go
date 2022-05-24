@@ -109,3 +109,7 @@ func (o *UnpackageOptions) Run() error {
 	if err != nil {
 		return err
 	}
+
+	// Print all resources as one YAML stream
+	for _, resBs := range resBss {
+		resBs = append([]byte("---\n"), resBs...)

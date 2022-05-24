@@ -183,3 +183,5 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				OSVersion:    "10.0.10586",
 				OSFeatures:   []string{"win32k"},
 				Variant:      "armv6l",
+				Features:     []string{"sse4"},
+			},
