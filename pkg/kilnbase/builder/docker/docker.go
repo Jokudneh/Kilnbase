@@ -208,3 +208,6 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 	imageDst = imageDstTagged.Name()
 
 	prefixedLogger.Write([]byte(fmt.Sprintf("starting push (using Docker): %s -> %s\n", tmpRef.AsString(), imageDst)))
+	defer prefixedLogger.Write([]byte("finished push (using Docker)\n"))
+
+	prevInspectData, err := d.Inspect(tmpRef.AsString())

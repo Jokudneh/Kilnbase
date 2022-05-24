@@ -130,3 +130,7 @@ changelog:
   # Could either be asc, desc or empty
   # Default is empty
   sort: asc
+
+  filters:
+    # Commit messages matching the regexp listed here will be removed from
+    # the changelog
