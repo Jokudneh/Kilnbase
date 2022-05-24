@@ -113,3 +113,7 @@ func (o *UnpackageOptions) Run() error {
 	// Print all resources as one YAML stream
 	for _, resBs := range resBss {
 		resBs = append([]byte("---\n"), resBs...)
+		o.ui.PrintBlock(resBs)
+	}
+
+	return nil
