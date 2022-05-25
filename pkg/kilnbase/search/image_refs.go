@@ -127,3 +127,5 @@ func (v ImageRefsVisitorFunc) extractValueAsJSON(val interface{},
 func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 	searchRules []ctlconf.SearchRule) (interface{}, bool) {
 
+	valStr, ok := val.(string)
+	if !ok {

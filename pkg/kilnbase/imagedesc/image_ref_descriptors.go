@@ -154,3 +154,7 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 	}
 
 	cfgDigest, err := img.ConfigName()
+	if err != nil {
+		return td, err
+	}
+	cfgBlob, err := img.RawConfigFile()
