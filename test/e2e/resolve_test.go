@@ -252,3 +252,7 @@ spec:
 	err = ioutil.WriteFile(file.Name(), []byte(imageMapData), os.ModePerm)
 	if err != nil {
 		t.Fatalf("write image map err: %s", err)
+	}
+
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false", "--image-map-file", file.Name()}, RunOpts{
+		StdinReader: strings.NewReader(input),
