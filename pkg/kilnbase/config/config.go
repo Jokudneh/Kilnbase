@@ -187,3 +187,6 @@ func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 		if err != nil {
 			return Config{}, fmt.Errorf(
 				"Unmarshaling %s as %s annotation: %s",
+				res.Description(), ImagesLockKilnbaseOrigins, err)
+		}
+		iOverride := ImageOverride{

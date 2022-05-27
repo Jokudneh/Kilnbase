@@ -180,3 +180,4 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 			Timeout:   30 * time.Second,
 			KeepAlive: 30 * time.Second,
 			DualStack: true,
+		}).DialContext,

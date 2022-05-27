@@ -200,3 +200,6 @@ images:
 - sidecarImage: sample-app
 - - sample-app
 ---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: ImageOverrides
+overrides:

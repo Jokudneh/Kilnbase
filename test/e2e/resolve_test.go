@@ -256,3 +256,5 @@ spec:
 
 	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false", "--image-map-file", file.Name()}, RunOpts{
 		StdinReader: strings.NewReader(input),
+	})
+
