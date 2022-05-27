@@ -142,3 +142,5 @@ overrides:
 	})
 
 	expectedOut := ""
+
+	if out != expectedOut {
