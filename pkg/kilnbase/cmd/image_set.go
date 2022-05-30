@@ -154,3 +154,7 @@ func (o *ImageSet) importImage(item imagedesc.ImageOrIndex,
 }
 
 func (o *ImageSet) verifyTagDigest(
+	uploadTagRef regname.Reference, importDigestRef regname.Digest, registry ctlreg.Registry) error {
+
+	resultURL, _, err := ctlimg.NewResolvedImage(uploadTagRef.Name(), registry).URL()
+	if err != nil {

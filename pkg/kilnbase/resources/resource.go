@@ -151,3 +151,4 @@ func (r *ResourceImpl) Labels() map[string]string      { return r.un.GetLabels()
 
 func (r *ResourceImpl) Equal(res Resource) bool {
 	if typedRes, ok := res.(*ResourceImpl); ok {
+		return reflect.DeepEqual(r.un, typedRes.un)
