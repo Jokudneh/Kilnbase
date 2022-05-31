@@ -181,3 +181,5 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 			KeepAlive: 30 * time.Second,
 			DualStack: true,
 		}).DialContext,
+		MaxIdleConns:          100,
+		IdleConnTimeout:       90 * time.Second,
