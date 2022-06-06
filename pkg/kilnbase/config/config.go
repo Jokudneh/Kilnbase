@@ -190,3 +190,4 @@ func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 				res.Description(), ImagesLockKilnbaseOrigins, err)
 		}
 		iOverride := ImageOverride{
+			ImageRef: ImageRef{

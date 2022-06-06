@@ -214,3 +214,4 @@ overrides:
 - image: ghcr.io/buildpacks-community/kpack/controller` +
 `@sha256:80e71f484f0aa5f54eb549f5d5e015ac5373c9bc616f12891d676a7e1dfb80bd
   newImage: ghcr.io/buildpacks-community/kpack/controller` +
+`@sha256:80e71f484f0aa5f54eb549f5d5e015ac5373c9bc616f12891d676a7e1dfb80bd

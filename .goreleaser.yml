@@ -136,3 +136,4 @@ changelog:
     # the changelog
     # Default is empty
     exclude:
+      - '^docs:'
