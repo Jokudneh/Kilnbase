@@ -231,3 +231,7 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 
 	for i := 0; i < len(writtenLayers); i++ {
 		err := <-errCh
+		if err != nil {
+			return fmt.Errorf("Filling in a layer: %s", err)
+		}
+	}

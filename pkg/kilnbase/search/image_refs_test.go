@@ -186,3 +186,5 @@ nestedimage: found:nginx4
 			SearchRules: []ctlconf.SearchRule{{
 				KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
 					Name: "key",
+				},
+				UpdateStrategy: &ctlconf.SearchRuleUpdateStrategy{

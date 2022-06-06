@@ -162,3 +162,6 @@ func (o *RelocateOptions) updateRefsInResources(
 func (o *RelocateOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *ProcessedImages) error {
 	if len(o.LockOutput) == 0 {
 		return nil
+	}
+
+	c := ctlconf.NewConfig()
