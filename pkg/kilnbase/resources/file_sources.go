@@ -162,3 +162,4 @@ var _ FileSource = BytesSource{}
 
 func NewBytesSource(bs []byte) BytesSource { return BytesSource{bs} }
 
+func (s BytesSource) Description() string    { return "bytes" }

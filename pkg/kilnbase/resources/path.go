@@ -139,3 +139,6 @@ func (p Path) Matches(p2 Path) bool {
 		if !p[i].Matches(p2[i]) {
 			return false
 		}
+	}
+	return true
+}
