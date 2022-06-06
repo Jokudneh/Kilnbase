@@ -153,3 +153,6 @@ func (r *ResourceImpl) Equal(res Resource) bool {
 	if typedRes, ok := res.(*ResourceImpl); ok {
 		return reflect.DeepEqual(r.un, typedRes.un)
 	}
+	panic("Resource#Equal only supports ResourceImpl")
+}
+

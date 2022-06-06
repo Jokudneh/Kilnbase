@@ -179,3 +179,6 @@ func (d Buildx) BuildAndOptionallyPush(
 		return "", err
 	}
 
+	tmpRef, err := d.docker.RetagStable(TmpRef{tagRef}, image, inspectData.ID, prefixedLogger)
+	if err != nil {
+		return "", err
