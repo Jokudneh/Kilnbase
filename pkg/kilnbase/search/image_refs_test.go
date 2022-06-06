@@ -188,3 +188,4 @@ nestedimage: found:nginx4
 					Name: "key",
 				},
 				UpdateStrategy: &ctlconf.SearchRuleUpdateStrategy{
+					YAML: &ctlconf.SearchRuleUpdateStrategyYAML{
