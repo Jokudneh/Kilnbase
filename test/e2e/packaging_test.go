@@ -216,3 +216,5 @@ overrides:
   newImage: ghcr.io/buildpacks-community/kpack/controller` +
 `@sha256:80e71f484f0aa5f54eb549f5d5e015ac5373c9bc616f12891d676a7e1dfb80bd
   preresolved: true
+- image: ghcr.io/buildpacks-community/kpack/webhook` +
+`@sha256:43fc8706c744f4686cc81d10dddc0ab9cd222d7d885904f3d6cc9c184a73cd84
