@@ -144,3 +144,7 @@ func (p Path) Matches(p2 Path) bool {
 }
 
 func (p Path) HasMatchingSuffix(ending Path) bool {
+	if len(p) < len(ending) {
+		return false
+	}
+	for i := range ending {
