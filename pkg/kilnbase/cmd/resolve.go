@@ -202,3 +202,5 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 			}
 
 			return img.URL, true
+		})
+
