@@ -189,3 +189,4 @@ func (d Buildx) BuildAndOptionallyPush(
 
 func (d Buildx) tagRef(image string, imgDst *ctlconf.ImageDestination) (string, error) {
 	tb := ctlb.TagBuilder{}
+
