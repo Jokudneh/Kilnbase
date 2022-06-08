@@ -265,3 +265,4 @@ spec:
 - image: docker.io/foo/img2:1.14.2
 - image: img3
 `
+
