@@ -118,3 +118,5 @@ func (o *UnpackageOptions) Run() error {
 
 	return nil
 }
+
+func (o *UnpackageOptions) updateRefsInResources(

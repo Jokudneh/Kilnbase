@@ -218,3 +218,7 @@ overrides:
   preresolved: true
 - image: ghcr.io/buildpacks-community/kpack/webhook` +
 `@sha256:43fc8706c744f4686cc81d10dddc0ab9cd222d7d885904f3d6cc9c184a73cd84
+  newImage: ghcr.io/buildpacks-community/kpack/webhook` +
+`@sha256:43fc8706c744f4686cc81d10dddc0ab9cd222d7d885904f3d6cc9c184a73cd84
+  preresolved: true
+- image: index.docker.io/bitnami/postgresql@sha256:9762d9a80b90a5efe299d4848057ac5c45fb384570b36f60aad38fe2b1704bd6
