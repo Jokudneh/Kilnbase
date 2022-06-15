@@ -225,3 +225,5 @@ overrides:
   newImage: index.docker.io/bitnami/postgresql@sha256:9762d9a80b90a5efe299d4848057ac5c45fb384570b36f60aad38fe2b1704bd6
   preresolved: true
 - image: index.docker.io/metacontroller/metacontroller@sha256:ad85cb5f5ad9a61a3f38277fed371df43ea0fc55d9073dfa8f4fc2e27c127603
+  newImage: index.docker.io/metacontroller/metacontroller@sha256:ad85cb5f5ad9a61a3f38277fed371df43ea0fc55d9073dfa8f4fc2e27c127603
+  preresolved: true

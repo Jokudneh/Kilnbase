@@ -130,3 +130,4 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 	valStr, ok := val.(string)
 	if !ok {
 		return val, false
+	}
