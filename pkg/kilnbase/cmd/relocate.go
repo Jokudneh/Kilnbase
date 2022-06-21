@@ -165,3 +165,7 @@ func (o *RelocateOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proc
 	}
 
 	c := ctlconf.NewConfig()
+	c.MinimumRequiredVersion = version.Version
+	c.SearchRules = conf.SearchRulesWithoutDefaults()
+
+	for _, override := range conf.ImageOverrides() {
