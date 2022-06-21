@@ -188,3 +188,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			required: ctlconf.PlatformSelection{
 				Architecture: "",
 				OS:           "linux",
+				OSVersion:    "",
