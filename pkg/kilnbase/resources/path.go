@@ -151,3 +151,5 @@ func (p Path) HasMatchingSuffix(ending Path) bool {
 		if !p[len(p)-1-i].Matches(ending[len(ending)-1-i]) {
 			return false
 		}
+	}
+	return true

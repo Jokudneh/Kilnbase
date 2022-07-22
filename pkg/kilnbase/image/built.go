@@ -139,3 +139,7 @@ func (i BuiltImage) URL() (string, []ctlconf.Origin, error) {
 		return i.optionalPushWithDocker(dockerTmpRef, origins)
 	}
 }
+
+func (i BuiltImage) optionalPushWithDocker(dockerTmpRef ctlbdk.TmpRef, origins []ctlconf.Origin) (string, []ctlconf.Origin, error) {
+	if i.imgDst != nil {
+		digest, err := i.docker.Push(dockerTmpRef, i.imgDst.NewImage)
