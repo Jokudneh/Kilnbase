@@ -156,3 +156,5 @@ func (r *ResourceImpl) Equal(res Resource) bool {
 	panic("Resource#Equal only supports ResourceImpl")
 }
 
+func (r *ResourceImpl) DeepCopy() Resource {
+	return &ResourceImpl{*r.un.DeepCopy(), r.gvr, r.transient}
