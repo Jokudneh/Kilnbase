@@ -158,3 +158,5 @@ func (r *ResourceImpl) Equal(res Resource) bool {
 
 func (r *ResourceImpl) DeepCopy() Resource {
 	return &ResourceImpl{*r.un.DeepCopy(), r.gvr, r.transient}
+}
+
