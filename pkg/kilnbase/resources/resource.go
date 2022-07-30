@@ -160,3 +160,5 @@ func (r *ResourceImpl) DeepCopy() Resource {
 	return &ResourceImpl{*r.un.DeepCopy(), r.gvr, r.transient}
 }
 
+func (r *ResourceImpl) DeepCopyRaw() map[string]interface{} {
+	return r.un.DeepCopy().UnstructuredContent()
