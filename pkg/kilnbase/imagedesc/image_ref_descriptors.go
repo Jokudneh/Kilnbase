@@ -162,3 +162,6 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 		return td, err
 	}
 
+	manifestMediaType, err := img.MediaType()
+	if err != nil {
+		return td, err

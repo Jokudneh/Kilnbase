@@ -158,3 +158,7 @@ func (o *ImageSet) verifyTagDigest(
 
 	resultURL, _, err := ctlimg.NewResolvedImage(uploadTagRef.Name(), registry).URL()
 	if err != nil {
+		return fmt.Errorf("Verifying imported image %s: %s", uploadTagRef.Name(), err)
+	}
+
+	resultRef, err := regname.NewDigest(resultURL)

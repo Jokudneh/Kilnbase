@@ -153,3 +153,5 @@ func (p Path) HasMatchingSuffix(ending Path) bool {
 		}
 	}
 	return true
+}
+
