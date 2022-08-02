@@ -195,3 +195,5 @@ func (d Buildx) tagRef(image string, imgDst *ctlconf.ImageDestination) (string, 
 		return "", fmt.Errorf("Generating tmp image suffix: %s", err)
 	}
 
+	tag := tb.CheckTagLen128(fmt.Sprintf(
+		"%s-%s",
