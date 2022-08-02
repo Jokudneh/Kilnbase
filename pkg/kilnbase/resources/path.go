@@ -159,3 +159,5 @@ func (p *PathPart) Matches(p2 *PathPart) bool {
 	switch {
 	case p.MapKey != nil && p2.MapKey != nil:
 		return *p.MapKey == *p2.MapKey
+
+	case p.ArrayIndex != nil && p2.ArrayIndex != nil:
