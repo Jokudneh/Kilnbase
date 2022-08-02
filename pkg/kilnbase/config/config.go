@@ -195,3 +195,4 @@ func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 			},
 			NewImage:     image.Image,
 			Preresolved:  true,
+			ImageOrigins: imgOrigins,

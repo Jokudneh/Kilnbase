@@ -163,3 +163,7 @@ func (o *ImageSet) verifyTagDigest(
 
 	resultRef, err := regname.NewDigest(resultURL)
 	if err != nil {
+		return fmt.Errorf("Verifying imported image %s: %s", resultURL, err)
+	}
+
+	if resultRef.DigestStr() != importDigestRef.DigestStr() {

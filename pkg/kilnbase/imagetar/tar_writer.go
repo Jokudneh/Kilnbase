@@ -239,3 +239,7 @@ func (w *TarWriter) fillInLayers(writtenLayers map[string]writtenLayer) error {
 	return nil
 }
 
+func (w *TarWriter) fillInLayer(wl writtenLayer) error {
+	file, err := w.dstOpener()
+	if err != nil {
+		return err
