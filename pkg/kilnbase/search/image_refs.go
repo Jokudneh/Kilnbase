@@ -133,3 +133,7 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 	}
 
 	docs, err := ctlres.NewYAMLFile(ctlres.NewBytesSource([]byte(valStr))).Docs()
+	if err != nil {
+		return val, false
+	}
+
