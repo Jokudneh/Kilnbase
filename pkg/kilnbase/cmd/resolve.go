@@ -204,3 +204,4 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 			return img.URL, true
 		})
 
+		resBs, err := NewResourceWithImages(resContents, images).Bytes()

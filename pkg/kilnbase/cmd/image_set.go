@@ -162,3 +162,4 @@ func (o *ImageSet) verifyTagDigest(
 	}
 
 	resultRef, err := regname.NewDigest(resultURL)
+	if err != nil {
