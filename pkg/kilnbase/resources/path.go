@@ -161,3 +161,6 @@ func (p *PathPart) Matches(p2 *PathPart) bool {
 		return *p.MapKey == *p2.MapKey
 
 	case p.ArrayIndex != nil && p2.ArrayIndex != nil:
+		switch {
+		case p.ArrayIndex.Index != nil && p2.ArrayIndex.Index != nil:
+			return *p.ArrayIndex.Index == *p2.ArrayIndex.Index

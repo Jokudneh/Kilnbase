@@ -193,3 +193,6 @@ nestedimage: found:nginx4
 							KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
 								Name: "nestedimage",
 							}},
+						},
+					},
+				},
