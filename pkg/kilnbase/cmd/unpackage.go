@@ -124,3 +124,6 @@ func (o *UnpackageOptions) updateRefsInResources(
 	resolvedImages *ProcessedImages) ([][]byte, error) {
 
 	var missingImageErrs []error
+	var resBss [][]byte
+
+	for _, res := range nonConfigRs {
