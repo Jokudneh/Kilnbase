@@ -185,3 +185,7 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 		IdleConnTimeout:       90 * time.Second,
 		TLSHandshakeTimeout:   10 * time.Second,
 		ResponseHeaderTimeout: 10 * time.Second,
+		ExpectContinueTimeout: 1 * time.Second,
+		// Use the cert pool with k8s cert bundle appended.
+		TLSClientConfig: &tls.Config{
+			RootCAs:            pool,
