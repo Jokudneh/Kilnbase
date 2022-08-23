@@ -197,3 +197,5 @@ func (d Buildx) tagRef(image string, imgDst *ctlconf.ImageDestination) (string, 
 
 	tag := tb.CheckTagLen128(fmt.Sprintf(
 		"%s-%s",
+		randPrefix50,
+		tb.TrimStr(tb.CleanStr(image), 50),
