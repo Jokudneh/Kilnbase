@@ -174,3 +174,4 @@ func TestGitRepoValidNonGit(t *testing.T) {
 		t.Fatalf("Making tmp dir: %s", err)
 	}
 
+	defer os.RemoveAll(dir)

@@ -232,3 +232,4 @@ overrides:
   preresolved: true
 - image: index.docker.io/cloudfoundry/cf-k8s-logging@sha256:d8c73e6c87b2a71c8b6798205761bb7870fb2080a4329c4eefb0b4620656eeaa
   newImage: index.docker.io/cloudfoundry/cf-k8s-logging@sha256:d8c73e6c87b2a71c8b6798205761bb7870fb2080a4329c4eefb0b4620656eeaa
+  preresolved: true
