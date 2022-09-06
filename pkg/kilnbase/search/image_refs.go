@@ -137,3 +137,7 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 		return val, false
 	}
 
+	var decodedVals []interface{}
+
+	// Parse all documents before trying to search thru them
+	for _, doc := range docs {

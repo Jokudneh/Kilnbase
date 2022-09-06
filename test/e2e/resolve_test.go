@@ -266,3 +266,7 @@ spec:
 - image: img3
 `
 
+	require.YAMLEq(t, expectedOut, out)
+}
+
+func TestResolveWithImageKeys(t *testing.T) {
