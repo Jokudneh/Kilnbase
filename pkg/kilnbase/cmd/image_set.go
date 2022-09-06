@@ -167,3 +167,4 @@ func (o *ImageSet) verifyTagDigest(
 	}
 
 	if resultRef.DigestStr() != importDigestRef.DigestStr() {
+		return fmt.Errorf("Expected imported image '%s' to have digest '%s' but was '%s'",
