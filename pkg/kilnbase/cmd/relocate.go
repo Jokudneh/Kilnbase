@@ -173,3 +173,4 @@ func (o *RelocateOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proc
 			img, found := resolvedImages.FindByURL(UnprocessedImageURL{override.NewImage})
 			if !found {
 				return fmt.Errorf("Expected to find imported image for '%s'", override.NewImage)
+			}

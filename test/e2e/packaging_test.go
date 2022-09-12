@@ -233,3 +233,6 @@ overrides:
 - image: index.docker.io/cloudfoundry/cf-k8s-logging@sha256:d8c73e6c87b2a71c8b6798205761bb7870fb2080a4329c4eefb0b4620656eeaa
   newImage: index.docker.io/cloudfoundry/cf-k8s-logging@sha256:d8c73e6c87b2a71c8b6798205761bb7870fb2080a4329c4eefb0b4620656eeaa
   preresolved: true
+- image: index.docker.io/cloudfoundry/log-cache-cf-auth-proxy@sha256:f75fc1585dbf869a1a98ee094d334525bb944a07aa0ebe522019c3a479b843de
+  newImage: index.docker.io/cloudfoundry/log-cache-cf-auth-proxy@sha256:f75fc1585dbf869a1a98ee094d334525bb944a07aa0ebe522019c3a479b843de
+  preresolved: true
