@@ -201,3 +201,4 @@ nestedimage: found:nginx4
 		},
 		// Nested YAML extraction
 		{
+			InputResource: map[string]interface{}{

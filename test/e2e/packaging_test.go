@@ -236,3 +236,7 @@ overrides:
 - image: index.docker.io/cloudfoundry/log-cache-cf-auth-proxy@sha256:f75fc1585dbf869a1a98ee094d334525bb944a07aa0ebe522019c3a479b843de
   newImage: index.docker.io/cloudfoundry/log-cache-cf-auth-proxy@sha256:f75fc1585dbf869a1a98ee094d334525bb944a07aa0ebe522019c3a479b843de
   preresolved: true
+- image: index.docker.io/cloudfoundry/log-cache-gateway@sha256:51bc54b4a901228537f43efe3b687c3d8c07f49c015775141a0dffa66cd83ec6
+  newImage: index.docker.io/cloudfoundry/log-cache-gateway@sha256:51bc54b4a901228537f43efe3b687c3d8c07f49c015775141a0dffa66cd83ec6
+  preresolved: true
+- image: index.docker.io/cloudfoundry/log-cache@sha256:616ce5401945100a84df5380e913d1136f2ed714aa90c78f592839de88928dfb

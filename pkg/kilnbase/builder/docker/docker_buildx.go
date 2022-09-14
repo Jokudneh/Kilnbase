@@ -202,3 +202,7 @@ func (d Buildx) tagRef(image string, imgDst *ctlconf.ImageDestination) (string, 
 	))
 
 	if imgDst != nil {
+		tagRef := imgDst.NewImage + ":" + tag
+
+		_, err := regname.NewTag(tagRef, regname.WeakValidation)
+		if err != nil {
