@@ -199,3 +199,6 @@ func (d Buildx) tagRef(image string, imgDst *ctlconf.ImageDestination) (string, 
 		"%s-%s",
 		randPrefix50,
 		tb.TrimStr(tb.CleanStr(image), 50),
+	))
+
+	if imgDst != nil {

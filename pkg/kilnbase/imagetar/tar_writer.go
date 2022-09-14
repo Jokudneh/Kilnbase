@@ -243,3 +243,7 @@ func (w *TarWriter) fillInLayer(wl writtenLayer) error {
 	file, err := w.dstOpener()
 	if err != nil {
 		return err
+	}
+
+	defer file.Close()
+
