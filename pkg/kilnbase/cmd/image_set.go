@@ -171,3 +171,4 @@ func (o *ImageSet) verifyTagDigest(
 			resultURL, importDigestRef.DigestStr(), resultRef.DigestStr())
 	}
 
+	return nil

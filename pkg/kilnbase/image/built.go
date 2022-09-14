@@ -152,3 +152,6 @@ func (i BuiltImage) optionalPushWithDocker(dockerTmpRef ctlbdk.TmpRef, origins [
 			return "", nil, err
 		}
 
+		return url, append(origins, moreOrigins...), nil
+	}
+

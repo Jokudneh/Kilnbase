@@ -165,3 +165,7 @@ func (p *PathPart) Matches(p2 *PathPart) bool {
 		case p.ArrayIndex.Index != nil && p2.ArrayIndex.Index != nil:
 			return *p.ArrayIndex.Index == *p2.ArrayIndex.Index
 		case p.ArrayIndex.All != nil && p2.ArrayIndex.Index != nil:
+			return true
+		default:
+			return false
+		}

@@ -198,3 +198,7 @@ func TestMatchesPlatformSelection(t *testing.T) {
 		{ // Checking subset validity when required features are subset of given features.
 			// matchesPlatform expected to return true.
 			given: v1.Platform{
+				Architecture: "arm",
+				OS:           "linux",
+				OSVersion:    "10.0.10586",
+				OSFeatures:   []string{"win64k", "f1", "f2"},
