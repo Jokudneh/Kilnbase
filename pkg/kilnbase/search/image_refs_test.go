@@ -198,3 +198,6 @@ nestedimage: found:nginx4
 				},
 			}},
 			OutputImages: []string{"nginx1", "nginx3", "nginx4"},
+		},
+		// Nested YAML extraction
+		{

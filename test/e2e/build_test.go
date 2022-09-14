@@ -153,3 +153,6 @@ sources:
 	})
 
 	out = regexp.MustCompile("sha256\\-[a-z0-9]{64}").ReplaceAllString(out, "SHA256-REPLACED")
+
+	expectedOut := `---
+kind: Object
