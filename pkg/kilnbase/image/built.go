@@ -148,3 +148,7 @@ func (i BuiltImage) optionalPushWithDocker(dockerTmpRef ctlbdk.TmpRef, origins [
 		}
 
 		url, moreOrigins, err := NewDigestedImageFromParts(i.imgDst.NewImage, digest.AsString()).URL()
+		if err != nil {
+			return "", nil, err
+		}
+

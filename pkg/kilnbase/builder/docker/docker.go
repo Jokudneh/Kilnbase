@@ -215,3 +215,4 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 		prefixedLogger.Write([]byte(fmt.Sprintf("inspect error: %s\n", err)))
 		return ImageDigest{}, err
 	}
+
