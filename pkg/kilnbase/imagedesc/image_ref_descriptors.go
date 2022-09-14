@@ -169,3 +169,4 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 	manifestDigest, err := img.Digest()
 	if err != nil {
 		return td, err
+	}

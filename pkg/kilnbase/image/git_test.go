@@ -175,3 +175,5 @@ func TestGitRepoValidNonGit(t *testing.T) {
 	}
 
 	defer os.RemoveAll(dir)
+
+	gitRepo := ctlimg.NewGitRepo(dir)
