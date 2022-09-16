@@ -189,3 +189,4 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 		// Use the cert pool with k8s cert bundle appended.
 		TLSClientConfig: &tls.Config{
 			RootCAs:            pool,
+			InsecureSkipVerify: (opts.VerifyCerts == false),

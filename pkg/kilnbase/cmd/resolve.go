@@ -205,3 +205,7 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 		})
 
 		resBs, err := NewResourceWithImages(resContents, images).Bytes()
+		if err != nil {
+			return nil, err
+		}
+
