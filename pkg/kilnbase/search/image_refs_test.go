@@ -202,3 +202,5 @@ nestedimage: found:nginx4
 		// Nested YAML extraction
 		{
 			InputResource: map[string]interface{}{
+				"nested": map[string]interface{}{
+					"key": `{"nestedimage":"nginx1"}`,

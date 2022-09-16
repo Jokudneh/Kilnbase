@@ -158,3 +158,4 @@ sources:
 kind: Object
 spec:
 - image: kilnbase:kilnbase-SHA256-REPLACED
+`

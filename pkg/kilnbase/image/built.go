@@ -155,3 +155,7 @@ func (i BuiltImage) optionalPushWithDocker(dockerTmpRef ctlbdk.TmpRef, origins [
 		return url, append(origins, moreOrigins...), nil
 	}
 
+	return dockerTmpRef.AsString(), origins, nil
+}
+
+func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
