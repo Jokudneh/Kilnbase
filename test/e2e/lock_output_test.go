@@ -216,3 +216,5 @@ kind: Config
 searchRules:
 - keyMatcher:
     path: [images, {allIndexes: true}, {index: 0}]
+`
+
