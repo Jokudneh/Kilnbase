@@ -247,3 +247,6 @@ func (w *TarWriter) fillInLayer(wl writtenLayer) error {
 
 	defer file.Close()
 
+	_, err = file.(*os.File).Seek(wl.Offset, 0)
+	if err != nil {
+		return fmt.Errorf("Seeking to offset: %s", err)
