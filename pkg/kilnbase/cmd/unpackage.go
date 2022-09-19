@@ -127,3 +127,4 @@ func (o *UnpackageOptions) updateRefsInResources(
 	var resBss [][]byte
 
 	for _, res := range nonConfigRs {
+		resContents := res.DeepCopyRaw()
