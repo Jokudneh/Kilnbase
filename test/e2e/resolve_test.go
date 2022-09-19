@@ -271,3 +271,7 @@ spec:
 
 func TestResolveWithImageKeys(t *testing.T) {
 	env := BuildEnv(t)
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
+
+	input := `
+kind: Object

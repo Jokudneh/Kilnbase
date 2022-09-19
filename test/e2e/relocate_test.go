@@ -153,3 +153,7 @@ overrides:
 	}
 
 	kilnbaseVersionOutput, _ := kilnbase.RunWithOpts([]string{"version"}, RunOpts{})
+	kilnbaseVersion := strings.SplitAfter(kilnbaseVersionOutput, " ")[2]
+
+	expectedLockOut := strings.ReplaceAll(env.WithRegistries(`apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Config
