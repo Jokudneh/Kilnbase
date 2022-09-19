@@ -241,3 +241,4 @@ overrides:
   preresolved: true
 - image: index.docker.io/cloudfoundry/log-cache@sha256:616ce5401945100a84df5380e913d1136f2ed714aa90c78f592839de88928dfb
   newImage: index.docker.io/cloudfoundry/log-cache@sha256:616ce5401945100a84df5380e913d1136f2ed714aa90c78f592839de88928dfb
+  preresolved: true
