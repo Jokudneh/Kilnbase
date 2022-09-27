@@ -142,3 +142,6 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 	// Parse all documents before trying to search thru them
 	for _, doc := range docs {
 		var decodedVal interface{}
+
+		err := yaml.Unmarshal(doc, &decodedVal)
+		if err != nil {

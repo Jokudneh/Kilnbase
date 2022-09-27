@@ -216,3 +216,5 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 		return ImageDigest{}, err
 	}
 
+	{
+		var stdoutBuf, stderrBuf bytes.Buffer

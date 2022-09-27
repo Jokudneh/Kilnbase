@@ -254,3 +254,6 @@ func (w *TarWriter) fillInLayer(wl writtenLayer) error {
 
 	tw := tar.NewWriter(file)
 	// Do not close tar writer as it would add unwanted footer
+
+	foundLayer, err := w.ids.FindLayer(wl.Layer)
+	if err != nil {
