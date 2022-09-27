@@ -250,3 +250,7 @@ func (w *TarWriter) fillInLayer(wl writtenLayer) error {
 	_, err = file.(*os.File).Seek(wl.Offset, 0)
 	if err != nil {
 		return fmt.Errorf("Seeking to offset: %s", err)
+	}
+
+	tw := tar.NewWriter(file)
+	// Do not close tar writer as it would add unwanted footer

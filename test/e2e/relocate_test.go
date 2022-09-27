@@ -157,3 +157,4 @@ overrides:
 
 	expectedLockOut := strings.ReplaceAll(env.WithRegistries(`apiVersion: kilnbase.k14s.io/v1alpha1
 kind: Config
+minimumRequiredVersion: __ver__
