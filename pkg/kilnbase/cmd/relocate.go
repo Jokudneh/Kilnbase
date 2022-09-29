@@ -180,3 +180,6 @@ func (o *RelocateOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proc
 				NewImage:    img.URL,
 				Preresolved: true,
 			})
+		}
+	}
+
