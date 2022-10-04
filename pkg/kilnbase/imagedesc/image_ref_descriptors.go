@@ -173,3 +173,4 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 	manifestBlob, err := img.RawManifest()
 	if err != nil {
 		return td, err
+	}
