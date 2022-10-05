@@ -204,3 +204,6 @@ nestedimage: found:nginx4
 			InputResource: map[string]interface{}{
 				"nested": map[string]interface{}{
 					"key": `{"nestedimage":"nginx1"}`,
+				},
+				"data": `
+path:
