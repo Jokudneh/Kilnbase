@@ -163,3 +163,6 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 
 	absPath, err := filepath.Abs(i.buildSource.Path)
 	if err != nil {
+		return nil, err
+	}
+

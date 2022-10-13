@@ -165,3 +165,7 @@ func (r *ResourceImpl) DeepCopyRaw() map[string]interface{} {
 }
 
 func (r *ResourceImpl) AsYAMLBytes() ([]byte, error) {
+	return yaml.Marshal(r.un.Object)
+}
+
+func (r *ResourceImpl) unstructured() unstructured.Unstructured     { return r.un }
