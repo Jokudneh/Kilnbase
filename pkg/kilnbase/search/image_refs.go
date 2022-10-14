@@ -145,3 +145,6 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 
 		err := yaml.Unmarshal(doc, &decodedVal)
 		if err != nil {
+			return val, false
+		}
+

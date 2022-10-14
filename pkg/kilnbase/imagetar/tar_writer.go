@@ -257,3 +257,7 @@ func (w *TarWriter) fillInLayer(wl writtenLayer) error {
 
 	foundLayer, err := w.ids.FindLayer(wl.Layer)
 	if err != nil {
+		return err
+	}
+
+	stream, err := foundLayer.Open()

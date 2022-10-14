@@ -128,3 +128,4 @@ func (o *UnpackageOptions) updateRefsInResources(
 
 	for _, res := range nonConfigRs {
 		resContents := res.DeepCopyRaw()
+		imageRefs := ctlser.NewImageRefs(resContents, conf.SearchRules())
