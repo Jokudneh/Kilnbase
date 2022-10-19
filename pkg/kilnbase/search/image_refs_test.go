@@ -207,3 +207,4 @@ nestedimage: found:nginx4
 				},
 				"data": `
 path:
+- nestedimage: |

@@ -250,3 +250,7 @@ overrides:
   preresolved: true
 - image: prom/statsd-exporter:v0.15.0@sha256:e3174186628b401e4a441b78513ba06e957644267332436be0c77dd7af9bdddc
   newImage: index.docker.io/prom/statsd-exporter@sha256:e3174186628b401e4a441b78513ba06e957644267332436be0c77dd7af9bdddc
+  preresolved: true
+`
+
+	expectedPackagedSHA256 := "5fe1470af5fc84d44949d5e9fb9f15c2369f7932ed2a6cadd466d1dd5c6e2bcf"
