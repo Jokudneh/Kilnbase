@@ -212,3 +212,4 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 		resBss = append(resBss, resBs)
 	}
 
+	err := errFromErrs(errs)
