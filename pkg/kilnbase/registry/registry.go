@@ -190,3 +190,6 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 		TLSClientConfig: &tls.Config{
 			RootCAs:            pool,
 			InsecureSkipVerify: (opts.VerifyCerts == false),
+		},
+	}, nil
+}
