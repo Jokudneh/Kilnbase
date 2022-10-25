@@ -209,3 +209,6 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 			return nil, err
 		}
 
+		resBss = append(resBss, resBs)
+	}
+

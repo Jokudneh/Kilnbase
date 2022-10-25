@@ -184,3 +184,4 @@ func (o *RelocateOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proc
 	}
 
 	// TODO should we dedup overrides?
+	for _, urlImagePair := range resolvedImages.All() {
