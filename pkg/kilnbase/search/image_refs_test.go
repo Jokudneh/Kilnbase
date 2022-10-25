@@ -208,3 +208,4 @@ nestedimage: found:nginx4
 				"data": `
 path:
 - nestedimage: |
+    something: nginx3

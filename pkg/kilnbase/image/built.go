@@ -166,3 +166,6 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 		return nil, err
 	}
 
+	sources = append(sources, ctlconf.Origin{Local: &ctlconf.OriginLocal{Path: absPath}})
+
+	gitRepo := NewGitRepo(absPath)
