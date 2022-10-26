@@ -197,3 +197,7 @@ func newHTTPTransport(opts Opts) (*http.Transport, error) {
 func (i Registry) retry(doFunc func() error) error {
 	var lastErr error
 	for i := 0; i < 5; i++ {
+		lastErr = doFunc()
+		if lastErr == nil {
+			return nil
+		}

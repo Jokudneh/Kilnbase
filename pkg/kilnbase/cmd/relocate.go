@@ -189,3 +189,5 @@ func (o *RelocateOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proc
 			ImageRef: ctlconf.ImageRef{
 				Image: urlImagePair.UnprocessedImageURL.URL,
 			},
+			NewImage:    urlImagePair.Image.URL,
+			Preresolved: true,
