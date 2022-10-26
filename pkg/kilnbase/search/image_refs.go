@@ -148,3 +148,6 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 			return val, false
 		}
 
+		// Skip over empty documents
+		if decodedVal != nil {
+			decodedVals = append(decodedVals, decodedVal)
