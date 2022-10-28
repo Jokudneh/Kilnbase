@@ -181,3 +181,4 @@ func TestGitRepoValidNonGit(t *testing.T) {
 		t.Fatalf("Expected empty dir to be not a valid git repo")
 	}
 	_, err = gitRepo.RemoteURL()
+	if err == nil {

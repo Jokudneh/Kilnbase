@@ -205,3 +205,6 @@ func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 		return Config{}, fmt.Errorf("Validating %s: %s", res.Description(), err)
 	}
 
+	return overridesConfig, nil
+}
+
