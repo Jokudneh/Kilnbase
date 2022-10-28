@@ -169,3 +169,7 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 	sources = append(sources, ctlconf.Origin{Local: &ctlconf.OriginLocal{Path: absPath}})
 
 	gitRepo := NewGitRepo(absPath)
+
+	if gitRepo.IsValid() {
+		var err error
+

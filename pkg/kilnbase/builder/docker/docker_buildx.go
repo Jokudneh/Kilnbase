@@ -210,3 +210,4 @@ func (d Buildx) tagRef(image string, imgDst *ctlconf.ImageDestination) (string, 
 		}
 
 		return tagRef, nil
+	}
