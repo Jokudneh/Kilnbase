@@ -277,3 +277,7 @@ func TestResolveWithImageKeys(t *testing.T) {
 kind: Object
 spec:
 - image: nginx:1.14.2
+- customImage: nginx:1.14.2
+- subPath:
+    anotherCustomImage: nginx:1.14.2
+---

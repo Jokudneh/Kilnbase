@@ -208,3 +208,7 @@ func NewConfigFromImagesLock(res ctlres.Resource) (Config, error) {
 	return overridesConfig, nil
 }
 
+func (d Config) Validate() error {
+	if len(d.MinimumRequiredVersion) > 0 {
+		if d.MinimumRequiredVersion[0] == 'v' {
+			return errors.New("Validating minimum version: " +
