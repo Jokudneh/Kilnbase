@@ -158,3 +158,6 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 
 	for _, decodedVal := range decodedVals {
 		v.Apply(decodedVal, searchRules)
+
+		valBs, err := yaml.Marshal(decodedVal)
+		if err != nil {

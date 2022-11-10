@@ -281,3 +281,7 @@ spec:
 - subPath:
     anotherCustomImage: nginx:1.14.2
 ---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: ImageKeys
+keys:
+- customImage

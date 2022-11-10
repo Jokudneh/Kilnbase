@@ -213,3 +213,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				Variant:      "",
 				Features:     []string{"sse4"},
 			},
+			want: true,
