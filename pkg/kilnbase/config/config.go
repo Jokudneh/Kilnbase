@@ -212,3 +212,5 @@ func (d Config) Validate() error {
 	if len(d.MinimumRequiredVersion) > 0 {
 		if d.MinimumRequiredVersion[0] == 'v' {
 			return errors.New("Validating minimum version: " +
+				"must not have prefix 'v' (e.g. '0.8.0')")
+		}

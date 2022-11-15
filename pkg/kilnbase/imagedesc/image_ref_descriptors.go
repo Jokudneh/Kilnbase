@@ -177,3 +177,6 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 
 	td = ImageDescriptor{
 		Refs: []string{ref.String()},
+
+		Config: ConfigDescriptor{
+			Digest: cfgDigest.String(),
