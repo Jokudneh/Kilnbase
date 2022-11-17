@@ -209,3 +209,5 @@ nestedimage: found:nginx4
 path:
 - nestedimage: |
     something: nginx3
+`,
+			},
