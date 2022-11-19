@@ -132,3 +132,6 @@ func (o *UnpackageOptions) updateRefsInResources(
 
 		imageRefs.Visit(func(imgURL string) (string, bool) {
 			outputImg, found := resolvedImages.FindByURL(UnprocessedImageURL{imgURL})
+			if found {
+				return outputImg.URL, true
+			}

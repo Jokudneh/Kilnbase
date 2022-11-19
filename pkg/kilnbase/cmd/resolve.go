@@ -219,3 +219,6 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 
 	return resBss, nil
 }
+
+func errFromErrs(errs []error) error {
+	if len(errs) == 0 {
