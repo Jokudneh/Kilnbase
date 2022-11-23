@@ -135,3 +135,4 @@ func (o *UnpackageOptions) updateRefsInResources(
 			if found {
 				return outputImg.URL, true
 			}
+			missingImageErrs = append(missingImageErrs, fmt.Errorf("Expected to find image for '%s'", imgURL))

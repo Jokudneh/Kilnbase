@@ -264,3 +264,6 @@ func (w *TarWriter) fillInLayer(wl writtenLayer) error {
 	if err != nil {
 		return err
 	}
+
+	err = w.writeTarEntry(tw, wl.Name, stream, wl.Layer.Size)
+	if err != nil {
