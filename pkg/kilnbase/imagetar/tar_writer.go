@@ -267,3 +267,6 @@ func (w *TarWriter) fillInLayer(wl writtenLayer) error {
 
 	err = w.writeTarEntry(tw, wl.Name, stream, wl.Layer.Size)
 	if err != nil {
+		return fmt.Errorf("Rewriting tar entry (%s): %s", wl.Name, err)
+	}
+

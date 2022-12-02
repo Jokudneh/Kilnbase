@@ -214,3 +214,6 @@ func (d Config) Validate() error {
 			return errors.New("Validating minimum version: " +
 				"must not have prefix 'v' (e.g. '0.8.0')")
 		}
+
+		userConstraint, err := semver.NewConstraint(">=" + d.MinimumRequiredVersion)
+		if err != nil {
