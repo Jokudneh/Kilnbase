@@ -161,3 +161,5 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 
 		valBs, err := yaml.Marshal(decodedVal)
 		if err != nil {
+			panic(fmt.Sprintf("ObjVisitor: Encoding as YAML: %s", err))
+		}

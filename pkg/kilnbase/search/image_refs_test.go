@@ -211,3 +211,4 @@ path:
     something: nginx3
 `,
 			},
+			OutputResource: map[string]interface{}{
