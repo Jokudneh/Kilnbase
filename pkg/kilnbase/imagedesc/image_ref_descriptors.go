@@ -180,3 +180,6 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 
 		Config: ConfigDescriptor{
 			Digest: cfgDigest.String(),
+			Raw:    string(cfgBlob),
+		},
+

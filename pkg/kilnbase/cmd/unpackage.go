@@ -136,3 +136,7 @@ func (o *UnpackageOptions) updateRefsInResources(
 				return outputImg.URL, true
 			}
 			missingImageErrs = append(missingImageErrs, fmt.Errorf("Expected to find image for '%s'", imgURL))
+			return "", false
+		})
+
+		resBs, err := yaml.Marshal(resContents)

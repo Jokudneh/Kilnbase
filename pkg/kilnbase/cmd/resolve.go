@@ -223,3 +223,7 @@ func (o *ResolveOptions) updateRefsInResources(nonConfigRs []ctlres.Resource,
 func errFromErrs(errs []error) error {
 	if len(errs) == 0 {
 		return nil
+	}
+
+	var errStrs []string
+	for _, err := range errs {

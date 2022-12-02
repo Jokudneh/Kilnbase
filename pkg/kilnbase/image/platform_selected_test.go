@@ -214,3 +214,5 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				Features:     []string{"sse4"},
 			},
 			want: true,
+		},
+		{ // Checking subset validity when some required features is not subset of given features.
