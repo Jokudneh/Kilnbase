@@ -216,3 +216,5 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			want: true,
 		},
 		{ // Checking subset validity when some required features is not subset of given features.
+			// matchesPlatform expected to return false.
+			given: v1.Platform{
