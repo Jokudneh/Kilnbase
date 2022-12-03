@@ -217,3 +217,5 @@ func (d Config) Validate() error {
 
 		userConstraint, err := semver.NewConstraint(">=" + d.MinimumRequiredVersion)
 		if err != nil {
+			return fmt.Errorf("Parsing minimum version constraint: %s", err)
+		}

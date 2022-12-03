@@ -173,3 +173,5 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 	if gitRepo.IsValid() {
 		var err error
 
+		sha, err := gitRepo.HeadSHA()
+		if err != nil {
