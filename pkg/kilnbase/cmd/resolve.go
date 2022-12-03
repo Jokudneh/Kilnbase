@@ -227,3 +227,7 @@ func errFromErrs(errs []error) error {
 
 	var errStrs []string
 	for _, err := range errs {
+		errStrs = append(errStrs, err.Error())
+	}
+	return fmt.Errorf("\n- %s", strings.Join(errStrs, "\n- "))
+}

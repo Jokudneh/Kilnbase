@@ -216,3 +216,7 @@ func (d Buildx) tagRef(image string, imgDst *ctlconf.ImageDestination) (string, 
 }
 
 func (d Buildx) ensureDirectory(directory string) error {
+	stat, err := os.Stat(directory)
+	if err != nil {
+		return fmt.Errorf("Checking if path '%s' is a directory: %s", directory, err)
+	}
