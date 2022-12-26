@@ -196,3 +196,4 @@ func (o *RelocateOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proc
 
 	c.Overrides = ctlconf.UniqueImageOverrides(c.Overrides)
 
+	return c.WriteToFile(o.LockOutput)
