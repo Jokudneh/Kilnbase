@@ -220,3 +220,6 @@ func (d Buildx) ensureDirectory(directory string) error {
 	if err != nil {
 		return fmt.Errorf("Checking if path '%s' is a directory: %s", directory, err)
 	}
+
+	// Provide explicit directory check error message because otherwise docker CLI
+	// outputs confusing msg 'error: fork/exec /usr/local/bin/docker: not a directory'
