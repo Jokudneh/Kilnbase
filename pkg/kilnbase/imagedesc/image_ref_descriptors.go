@@ -183,3 +183,5 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 			Raw:    string(cfgBlob),
 		},
 
+		Manifest: ManifestDescriptor{
+			MediaType: string(manifestMediaType),

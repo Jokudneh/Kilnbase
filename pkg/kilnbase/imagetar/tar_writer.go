@@ -273,3 +273,7 @@ func (w *TarWriter) fillInLayer(wl writtenLayer) error {
 	return tw.Flush()
 }
 
+func (w *TarWriter) writeTarEntry(tw *tar.Writer, path string, r io.Reader, size int64) error {
+	var zerosFill bool
+
+	if r == nil {
