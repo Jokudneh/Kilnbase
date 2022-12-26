@@ -270,3 +270,6 @@ func (w *TarWriter) fillInLayer(wl writtenLayer) error {
 		return fmt.Errorf("Rewriting tar entry (%s): %s", wl.Name, err)
 	}
 
+	return tw.Flush()
+}
+
