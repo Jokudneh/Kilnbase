@@ -277,3 +277,5 @@ func (w *TarWriter) writeTarEntry(tw *tar.Writer, path string, r io.Reader, size
 	var zerosFill bool
 
 	if r == nil {
+		zerosFill = true
+		r = io.LimitReader(zeroReader{}, size)

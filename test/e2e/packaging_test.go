@@ -256,3 +256,5 @@ overrides:
 	expectedPackagedSHA256 := "5fe1470af5fc84d44949d5e9fb9f15c2369f7932ed2a6cadd466d1dd5c6e2bcf"
 
 	path := "/tmp/kilnbase-test-pkg-unpkg-successful-with-many-images"
+	defer os.RemoveAll(path)
+

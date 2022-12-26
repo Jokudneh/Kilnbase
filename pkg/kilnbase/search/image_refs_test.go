@@ -215,3 +215,5 @@ path:
 				"nested": map[string]interface{}{
 					"key": `{"nestedimage":"found:nginx1"}`,
 				},
+				"data": `---
+path:
