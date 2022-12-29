@@ -228,3 +228,6 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 			prefixedLogger.Write([]byte(fmt.Sprintf("tag error: %s\n", err)))
 			return ImageDigest{}, err
 		}
+	}
+
+	{
