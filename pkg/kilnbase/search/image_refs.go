@@ -166,3 +166,7 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 
 		result += "---\n" + string(valBs)
 	}
+
+	return result, true
+}
+

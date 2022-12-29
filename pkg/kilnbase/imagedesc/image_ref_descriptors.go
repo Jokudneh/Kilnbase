@@ -185,3 +185,6 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 
 		Manifest: ManifestDescriptor{
 			MediaType: string(manifestMediaType),
+			Digest:    manifestDigest.String(),
+			Raw:       string(manifestBlob),
+		},
