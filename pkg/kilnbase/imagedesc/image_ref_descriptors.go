@@ -190,3 +190,5 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 		},
 	}
 
+	layers, err := img.Layers()
+	if err != nil {

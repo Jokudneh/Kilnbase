@@ -171,3 +171,5 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 }
 
 func (ImageRefsVisitorFunc) randomPrefix() string {
+	bs := make([]byte, 10)
+	_, err := rand.Read(bs)
