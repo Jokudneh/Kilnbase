@@ -170,3 +170,4 @@ func (v ImageRefsVisitorFunc) extractValueAsYAML(val interface{},
 	return result, true
 }
 
+func (ImageRefsVisitorFunc) randomPrefix() string {
