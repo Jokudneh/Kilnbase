@@ -292,3 +292,6 @@ keys:
 		StdinReader: strings.NewReader(input),
 	})
 
+	expectedOut := `---
+kind: Object
+spec:

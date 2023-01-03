@@ -188,3 +188,5 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 			Digest:    manifestDigest.String(),
 			Raw:       string(manifestBlob),
 		},
+	}
+
