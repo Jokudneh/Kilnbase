@@ -178,3 +178,5 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 			return nil, err
 		}
 
+		unredactedURL, err := gitRepo.RemoteURL()
+		if err != nil {
