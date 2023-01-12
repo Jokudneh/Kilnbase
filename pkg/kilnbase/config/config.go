@@ -223,3 +223,5 @@ func (d Config) Validate() error {
 		kilnbaseVersion, err := semver.NewVersion(version.Version)
 		if err != nil {
 			return fmt.Errorf("Parsing version constraint: %s", err)
+		}
+
