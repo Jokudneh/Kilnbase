@@ -183,3 +183,6 @@ func TestGitRepoValidNonGit(t *testing.T) {
 	_, err = gitRepo.RemoteURL()
 	if err == nil {
 		t.Fatalf("Did not expect remote url")
+	}
+	_, err = gitRepo.HeadSHA()
+	if err == nil {
