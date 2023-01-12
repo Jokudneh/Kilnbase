@@ -232,3 +232,5 @@ func errFromErrs(errs []error) error {
 	return fmt.Errorf("\n- %s", strings.Join(errStrs, "\n- "))
 }
 
+func (o *ResolveOptions) withImageMapConf(conf ctlconf.Conf) (ctlconf.Conf, error) {
+	if len(o.ImageMapFile) == 0 {

@@ -231,3 +231,6 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 	}
 
 	{
+		var stdoutBuf, stderrBuf bytes.Buffer
+
+		cmd := exec.Command("docker", "push", imageDst)

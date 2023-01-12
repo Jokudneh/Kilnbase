@@ -169,3 +169,4 @@ overrides:
 
 	if string(lockOutBs) != expectedLockOut {
 		t.Fatalf("Expected unpackage lock output >>>%s<<< to match >>>%s<<<", lockOutBs, expectedLockOut)
+	}
