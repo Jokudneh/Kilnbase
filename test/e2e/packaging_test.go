@@ -259,3 +259,6 @@ overrides:
 	defer os.RemoveAll(path)
 
 	kilnbase.RunWithOpts([]string{"package", "-f", "-", "--output", path, "--concurrency=1"}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})
+

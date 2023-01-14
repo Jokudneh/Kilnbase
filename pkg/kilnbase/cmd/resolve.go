@@ -234,3 +234,6 @@ func errFromErrs(errs []error) error {
 
 func (o *ResolveOptions) withImageMapConf(conf ctlconf.Conf) (ctlconf.Conf, error) {
 	if len(o.ImageMapFile) == 0 {
+		return conf, nil
+	}
+

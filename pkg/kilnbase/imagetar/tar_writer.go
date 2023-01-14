@@ -281,3 +281,7 @@ func (w *TarWriter) writeTarEntry(tw *tar.Writer, path string, r io.Reader, size
 		r = io.LimitReader(zeroReader{}, size)
 	}
 
+	hdr := &tar.Header{
+		Mode:     0644,
+		Typeflag: tar.TypeReg,
+		Size:     size,
