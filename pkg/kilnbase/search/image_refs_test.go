@@ -217,3 +217,4 @@ path:
 				},
 				"data": `---
 path:
+- nestedimage: |
