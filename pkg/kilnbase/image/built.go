@@ -182,3 +182,5 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 		if err != nil {
 			return nil, err
 		}
+
+		git := ctlconf.OriginGit{

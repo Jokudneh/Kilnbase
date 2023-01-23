@@ -225,3 +225,5 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				Variant:      "",
 				Features:     []string{"sse4", "f1"},
 			},
+			required: ctlconf.PlatformSelection{
+				Architecture: "arm",
