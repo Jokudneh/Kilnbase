@@ -187,3 +187,5 @@ func TestGitRepoValidNonGit(t *testing.T) {
 	_, err = gitRepo.HeadSHA()
 	if err == nil {
 		t.Fatalf("Did not expect head sha")
+	}
+	_, err = gitRepo.HeadTags()
