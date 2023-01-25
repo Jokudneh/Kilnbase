@@ -218,3 +218,4 @@ path:
 				"data": `---
 path:
 - nestedimage: |
+    ---
