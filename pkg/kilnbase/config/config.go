@@ -225,3 +225,7 @@ func (d Config) Validate() error {
 			return fmt.Errorf("Parsing version constraint: %s", err)
 		}
 
+		if !userConstraint.Check(kilnbaseVersion) {
+			return fmt.Errorf("kilnbase version '%s' does "+
+				"not meet the minimum required version '%s'", version.Version, d.MinimumRequiredVersion)
+		}
