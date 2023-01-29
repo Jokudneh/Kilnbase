@@ -285,3 +285,7 @@ func (w *TarWriter) writeTarEntry(tw *tar.Writer, path string, r io.Reader, size
 		Mode:     0644,
 		Typeflag: tar.TypeReg,
 		Size:     size,
+		Name:     path,
+	}
+
+	err := tw.WriteHeader(hdr)
