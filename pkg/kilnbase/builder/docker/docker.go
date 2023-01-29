@@ -234,3 +234,6 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 		var stdoutBuf, stderrBuf bytes.Buffer
 
 		cmd := exec.Command("docker", "push", imageDst)
+		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
+		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
+
