@@ -262,3 +262,4 @@ overrides:
 		StdinReader: strings.NewReader(input),
 	})
 
+	actualSHA256 := sha256File(t, path)
