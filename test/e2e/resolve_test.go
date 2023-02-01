@@ -303,3 +303,6 @@ spec:
 
 	require.YAMLEq(t, expectedOut, out)
 }
+
+func TestResolveWithOverrideMatchingImageRepo(t *testing.T) {
+	env := BuildEnv(t)

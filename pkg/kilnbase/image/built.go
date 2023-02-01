@@ -184,3 +184,7 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 		}
 
 		git := ctlconf.OriginGit{
+			SHA:       sha,
+			RemoteURL: GitRedactedRemoteURL(unredactedURL),
+		}
+

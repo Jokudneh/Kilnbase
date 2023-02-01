@@ -193,3 +193,7 @@ func TestGitRepoValidNonGit(t *testing.T) {
 		t.Fatalf("Did not expect head tags to succeed")
 	}
 	_, err = gitRepo.IsDirty()
+	if err == nil {
+		t.Fatalf("Did not expect dirty to succeed")
+	}
+}
