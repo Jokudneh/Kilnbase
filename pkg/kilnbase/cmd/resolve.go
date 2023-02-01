@@ -240,3 +240,4 @@ func (o *ResolveOptions) withImageMapConf(conf ctlconf.Conf) (ctlconf.Conf, erro
 	bs, err := os.ReadFile(o.ImageMapFile)
 	if err != nil {
 		return ctlconf.Conf{}, err
+	}

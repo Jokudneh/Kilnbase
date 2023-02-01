@@ -237,3 +237,4 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 		cmd.Stdout = io.MultiWriter(&stdoutBuf, prefixedLogger)
 		cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
 
+		err := cmd.Run()
