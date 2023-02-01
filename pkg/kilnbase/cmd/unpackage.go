@@ -143,3 +143,5 @@ func (o *UnpackageOptions) updateRefsInResources(
 		if err != nil {
 			return nil, err
 		}
+
+		resBss = append(resBss, resBs)

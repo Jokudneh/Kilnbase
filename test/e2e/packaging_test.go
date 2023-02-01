@@ -263,3 +263,6 @@ overrides:
 	})
 
 	actualSHA256 := sha256File(t, path)
+
+	// Assert that concurrently writing to tar doesn't affect sha256
+	if actualSHA256 != expectedPackagedSHA256 {
