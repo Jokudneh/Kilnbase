@@ -227,3 +227,4 @@ func (d Buildx) ensureDirectory(directory string) error {
 		return fmt.Errorf("Expected path '%s' to be a directory, but was not", directory)
 	}
 
+	return nil

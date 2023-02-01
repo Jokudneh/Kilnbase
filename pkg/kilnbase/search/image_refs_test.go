@@ -222,3 +222,5 @@ path:
     something: found:nginx3
 `,
 			},
+			SearchRules: []ctlconf.SearchRule{{
+				KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
