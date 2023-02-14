@@ -227,3 +227,7 @@ path:
 					Name: "key",
 				},
 				UpdateStrategy: &ctlconf.SearchRuleUpdateStrategy{
+					YAML: &ctlconf.SearchRuleUpdateStrategyYAML{
+						SearchRules: []ctlconf.SearchRule{{
+							KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
+								Name: "nestedimage",

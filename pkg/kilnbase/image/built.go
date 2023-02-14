@@ -188,3 +188,7 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 			RemoteURL: GitRedactedRemoteURL(unredactedURL),
 		}
 
+		git.Dirty, err = gitRepo.IsDirty()
+		if err != nil {
+			return nil, err
+		}
