@@ -234,3 +234,6 @@ func TestMatchesPlatformSelection(t *testing.T) {
 				Features:     []string{"sse4", "f2"},
 			},
 			want: false,
+		},
+		{ // Checking subset validity when OS features not required,
+			// and required features is indeed a subset of given features.

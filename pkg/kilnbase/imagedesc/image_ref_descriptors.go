@@ -195,3 +195,6 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 		return td, err
 	}
 
+	for _, layer := range layers {
+		layerMediaType, err := layer.MediaType()
+		if err != nil {

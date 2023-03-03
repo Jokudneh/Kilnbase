@@ -229,3 +229,6 @@ func (d Config) Validate() error {
 			return fmt.Errorf("kilnbase version '%s' does "+
 				"not meet the minimum required version '%s'", version.Version, d.MinimumRequiredVersion)
 		}
+	}
+
+	for i, src := range d.Sources {
