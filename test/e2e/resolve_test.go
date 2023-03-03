@@ -307,3 +307,5 @@ spec:
 func TestResolveWithOverrideMatchingImageRepo(t *testing.T) {
 	env := BuildEnv(t)
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
+
+	input := `

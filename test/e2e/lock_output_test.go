@@ -224,3 +224,6 @@ searchRules:
 	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false", "--imgpkg-lock-output=" + path}, RunOpts{
 		StdinReader: strings.NewReader(input),
 	})
+
+	expectedOut := `---
+images:

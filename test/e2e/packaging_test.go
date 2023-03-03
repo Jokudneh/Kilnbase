@@ -266,3 +266,5 @@ overrides:
 
 	// Assert that concurrently writing to tar doesn't affect sha256
 	if actualSHA256 != expectedPackagedSHA256 {
+		t.Fatalf("Expected package sha256 to be same >>>%s<<< to match >>>%s<<<", actualSHA256, expectedPackagedSHA256)
+	}
