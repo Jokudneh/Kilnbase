@@ -197,3 +197,6 @@ func TestGitRepoValidNonGit(t *testing.T) {
 		t.Fatalf("Did not expect dirty to succeed")
 	}
 }
+
+func TestGitRepoRemoteURL(t *testing.T) {
+	dir, err := os.MkdirTemp("", "kilnbase-git-repo")

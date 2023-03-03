@@ -192,3 +192,5 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 		if err != nil {
 			return nil, err
 		}
+
+		git.Tags, err = gitRepo.HeadTags()
