@@ -232,3 +232,7 @@ func (d Config) Validate() error {
 	}
 
 	for i, src := range d.Sources {
+		err := src.Validate()
+		if err != nil {
+			return fmt.Errorf("Validating Sources[%d]: %s", i, err)
+		}

@@ -289,3 +289,6 @@ func (w *TarWriter) writeTarEntry(tw *tar.Writer, path string, r io.Reader, size
 	}
 
 	err := tw.WriteHeader(hdr)
+	if err != nil {
+		return fmt.Errorf("Writing header: %s", err)
+	}
