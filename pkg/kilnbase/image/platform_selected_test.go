@@ -239,3 +239,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			// and required features is indeed a subset of given features.
 			// matchesPlatform expected to return true.
 			given: v1.Platform{
+				Architecture: "arm",
