@@ -145,3 +145,5 @@ func (o *UnpackageOptions) updateRefsInResources(
 		}
 
 		resBss = append(resBss, resBs)
+	}
+
