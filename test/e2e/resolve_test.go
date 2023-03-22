@@ -309,3 +309,6 @@ func TestResolveWithOverrideMatchingImageRepo(t *testing.T) {
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
 	input := `
+kind: Object
+spec:
+- image: docker.io/library/not-nginx

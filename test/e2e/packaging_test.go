@@ -269,3 +269,7 @@ overrides:
 		t.Fatalf("Expected package sha256 to be same >>>%s<<< to match >>>%s<<<", actualSHA256, expectedPackagedSHA256)
 	}
 
+	kilnbase.RunWithOpts([]string{"package", "-f", "-", "--output", path, "--concurrency=5"}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})
+
