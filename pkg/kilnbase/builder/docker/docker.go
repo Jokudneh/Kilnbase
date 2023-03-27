@@ -243,3 +243,6 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 			return ImageDigest{}, err
 		}
 	}
+
+	currInspectData, err := d.Inspect(imageDst)
+	if err != nil {
