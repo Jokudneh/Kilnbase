@@ -235,3 +235,7 @@ path:
 						},
 					},
 				},
+			}, {
+				KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
+					Name: "data",
+				},

@@ -147,3 +147,7 @@ func (o *UnpackageOptions) updateRefsInResources(
 		resBss = append(resBss, resBs)
 	}
 
+	err := errFromErrs(missingImageErrs)
+	if err != nil {
+		return nil, err
+	}
