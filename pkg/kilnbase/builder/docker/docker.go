@@ -246,3 +246,7 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 
 	currInspectData, err := d.Inspect(imageDst)
 	if err != nil {
+		prefixedLogger.Write([]byte(fmt.Sprintf("inspect error: %s\n", err)))
+		return ImageDigest{}, err
+	}
+

@@ -239,3 +239,5 @@ path:
 				KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
 					Name: "data",
 				},
+				UpdateStrategy: &ctlconf.SearchRuleUpdateStrategy{
+					YAML: &ctlconf.SearchRuleUpdateStrategyYAML{

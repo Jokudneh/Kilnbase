@@ -236,3 +236,7 @@ func (d Config) Validate() error {
 		if err != nil {
 			return fmt.Errorf("Validating Sources[%d]: %s", i, err)
 		}
+	}
+
+	for i, override := range d.Overrides {
+		err := override.Validate()
