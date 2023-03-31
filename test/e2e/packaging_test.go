@@ -273,3 +273,7 @@ overrides:
 		StdinReader: strings.NewReader(input),
 	})
 
+	actualSHA256 = sha256File(t, path)
+
+	if actualSHA256 != expectedPackagedSHA256 {
+		t.Fatalf("Expected package sha256 to be same >>>%s<<< to match >>>%s<<<", actualSHA256, expectedPackagedSHA256)

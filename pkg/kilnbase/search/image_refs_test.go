@@ -241,3 +241,4 @@ path:
 				},
 				UpdateStrategy: &ctlconf.SearchRuleUpdateStrategy{
 					YAML: &ctlconf.SearchRuleUpdateStrategyYAML{
+						SearchRules: []ctlconf.SearchRule{{

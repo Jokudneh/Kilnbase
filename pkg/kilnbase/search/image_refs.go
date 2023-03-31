@@ -176,3 +176,5 @@ func (ImageRefsVisitorFunc) randomPrefix() string {
 	if err != nil {
 		panic("ImageRefs: Expected to fetch 10 random bytes")
 	}
+	var str string
+	for _, b := range bs {
