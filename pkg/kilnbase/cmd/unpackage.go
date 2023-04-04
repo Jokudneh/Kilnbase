@@ -151,3 +151,5 @@ func (o *UnpackageOptions) updateRefsInResources(
 	if err != nil {
 		return nil, err
 	}
+
+	return resBss, nil

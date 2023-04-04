@@ -241,3 +241,6 @@ images:
 		t.Fatalf(failedReading, path)
 	}
 
+	if string(bs) != imgLockWithResolvedOrigins {
+		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", bs, imgLockWithResolvedOrigins)
+	}
