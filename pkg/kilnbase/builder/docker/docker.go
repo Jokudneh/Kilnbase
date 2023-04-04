@@ -250,3 +250,4 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 		return ImageDigest{}, err
 	}
 
+	// Try to detect if image we should be pushing isnt the one we ended up pushing

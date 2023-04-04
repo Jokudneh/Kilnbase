@@ -205,3 +205,6 @@ func TestGitRepoRemoteURL(t *testing.T) {
 	}
 
 	defer os.RemoveAll(dir)
+
+	runCmd(t, "git", []string{"init", "."}, dir)
+

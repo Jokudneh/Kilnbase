@@ -312,3 +312,4 @@ func TestResolveWithOverrideMatchingImageRepo(t *testing.T) {
 kind: Object
 spec:
 - image: docker.io/library/not-nginx
+- image: docker.io/library/not-nginx:1.14.2
