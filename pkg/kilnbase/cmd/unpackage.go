@@ -157,3 +157,5 @@ func (o *UnpackageOptions) updateRefsInResources(
 
 func (o *UnpackageOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *ProcessedImages) error {
 	if len(o.LockOutput) == 0 {
+		return nil
+	}

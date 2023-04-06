@@ -244,3 +244,5 @@ images:
 	if string(bs) != imgLockWithResolvedOrigins {
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", bs, imgLockWithResolvedOrigins)
 	}
+}
+
