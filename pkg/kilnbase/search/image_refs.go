@@ -178,3 +178,4 @@ func (ImageRefsVisitorFunc) randomPrefix() string {
 	}
 	var str string
 	for _, b := range bs {
+		str += fmt.Sprintf("%d", b)
