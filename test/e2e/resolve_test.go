@@ -314,3 +314,6 @@ spec:
 - image: docker.io/library/not-nginx
 - image: docker.io/library/not-nginx:1.14.2
 - image: docker.io/library/not-nginx:1.20@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: ImageOverrides

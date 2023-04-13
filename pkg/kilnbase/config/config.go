@@ -240,3 +240,5 @@ func (d Config) Validate() error {
 
 	for i, override := range d.Overrides {
 		err := override.Validate()
+		if err != nil {
+			return fmt.Errorf("Validating Overrides[%d]: %s", i, err)
