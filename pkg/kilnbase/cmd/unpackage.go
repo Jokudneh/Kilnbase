@@ -159,3 +159,7 @@ func (o *UnpackageOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Pro
 	if len(o.LockOutput) == 0 {
 		return nil
 	}
+
+	c := ctlconf.NewConfig()
+	c.MinimumRequiredVersion = version.Version
+	c.SearchRules = conf.SearchRulesWithoutDefaults()
