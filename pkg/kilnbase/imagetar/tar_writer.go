@@ -293,3 +293,4 @@ func (w *TarWriter) writeTarEntry(tw *tar.Writer, path string, r io.Reader, size
 		return fmt.Errorf("Writing header: %s", err)
 	}
 
+	t1 := time.Now()
