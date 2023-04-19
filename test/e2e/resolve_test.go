@@ -317,3 +317,7 @@ spec:
 ---
 apiVersion: kilnbase.k14s.io/v1alpha1
 kind: ImageOverrides
+overrides:
+- imageRepo: docker.io/library/not-nginx
+  newImage: docker.io/library/nginx:1.14.2
+`
