@@ -279,3 +279,7 @@ overrides:
 		t.Fatalf("Expected package sha256 to be same >>>%s<<< to match >>>%s<<<", actualSHA256, expectedPackagedSHA256)
 	}
 
+	kilnbase.RunWithOpts([]string{
+		"unpackage", "-f", "-", "--input", path,
+		"--repository", env.WithRegistries("docker.io/*username*/kilnbase-test-pkg-unpkg-successful-with-many-images"),
+	}, RunOpts{StdinReader: strings.NewReader(input)})

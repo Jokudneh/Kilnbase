@@ -163,3 +163,7 @@ func (o *UnpackageOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Pro
 	c := ctlconf.NewConfig()
 	c.MinimumRequiredVersion = version.Version
 	c.SearchRules = conf.SearchRulesWithoutDefaults()
+
+	for _, override := range conf.ImageOverrides() {
+		if override.Preresolved {
+			img, found := resolvedImages.FindByURL(UnprocessedImageURL{override.NewImage})
