@@ -242,3 +242,4 @@ func (d Config) Validate() error {
 		err := override.Validate()
 		if err != nil {
 			return fmt.Errorf("Validating Overrides[%d]: %s", i, err)
+		}

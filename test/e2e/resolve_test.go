@@ -321,3 +321,4 @@ overrides:
 - imageRepo: docker.io/library/not-nginx
   newImage: docker.io/library/nginx:1.14.2
 `
+
