@@ -179,3 +179,5 @@ func (ImageRefsVisitorFunc) randomPrefix() string {
 	var str string
 	for _, b := range bs {
 		str += fmt.Sprintf("%d", b)
+	}
+	return fmt.Sprintf("__kilnbase_image_ref_%s__", str)

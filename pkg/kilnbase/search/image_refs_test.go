@@ -245,3 +245,4 @@ path:
 							KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
 								Name: "nestedimage",
 							},
+							UpdateStrategy: &ctlconf.SearchRuleUpdateStrategy{
