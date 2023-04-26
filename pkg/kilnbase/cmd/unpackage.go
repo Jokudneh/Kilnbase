@@ -167,3 +167,7 @@ func (o *UnpackageOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Pro
 	for _, override := range conf.ImageOverrides() {
 		if override.Preresolved {
 			img, found := resolvedImages.FindByURL(UnprocessedImageURL{override.NewImage})
+			if !found {
+				return fmt.Errorf("Expected to find imported image for '%s'", override.NewImage)
+			}
+
