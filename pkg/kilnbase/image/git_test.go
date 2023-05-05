@@ -209,3 +209,6 @@ func TestGitRepoRemoteURL(t *testing.T) {
 	runCmd(t, "git", []string{"init", "."}, dir)
 
 	gitRepo := ctlimg.NewGitRepo(dir)
+
+	url, err := gitRepo.RemoteURL()
+	if err != nil {

@@ -250,3 +250,6 @@ path:
 									SearchRules: []ctlconf.SearchRule{{
 										KeyMatcher: &ctlconf.SearchRuleKeyMatcher{
 											Name: "something",
+										}},
+									},
+								},
