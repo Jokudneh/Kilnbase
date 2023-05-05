@@ -249,3 +249,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			required: ctlconf.PlatformSelection{
 				Architecture: "arm",
 				OS:           "linux",
+				OSVersion:    "10.0.10586",

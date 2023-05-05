@@ -283,3 +283,6 @@ overrides:
 		"unpackage", "-f", "-", "--input", path,
 		"--repository", env.WithRegistries("docker.io/*username*/kilnbase-test-pkg-unpkg-successful-with-many-images"),
 	}, RunOpts{StdinReader: strings.NewReader(input)})
+}
+
+func sha256File(t *testing.T, path string) string {

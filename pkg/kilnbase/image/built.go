@@ -200,3 +200,5 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 
 		sources = append(sources, ctlconf.Origin{Git: &git})
 	}
+
+	return sources, nil
