@@ -171,3 +171,5 @@ func (o *UnpackageOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Pro
 				return fmt.Errorf("Expected to find imported image for '%s'", override.NewImage)
 			}
 
+			c.Overrides = append(c.Overrides, ctlconf.ImageOverride{
+				ImageRef:    override.ImageRef,

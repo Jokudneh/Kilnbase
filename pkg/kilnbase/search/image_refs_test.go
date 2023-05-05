@@ -257,3 +257,6 @@ path:
 						},
 					},
 				},
+			}},
+			OutputImages: []string{"nginx1", "nginx3"},
+		},
