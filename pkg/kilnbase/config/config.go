@@ -247,3 +247,4 @@ func (d Config) Validate() error {
 
 	for i, dst := range d.Destinations {
 		err := dst.Validate()
+		if err != nil {

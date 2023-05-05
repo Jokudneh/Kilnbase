@@ -250,3 +250,5 @@ func TestImgpkgLockFileNotInOutput(t *testing.T) {
 	env := BuildEnv(t)
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
+	input := imgLock
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
