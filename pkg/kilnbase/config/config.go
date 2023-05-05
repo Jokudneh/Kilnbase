@@ -243,3 +243,7 @@ func (d Config) Validate() error {
 		if err != nil {
 			return fmt.Errorf("Validating Overrides[%d]: %s", i, err)
 		}
+	}
+
+	for i, dst := range d.Destinations {
+		err := dst.Validate()

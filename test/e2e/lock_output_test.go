@@ -246,3 +246,4 @@ images:
 	}
 }
 
+func TestImgpkgLockFileNotInOutput(t *testing.T) {
