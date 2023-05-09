@@ -174,3 +174,6 @@ func (o *UnpackageOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Pro
 			c.Overrides = append(c.Overrides, ctlconf.ImageOverride{
 				ImageRef:    override.ImageRef,
 				NewImage:    img.URL,
+				Preresolved: true,
+			})
+		}
