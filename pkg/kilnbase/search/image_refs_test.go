@@ -261,3 +261,6 @@ path:
 			OutputImages: []string{"nginx1", "nginx3"},
 		},
 		// Matching key within another matching key section
+		{
+			InputResource: map[string]interface{}{
+				// key matches, but not expecting a map
