@@ -290,3 +290,5 @@ func sha256File(t *testing.T, path string) string {
 	if err != nil {
 		t.Fatal(err)
 	}
+	defer f.Close()
+
