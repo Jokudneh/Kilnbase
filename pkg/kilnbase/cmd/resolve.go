@@ -246,3 +246,5 @@ func (o *ResolveOptions) withImageMapConf(conf ctlconf.Conf) (ctlconf.Conf, erro
 
 	err = json.Unmarshal(bs, &mapping)
 	if err != nil {
+		return ctlconf.Conf{}, err
+	}

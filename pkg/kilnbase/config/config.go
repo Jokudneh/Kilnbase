@@ -249,3 +249,7 @@ func (d Config) Validate() error {
 		err := dst.Validate()
 		if err != nil {
 			return fmt.Errorf("Validating Destinations[%d]: %s", i, err)
+		}
+	}
+
+	for i, key := range d.Keys {
