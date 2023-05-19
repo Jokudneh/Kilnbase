@@ -253,3 +253,6 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 	// Try to detect if image we should be pushing isnt the one we ended up pushing
 	// given that its theoretically possible concurrent Docker commands
 	// may have retagged in the middle of the process.
+	if prevInspectData.ID != currInspectData.ID {
+		prefixedLogger.Write([]byte(fmt.Sprintf("push race error: %s\n", err)))
+		return ImageDigest{}, err
