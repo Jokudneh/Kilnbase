@@ -181,3 +181,6 @@ func (o *UnpackageOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Pro
 
 	// TODO should we dedup overrides?
 	for _, urlImagePair := range resolvedImages.All() {
+		c.Overrides = append(c.Overrides, ctlconf.ImageOverride{
+			ImageRef: ctlconf.ImageRef{
+				Image: urlImagePair.UnprocessedImageURL.URL,

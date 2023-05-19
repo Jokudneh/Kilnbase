@@ -299,3 +299,6 @@ func (w *TarWriter) writeTarEntry(tw *tar.Writer, path string, r io.Reader, size
 	if err != nil {
 		return fmt.Errorf("Copying data: %s", err)
 	}
+
+	if !zerosFill {
+		w.logger.WriteStr("done: file '%s' (%s)\n", path, time.Now().Sub(t1))
