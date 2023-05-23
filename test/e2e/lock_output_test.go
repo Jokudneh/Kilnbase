@@ -254,3 +254,5 @@ func TestImgpkgLockFileNotInOutput(t *testing.T) {
 	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
 		StdinReader: strings.NewReader(input),
 	})
+
+	expectedOut := ``
