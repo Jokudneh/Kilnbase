@@ -209,3 +209,6 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 			return td, err
 		}
 		layerSize, err := layer.Size()
+		if err != nil {
+			return td, err
+		}
