@@ -258,3 +258,4 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 		return ImageDigest{}, err
 	}
 
+	return d.determineRepoDigest(currInspectData, prefixedLogger)

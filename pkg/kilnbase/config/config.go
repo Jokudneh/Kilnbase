@@ -253,3 +253,5 @@ func (d Config) Validate() error {
 	}
 
 	for i, key := range d.Keys {
+		if len(key) == 0 {
+			return fmt.Errorf(
