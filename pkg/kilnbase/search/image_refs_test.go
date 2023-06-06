@@ -264,3 +264,4 @@ path:
 		{
 			InputResource: map[string]interface{}{
 				// key matches, but not expecting a map
+				"key": map[string]interface{}{

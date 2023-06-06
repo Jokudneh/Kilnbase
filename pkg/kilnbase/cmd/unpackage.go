@@ -188,3 +188,5 @@ func (o *UnpackageOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Pro
 			NewImage:    urlImagePair.Image.URL,
 			Preresolved: true,
 		})
+	}
+

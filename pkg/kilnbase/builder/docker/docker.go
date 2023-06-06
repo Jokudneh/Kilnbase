@@ -256,3 +256,5 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 	if prevInspectData.ID != currInspectData.ID {
 		prefixedLogger.Write([]byte(fmt.Sprintf("push race error: %s\n", err)))
 		return ImageDigest{}, err
+	}
+
