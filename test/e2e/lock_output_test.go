@@ -256,3 +256,4 @@ func TestImgpkgLockFileNotInOutput(t *testing.T) {
 	})
 
 	expectedOut := ``
+	if out != expectedOut {
