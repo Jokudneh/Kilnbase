@@ -257,3 +257,6 @@ func (d Config) Validate() error {
 			return fmt.Errorf(
 				"Validating Destinations[%d]: expected to be non-empty", i)
 		}
+	}
+
+	for i, sr := range d.SearchRules {
