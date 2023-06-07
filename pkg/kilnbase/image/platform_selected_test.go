@@ -261,3 +261,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 	for _, test := range tests {
 		got := ctlimg.MatchesPlatformSelection(test.given, test.required)
 		if got != test.want {
+			t.Errorf("matchesPlatform(%v, %v); got %v, want %v", test.given, test.required, got, test.want)
