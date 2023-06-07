@@ -256,3 +256,4 @@ func (d Config) Validate() error {
 		if len(key) == 0 {
 			return fmt.Errorf(
 				"Validating Destinations[%d]: expected to be non-empty", i)
+		}

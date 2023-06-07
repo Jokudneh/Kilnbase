@@ -267,3 +267,5 @@ path:
 				"key": map[string]interface{}{
 					// nested-key matches as well and is a string
 					"nested-key": "nginx1",
+					"key":        "nginx2",
+				},
