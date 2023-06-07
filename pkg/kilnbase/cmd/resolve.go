@@ -249,3 +249,4 @@ func (o *ResolveOptions) withImageMapConf(conf ctlconf.Conf) (ctlconf.Conf, erro
 		return ctlconf.Conf{}, err
 	}
 
+	additionalConfig := ctlconf.Config{}
