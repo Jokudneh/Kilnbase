@@ -183,3 +183,5 @@ func (ImageRefsVisitorFunc) randomPrefix() string {
 	return fmt.Sprintf("__kilnbase_image_ref_%s__", str)
 }
 
+type tmpRefMatcher struct {
+	prefix string

@@ -269,3 +269,7 @@ path:
 					"nested-key": "nginx1",
 					"key":        "nginx2",
 				},
+				"another-key": map[string]interface{}{
+					"key": "nginx3",
+				},
+			},

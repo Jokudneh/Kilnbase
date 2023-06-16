@@ -213,3 +213,6 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 			return td, err
 		}
 
+		layerTD := ImageLayerDescriptor{
+			MediaType: string(layerMediaType),
+			Digest:    layerDigest.String(),
