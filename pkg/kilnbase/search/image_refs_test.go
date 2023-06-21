@@ -273,3 +273,5 @@ path:
 					"key": "nginx3",
 				},
 			},
+			OutputResource: map[string]interface{}{
+				"key": map[string]interface{}{

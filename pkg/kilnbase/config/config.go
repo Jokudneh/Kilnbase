@@ -260,3 +260,6 @@ func (d Config) Validate() error {
 	}
 
 	for i, sr := range d.SearchRules {
+		err := sr.Validate()
+		if err != nil {
+			return fmt.Errorf("Validating SearchRules[%d]: %s", i, err)
