@@ -186,3 +186,4 @@ func (ImageRefsVisitorFunc) randomPrefix() string {
 type tmpRefMatcher struct {
 	prefix string
 }
+
