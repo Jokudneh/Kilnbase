@@ -293,3 +293,4 @@ func sha256File(t *testing.T, path string) string {
 	defer f.Close()
 
 	hs := sha256.New()
+	if _, err := io.Copy(hs, f); err != nil {
