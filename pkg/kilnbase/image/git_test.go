@@ -217,3 +217,4 @@ func TestGitRepoRemoteURL(t *testing.T) {
 	if url != ctlimg.GitRepoRemoteURLUnknown {
 		t.Fatalf("Expected url to be unknown")
 	}
+

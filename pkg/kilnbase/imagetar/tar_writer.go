@@ -305,3 +305,6 @@ func (w *TarWriter) writeTarEntry(tw *tar.Writer, path string, r io.Reader, size
 	}
 
 	return nil
+}
+
+func (TarWriter) retry(fn func() error) error {
