@@ -220,3 +220,5 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 			Size:      layerSize,
 		}
 
+		td.Layers = append(td.Layers, layerTD)
+

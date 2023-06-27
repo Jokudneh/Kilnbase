@@ -218,3 +218,4 @@ func TestGitRepoRemoteURL(t *testing.T) {
 		t.Fatalf("Expected url to be unknown")
 	}
 
+	runCmd(t, "git", []string{"remote", "add", "origin", "http://some-remote"}, dir)
