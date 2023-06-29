@@ -263,3 +263,5 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 
 func (d Docker) ensureDirectory(directory string) error {
 	stat, err := os.Stat(directory)
+	if err != nil {
+		return fmt.Errorf("Checking if path '%s' is a directory: %s", directory, err)
