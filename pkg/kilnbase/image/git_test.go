@@ -219,3 +219,6 @@ func TestGitRepoRemoteURL(t *testing.T) {
 	}
 
 	runCmd(t, "git", []string{"remote", "add", "origin", "http://some-remote"}, dir)
+
+	url, err = gitRepo.RemoteURL()
+	if err != nil {

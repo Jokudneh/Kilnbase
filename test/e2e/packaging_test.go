@@ -296,3 +296,5 @@ func sha256File(t *testing.T, path string) string {
 	if _, err := io.Copy(hs, f); err != nil {
 		t.Fatal(err)
 	}
+
+	return fmt.Sprintf("%x", hs.Sum(nil))
