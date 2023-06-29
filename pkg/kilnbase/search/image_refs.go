@@ -187,3 +187,6 @@ type tmpRefMatcher struct {
 	prefix string
 }
 
+var _ Matcher = tmpRefMatcher{}
+
+func (m tmpRefMatcher) Matches(_ ctlres.Path, value interface{}) (bool, ctlconf.SearchRuleUpdateStrategy) {

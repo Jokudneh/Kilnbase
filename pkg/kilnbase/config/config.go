@@ -265,3 +265,4 @@ func (d Config) Validate() error {
 			return fmt.Errorf("Validating SearchRules[%d]: %s", i, err)
 		}
 	}
+

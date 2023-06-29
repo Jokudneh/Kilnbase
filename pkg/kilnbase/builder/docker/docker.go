@@ -259,3 +259,7 @@ func (d Docker) Push(tmpRef TmpRef, imageDst string) (ImageDigest, error) {
 	}
 
 	return d.determineRepoDigest(currInspectData, prefixedLogger)
+}
+
+func (d Docker) ensureDirectory(directory string) error {
+	stat, err := os.Stat(directory)
