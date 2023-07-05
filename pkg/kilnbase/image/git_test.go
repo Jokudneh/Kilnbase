@@ -222,3 +222,5 @@ func TestGitRepoRemoteURL(t *testing.T) {
 
 	url, err = gitRepo.RemoteURL()
 	if err != nil {
+		t.Fatalf("Expected url to succeed")
+	}

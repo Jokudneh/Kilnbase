@@ -222,3 +222,6 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 
 		td.Layers = append(td.Layers, layerTD)
 
+		ids.imageLayersLock.Lock()
+		ids.imageLayers[layerTD] = layer
+		ids.imageLayersLock.Unlock()

@@ -266,3 +266,5 @@ func (d Config) Validate() error {
 		}
 	}
 
+	return nil
+}
