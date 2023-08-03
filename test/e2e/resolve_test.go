@@ -337,3 +337,5 @@ spec:
 	require.YAMLEq(t, expectedOut, out)
 }
 
+func TestResolveSuccessfulWithSearchRules(t *testing.T) {
+	env := BuildEnv(t)

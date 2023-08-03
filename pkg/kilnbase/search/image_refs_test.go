@@ -275,3 +275,5 @@ path:
 			},
 			OutputResource: map[string]interface{}{
 				"key": map[string]interface{}{
+					"nested-key": "found:nginx1",
+					"key":        "found:nginx2",
