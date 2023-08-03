@@ -225,3 +225,4 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 		ids.imageLayersLock.Lock()
 		ids.imageLayers[layerTD] = layer
 		ids.imageLayersLock.Unlock()
+	}
