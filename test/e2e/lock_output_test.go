@@ -260,3 +260,5 @@ func TestImgpkgLockFileNotInOutput(t *testing.T) {
 		t.Fatalf("Expected:\n >>>%s<<<\n\nActual:\n >>>%s<<<", expectedOut, out)
 	}
 }
+
+func TestImgpkgLockFileInputSuccessful(t *testing.T) {

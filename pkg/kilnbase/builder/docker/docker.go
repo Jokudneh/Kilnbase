@@ -269,3 +269,6 @@ func (d Docker) ensureDirectory(directory string) error {
 
 	// Provide explicit directory check error message because otherwise docker CLI
 	// outputs confusing msg 'error: fork/exec /usr/local/bin/docker: not a directory'
+	if !stat.IsDir() {
+		return fmt.Errorf("Expected path '%s' to be a directory, but was not", directory)
+	}
