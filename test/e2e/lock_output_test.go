@@ -264,3 +264,7 @@ func TestImgpkgLockFileNotInOutput(t *testing.T) {
 func TestImgpkgLockFileInputSuccessful(t *testing.T) {
 	env := BuildEnv(t)
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
+
+	input := `
+images:
+- image: nginx:1.14.2
