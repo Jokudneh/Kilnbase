@@ -262,3 +262,5 @@ func TestImgpkgLockFileNotInOutput(t *testing.T) {
 }
 
 func TestImgpkgLockFileInputSuccessful(t *testing.T) {
+	env := BuildEnv(t)
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
