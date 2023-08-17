@@ -271,3 +271,7 @@ func (d Config) Validate() error {
 
 func (d Source) Validate() error {
 	err := d.ImageRef.Validate()
+	if err != nil {
+		return err
+	}
+	if len(d.Path) == 0 {

@@ -228,3 +228,4 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 	}
 
 	return td, nil
+}

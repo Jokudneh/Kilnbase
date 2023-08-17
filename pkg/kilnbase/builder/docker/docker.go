@@ -275,3 +275,5 @@ func (d Docker) ensureDirectory(directory string) error {
 
 	return nil
 }
+
+func (d Docker) determineRepoDigest(inspectData InspectData,
