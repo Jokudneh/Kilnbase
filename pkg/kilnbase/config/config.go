@@ -269,3 +269,5 @@ func (d Config) Validate() error {
 	return nil
 }
 
+func (d Source) Validate() error {
+	err := d.ImageRef.Validate()

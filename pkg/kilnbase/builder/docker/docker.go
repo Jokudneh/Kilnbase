@@ -272,3 +272,6 @@ func (d Docker) ensureDirectory(directory string) error {
 	if !stat.IsDir() {
 		return fmt.Errorf("Expected path '%s' to be a directory, but was not", directory)
 	}
+
+	return nil
+}
