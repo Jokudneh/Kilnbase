@@ -314,3 +314,7 @@ func (TarWriter) retry(fn func() error) error {
 		if err == nil {
 			return nil
 		}
+		time.Sleep(1 * time.Second)
+	}
+	return fmt.Errorf("Retried 5 times: %s", err)
+}
