@@ -311,3 +311,6 @@ func (TarWriter) retry(fn func() error) error {
 	var err error
 	for i := 0; i < 5; i++ {
 		err = fn()
+		if err == nil {
+			return nil
+		}
