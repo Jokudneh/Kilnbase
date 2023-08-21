@@ -342,3 +342,5 @@ func TestResolveSuccessfulWithSearchRules(t *testing.T) {
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
 	input := `
+kind: Object
+spec:
