@@ -345,3 +345,7 @@ func TestResolveSuccessfulWithSearchRules(t *testing.T) {
 kind: Object
 spec:
 - image: nginx:1.14.2
+- sidecarImage: index.docker.io/library/nginx:1.14.2
+- some_key: nginx:1.14.2
+- nestedkey:
+    data: |
