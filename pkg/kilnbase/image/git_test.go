@@ -228,3 +228,5 @@ func TestGitRepoRemoteURL(t *testing.T) {
 		t.Fatalf("Expected url to be correct: %s", url)
 	}
 }
+
+func TestGitRepoHeadSHA(t *testing.T) {

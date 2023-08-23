@@ -277,3 +277,4 @@ func (d Docker) ensureDirectory(directory string) error {
 }
 
 func (d Docker) determineRepoDigest(inspectData InspectData,
+	prefixedLogger *ctllog.PrefixWriter) (ImageDigest, error) {

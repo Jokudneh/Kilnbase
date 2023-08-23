@@ -344,3 +344,4 @@ func TestResolveSuccessfulWithSearchRules(t *testing.T) {
 	input := `
 kind: Object
 spec:
+- image: nginx:1.14.2
