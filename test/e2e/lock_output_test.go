@@ -270,3 +270,7 @@ images:
 - image: nginx:1.14.2
 - image: sample-app
 ---
+` + imgLockWithResolvedOrigins
+
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-"}, RunOpts{
+		StdinReader: strings.NewReader(input),

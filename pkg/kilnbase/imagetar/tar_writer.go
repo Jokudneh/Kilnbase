@@ -318,3 +318,5 @@ func (TarWriter) retry(fn func() error) error {
 	}
 	return fmt.Errorf("Retried 5 times: %s", err)
 }
+
+type zeroReader struct{}
