@@ -349,3 +349,5 @@ spec:
 - some_key: nginx:1.14.2
 - nestedkey:
     data: |
+      nested:
+        image: nginx:1.14.2

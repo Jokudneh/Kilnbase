@@ -258,3 +258,7 @@ func (o *ResolveOptions) withImageMapConf(conf ctlconf.Conf) (ctlconf.Conf, erro
 			},
 			NewImage:    v,
 			Preresolved: true,
+		})
+	}
+
+	return conf.WithAdditionalConfig(additionalConfig), nil
