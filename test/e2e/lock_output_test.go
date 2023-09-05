@@ -274,3 +274,5 @@ images:
 
 	out, _ := kilnbase.RunWithOpts([]string{"-f", "-"}, RunOpts{
 		StdinReader: strings.NewReader(input),
+	})
+

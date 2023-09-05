@@ -285,3 +285,4 @@ path:
 			SearchRules: []ctlconf.SearchRule{
 				{KeyMatcher: &ctlconf.SearchRuleKeyMatcher{Name: "key"}},
 				{KeyMatcher: &ctlconf.SearchRuleKeyMatcher{Name: "nested-key"}},
+			},

@@ -233,3 +233,6 @@ func TestGitRepoHeadSHA(t *testing.T) {
 	dir, err := os.MkdirTemp("", "kilnbase-git-repo")
 	if err != nil {
 		t.Fatalf("Making tmp dir: %s", err)
+	}
+
+	defer os.RemoveAll(dir)

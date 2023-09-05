@@ -280,3 +280,4 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 	prefixedLogger *ctllog.PrefixWriter) (ImageDigest, error) {
 
 	if len(inspectData.RepoDigests) == 0 {
+		prefixedLogger.Write([]byte("missing repo digest\n"))
