@@ -264,3 +264,5 @@ func (o *ResolveOptions) withImageMapConf(conf ctlconf.Conf) (ctlconf.Conf, erro
 	return conf.WithAdditionalConfig(additionalConfig), nil
 }
 
+func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *ProcessedImages) error {
+	switch {

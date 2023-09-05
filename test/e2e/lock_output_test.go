@@ -276,3 +276,4 @@ images:
 		StdinReader: strings.NewReader(input),
 	})
 
+	expectedOut := `---

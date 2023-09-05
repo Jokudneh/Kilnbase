@@ -281,3 +281,7 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 
 	if len(inspectData.RepoDigests) == 0 {
 		prefixedLogger.Write([]byte("missing repo digest\n"))
+		return ImageDigest{}, fmt.Errorf("Expected to find at least one repo digest")
+	}
+
+	digestStrs := map[string]struct{}{}

@@ -352,3 +352,6 @@ spec:
       nested:
         image: nginx:1.14.2
 - images:
+  - nginx:1.14.2
+  - nginxImage: nginx:1.14.2
+    nginxImages:
