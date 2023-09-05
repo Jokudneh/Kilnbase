@@ -285,3 +285,6 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 	}
 
 	digestStrs := map[string]struct{}{}
+
+	for _, rd := range inspectData.RepoDigests {
+		nameWithDigest, err := regname.NewDigest(rd, regname.WeakValidation)
