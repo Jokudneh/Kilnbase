@@ -277,3 +277,5 @@ func (d Source) Validate() error {
 	if len(d.Path) == 0 {
 		return fmt.Errorf("Expected Path to be non-empty")
 	}
+	return nil
+}
