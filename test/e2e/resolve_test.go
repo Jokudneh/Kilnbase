@@ -351,3 +351,4 @@ spec:
     data: |
       nested:
         image: nginx:1.14.2
+- images:

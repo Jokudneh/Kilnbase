@@ -233,3 +233,6 @@ func (ids *ImageRefDescriptors) buildImage(ref regname.Reference) (ImageDescript
 func (ImageRefDescriptors) isImageIndex(regDesc regv1.Descriptor) bool {
 	switch regDesc.MediaType {
 	case regtypes.OCIImageIndex, regtypes.DockerManifestList:
+		return true
+	}
+	return false
