@@ -236,3 +236,5 @@ func (ImageRefDescriptors) isImageIndex(regDesc regv1.Descriptor) bool {
 		return true
 	}
 	return false
+}
+

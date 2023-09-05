@@ -279,3 +279,6 @@ func (d Source) Validate() error {
 	}
 	return nil
 }
+
+func (d ImageOverride) Validate() error {
+	err := d.ImageRef.Validate()
