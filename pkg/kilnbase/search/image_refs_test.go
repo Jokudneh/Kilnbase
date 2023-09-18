@@ -288,3 +288,7 @@ path:
 			},
 			OutputImages: []string{"nginx1", "nginx2", "nginx3"},
 		},
+	}
+
+	for _, ex := range exs {
+		refs := ctlser.NewImageRefs(ex.InputResource, ex.SearchRules)

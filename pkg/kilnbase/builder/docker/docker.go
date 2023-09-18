@@ -290,3 +290,5 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 		nameWithDigest, err := regname.NewDigest(rd, regname.WeakValidation)
 		if err != nil {
 			return ImageDigest{}, fmt.Errorf("Extracting reference digest from '%s': %s", rd, err)
+		}
+		digestStrs[nameWithDigest.DigestStr()] = struct{}{}
