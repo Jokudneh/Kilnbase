@@ -287,3 +287,4 @@ path:
 				{KeyMatcher: &ctlconf.SearchRuleKeyMatcher{Name: "nested-key"}},
 			},
 			OutputImages: []string{"nginx1", "nginx2", "nginx3"},
+		},

@@ -266,3 +266,7 @@ func (o *ResolveOptions) withImageMapConf(conf ctlconf.Conf) (ctlconf.Conf, erro
 
 func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *ProcessedImages) error {
 	switch {
+	case o.LockOutput != "":
+		c := ctlconf.NewConfig()
+		c.MinimumRequiredVersion = version.Version
+		c.SearchRules = conf.SearchRulesWithoutDefaults()

@@ -288,3 +288,5 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 
 	for _, rd := range inspectData.RepoDigests {
 		nameWithDigest, err := regname.NewDigest(rd, regname.WeakValidation)
+		if err != nil {
+			return ImageDigest{}, fmt.Errorf("Extracting reference digest from '%s': %s", rd, err)
