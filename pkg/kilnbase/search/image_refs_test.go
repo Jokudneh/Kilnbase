@@ -294,3 +294,4 @@ path:
 		refs := ctlser.NewImageRefs(ex.InputResource, ex.SearchRules)
 
 		foundImages := []string{}
+		refs.Visit(func(val string) (string, bool) {

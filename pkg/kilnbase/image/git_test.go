@@ -239,3 +239,7 @@ func TestGitRepoHeadSHA(t *testing.T) {
 
 	runCmd(t, "git", []string{"init", "."}, dir)
 
+	gitRepo := ctlimg.NewGitRepo(dir)
+
+	sha, err := gitRepo.HeadSHA()
+	if err != nil {
