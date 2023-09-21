@@ -292,3 +292,6 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 			return ImageDigest{}, fmt.Errorf("Extracting reference digest from '%s': %s", rd, err)
 		}
 		digestStrs[nameWithDigest.DigestStr()] = struct{}{}
+	}
+
+	if len(digestStrs) != 1 {

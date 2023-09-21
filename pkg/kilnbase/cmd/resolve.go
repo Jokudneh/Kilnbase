@@ -270,3 +270,6 @@ func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proce
 		c := ctlconf.NewConfig()
 		c.MinimumRequiredVersion = version.Version
 		c.SearchRules = conf.SearchRulesWithoutDefaults()
+
+		for _, urlImagePair := range resolvedImages.All() {
+			c.Overrides = append(c.Overrides, ctlconf.ImageOverride{
