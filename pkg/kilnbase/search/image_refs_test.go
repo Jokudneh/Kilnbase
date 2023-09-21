@@ -292,3 +292,5 @@ path:
 
 	for _, ex := range exs {
 		refs := ctlser.NewImageRefs(ex.InputResource, ex.SearchRules)
+
+		foundImages := []string{}

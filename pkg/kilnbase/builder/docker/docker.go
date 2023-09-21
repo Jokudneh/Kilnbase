@@ -295,3 +295,4 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 	}
 
 	if len(digestStrs) != 1 {
+		prefixedLogger.Write([]byte("repo digests mismatch\n"))

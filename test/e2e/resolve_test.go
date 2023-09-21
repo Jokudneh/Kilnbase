@@ -356,3 +356,5 @@ spec:
   - nginxImage: nginx:1.14.2
     nginxImages:
       value: nginx:1.14.2
+- image: skip
+---
