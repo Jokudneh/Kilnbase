@@ -285,3 +285,5 @@ func (d ImageOverride) Validate() error {
 	if err != nil {
 		return err
 	}
+	if len(d.NewImage) == 0 {
+		return fmt.Errorf("Expected NewImage to be non-empty")

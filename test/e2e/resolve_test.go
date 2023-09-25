@@ -358,3 +358,7 @@ spec:
       value: nginx:1.14.2
 - image: skip
 ---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Config
+searchRules:
+- keyMatcher:
