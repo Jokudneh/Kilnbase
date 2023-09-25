@@ -273,3 +273,6 @@ func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proce
 
 		for _, urlImagePair := range resolvedImages.All() {
 			c.Overrides = append(c.Overrides, ctlconf.ImageOverride{
+				ImageRef: ctlconf.ImageRef{
+					Image: urlImagePair.UnprocessedImageURL.URL,
+				},

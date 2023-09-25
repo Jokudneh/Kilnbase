@@ -282,3 +282,6 @@ images:
 - image: index.docker.io/library/nginx@sha256:4a5573037f358b6cdfa2f3e8a9c33a5cf11bcd1675ca72ca76fbe5bd77d0d682
 metadata:
   annotations:
+    kilnbase.k14s.io/images: |
+      - origins:
+        - resolved:
