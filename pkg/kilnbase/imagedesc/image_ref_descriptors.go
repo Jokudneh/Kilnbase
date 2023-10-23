@@ -240,3 +240,7 @@ func (ImageRefDescriptors) isImageIndex(regDesc regv1.Descriptor) bool {
 
 type wrappedCompressedLayerContents struct {
 	layer regv1.Layer
+}
+
+var _ LayerContents = wrappedCompressedLayerContents{}
+

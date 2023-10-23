@@ -285,3 +285,5 @@ metadata:
     kilnbase.k14s.io/images: |
       - origins:
         - resolved:
+            tag: 1.15.1
+            url: nginx:1.15.1
