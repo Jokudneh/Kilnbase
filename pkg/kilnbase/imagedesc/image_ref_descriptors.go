@@ -244,3 +244,4 @@ type wrappedCompressedLayerContents struct {
 
 var _ LayerContents = wrappedCompressedLayerContents{}
 
+func (lc wrappedCompressedLayerContents) Open() (io.ReadCloser, error) {

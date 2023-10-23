@@ -299,3 +299,6 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 		foundDigests := strings.Join(inspectData.RepoDigests, ", ")
 		return ImageDigest{}, fmt.Errorf(
 			"Expected to find same repo digest, but found %s", foundDigests)
+	}
+
+	for digest := range digestStrs {
