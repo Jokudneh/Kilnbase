@@ -366,3 +366,6 @@ searchRules:
 - valueMatcher:
     imageRepo: nginx
 - keyMatcher:
+    name: data
+  updateStrategy:
+    yaml:

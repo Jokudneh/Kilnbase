@@ -276,3 +276,4 @@ func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proce
 				ImageRef: ctlconf.ImageRef{
 					Image: urlImagePair.UnprocessedImageURL.URL,
 				},
+				NewImage:    urlImagePair.Image.URL,
