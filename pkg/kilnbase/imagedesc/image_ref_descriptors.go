@@ -250,3 +250,6 @@ func (lc wrappedCompressedLayerContents) Open() (io.ReadCloser, error) {
 		return nil, fmt.Errorf("Getting compressed layer: %s", err)
 	}
 	return rc, nil
+}
+
+func (ids *ImageRefDescriptors) FindLayer(layerTD ImageLayerDescriptor) (LayerContents, error) {

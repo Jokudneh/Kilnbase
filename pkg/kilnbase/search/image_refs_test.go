@@ -297,3 +297,4 @@ path:
 		refs.Visit(func(val string) (string, bool) {
 			foundImages = append(foundImages, val)
 			return "found:" + val, true
+		})
