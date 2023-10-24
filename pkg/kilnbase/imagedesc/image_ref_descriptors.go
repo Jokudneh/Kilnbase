@@ -247,3 +247,6 @@ var _ LayerContents = wrappedCompressedLayerContents{}
 func (lc wrappedCompressedLayerContents) Open() (io.ReadCloser, error) {
 	rc, err := lc.layer.Compressed()
 	if err != nil {
+		return nil, fmt.Errorf("Getting compressed layer: %s", err)
+	}
+	return rc, nil
