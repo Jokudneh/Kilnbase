@@ -304,3 +304,6 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 	for digest := range digestStrs {
 		return ImageDigest{digest}, nil
 	}
+
+	panic("unreachable")
+}

@@ -298,3 +298,4 @@ path:
 			foundImages = append(foundImages, val)
 			return "found:" + val, true
 		})
+
