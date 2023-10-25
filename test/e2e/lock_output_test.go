@@ -293,3 +293,4 @@ metadata:
       - origins:
         - resolved:
             tag: 1.14.2
+            url: nginx:1.14.2

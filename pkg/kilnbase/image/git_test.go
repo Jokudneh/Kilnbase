@@ -243,3 +243,5 @@ func TestGitRepoHeadSHA(t *testing.T) {
 
 	sha, err := gitRepo.HeadSHA()
 	if err != nil {
+		t.Fatalf("Expected sha to succeed")
+	}
