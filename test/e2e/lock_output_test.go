@@ -294,3 +294,6 @@ metadata:
         - resolved:
             tag: 1.14.2
             url: nginx:1.14.2
+        - preresolved:
+            url: index.docker.io/library/nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d
+        url: index.docker.io/library/nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d

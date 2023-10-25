@@ -299,3 +299,7 @@ path:
 			return "found:" + val, true
 		})
 
+		sort.Strings(foundImages)
+
+		if !reflect.DeepEqual(ex.InputResource, ex.OutputResource) {
+			inBs, _ := json.Marshal(ex.InputResource)
