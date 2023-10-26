@@ -373,3 +373,5 @@ searchRules:
       - keyMatcher:
           name: image
 - keyMatcher:
+    path: [spec, {allIndexes: true}, images, {index: 0}]
+- keyMatcher:

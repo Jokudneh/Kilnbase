@@ -306,3 +306,6 @@ path:
 			outBs, _ := json.Marshal(ex.OutputResource)
 			t.Fatalf("Expected %#v to succeed: >>>%s<<< vs >>>%s<<<", ex, inBs, outBs)
 		}
+		if !reflect.DeepEqual(foundImages, ex.OutputImages) {
+			t.Fatalf("Expected %#v to succeed: >>>%s<<< vs >>>%s<<<", ex, foundImages, ex.OutputImages)
+		}

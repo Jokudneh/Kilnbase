@@ -289,3 +289,7 @@ func (d ImageOverride) Validate() error {
 		return fmt.Errorf("Expected NewImage to be non-empty")
 	}
 	return nil
+}
+
+func (d ImageDestination) Validate() error {
+	return d.ImageRef.Validate()
