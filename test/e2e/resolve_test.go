@@ -375,3 +375,6 @@ searchRules:
 - keyMatcher:
     path: [spec, {allIndexes: true}, images, {index: 0}]
 - keyMatcher:
+    path: [spec, {allIndexes: true}, nginxImage]
+- keyMatcher:
+    path: [spec, {allIndexes: true}, nginxImages, value]

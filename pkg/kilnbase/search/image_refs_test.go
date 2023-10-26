@@ -309,3 +309,4 @@ path:
 		if !reflect.DeepEqual(foundImages, ex.OutputImages) {
 			t.Fatalf("Expected %#v to succeed: >>>%s<<< vs >>>%s<<<", ex, foundImages, ex.OutputImages)
 		}
+	}
