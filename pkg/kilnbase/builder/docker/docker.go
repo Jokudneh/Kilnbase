@@ -307,3 +307,4 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 
 	panic("unreachable")
 }
+

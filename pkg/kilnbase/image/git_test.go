@@ -247,3 +247,7 @@ func TestGitRepoHeadSHA(t *testing.T) {
 	}
 	if sha != ctlimg.GitRepoHeadSHANoCommits {
 		t.Fatalf("Expected sha to be unknown")
+	}
+
+	runCmd(t, "git", []string{"commit", "-am", "msg1", "--allow-empty"}, dir)
+	expectedSHAShort := runCmd(t, "git", []string{"log", "-1", "--oneline"}, dir)[0:7]
