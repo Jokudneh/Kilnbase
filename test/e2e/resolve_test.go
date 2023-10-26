@@ -369,3 +369,7 @@ searchRules:
     name: data
   updateStrategy:
     yaml:
+      searchRules:
+      - keyMatcher:
+          name: image
+- keyMatcher:

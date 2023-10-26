@@ -303,3 +303,6 @@ path:
 
 		if !reflect.DeepEqual(ex.InputResource, ex.OutputResource) {
 			inBs, _ := json.Marshal(ex.InputResource)
+			outBs, _ := json.Marshal(ex.OutputResource)
+			t.Fatalf("Expected %#v to succeed: >>>%s<<< vs >>>%s<<<", ex, inBs, outBs)
+		}

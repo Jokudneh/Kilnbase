@@ -245,3 +245,5 @@ func TestGitRepoHeadSHA(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Expected sha to succeed")
 	}
+	if sha != ctlimg.GitRepoHeadSHANoCommits {
+		t.Fatalf("Expected sha to be unknown")
