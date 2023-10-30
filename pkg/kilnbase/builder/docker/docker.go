@@ -308,3 +308,7 @@ func (d Docker) determineRepoDigest(inspectData InspectData,
 	panic("unreachable")
 }
 
+type InspectData struct {
+	ID          string
+	RepoDigests []string
+}

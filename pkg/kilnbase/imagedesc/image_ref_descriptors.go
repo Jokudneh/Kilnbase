@@ -254,3 +254,4 @@ func (lc wrappedCompressedLayerContents) Open() (io.ReadCloser, error) {
 
 func (ids *ImageRefDescriptors) FindLayer(layerTD ImageLayerDescriptor) (LayerContents, error) {
 	ids.imageLayersLock.Lock()
+	defer ids.imageLayersLock.Unlock()
