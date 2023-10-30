@@ -312,3 +312,5 @@ type InspectData struct {
 	ID          string
 	RepoDigests []string
 }
+
+func (d Docker) Inspect(ref string) (InspectData, error) {

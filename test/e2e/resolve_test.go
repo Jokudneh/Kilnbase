@@ -378,3 +378,7 @@ searchRules:
     path: [spec, {allIndexes: true}, nginxImage]
 - keyMatcher:
     path: [spec, {allIndexes: true}, nginxImages, value]
+- valueMatcher:
+    image: skip
+  updateStrategy:
+    none: {}
