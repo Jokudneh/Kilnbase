@@ -256,3 +256,4 @@ func (ids *ImageRefDescriptors) FindLayer(layerTD ImageLayerDescriptor) (LayerCo
 	ids.imageLayersLock.Lock()
 	defer ids.imageLayersLock.Unlock()
 
+	layer, found := ids.imageLayers[layerTD]

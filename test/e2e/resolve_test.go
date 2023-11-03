@@ -382,3 +382,4 @@ searchRules:
     image: skip
   updateStrategy:
     none: {}
+`
