@@ -281,3 +281,6 @@ func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proce
 			})
 		}
 
+		return c.WriteToFile(o.LockOutput)
+	case o.ImgpkgLockOutput != "":
+		iLock := lockconfig.ImagesLock{
