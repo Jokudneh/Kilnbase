@@ -317,3 +317,6 @@ func (d Docker) Inspect(ref string) (InspectData, error) {
 	var stdoutBuf, stderrBuf bytes.Buffer
 
 	cmd := exec.Command("docker", "inspect", ref)
+	cmd.Stdout = &stdoutBuf
+	cmd.Stderr = &stderrBuf
+

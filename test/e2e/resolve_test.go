@@ -384,3 +384,4 @@ searchRules:
     none: {}
 `
 
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
