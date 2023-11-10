@@ -294,3 +294,4 @@ func (d ImageOverride) Validate() error {
 func (d ImageDestination) Validate() error {
 	return d.ImageRef.Validate()
 }
+

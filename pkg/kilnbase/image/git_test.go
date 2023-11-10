@@ -252,3 +252,7 @@ func TestGitRepoHeadSHA(t *testing.T) {
 	runCmd(t, "git", []string{"commit", "-am", "msg1", "--allow-empty"}, dir)
 	expectedSHAShort := runCmd(t, "git", []string{"log", "-1", "--oneline"}, dir)[0:7]
 
+	sha, err = gitRepo.HeadSHA()
+	if err != nil {
+		t.Fatalf("Expected sha to succeed")
+	}
