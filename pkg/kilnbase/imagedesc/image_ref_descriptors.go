@@ -264,3 +264,5 @@ func (ids *ImageRefDescriptors) FindLayer(layerTD ImageLayerDescriptor) (LayerCo
 	return wrappedCompressedLayerContents{layer}, nil
 }
 
+func (ids *ImageRefDescriptors) AsBytes() ([]byte, error) {
+	// Ensure result is deterministic

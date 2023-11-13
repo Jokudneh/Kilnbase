@@ -291,3 +291,6 @@ func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proce
 		}
 		for _, urlImagePair := range resolvedImages.All() {
 			iLock.Images = append(iLock.Images, lockconfig.ImageRef{
+				Image:       urlImagePair.Image.URL,
+				Annotations: o.imgpkgLockAnnotations(urlImagePair),
+			})
