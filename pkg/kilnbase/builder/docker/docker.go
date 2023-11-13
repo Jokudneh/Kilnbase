@@ -320,3 +320,4 @@ func (d Docker) Inspect(ref string) (InspectData, error) {
 	cmd.Stdout = &stdoutBuf
 	cmd.Stderr = &stderrBuf
 
+	_, _ = d.logger.NewPrefixedWriter(ref + " | ").Write(

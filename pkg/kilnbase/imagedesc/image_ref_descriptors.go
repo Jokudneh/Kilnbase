@@ -258,3 +258,7 @@ func (ids *ImageRefDescriptors) FindLayer(layerTD ImageLayerDescriptor) (LayerCo
 
 	layer, found := ids.imageLayers[layerTD]
 	if !found {
+		panic(fmt.Sprintf("Expected to find stream for %+v", layerTD))
+	}
+
+	return wrappedCompressedLayerContents{layer}, nil
