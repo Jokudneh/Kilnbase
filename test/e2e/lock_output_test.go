@@ -313,3 +313,6 @@ images:
 - image: sample-app
 ---
 ` + imgLockWithBuiltOrigins
+
+	path := "/tmp/kilnbase-test-lock-origins"
+	defer os.RemoveAll(path)
