@@ -295,3 +295,7 @@ func (d ImageDestination) Validate() error {
 	return d.ImageRef.Validate()
 }
 
+func (d SearchRule) Validate() error {
+	if d.KeyMatcher == nil && d.ValueMatcher == nil {
+		return fmt.Errorf("Expected KeyMatcher or ValueMatcher to be non-empty")
+	}
