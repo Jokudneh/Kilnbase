@@ -256,3 +256,5 @@ func TestGitRepoHeadSHA(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Expected sha to succeed")
 	}
+	if !strings.HasPrefix(sha, expectedSHAShort) {
+		t.Fatalf("Expected sha to be correct: %s vs %s", sha, expectedSHAShort)

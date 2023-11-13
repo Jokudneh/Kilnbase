@@ -299,3 +299,6 @@ func (d SearchRule) Validate() error {
 	if d.KeyMatcher == nil && d.ValueMatcher == nil {
 		return fmt.Errorf("Expected KeyMatcher or ValueMatcher to be non-empty")
 	}
+	if d.KeyMatcher != nil {
+		if len(d.KeyMatcher.Name) == 0 && len(d.KeyMatcher.Path) == 0 {
+			return fmt.Errorf("Expected KeyMatcher.Name or KeyMatcher.Path to be non-empty")

@@ -262,3 +262,5 @@ func (ids *ImageRefDescriptors) FindLayer(layerTD ImageLayerDescriptor) (LayerCo
 	}
 
 	return wrappedCompressedLayerContents{layer}, nil
+}
+
