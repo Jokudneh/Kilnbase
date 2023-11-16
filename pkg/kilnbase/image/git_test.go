@@ -259,3 +259,4 @@ func TestGitRepoHeadSHA(t *testing.T) {
 	if !strings.HasPrefix(sha, expectedSHAShort) {
 		t.Fatalf("Expected sha to be correct: %s vs %s", sha, expectedSHAShort)
 	}
+}
