@@ -266,3 +266,7 @@ func (ids *ImageRefDescriptors) FindLayer(layerTD ImageLayerDescriptor) (LayerCo
 
 func (ids *ImageRefDescriptors) AsBytes() ([]byte, error) {
 	// Ensure result is deterministic
+	sort.Slice(ids.descs, func(i, j int) bool {
+		return ids.descs[i].SortKey() < ids.descs[j].SortKey()
+	})
+

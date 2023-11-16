@@ -294,3 +294,7 @@ func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proce
 				Image:       urlImagePair.Image.URL,
 				Annotations: o.imgpkgLockAnnotations(urlImagePair),
 			})
+		}
+		return iLock.WriteToPath(o.ImgpkgLockOutput)
+	default:
+		return nil
