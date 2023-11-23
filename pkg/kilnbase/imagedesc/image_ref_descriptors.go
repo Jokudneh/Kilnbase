@@ -270,3 +270,6 @@ func (ids *ImageRefDescriptors) AsBytes() ([]byte, error) {
 		return ids.descs[i].SortKey() < ids.descs[j].SortKey()
 	})
 
+	return json.Marshal(ids.descs)
+}
+

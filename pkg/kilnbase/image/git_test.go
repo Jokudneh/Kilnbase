@@ -260,3 +260,6 @@ func TestGitRepoHeadSHA(t *testing.T) {
 		t.Fatalf("Expected sha to be correct: %s vs %s", sha, expectedSHAShort)
 	}
 }
+
+func TestGitRepoIsDirty(t *testing.T) {
+	dir, err := os.MkdirTemp("", "kilnbase-git-repo")

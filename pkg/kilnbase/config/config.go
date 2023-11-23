@@ -308,3 +308,6 @@ func (d SearchRule) Validate() error {
 		if len(d.ValueMatcher.Image) == 0 && len(d.ValueMatcher.ImageRepo) == 0 {
 			return fmt.Errorf("Expected ValueMatcher.Image or ValueMatcher.ImageRepo to be non-empty")
 		}
+	}
+	return nil
+}

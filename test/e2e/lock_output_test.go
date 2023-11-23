@@ -319,3 +319,6 @@ images:
 	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--imgpkg-lock-output=" + path}, RunOpts{
 		StdinReader: strings.NewReader(input),
 	})
+
+	expectedOut := `---
+images:
