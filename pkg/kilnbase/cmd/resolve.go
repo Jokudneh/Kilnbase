@@ -298,3 +298,4 @@ func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proce
 		return iLock.WriteToPath(o.ImgpkgLockOutput)
 	default:
 		return nil
+	}
