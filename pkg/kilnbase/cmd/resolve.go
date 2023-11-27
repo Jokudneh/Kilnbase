@@ -303,3 +303,7 @@ func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proce
 
 func (o *ResolveOptions) imgpkgLockAnnotations(i ProcessedImageItem) map[string]string {
 	anns := map[string]string{
+		ctlconf.ImagesLockKilnbaseID: i.UnprocessedImageURL.URL,
+	}
+	if o.OriginsAnnotation && len(i.Origins) > 0 {
+		bs, err := yaml.Marshal(i.Origins)
