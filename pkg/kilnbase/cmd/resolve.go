@@ -299,3 +299,7 @@ func (o *ResolveOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Proce
 	default:
 		return nil
 	}
+}
+
+func (o *ResolveOptions) imgpkgLockAnnotations(i ProcessedImageItem) map[string]string {
+	anns := map[string]string{
