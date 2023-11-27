@@ -332,3 +332,6 @@ func (d Docker) Inspect(ref string) (InspectData, error) {
 
 	err = json.Unmarshal(stdoutBuf.Bytes(), &data)
 	if err != nil {
+		return InspectData{}, err
+	}
+

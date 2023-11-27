@@ -317,3 +317,4 @@ func (r ImageRef) Validate() error {
 		return fmt.Errorf("Expected Image or ImageRepo to be non-empty")
 	}
 	return nil
+}

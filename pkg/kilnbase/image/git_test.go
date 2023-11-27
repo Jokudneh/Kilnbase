@@ -268,3 +268,4 @@ func TestGitRepoIsDirty(t *testing.T) {
 	}
 
 	defer os.RemoveAll(dir)
+
