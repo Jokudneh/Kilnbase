@@ -307,3 +307,6 @@ func (o *ResolveOptions) imgpkgLockAnnotations(i ProcessedImageItem) map[string]
 	}
 	if o.OriginsAnnotation && len(i.Origins) > 0 {
 		bs, err := yaml.Marshal(i.Origins)
+		if err != nil {
+			return anns
+		}
