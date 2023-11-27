@@ -311,3 +311,7 @@ func (d SearchRule) Validate() error {
 	}
 	return nil
 }
+
+func (r ImageRef) Validate() error {
+	if len(r.Image) == 0 && len(r.ImageRepo) == 0 {
+		return fmt.Errorf("Expected Image or ImageRepo to be non-empty")
