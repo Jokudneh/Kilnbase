@@ -310,3 +310,5 @@ func (o *ResolveOptions) imgpkgLockAnnotations(i ProcessedImageItem) map[string]
 		if err != nil {
 			return anns
 		}
+		anns[ctlconf.ImagesLockKilnbaseOrigins] = string(bs)
+	}

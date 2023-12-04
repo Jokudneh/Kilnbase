@@ -318,3 +318,7 @@ func (r ImageRef) Validate() error {
 	}
 	return nil
 }
+
+func (d Config) AsBytes() ([]byte, error) {
+	bs, err := yaml.Marshal(d)
+	if err != nil {

@@ -273,3 +273,7 @@ func (ids *ImageRefDescriptors) AsBytes() ([]byte, error) {
 	return json.Marshal(ids.descs)
 }
 
+func (ids *ImageRefDescriptors) buildRef(otherRef regname.Reference, digest string) regname.Reference {
+	newRef, err := regname.NewDigest(fmt.Sprintf("%s@%s", otherRef.Context().Name(), digest))
+	if err != nil {
+		panic(fmt.Sprintf("Building new ref"))
