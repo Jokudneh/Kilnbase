@@ -337,3 +337,5 @@ func (d Docker) Inspect(ref string) (InspectData, error) {
 
 	if len(data) != 1 {
 		return InspectData{}, fmt.Errorf("Expected to find exactly one image, but found %d", len(data))
+	}
+

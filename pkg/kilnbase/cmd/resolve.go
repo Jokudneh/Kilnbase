@@ -315,3 +315,6 @@ func (o *ResolveOptions) imgpkgLockAnnotations(i ProcessedImageItem) map[string]
 
 	return anns
 }
+
+// NewPlatformSelection parses platform string into PlatformSelection
+// Examples: linux/386, linux/arm/v7, linux/arm/v6

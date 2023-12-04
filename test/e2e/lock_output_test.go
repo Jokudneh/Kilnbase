@@ -329,3 +329,7 @@ metadata:
     kilnbase.k14s.io/images: |
       - origins:
         - local:
+            path: path/to/source
+        - git:
+            dirty: true
+            remoteURL: git@github.com:jokudneh/kilnbase-kilnbase.git
