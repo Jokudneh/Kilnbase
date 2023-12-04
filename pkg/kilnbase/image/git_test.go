@@ -272,3 +272,5 @@ func TestGitRepoIsDirty(t *testing.T) {
 	runCmd(t, "git", []string{"init", "."}, dir)
 	runCmd(t, "git", []string{"commit", "-am", "msg1", "--allow-empty"}, dir)
 
+	gitRepo := ctlimg.NewGitRepo(dir)
+

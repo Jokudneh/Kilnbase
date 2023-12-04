@@ -277,3 +277,4 @@ func (ids *ImageRefDescriptors) buildRef(otherRef regname.Reference, digest stri
 	newRef, err := regname.NewDigest(fmt.Sprintf("%s@%s", otherRef.Context().Name(), digest))
 	if err != nil {
 		panic(fmt.Sprintf("Building new ref"))
+	}

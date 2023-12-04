@@ -312,3 +312,6 @@ func (o *ResolveOptions) imgpkgLockAnnotations(i ProcessedImageItem) map[string]
 		}
 		anns[ctlconf.ImagesLockKilnbaseOrigins] = string(bs)
 	}
+
+	return anns
+}
