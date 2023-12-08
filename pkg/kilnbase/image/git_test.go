@@ -274,3 +274,5 @@ func TestGitRepoIsDirty(t *testing.T) {
 
 	gitRepo := ctlimg.NewGitRepo(dir)
 
+	dirty, err := gitRepo.IsDirty()
+	if err != nil {

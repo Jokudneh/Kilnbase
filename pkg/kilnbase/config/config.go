@@ -325,3 +325,4 @@ func (d Config) AsBytes() ([]byte, error) {
 		return nil, fmt.Errorf("Marshaling config: %s", err)
 	}
 
+	return bs, nil
