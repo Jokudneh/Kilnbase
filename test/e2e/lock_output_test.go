@@ -333,3 +333,4 @@ metadata:
         - git:
             dirty: true
             remoteURL: git@github.com:jokudneh/kilnbase-kilnbase.git
+            sha: 4a5573037f358b6cdfa2f3e8a9c33a5cf11bcd1

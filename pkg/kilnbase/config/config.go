@@ -323,3 +323,5 @@ func (d Config) AsBytes() ([]byte, error) {
 	bs, err := yaml.Marshal(d)
 	if err != nil {
 		return nil, fmt.Errorf("Marshaling config: %s", err)
+	}
+

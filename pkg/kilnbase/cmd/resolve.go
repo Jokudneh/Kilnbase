@@ -318,3 +318,6 @@ func (o *ResolveOptions) imgpkgLockAnnotations(i ProcessedImageItem) map[string]
 
 // NewPlatformSelection parses platform string into PlatformSelection
 // Examples: linux/386, linux/arm/v7, linux/arm/v6
+// Taken from https://github.com/google/go-containerregistry/blob/570ba6c88a5041afebd4599981d849af96f5dba9/cmd/crane/cmd/util.go#L45
+func NewPlatformSelection(platform string) (*ctlconf.PlatformSelection, error) {
+	result := &ctlconf.PlatformSelection{}
