@@ -326,3 +326,4 @@ func (d Config) AsBytes() ([]byte, error) {
 	}
 
 	return bs, nil
+}

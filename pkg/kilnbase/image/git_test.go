@@ -276,3 +276,7 @@ func TestGitRepoIsDirty(t *testing.T) {
 
 	dirty, err := gitRepo.IsDirty()
 	if err != nil {
+		t.Fatalf("Expected dirty to succeed")
+	}
+	if dirty != false {
+		t.Fatalf("Expected dirty to be false")
