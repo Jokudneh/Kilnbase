@@ -339,3 +339,4 @@ func (d Docker) Inspect(ref string) (InspectData, error) {
 		return InspectData{}, fmt.Errorf("Expected to find exactly one image, but found %d", len(data))
 	}
 
+	return data[0], nil

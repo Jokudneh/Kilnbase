@@ -327,3 +327,7 @@ func (d Config) AsBytes() ([]byte, error) {
 
 	return bs, nil
 }
+
+func (d Config) WriteToFile(path string) error {
+	bs, err := d.AsBytes()
+	if err != nil {
