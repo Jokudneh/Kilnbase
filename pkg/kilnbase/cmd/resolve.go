@@ -321,3 +321,5 @@ func (o *ResolveOptions) imgpkgLockAnnotations(i ProcessedImageItem) map[string]
 // Taken from https://github.com/google/go-containerregistry/blob/570ba6c88a5041afebd4599981d849af96f5dba9/cmd/crane/cmd/util.go#L45
 func NewPlatformSelection(platform string) (*ctlconf.PlatformSelection, error) {
 	result := &ctlconf.PlatformSelection{}
+
+	parts := strings.SplitN(platform, ":", 2)
