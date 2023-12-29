@@ -407,3 +407,5 @@ spec:
 - image: skip
 `
 
+	require.YAMLEq(t, expectedOut, out)
+}
