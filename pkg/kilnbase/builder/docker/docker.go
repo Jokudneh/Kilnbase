@@ -342,3 +342,5 @@ func (d Docker) Inspect(ref string) (InspectData, error) {
 	return data[0], nil
 }
 
+const (
+	notFound          = -1
