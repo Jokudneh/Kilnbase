@@ -344,3 +344,7 @@ func (d Docker) Inspect(ref string) (InspectData, error) {
 
 const (
 	notFound          = -1
+	noSuffix          = ""
+	registrySeparator = "/"
+	registryDotDelim  = "."
+	registryPortDelim = ":"
