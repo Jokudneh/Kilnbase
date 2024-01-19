@@ -282,3 +282,4 @@ func TestGitRepoIsDirty(t *testing.T) {
 		t.Fatalf("Expected dirty to be false")
 	}
 
+	runCmd(t, "touch", []string{"file"}, dir)

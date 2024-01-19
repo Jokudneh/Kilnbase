@@ -409,3 +409,7 @@ spec:
 
 	require.YAMLEq(t, expectedOut, out)
 }
+
+func TestResolveSuccessfulWithDuplicateSearchRules(t *testing.T) {
+	env := BuildEnv(t)
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
