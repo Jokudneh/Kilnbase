@@ -283,3 +283,5 @@ func TestGitRepoIsDirty(t *testing.T) {
 	}
 
 	runCmd(t, "touch", []string{"file"}, dir)
+
+	dirty, err = gitRepo.IsDirty()

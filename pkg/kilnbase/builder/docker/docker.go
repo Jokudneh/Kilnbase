@@ -348,3 +348,7 @@ const (
 	registrySeparator = "/"
 	registryDotDelim  = "."
 	registryPortDelim = ":"
+	localhostName     = "localhost"
+	emptyLength       = 0
+)
+
