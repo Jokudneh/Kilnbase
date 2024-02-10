@@ -281,3 +281,6 @@ func (ids *ImageRefDescriptors) buildRef(otherRef regname.Reference, digest stri
 	return newRef
 }
 
+type errRegistry struct {
+	delegate Registry
+}

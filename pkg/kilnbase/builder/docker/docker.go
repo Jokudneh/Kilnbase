@@ -356,3 +356,7 @@ const (
 // repository path and tag case (per RFC 1035/1123 case-insensitive names).
 // Callers outside this package use this to normalize image references before
 // comparing them, consistent with RFC 1035/1123 hostname case-insensitivity.
+func LowerCaseRegistry(ref string) string {
+	// Use simple string-based approach to avoid issues with parsing ambiguous
+	// references like "org/index.docker.io/app:Release" where namespace and
+	// registry boundaries are unclear to parsers.

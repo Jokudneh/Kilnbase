@@ -351,3 +351,5 @@ metadata:
 	if out != expectedOut {
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)
 	}
+
+	bs, err := ioutil.ReadFile(path)
