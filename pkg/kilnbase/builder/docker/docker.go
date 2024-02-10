@@ -352,3 +352,7 @@ const (
 	emptyLength       = 0
 )
 
+// LowerCaseRegistry lowercases only the registry hostname while preserving
+// repository path and tag case (per RFC 1035/1123 case-insensitive names).
+// Callers outside this package use this to normalize image references before
+// comparing them, consistent with RFC 1035/1123 hostname case-insensitivity.

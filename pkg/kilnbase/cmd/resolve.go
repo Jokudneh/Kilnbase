@@ -327,3 +327,4 @@ func NewPlatformSelection(platform string) (*ctlconf.PlatformSelection, error) {
 		result.OSVersion = parts[1]
 	}
 
+	parts = strings.Split(parts[0], "/")

@@ -278,3 +278,6 @@ func (ids *ImageRefDescriptors) buildRef(otherRef regname.Reference, digest stri
 	if err != nil {
 		panic(fmt.Sprintf("Building new ref"))
 	}
+	return newRef
+}
+
