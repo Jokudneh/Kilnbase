@@ -353,3 +353,5 @@ metadata:
 	}
 
 	bs, err := ioutil.ReadFile(path)
+	if err != nil {
+		t.Fatalf(failedReading, path)

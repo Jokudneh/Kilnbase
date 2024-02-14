@@ -334,3 +334,4 @@ func (d Config) WriteToFile(path string) error {
 		return err
 	}
 
+	err = os.WriteFile(path, bs, 0600)
