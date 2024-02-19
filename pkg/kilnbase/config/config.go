@@ -335,3 +335,6 @@ func (d Config) WriteToFile(path string) error {
 	}
 
 	err = os.WriteFile(path, bs, 0600)
+	if err != nil {
+		return fmt.Errorf("Writing lock config: %s", err)
+	}

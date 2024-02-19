@@ -328,3 +328,7 @@ func NewPlatformSelection(platform string) (*ctlconf.PlatformSelection, error) {
 	}
 
 	parts = strings.Split(parts[0], "/")
+	if len(parts) < 2 {
+		return nil, fmt.Errorf("Parsing platform '%s': expected format os/arch[/variant]", platform)
+	}
+	if len(parts) > 3 {
