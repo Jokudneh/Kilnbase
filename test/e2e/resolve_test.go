@@ -425,3 +425,7 @@ searchRules:
 - keyMatcher:
     name: sidecarImage
 - keyMatcher:
+    name: sidecarImage
+`
+
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--images-annotation=false"}, RunOpts{
