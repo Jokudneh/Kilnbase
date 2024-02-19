@@ -358,3 +358,5 @@ metadata:
 	}
 
 	if string(bs) != imgLockWithBuiltAndPreresolvedOrigins {
+		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", bs, imgLockWithBuiltAndPreresolvedOrigins)
+	}

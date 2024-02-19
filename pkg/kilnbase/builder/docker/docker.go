@@ -360,3 +360,5 @@ func LowerCaseRegistry(ref string) string {
 	// Use simple string-based approach to avoid issues with parsing ambiguous
 	// references like "org/index.docker.io/app:Release" where namespace and
 	// registry boundaries are unclear to parsers.
+	return lowercaseRegistryBySlash(ref)
+}

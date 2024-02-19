@@ -341,3 +341,6 @@ func (d Config) WriteToFile(path string) error {
 
 	return nil
 }
+
+// Equal reports whether this ImageOverride is equal to another ImageOverride.
+// (`ImageMeta` is descriptive — not identifying — so not part of equality)
