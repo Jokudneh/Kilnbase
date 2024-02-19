@@ -416,3 +416,4 @@ func TestResolveSuccessfulWithDuplicateSearchRules(t *testing.T) {
 
 	input := `
 kind: Object
+spec:
