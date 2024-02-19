@@ -417,3 +417,7 @@ func TestResolveSuccessfulWithDuplicateSearchRules(t *testing.T) {
 	input := `
 kind: Object
 spec:
+- sidecarImage: index.docker.io/library/nginx:1.14.2
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: Config

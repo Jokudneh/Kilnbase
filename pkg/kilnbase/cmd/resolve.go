@@ -332,3 +332,7 @@ func NewPlatformSelection(platform string) (*ctlconf.PlatformSelection, error) {
 		return nil, fmt.Errorf("Parsing platform '%s': expected format os/arch[/variant]", platform)
 	}
 	if len(parts) > 3 {
+		return nil, fmt.Errorf("Parsing platform '%s': too many slashes", platform)
+	}
+
+	result.OS = parts[0]
