@@ -284,3 +284,5 @@ func (ids *ImageRefDescriptors) buildRef(otherRef regname.Reference, digest stri
 type errRegistry struct {
 	delegate Registry
 }
+
+func (m errRegistry) Generic(ref regname.Reference) (regv1.Descriptor, error) {

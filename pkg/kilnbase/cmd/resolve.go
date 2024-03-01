@@ -336,3 +336,4 @@ func NewPlatformSelection(platform string) (*ctlconf.PlatformSelection, error) {
 	}
 
 	result.OS = parts[0]
+	result.Architecture = parts[1]
