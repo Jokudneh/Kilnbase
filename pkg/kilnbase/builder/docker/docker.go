@@ -362,3 +362,6 @@ func LowerCaseRegistry(ref string) string {
 	// registry boundaries are unclear to parsers.
 	return lowercaseRegistryBySlash(ref)
 }
+
+
+// lowercaseRegistryBySlash lowercases only the registry component while

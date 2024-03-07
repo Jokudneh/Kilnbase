@@ -433,3 +433,4 @@ searchRules:
 	})
 
 	expectedOut := `---
+kind: Object
