@@ -292,3 +292,4 @@ func TestGitRepoIsDirty(t *testing.T) {
 		t.Fatalf("Expected dirty to be true")
 	}
 }
+

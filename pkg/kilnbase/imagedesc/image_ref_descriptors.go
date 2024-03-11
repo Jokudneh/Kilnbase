@@ -288,3 +288,6 @@ type errRegistry struct {
 func (m errRegistry) Generic(ref regname.Reference) (regv1.Descriptor, error) {
 	regDesc, err := m.delegate.Generic(ref)
 	return regDesc, m.betterErr(ref, err)
+}
+
+func (m errRegistry) Index(ref regname.Reference) (regv1.ImageIndex, error) {
