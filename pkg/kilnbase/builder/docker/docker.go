@@ -365,3 +365,7 @@ func LowerCaseRegistry(ref string) string {
 
 
 // lowercaseRegistryBySlash lowercases only the registry component while
+// preserving repository path case. Only the first component (before the
+// first slash) can be a registry; everything after is repository path.
+func lowercaseRegistryBySlash(ref string) string {
+	// Split into digestless part and digest suffix
