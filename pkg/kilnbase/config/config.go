@@ -348,3 +348,6 @@ func (d ImageOverride) Equal(other ImageOverride) bool {
 	return d.ImageRef == other.ImageRef &&
 		d.NewImage == other.NewImage &&
 		d.Preresolved == other.Preresolved &&
+		d.TagSelection == other.TagSelection
+}
+
