@@ -347,3 +347,4 @@ func (d Config) WriteToFile(path string) error {
 func (d ImageOverride) Equal(other ImageOverride) bool {
 	return d.ImageRef == other.ImageRef &&
 		d.NewImage == other.NewImage &&
+		d.Preresolved == other.Preresolved &&

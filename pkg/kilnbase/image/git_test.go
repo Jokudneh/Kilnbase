@@ -293,3 +293,4 @@ func TestGitRepoIsDirty(t *testing.T) {
 	}
 }
 
+func runCmd(t *testing.T, cmdName string, args []string, dir string) string {
