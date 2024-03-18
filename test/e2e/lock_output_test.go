@@ -383,3 +383,6 @@ images:
 images:
 - image: index.docker.io/library/nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d
 - image: index.docker.io/library/nginx@sha256:4a5573037f358b6cdfa2f3e8a9c33a5cf11bcd1675ca72ca76fbe5bd77d0d682
+`
+	if out != expectedOut {
+		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", out, expectedOut)

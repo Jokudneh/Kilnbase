@@ -354,3 +354,7 @@ func (d ImageOverride) Equal(other ImageOverride) bool {
 func UniqueImageOverrides(overrides []ImageOverride) []ImageOverride {
 	var result []ImageOverride
 	for _, override := range overrides {
+		var found bool
+		for _, addedOverride := range result {
+			if override.Equal(addedOverride) {
+				found = true
