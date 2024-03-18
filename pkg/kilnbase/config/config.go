@@ -353,3 +353,4 @@ func (d ImageOverride) Equal(other ImageOverride) bool {
 
 func UniqueImageOverrides(overrides []ImageOverride) []ImageOverride {
 	var result []ImageOverride
+	for _, override := range overrides {
