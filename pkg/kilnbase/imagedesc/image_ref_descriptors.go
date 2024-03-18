@@ -295,3 +295,5 @@ func (m errRegistry) Index(ref regname.Reference) (regv1.ImageIndex, error) {
 	return idx, m.betterErr(ref, err)
 }
 
+func (m errRegistry) Image(ref regname.Reference) (regv1.Image, error) {
+	img, err := m.delegate.Image(ref)
