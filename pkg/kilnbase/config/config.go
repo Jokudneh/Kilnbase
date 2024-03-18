@@ -351,3 +351,5 @@ func (d ImageOverride) Equal(other ImageOverride) bool {
 		d.TagSelection == other.TagSelection
 }
 
+func UniqueImageOverrides(overrides []ImageOverride) []ImageOverride {
+	var result []ImageOverride

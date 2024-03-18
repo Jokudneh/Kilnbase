@@ -369,3 +369,6 @@ func LowerCaseRegistry(ref string) string {
 // first slash) can be a registry; everything after is repository path.
 func lowercaseRegistryBySlash(ref string) string {
 	// Split into digestless part and digest suffix
+	mainPart, digestSuffix := extractDigestSuffix(ref)
+
+	// Split into tag-free part and tag suffix
