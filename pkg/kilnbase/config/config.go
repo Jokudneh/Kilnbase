@@ -358,3 +358,6 @@ func UniqueImageOverrides(overrides []ImageOverride) []ImageOverride {
 		for _, addedOverride := range result {
 			if override.Equal(addedOverride) {
 				found = true
+				break
+			}
+		}
