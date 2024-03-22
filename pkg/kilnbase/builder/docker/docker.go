@@ -375,3 +375,5 @@ func lowercaseRegistryBySlash(ref string) string {
 	refWithoutTag, tagSuffix := extractAndRemoveTagSuffix(mainPart)
 
 	// Find the first slash
+	firstSlashIdx := strings.Index(refWithoutTag, registrySeparator)
+
