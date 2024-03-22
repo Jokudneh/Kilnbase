@@ -306,3 +306,4 @@ func (m errRegistry) betterErr(ref regname.Reference, err error) error {
 			err = fmt.Errorf("Encountered an error most likely because this image is in Docker Registry v1 format; only v2 or OCI image format is supported (underlying error: %s)", err)
 		}
 		err = fmt.Errorf("Working with %s: %s", ref.Name(), err)
+	}

@@ -295,3 +295,7 @@ func TestGitRepoIsDirty(t *testing.T) {
 
 func runCmd(t *testing.T, cmdName string, args []string, dir string) string {
 	var stdoutBuf, stderrBuf bytes.Buffer
+
+	cmd := exec.Command(cmdName, args...)
+	cmd.Dir = dir
+	cmd.Stdout = &stdoutBuf

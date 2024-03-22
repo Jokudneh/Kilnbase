@@ -374,3 +374,4 @@ func lowercaseRegistryBySlash(ref string) string {
 	// Split into tag-free part and tag suffix
 	refWithoutTag, tagSuffix := extractAndRemoveTagSuffix(mainPart)
 
+	// Find the first slash
