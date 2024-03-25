@@ -299,3 +299,5 @@ func runCmd(t *testing.T, cmdName string, args []string, dir string) string {
 	cmd := exec.Command(cmdName, args...)
 	cmd.Dir = dir
 	cmd.Stdout = &stdoutBuf
+	cmd.Stderr = &stderrBuf
+
