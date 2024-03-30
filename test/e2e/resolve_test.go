@@ -446,3 +446,7 @@ func TestResolveSuccessfulWithTagSelection(t *testing.T) {
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
 	input := `
+kind: Object
+spec:
+- image: nginx1
+- image: nginx2
