@@ -393,3 +393,4 @@ images:
 		t.Fatalf(failedReading, path)
 	}
 
+	// For Digest references, Image Lock should not have origins since there is no image metadata

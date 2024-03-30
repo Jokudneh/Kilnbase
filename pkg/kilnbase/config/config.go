@@ -365,3 +365,5 @@ func UniqueImageOverrides(overrides []ImageOverride) []ImageOverride {
 			result = append(result, override)
 		}
 	}
+	return result
+}

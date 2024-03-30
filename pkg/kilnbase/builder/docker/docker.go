@@ -377,3 +377,4 @@ func lowercaseRegistryBySlash(ref string) string {
 	// Find the first slash
 	firstSlashIdx := strings.Index(refWithoutTag, registrySeparator)
 
+	if firstSlashIdx == notFound {

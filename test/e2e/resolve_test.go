@@ -450,3 +450,6 @@ kind: Object
 spec:
 - image: nginx1
 - image: nginx2
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
+kind: ImageOverrides
