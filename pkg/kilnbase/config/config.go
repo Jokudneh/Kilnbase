@@ -368,3 +368,5 @@ func UniqueImageOverrides(overrides []ImageOverride) []ImageOverride {
 	return result
 }
 
+func (d SearchRule) UpdateStrategyWithDefaults() SearchRuleUpdateStrategy {
+	if d.UpdateStrategy != nil {

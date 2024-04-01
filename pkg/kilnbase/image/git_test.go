@@ -306,3 +306,6 @@ func runCmd(t *testing.T, cmdName string, args []string, dir string) string {
 		t.Fatalf("Running cmd %s (%#v): %s (stdout: '%s', stderr: '%s')",
 			cmdName, args, err, stdoutBuf.String(), stderrBuf.String())
 	}
+
+	return stdoutBuf.String()
+}

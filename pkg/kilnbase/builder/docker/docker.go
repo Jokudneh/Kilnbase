@@ -378,3 +378,4 @@ func lowercaseRegistryBySlash(ref string) string {
 	firstSlashIdx := strings.Index(refWithoutTag, registrySeparator)
 
 	if firstSlashIdx == notFound {
+		// No slash - entire thing could be bare image name or registry
