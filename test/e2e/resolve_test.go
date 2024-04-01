@@ -453,3 +453,6 @@ spec:
 ---
 apiVersion: kilnbase.k14s.io/v1alpha1
 kind: ImageOverrides
+overrides:
+- image: nginx1
+  newImage: index.docker.io/library/nginx

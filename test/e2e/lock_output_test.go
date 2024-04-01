@@ -394,3 +394,6 @@ images:
 	}
 
 	// For Digest references, Image Lock should not have origins since there is no image metadata
+	if string(bs) != imgLock {
+		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", bs, imgLock)
+	}
