@@ -309,3 +309,4 @@ func runCmd(t *testing.T, cmdName string, args []string, dir string) string {
 
 	return stdoutBuf.String()
 }
+

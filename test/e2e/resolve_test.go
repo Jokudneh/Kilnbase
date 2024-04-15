@@ -456,3 +456,4 @@ kind: ImageOverrides
 overrides:
 - image: nginx1
   newImage: index.docker.io/library/nginx
+  tagSelection:
