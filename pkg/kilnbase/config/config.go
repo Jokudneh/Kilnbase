@@ -374,3 +374,4 @@ func (d SearchRule) UpdateStrategyWithDefaults() SearchRuleUpdateStrategy {
 	}
 	return SearchRuleUpdateStrategy{
 		EntireString: &SearchRuleUpdateStrategyEntireString{},
+	}
