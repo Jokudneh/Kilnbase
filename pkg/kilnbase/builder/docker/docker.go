@@ -380,3 +380,5 @@ func lowercaseRegistryBySlash(ref string) string {
 	if firstSlashIdx == notFound {
 		// No slash - entire thing could be bare image name or registry
 		// Only lowercase if it looks like a registry
+		if looksLikeRegistry(refWithoutTag) {
+			return strings.ToLower(refWithoutTag) + tagSuffix + digestSuffix

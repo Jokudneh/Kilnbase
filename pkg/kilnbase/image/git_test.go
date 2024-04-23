@@ -313,3 +313,5 @@ func runCmd(t *testing.T, cmdName string, args []string, dir string) string {
 func TestGitRedactedRemoteURL(t *testing.T) {
 	cases := map[string]string{
 		"http://something@github.com/my-org/my-repo.git":      "http://_redacted_@github.com/my-org/my-repo.git",
+		"https://something@github.com/my-org/my-repo.git":     "https://_redacted_@github.com/my-org/my-repo.git",
+		"https://user:password@github.com/my-org/my-repo.git": "https://_redacted_@github.com/my-org/my-repo.git",

@@ -461,3 +461,5 @@ overrides:
       constraints: "<=1.14.2"
 - image: nginx2
   newImage: index.docker.io/library/nginx
+  tagSelection:
+    semver:
