@@ -463,3 +463,4 @@ overrides:
   newImage: index.docker.io/library/nginx
   tagSelection:
     semver:
+      constraints: "<1.14.2"

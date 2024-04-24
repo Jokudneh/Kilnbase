@@ -315,3 +315,5 @@ func TestGitRedactedRemoteURL(t *testing.T) {
 		"http://something@github.com/my-org/my-repo.git":      "http://_redacted_@github.com/my-org/my-repo.git",
 		"https://something@github.com/my-org/my-repo.git":     "https://_redacted_@github.com/my-org/my-repo.git",
 		"https://user:password@github.com/my-org/my-repo.git": "https://_redacted_@github.com/my-org/my-repo.git",
+		"ssh://user@host.xz/path/to/repo.git/":                "ssh://_redacted_@host.xz/path/to/repo.git/",
+		"git@github.com:my-org/my-repo.git":                   "git@github.com:my-org/my-repo.git",
