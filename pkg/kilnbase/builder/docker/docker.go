@@ -383,3 +383,7 @@ func lowercaseRegistryBySlash(ref string) string {
 		if looksLikeRegistry(refWithoutTag) {
 			return strings.ToLower(refWithoutTag) + tagSuffix + digestSuffix
 		}
+		return refWithoutTag + tagSuffix + digestSuffix
+	}
+
+	// Has slash - only lowercase the registry component (before first slash)

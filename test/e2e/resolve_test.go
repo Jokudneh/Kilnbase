@@ -464,3 +464,7 @@ overrides:
   tagSelection:
     semver:
       constraints: "<1.14.2"
+`
+
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-"}, RunOpts{
+		StdinReader: strings.NewReader(input),
