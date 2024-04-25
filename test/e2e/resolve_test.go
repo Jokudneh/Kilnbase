@@ -472,3 +472,5 @@ overrides:
 
 	expectedOut := `---
 kind: Object
+metadata:
+  annotations:
