@@ -387,3 +387,4 @@ func lowercaseRegistryBySlash(ref string) string {
 	}
 
 	// Has slash - only lowercase the registry component (before first slash)
+	registry := refWithoutTag[:firstSlashIdx]

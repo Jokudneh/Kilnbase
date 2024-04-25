@@ -468,3 +468,7 @@ overrides:
 
 	out, _ := kilnbase.RunWithOpts([]string{"-f", "-"}, RunOpts{
 		StdinReader: strings.NewReader(input),
+	})
+
+	expectedOut := `---
+kind: Object
