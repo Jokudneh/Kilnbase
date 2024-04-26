@@ -321,3 +321,5 @@ func TestGitRedactedRemoteURL(t *testing.T) {
 		"user@host.xz/path/to/repo.git/":                      "_redacted_@host.xz/path/to/repo.git/",
 	}
 	for input, expected := range cases {
+		actual := ctlimg.GitRedactedRemoteURL(input)
+		if actual != expected {
