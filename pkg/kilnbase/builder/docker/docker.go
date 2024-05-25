@@ -396,3 +396,4 @@ func lowercaseRegistryBySlash(ref string) string {
 
 	return registry + path + tagSuffix + digestSuffix
 }
+
