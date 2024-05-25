@@ -392,3 +392,7 @@ func lowercaseRegistryBySlash(ref string) string {
 
 	if looksLikeHostname(registry) {
 		registry = strings.ToLower(registry)
+	}
+
+	return registry + path + tagSuffix + digestSuffix
+}

@@ -324,3 +324,5 @@ func TestGitRedactedRemoteURL(t *testing.T) {
 		actual := ctlimg.GitRedactedRemoteURL(input)
 		if actual != expected {
 			t.Fatalf("Expected '%s' to equal '%s' but was '%s'", input, expected, actual)
+		}
+	}
