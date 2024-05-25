@@ -323,3 +323,4 @@ func TestGitRedactedRemoteURL(t *testing.T) {
 	for input, expected := range cases {
 		actual := ctlimg.GitRedactedRemoteURL(input)
 		if actual != expected {
+			t.Fatalf("Expected '%s' to equal '%s' but was '%s'", input, expected, actual)

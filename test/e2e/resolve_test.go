@@ -478,3 +478,7 @@ metadata:
       - origins:
         - resolved:
             tag: 1.14.1
+            url: index.docker.io/library/nginx:1.14.1
+        url: index.docker.io/library/nginx@sha256:32fdf92b4e986e109e4db0865758020cb0c3b70d6ba80d02fe87bad5cc3dc228
+      - origins:
+        - resolved:

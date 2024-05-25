@@ -388,3 +388,7 @@ func lowercaseRegistryBySlash(ref string) string {
 
 	// Has slash - only lowercase the registry component (before first slash)
 	registry := refWithoutTag[:firstSlashIdx]
+	path := refWithoutTag[firstSlashIdx:]
+
+	if looksLikeHostname(registry) {
+		registry = strings.ToLower(registry)
