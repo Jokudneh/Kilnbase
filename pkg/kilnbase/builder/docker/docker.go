@@ -397,3 +397,5 @@ func lowercaseRegistryBySlash(ref string) string {
 	return registry + path + tagSuffix + digestSuffix
 }
 
+// extractDigestSuffix separates a ref into main part and @ digest suffix.
+func extractDigestSuffix(ref string) (main string, digestSuffix string) {

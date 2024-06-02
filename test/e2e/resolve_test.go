@@ -490,3 +490,4 @@ spec:
 - image: index.docker.io/library/nginx@sha256:32fdf92b4e986e109e4db0865758020cb0c3b70d6ba80d02fe87bad5cc3dc228
 `
 
+	require.YAMLEq(t, expectedOut, out)
