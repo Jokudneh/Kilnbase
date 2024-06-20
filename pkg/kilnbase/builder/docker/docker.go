@@ -400,3 +400,6 @@ func lowercaseRegistryBySlash(ref string) string {
 // extractDigestSuffix separates a ref into main part and @ digest suffix.
 func extractDigestSuffix(ref string) (main string, digestSuffix string) {
 	digestIdx := strings.Index(ref, "@")
+	if digestIdx == notFound {
+		return ref, noSuffix
+	}
