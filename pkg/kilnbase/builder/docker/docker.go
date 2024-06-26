@@ -403,3 +403,6 @@ func extractDigestSuffix(ref string) (main string, digestSuffix string) {
 	if digestIdx == notFound {
 		return ref, noSuffix
 	}
+	return ref[:digestIdx], ref[digestIdx:]
+}
+
