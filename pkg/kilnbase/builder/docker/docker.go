@@ -410,3 +410,7 @@ func extractDigestSuffix(ref string) (main string, digestSuffix string) {
 func extractAndRemoveTagSuffix(
 	ref string,
 ) (refWithoutTag string, tagSuffix string) {
+	lastSlashIdx := strings.LastIndex(ref, registrySeparator)
+	lastSegment := ref
+	if lastSlashIdx != notFound {
+		lastSegment = ref[lastSlashIdx+len(registrySeparator):]

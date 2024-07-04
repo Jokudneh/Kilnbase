@@ -499,3 +499,6 @@ func TestResolveSuccessfulWithPlatformSelectionConfig(t *testing.T) {
 
 	input := `
 kind: Object
+spec:
+- image: pause-arm64
+- image: pause-amd64
