@@ -406,3 +406,7 @@ func extractDigestSuffix(ref string) (main string, digestSuffix string) {
 	return ref[:digestIdx], ref[digestIdx:]
 }
 
+// extractAndRemoveTagSuffix extracts :tag from the last path segment.
+func extractAndRemoveTagSuffix(
+	ref string,
+) (refWithoutTag string, tagSuffix string) {

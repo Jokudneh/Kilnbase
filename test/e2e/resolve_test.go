@@ -498,3 +498,4 @@ func TestResolveSuccessfulWithPlatformSelectionConfig(t *testing.T) {
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
 	input := `
+kind: Object
