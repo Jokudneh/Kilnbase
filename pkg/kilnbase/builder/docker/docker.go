@@ -414,3 +414,7 @@ func extractAndRemoveTagSuffix(
 	lastSegment := ref
 	if lastSlashIdx != notFound {
 		lastSegment = ref[lastSlashIdx+len(registrySeparator):]
+	}
+
+	colonIdx := strings.Index(lastSegment, ":")
+	if colonIdx == notFound {

@@ -502,3 +502,5 @@ kind: Object
 spec:
 - image: pause-arm64
 - image: pause-amd64
+- image: pause-all
+---
