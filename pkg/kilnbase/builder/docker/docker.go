@@ -418,3 +418,7 @@ func extractAndRemoveTagSuffix(
 
 	colonIdx := strings.Index(lastSegment, ":")
 	if colonIdx == notFound {
+		return ref, noSuffix
+	}
+
+	// If there's a slash, the last segment is in the repo path (not hostname),
