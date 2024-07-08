@@ -428,3 +428,4 @@ func extractAndRemoveTagSuffix(
 		tagSuffix = lastSegment[colonIdx:]
 		return refWithoutTag, tagSuffix
 	}
+

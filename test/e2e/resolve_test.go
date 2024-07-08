@@ -514,3 +514,7 @@ overrides:
     architecture: arm64
 - image: pause-amd64
   newImage: gcr.io/google-containers/pause:3.2
+  platformSelection:
+    os: linux
+    architecture: amd64
+- image: pause-all
