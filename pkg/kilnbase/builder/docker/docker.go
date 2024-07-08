@@ -426,3 +426,5 @@ func extractAndRemoveTagSuffix(
 	if lastSlashIdx != notFound {
 		refWithoutTag = ref[:len(ref)-len(lastSegment[colonIdx:])]
 		tagSuffix = lastSegment[colonIdx:]
+		return refWithoutTag, tagSuffix
+	}
