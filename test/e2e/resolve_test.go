@@ -507,3 +507,7 @@ spec:
 apiVersion: kilnbase.k14s.io/v1alpha1
 kind: ImageOverrides
 overrides:
+- image: pause-arm64
+  newImage: gcr.io/google-containers/pause:3.2
+  platformSelection:
+    os: linux

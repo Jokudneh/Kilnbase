@@ -424,3 +424,5 @@ func extractAndRemoveTagSuffix(
 	// If there's a slash, the last segment is in the repo path (not hostname),
 	// so any colon is a tag separator, not a port separator.
 	if lastSlashIdx != notFound {
+		refWithoutTag = ref[:len(ref)-len(lastSegment[colonIdx:])]
+		tagSuffix = lastSegment[colonIdx:]
