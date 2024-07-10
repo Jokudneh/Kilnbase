@@ -434,3 +434,5 @@ func extractAndRemoveTagSuffix(
 	// (actual port number) or if it's "localhost".
 	afterColon := lastSegment[colonIdx+len(registryPortDelim):]
 	isPortNumber := isAllDigits(afterColon)
+	beforeColon := lastSegment[:colonIdx]
+	isLocalhost := strings.EqualFold(beforeColon, "localhost")
