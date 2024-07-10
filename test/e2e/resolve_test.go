@@ -520,3 +520,6 @@ overrides:
 - image: pause-all
   newImage: gcr.io/google-containers/pause:3.2
 `
+
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-"}, RunOpts{
+		StdinReader: strings.NewReader(input),
