@@ -429,3 +429,6 @@ func extractAndRemoveTagSuffix(
 		return refWithoutTag, tagSuffix
 	}
 
+	// No slash: could be bare image name or registry with port.
+	// Only treat colon as port separator if what follows is all digits
+	// (actual port number) or if it's "localhost".
