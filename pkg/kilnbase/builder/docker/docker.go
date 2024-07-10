@@ -436,3 +436,6 @@ func extractAndRemoveTagSuffix(
 	isPortNumber := isAllDigits(afterColon)
 	beforeColon := lastSegment[:colonIdx]
 	isLocalhost := strings.EqualFold(beforeColon, "localhost")
+
+	if isPortNumber || isLocalhost {
+		return ref, noSuffix

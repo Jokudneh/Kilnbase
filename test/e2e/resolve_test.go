@@ -527,3 +527,6 @@ overrides:
 
 	expectedOut := `---
 kind: Object
+metadata:
+  annotations:
+    kilnbase.k14s.io/images: |
