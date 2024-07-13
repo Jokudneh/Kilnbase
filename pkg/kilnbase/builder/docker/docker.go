@@ -439,3 +439,6 @@ func extractAndRemoveTagSuffix(
 
 	if isPortNumber || isLocalhost {
 		return ref, noSuffix
+	}
+
+	// Not a port separator, so colon is a tag separator
