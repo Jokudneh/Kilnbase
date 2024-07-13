@@ -445,3 +445,7 @@ func extractAndRemoveTagSuffix(
 	refWithoutTag = ref[:len(ref)-len(lastSegment[colonIdx:])]
 	tagSuffix = lastSegment[colonIdx:]
 	return refWithoutTag, tagSuffix
+}
+
+// looksLikeHostname checks if a string appears to be a registry hostname.
+func looksLikeHostname(part string) bool {
