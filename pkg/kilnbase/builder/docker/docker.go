@@ -442,3 +442,6 @@ func extractAndRemoveTagSuffix(
 	}
 
 	// Not a port separator, so colon is a tag separator
+	refWithoutTag = ref[:len(ref)-len(lastSegment[colonIdx:])]
+	tagSuffix = lastSegment[colonIdx:]
+	return refWithoutTag, tagSuffix
