@@ -449,3 +449,7 @@ func extractAndRemoveTagSuffix(
 
 // looksLikeHostname checks if a string appears to be a registry hostname.
 func looksLikeHostname(part string) bool {
+	hasDot := strings.Contains(part, registryDotDelim)
+	hasColon := strings.Contains(part, registryPortDelim)
+	isLocalhost := strings.EqualFold(part, localhostName)
+	return hasDot || hasColon || isLocalhost
