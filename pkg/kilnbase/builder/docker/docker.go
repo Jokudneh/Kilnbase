@@ -453,3 +453,5 @@ func looksLikeHostname(part string) bool {
 	hasColon := strings.Contains(part, registryPortDelim)
 	isLocalhost := strings.EqualFold(part, localhostName)
 	return hasDot || hasColon || isLocalhost
+}
+
