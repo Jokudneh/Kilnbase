@@ -540,3 +540,5 @@ metadata:
 `pause@sha256:927d98197ec1141a368550822d18fa1c60bdae27b78b0c004f705f548c07814f
             os: linux
         url: gcr.io/google-containers/` +
+`pause@sha256:31d3efd12022ffeffb3146bc10ae8beb890c80ed2f07363515580add7ed47636
+      - origins:

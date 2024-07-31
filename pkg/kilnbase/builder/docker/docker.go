@@ -458,3 +458,7 @@ func looksLikeHostname(part string) bool {
 // looksLikeRegistry checks if a bare reference (no slashes) looks like a
 // registry rather than a bare image name. Bare image names typically don't
 // have port numbers, and references with dots but no colons are ambiguous
+// (could be "registry.com" or "alpine.debug"), so we only treat as registry
+// if it has a colon (port indicator) or is "localhost".
+func looksLikeRegistry(part string) bool {
+	hasColon := strings.Contains(part, registryPortDelim)
