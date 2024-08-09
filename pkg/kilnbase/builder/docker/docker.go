@@ -465,3 +465,7 @@ func looksLikeRegistry(part string) bool {
 	isLocalhost := strings.EqualFold(part, localhostName)
 	return hasColon || isLocalhost
 }
+
+// isAllDigits checks if a string contains only decimal digits.
+func isAllDigits(s string) bool {
+	if len(s) == emptyLength {

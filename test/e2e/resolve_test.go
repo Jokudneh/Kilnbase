@@ -545,3 +545,5 @@ metadata:
         - resolved:
             tag: "3.2"
             url: gcr.io/google-containers/pause:3.2
+        - platformSelected:
+            architecture: amd64
