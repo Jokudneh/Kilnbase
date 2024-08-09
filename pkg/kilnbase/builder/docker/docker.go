@@ -469,3 +469,7 @@ func looksLikeRegistry(part string) bool {
 // isAllDigits checks if a string contains only decimal digits.
 func isAllDigits(s string) bool {
 	if len(s) == emptyLength {
+		return false
+	}
+	for _, ch := range s {
+		if !isDigit(ch) {

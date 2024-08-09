@@ -547,3 +547,5 @@ metadata:
             url: gcr.io/google-containers/pause:3.2
         - platformSelected:
             architecture: amd64
+            index: gcr.io/google-containers/` +
+`pause@sha256:927d98197ec1141a368550822d18fa1c60bdae27b78b0c004f705f548c07814f
