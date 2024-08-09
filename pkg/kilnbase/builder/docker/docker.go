@@ -462,3 +462,6 @@ func looksLikeHostname(part string) bool {
 // if it has a colon (port indicator) or is "localhost".
 func looksLikeRegistry(part string) bool {
 	hasColon := strings.Contains(part, registryPortDelim)
+	isLocalhost := strings.EqualFold(part, localhostName)
+	return hasColon || isLocalhost
+}
