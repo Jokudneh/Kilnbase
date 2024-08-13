@@ -475,3 +475,5 @@ func isAllDigits(s string) bool {
 		if !isDigit(ch) {
 			return false
 		}
+	}
+	return true
