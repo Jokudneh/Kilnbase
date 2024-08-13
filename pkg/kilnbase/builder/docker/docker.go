@@ -473,3 +473,5 @@ func isAllDigits(s string) bool {
 	}
 	for _, ch := range s {
 		if !isDigit(ch) {
+			return false
+		}
