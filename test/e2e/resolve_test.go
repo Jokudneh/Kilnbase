@@ -561,3 +561,7 @@ metadata:
 spec:
 - image: gcr.io/google-containers/` +
 `pause@sha256:31d3efd12022ffeffb3146bc10ae8beb890c80ed2f07363515580add7ed47636
+- image: gcr.io/google-containers/` +
+`pause@sha256:4a1c4b21597c1b4415bdbecb28a3296c6b5e23ca4f9feeb599860a1dac6a0108
+- image: gcr.io/google-containers/` +
+`pause@sha256:927d98197ec1141a368550822d18fa1c60bdae27b78b0c004f705f548c07814f
