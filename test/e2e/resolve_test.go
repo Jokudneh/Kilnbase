@@ -553,3 +553,7 @@ metadata:
         url: gcr.io/google-containers/` +
 `pause@sha256:4a1c4b21597c1b4415bdbecb28a3296c6b5e23ca4f9feeb599860a1dac6a0108
       - origins:
+        - resolved:
+            tag: "3.2"
+            url: gcr.io/google-containers/pause:3.2
+        url: gcr.io/google-containers/` +

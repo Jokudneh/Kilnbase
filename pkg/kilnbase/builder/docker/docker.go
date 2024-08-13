@@ -477,3 +477,4 @@ func isAllDigits(s string) bool {
 		}
 	}
 	return true
+}
