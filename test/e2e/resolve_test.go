@@ -575,3 +575,6 @@ func TestResolveSuccessfulWithPlatformSelectionWithGlobalFlag(t *testing.T) {
 	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
 
 	input := `
+kind: Object
+spec:
+- image: nginx-arm64
