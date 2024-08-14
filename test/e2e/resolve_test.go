@@ -570,3 +570,6 @@ spec:
 	require.YAMLEq(t, expectedOut, out)
 }
 
+func TestResolveSuccessfulWithPlatformSelectionWithGlobalFlag(t *testing.T) {
+	env := BuildEnv(t)
+	kilnbase := Kilnbase{t, env.KilnbaseBinaryPath, Logger{}}
