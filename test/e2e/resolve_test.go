@@ -579,3 +579,6 @@ kind: Object
 spec:
 - image: nginx-arm64
 - image: nginx-amd64
+- image: nginx-all
+---
+apiVersion: kilnbase.k14s.io/v1alpha1
