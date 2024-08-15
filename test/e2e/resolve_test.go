@@ -578,3 +578,4 @@ func TestResolveSuccessfulWithPlatformSelectionWithGlobalFlag(t *testing.T) {
 kind: Object
 spec:
 - image: nginx-arm64
+- image: nginx-amd64
