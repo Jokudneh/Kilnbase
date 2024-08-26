@@ -591,3 +591,6 @@ overrides:
     architecture: arm64
 - image: nginx-amd64
   newImage: index.docker.io/library/nginx:1.14.2
+  platformSelection:
+    os: linux
+    architecture: amd64
