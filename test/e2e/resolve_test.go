@@ -599,3 +599,6 @@ overrides:
   newImage: index.docker.io/library/nginx:1.14.2
 `
 
+	out, _ := kilnbase.RunWithOpts([]string{"-f", "-", "--platform", "linux/amd64"}, RunOpts{
+		StdinReader: strings.NewReader(input),
+	})
