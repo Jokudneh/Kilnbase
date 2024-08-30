@@ -595,3 +595,7 @@ overrides:
     os: linux
     architecture: amd64
 # will use flag provided platform selection
+- image: nginx-all
+  newImage: index.docker.io/library/nginx:1.14.2
+`
+
