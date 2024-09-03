@@ -603,3 +603,5 @@ overrides:
 		StdinReader: strings.NewReader(input),
 	})
 
+	expectedOut := `---
+kind: Object
