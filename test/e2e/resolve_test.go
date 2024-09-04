@@ -609,3 +609,5 @@ metadata:
   annotations:
     kilnbase.k14s.io/images: |
       - origins:
+        - resolved:
+            tag: 1.14.2
