@@ -611,3 +611,5 @@ metadata:
       - origins:
         - resolved:
             tag: 1.14.2
+            url: index.docker.io/library/nginx:1.14.2
+        - platformSelected:
