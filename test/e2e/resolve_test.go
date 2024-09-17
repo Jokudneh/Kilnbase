@@ -616,3 +616,7 @@ metadata:
             architecture: amd64
             index: index.docker.io/library/nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d
             os: linux
+        url: index.docker.io/library/nginx@sha256:706446e9c6667c0880d5da3f39c09a6c7d2114f5a5d6b74a2fafd24ae30d2078
+      - origins:
+        - resolved:
+            tag: 1.14.2
