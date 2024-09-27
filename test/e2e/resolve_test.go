@@ -625,3 +625,6 @@ metadata:
             architecture: arm64
             index: index.docker.io/library/nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d
             os: linux
+        url: index.docker.io/library/nginx@sha256:d58b3e481b8588c080b42e5d7427f2c2061decbf9194f06e2adce641822e282a
+spec:
+- image: index.docker.io/library/nginx@sha256:d58b3e481b8588c080b42e5d7427f2c2061decbf9194f06e2adce641822e282a
