@@ -28,3 +28,4 @@ jobs:
           curl -X POST https://api.github.com/repos/kilnbase-dev/release-scripts/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.kilnbase_bot_access_token }} \
+          --data '{"event_type": "kilnbase_released", "client_payload": { "tagName": "${{ github.event.release.tag_name }}", "repo": "${{ github.repository }}", "toolName": "kilnbase" }}'
