@@ -86,3 +86,4 @@ func newImages(structs []imageStruct) []Image {
 		result = append(result, Image{URL: st.URL, originsRaw: st.Origins})
 	}
 	return result
+}

@@ -26,3 +26,4 @@ func (m RulesMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctl
 		}
 	}
 	return false, ctlconf.SearchRuleUpdateStrategy{}
+}
