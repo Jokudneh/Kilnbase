@@ -64,3 +64,4 @@ func ReadCloser(r io.ReadCloser, h v1.Hash) (io.ReadCloser, error) {
 		},
 		CloseFunc: r.Close,
 	}, nil
+}
