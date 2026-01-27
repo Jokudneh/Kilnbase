@@ -397,3 +397,4 @@ images:
 	if string(bs) != imgLock {
 		t.Fatalf("Expected >>>%s<<< to match >>>%s<<<", bs, imgLock)
 	}
+}
