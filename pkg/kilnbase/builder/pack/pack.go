@@ -94,3 +94,4 @@ func (d Pack) Build(image, directory string, opts PackBuildOpts) (ctlbdk.TmpRef,
 
 func (d Pack) Push(tmpRef ctlbdk.TmpRef, imageDst string) (ctlbdk.ImageDigest, error) {
 	return d.docker.Push(tmpRef, imageDst)
+}
