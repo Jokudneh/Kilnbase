@@ -193,3 +193,4 @@ func (o *UnpackageOptions) emitLockOutput(conf ctlconf.Conf, resolvedImages *Pro
 	c.Overrides = ctlconf.UniqueImageOverrides(c.Overrides)
 
 	return c.WriteToFile(o.LockOutput)
+}
