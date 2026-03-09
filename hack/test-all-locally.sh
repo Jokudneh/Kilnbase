@@ -45,3 +45,4 @@ docker run \
 -i -a STDOUT -a STDERR \
 --network host --rm \
 $image_name \
+./hack/test-all-minikube-local-registry.sh $@
