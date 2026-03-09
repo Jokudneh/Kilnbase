@@ -18,3 +18,4 @@ jobs:
         exempt-issue-labels: 'discussion'
         only-labels: 'kilnbase triage'
         days-before-stale: 40
+        days-before-close: 5
