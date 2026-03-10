@@ -50,3 +50,4 @@ func (i TaggedImage) URL() (string, []ctlconf.Origin, error) {
 	}
 
 	return url, origins, err
+}
