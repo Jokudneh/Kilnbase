@@ -202,3 +202,4 @@ func (i BuiltImage) sources() ([]ctlconf.Origin, error) {
 	}
 
 	return sources, nil
+}
