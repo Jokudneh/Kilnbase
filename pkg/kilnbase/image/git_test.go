@@ -326,3 +326,4 @@ func TestGitRedactedRemoteURL(t *testing.T) {
 			t.Fatalf("Expected '%s' to equal '%s' but was '%s'", input, expected, actual)
 		}
 	}
+}

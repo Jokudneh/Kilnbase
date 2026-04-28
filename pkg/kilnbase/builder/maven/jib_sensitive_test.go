@@ -38,3 +38,4 @@ func TestMavenBannerDoesNotExposeArguments(t *testing.T) {
 	actual, err := os.ReadFile(argsFile)
 	require.NoError(t, err)
 	require.Contains(t, string(actual), "password-canary")
+}

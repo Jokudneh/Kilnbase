@@ -121,3 +121,4 @@ func (c Conf) dedupSearchRules(rules []SearchRule) []SearchRule {
 		}
 	}
 	return result
+}
