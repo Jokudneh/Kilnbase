@@ -49,3 +49,4 @@ func (r DescribedReader) buildIndex(iitd ImageIndexDescriptor) ImageIndexWithRef
 	}
 
 	return NewDescribedImageIndex(iitd, images, indexes)
+}
