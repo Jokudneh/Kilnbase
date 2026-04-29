@@ -7,3 +7,4 @@ on:
 
 jobs:
   check-inclusive-language:
+    uses: kilnbase-dev/release-scripts/.github/workflows/inclusive-language-check.yml@main

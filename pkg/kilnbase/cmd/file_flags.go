@@ -51,3 +51,4 @@ func (s *FileFlags) ResourcesAndConfig() ([]ctlres.Resource, ctlconf.Conf, error
 		return nil, ctlconf.Conf{}, err
 	}
 	return ctlconf.NewConfFromResources(allRs)
+}
