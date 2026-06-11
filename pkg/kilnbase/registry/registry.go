@@ -204,3 +204,4 @@ func (i Registry) retry(doFunc func() error) error {
 		time.Sleep(1 * time.Second)
 	}
 	return fmt.Errorf("Retried 5 times: %s", lastErr)
+}

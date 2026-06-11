@@ -89,3 +89,4 @@ func TestRuleMatcherValueMatcherCaseInsensitiveHostname(t *testing.T) {
 				ex.desc, ex.matched, matched)
 		}
 	}
+}

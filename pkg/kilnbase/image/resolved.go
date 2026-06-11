@@ -52,3 +52,4 @@ func (i ResolvedImage) URL() (string, []ctlconf.Origin, error) {
 	origins = append(origins, ctlconf.Origin{Resolved: &ctlconf.OriginResolved{URL: i.url, Tag: tag.TagStr()}})
 
 	return url, origins, nil
+}
