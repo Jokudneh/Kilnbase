@@ -71,3 +71,4 @@ func TestNewPlatformSelection(t *testing.T) {
 			assert.Equal(t, plat, ex.Plat)
 		})
 	}
+}
