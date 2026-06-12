@@ -20,3 +20,4 @@ func TestInvalidRegistryHostnameDoesNotExposeCredentials(t *testing.T) {
 			}
 		})
 	}
+}

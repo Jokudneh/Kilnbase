@@ -35,3 +35,4 @@ func (l ForeignDescribedLayer) Size() (int64, error) { return l.desc.Size, nil }
 
 func (l ForeignDescribedLayer) MediaType() (types.MediaType, error) {
 	return types.MediaType(l.desc.MediaType), nil
+}
