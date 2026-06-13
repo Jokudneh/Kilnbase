@@ -117,3 +117,4 @@ func (t ImageOrIndex) Ref() string {
 	default:
 		panic("Unknown item")
 	}
+}
