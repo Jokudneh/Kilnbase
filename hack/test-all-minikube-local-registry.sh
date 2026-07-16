@@ -33,3 +33,4 @@ EOF
 # Need to bootstrap to avoid race conditions to boot
 docker buildx create minikube --use --driver=kubernetes --bootstrap --config buildkitd.toml
 
+./hack/test-all.sh $@
