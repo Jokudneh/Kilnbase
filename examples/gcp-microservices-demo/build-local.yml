@@ -45,3 +45,4 @@ destinations:
 - image: shippingservice
   newImage: docker.io/dkalinin/microservices-demo-shippingservice
 - image: adservice
+  newImage: docker.io/dkalinin/microservices-demo-adservice

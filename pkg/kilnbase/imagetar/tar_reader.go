@@ -36,3 +36,4 @@ func (r TarReader) Read() ([]imagedesc.ImageOrIndex, error) {
 	}
 
 	return imagedesc.NewDescribedReader(ids, file).Read(), nil
+}
