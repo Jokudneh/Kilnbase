@@ -341,3 +341,4 @@ func NewPlatformSelection(platform string) (*ctlconf.PlatformSelection, error) {
 		result.Variant = parts[2]
 	}
 	return result, nil
+}

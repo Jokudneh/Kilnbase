@@ -298,3 +298,4 @@ func sha256File(t *testing.T, path string) string {
 	}
 
 	return fmt.Sprintf("%x", hs.Sum(nil))
+}
