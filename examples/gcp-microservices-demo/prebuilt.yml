@@ -22,3 +22,4 @@ overrides:
 - image: shippingservice
   newImage: gcr.io/google-samples/microservices-demo/shippingservice:v0.1.0
 - image: adservice
+  newImage: gcr.io/google-samples/microservices-demo/adservice:v0.1.0

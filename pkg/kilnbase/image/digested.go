@@ -46,3 +46,4 @@ func (i DigestedImage) URL() (string, []ctlconf.Origin, error) {
 		return "", nil, i.parseErr
 	}
 	return i.nameWithDigest.Name(), nil, nil
+}
