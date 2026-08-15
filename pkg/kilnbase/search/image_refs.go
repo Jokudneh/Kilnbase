@@ -194,3 +194,4 @@ func (m tmpRefMatcher) Matches(_ ctlres.Path, value interface{}) (bool, ctlconf.
 		return strings.HasPrefix(valStr, m.prefix), (ctlconf.SearchRule{}).UpdateStrategyWithDefaults()
 	}
 	return false, ctlconf.SearchRuleUpdateStrategy{}
+}

@@ -65,3 +65,4 @@ func (r ResourceWithImages) Images() ([]Image, error) {
 	}
 
 	return newImages(structs), nil
+}
