@@ -42,3 +42,4 @@ func main() {
 	}
 
 	confUI.PrintLinef("Succeeded")
+}

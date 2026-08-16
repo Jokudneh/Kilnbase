@@ -15,3 +15,4 @@ jobs:
       - uses: actions/add-to-project@v0.3.0
         with:
           project-url: https://github.com/orgs/kilnbase-dev/projects/1
+          github-token: ${{ secrets.kilnbase_ADD_TO_PROJECT_TOKEN }}
