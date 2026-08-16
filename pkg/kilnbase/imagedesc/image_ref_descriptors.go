@@ -308,3 +308,4 @@ func (m errRegistry) betterErr(ref regname.Reference, err error) error {
 		err = fmt.Errorf("Working with %s: %s", ref.Name(), err)
 	}
 	return err
+}

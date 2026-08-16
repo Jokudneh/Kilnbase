@@ -21,3 +21,4 @@ func TestPreResolvedOrigins(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Equal(t, url, preresolvedImage)
 	assert.Len(t, origins, 1)
+}
