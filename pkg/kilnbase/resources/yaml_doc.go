@@ -41,3 +41,4 @@ func (f YAMLFile) Docs() ([][]byte, error) {
 	}
 
 	return docs, nil
+}

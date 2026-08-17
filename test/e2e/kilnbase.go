@@ -84,3 +84,4 @@ func (k Kilnbase) cmdDesc(args []string, opts RunOpts) string {
 		return prefix + " -redacted-"
 	}
 	return fmt.Sprintf("%s %s", prefix, strings.Join(args, " "))
+}
