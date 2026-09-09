@@ -8,3 +8,4 @@ go clean -testcache
 
 go test ./... -test.v $@
 
+echo UNIT SUCCESS

@@ -107,3 +107,4 @@ var lowerCaseRepositoryCases = []lowerCaseRepositoryTestCase{
 		input:    "MyOrg/index.docker.io-mirror:Tag",
 		expected: "MyOrg/index.docker.io-mirror:Tag",
 	},
+}
