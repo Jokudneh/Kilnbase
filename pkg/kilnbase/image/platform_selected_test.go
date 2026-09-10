@@ -264,3 +264,4 @@ func TestMatchesPlatformSelection(t *testing.T) {
 			t.Errorf("matchesPlatform(%v, %v); got %v, want %v", test.given, test.required, got, test.want)
 		}
 	}
+}

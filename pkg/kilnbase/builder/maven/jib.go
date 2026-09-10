@@ -151,3 +151,4 @@ func (*Jib) tagTarget(stableTmpRef ctlbdk.TmpRef, targetImage string,
 	cmd.Stderr = io.MultiWriter(&stderrBuf, prefixedLogger)
 
 	return cmd.Run()
+}
