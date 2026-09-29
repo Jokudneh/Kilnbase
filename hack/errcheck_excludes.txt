@@ -10,3 +10,4 @@ fmt.Fprintf
 (*io.PipeWriter).Close
 (*io.PipeWriter).CloseWithError
 (*compress/gzip.Writer).Close
+(*compress/gzip.Reader).Close
