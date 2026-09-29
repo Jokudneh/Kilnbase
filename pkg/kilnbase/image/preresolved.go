@@ -35,3 +35,4 @@ func copyAndAppendOrigins(existing []ctlconf.Origin, new ...ctlconf.Origin) []ct
 	all := make([]ctlconf.Origin, len(existing), len(existing)+len(new))
 	copy(all, existing)
 	return append(all, new...)
+}
