@@ -90,3 +90,4 @@ jobs:
 
         export KILNBASE_E2E_SKIP_WHEN_HTTP_REGISTRY=true
         ./hack/build-binaries.sh
+        ./hack/test-all-locally.sh
