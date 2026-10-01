@@ -144,3 +144,4 @@ func (d KubectlBuildkit) tagRef(image string, imgDst *ctlconf.ImageDestination) 
 	}
 
 	return "kilnbase:" + tag, nil
+}
