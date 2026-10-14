@@ -58,3 +58,4 @@ func (o *TarImageSet) Import(path string,
 	}
 
 	return o.imageSet.Import(imgOrIndexes, importRepo, registry)
+}

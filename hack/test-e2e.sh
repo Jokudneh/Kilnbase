@@ -28,3 +28,4 @@ export KILNBASE_BINARY_PATH="${KILNBASE_BINARY_PATH:-$PWD/kilnbase}"
 
 go test -tags=e2e ./test/e2e/ -timeout 60m -test.v $@
 
+echo E2E SUCCESS
