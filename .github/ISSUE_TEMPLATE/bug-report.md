@@ -45,3 +45,4 @@ This is an invitation to the community to vote on issues, to help us prioritize 
 👍 "I would like to see this addressed as soon as possible"
 👎 "There are other more important things to focus on right now"
 
+We are also happy to receive and review Pull Requests if you want to help working on this issue.

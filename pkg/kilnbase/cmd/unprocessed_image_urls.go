@@ -38,3 +38,4 @@ func (i *UnprocessedImageURLs) All() []UnprocessedImageURL {
 
 func (i *UnprocessedImageURLs) Bytes() ([]byte, error) {
 	return yaml.Marshal(i.All())
+}
