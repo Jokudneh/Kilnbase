@@ -12,3 +12,4 @@ type SourcePackBuildOpts struct {
 	Buildpacks *[]string
 	ClearCache *bool     `json:"clearCache"`
 	RawOptions *[]string `json:"rawOptions"`
+}

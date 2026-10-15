@@ -79,3 +79,4 @@ func (f Fields) visit(keyPath ctlres.Path, res interface{}, visitorFunc FieldsVi
 
 func (Fields) newPath(p ctlres.Path) ctlres.Path {
 	return ctlres.Path(append(ctlres.Path{}, p...))
+}
