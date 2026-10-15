@@ -22,3 +22,4 @@ func TestGitProvenanceOmitsQueryCredentials(t *testing.T) {
 			t.Fatal("provenance contains credentials")
 		}
 	}
+}

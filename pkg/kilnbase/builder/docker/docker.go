@@ -482,3 +482,4 @@ func isAllDigits(s string) bool {
 // isDigit checks if a rune is a decimal digit.
 func isDigit(ch rune) bool {
 	return ch >= '0' && ch <= '9'
+}
