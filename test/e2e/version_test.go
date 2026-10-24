@@ -19,3 +19,4 @@ func TestVersion(t *testing.T) {
 	if !strings.Contains(out, "kilnbase version") {
 		t.Fatalf("Expected to find client version")
 	}
+}

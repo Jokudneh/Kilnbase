@@ -12,3 +12,4 @@ go_image(
 container_image(
     name = "simple-app",
     base = ":simple-app-go-image",
+)
