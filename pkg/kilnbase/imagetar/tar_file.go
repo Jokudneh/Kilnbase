@@ -92,3 +92,4 @@ func (f tarFileChunkReadCloser) Close() error {
 		}
 	}
 	return err
+}
