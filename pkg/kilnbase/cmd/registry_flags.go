@@ -27,3 +27,4 @@ func (s *RegistryFlags) AsRegistryOpts() ctlreg.Opts {
 		Insecure:      s.Insecure,
 		EnvAuthPrefix: "KILNBASE_REGISTRY",
 	}
+}

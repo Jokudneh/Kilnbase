@@ -72,3 +72,4 @@ func (b *Bazel) Run(image, directory string, opts config.SourceBazelRunOpts) (ct
 	}
 
 	return b.docker.RetagStable(ctlbdk.NewTmpRef(imageID), image, imageID, prefixedLogger)
+}

@@ -93,3 +93,4 @@ Confirm that there is an 'External load balancer' named 'registry' with an 'Exte
 At the bottom of the details view (click on registry), see that port forwarding is set up with a 'target port' of 5000.
 
 That's all!  We should now be able to run regular commands against it:
+`kilnbase relocate -f test/e2e/assets/simple-app -r <External IP>:80/<Name> --registry-insecure`
