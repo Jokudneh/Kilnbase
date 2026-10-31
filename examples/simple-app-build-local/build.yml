@@ -44,3 +44,4 @@ sources:
   path: test/e2e/assets/simple-app
   docker:
     pull: true
+    noCache: true

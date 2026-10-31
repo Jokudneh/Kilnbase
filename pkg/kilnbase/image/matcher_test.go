@@ -126,3 +126,4 @@ func TestMatcherMatches(t *testing.T) {
 			t.Fatalf("Expected %#v to succeed", ex)
 		}
 	}
+}

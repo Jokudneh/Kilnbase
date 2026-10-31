@@ -35,3 +35,4 @@ Check out which organizations are using and contributing to Kilnbase: [Adopter's
 
 # Development
 
+Consult [docs/dev.md](docs/dev.md) for build instructions, code structure details.
