@@ -139,3 +139,4 @@ func TestRedactURL(t *testing.T) {
 			}
 		})
 	}
+}

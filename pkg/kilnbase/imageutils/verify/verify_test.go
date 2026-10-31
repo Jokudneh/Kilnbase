@@ -71,3 +71,4 @@ func TestBadHash(t *testing.T) {
 	if err == nil {
 		t.Errorf("ReadCloser() = %v, wanted err", err)
 	}
+}

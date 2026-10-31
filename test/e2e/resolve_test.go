@@ -633,3 +633,4 @@ spec:
 `
 
 	require.YAMLEq(t, expectedOut, out)
+}
