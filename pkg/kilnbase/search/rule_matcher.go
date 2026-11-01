@@ -76,3 +76,4 @@ func (m RuleMatcher) Matches(keyPath ctlres.Path, value interface{}) (bool, ctlc
 	}
 
 	return keyMatched && valueMatched, m.rule.UpdateStrategyWithDefaults()
+}
