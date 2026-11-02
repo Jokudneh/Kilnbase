@@ -9,3 +9,4 @@ type SourceKoOpts struct {
 
 type SourceKoBuildOpts struct {
 	RawOptions *[]string `json:"rawOptions"`
+}
