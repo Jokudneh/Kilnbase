@@ -169,3 +169,4 @@ func (r *ResourceImpl) AsYAMLBytes() ([]byte, error) {
 }
 
 func (r *ResourceImpl) unstructured() unstructured.Unstructured     { return r.un }
+func (r *ResourceImpl) unstructuredPtr() *unstructured.Unstructured { return &r.un }

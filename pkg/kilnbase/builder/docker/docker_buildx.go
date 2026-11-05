@@ -228,3 +228,4 @@ func (d Buildx) ensureDirectory(directory string) error {
 	}
 
 	return nil
+}
