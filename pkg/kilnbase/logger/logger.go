@@ -59,3 +59,4 @@ func (w *PrefixWriter) Write(data []byte) (int, error) {
 func (w *PrefixWriter) WriteStr(str string, args ...interface{}) error {
 	_, err := w.Write([]byte(fmt.Sprintf(str, args...)))
 	return err
+}
