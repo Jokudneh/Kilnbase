@@ -15,3 +15,4 @@ var _ Image = ErrImage{}
 
 func NewErrImage(err error) ErrImage { return ErrImage{err} }
 
+func (i ErrImage) URL() (string, []ctlconf.Origin, error) { return "", nil, i.err }
