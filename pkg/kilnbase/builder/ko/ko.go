@@ -49,3 +49,4 @@ func (k *Ko) Build(image, directory string, opts config.SourceKoBuildOpts) (ctlb
 	}
 
 	return ctlbdk.NewTmpRef(strings.Trim(stdoutBuf.String(), "\n")), nil
+}

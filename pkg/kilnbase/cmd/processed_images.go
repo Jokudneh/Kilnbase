@@ -52,3 +52,4 @@ func (i *ProcessedImages) All() []ProcessedImageItem {
 		return result[i].UnprocessedImageURL.URL < result[j].UnprocessedImageURL.URL
 	})
 	return result
+}
