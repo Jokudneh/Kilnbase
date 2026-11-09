@@ -23,3 +23,4 @@ func NewThrottle(max int) Throttle {
 }
 
 func (t Throttle) Take() { <-t.ch }
+func (t Throttle) Done() { t.ch <- struct{}{} }

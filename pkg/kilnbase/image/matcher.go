@@ -53,3 +53,4 @@ func URLRepo(url string) (string, bool) {
 		return matches[1], true
 	}
 	return url, false
+}
