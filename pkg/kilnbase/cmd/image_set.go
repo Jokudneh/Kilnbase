@@ -172,3 +172,4 @@ func (o *ImageSet) verifyTagDigest(
 	}
 
 	return nil
+}
