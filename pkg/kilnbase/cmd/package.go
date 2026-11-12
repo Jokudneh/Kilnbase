@@ -119,3 +119,4 @@ func FindImages(allRs []ctlres.Resource, conf ctlconf.Conf) (*UnprocessedImageUR
 	}
 
 	return foundImages, nil
+}

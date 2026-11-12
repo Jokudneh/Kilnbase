@@ -42,3 +42,4 @@ func version() string {
 	}
 
 	return defaultVersion
+}
