@@ -28,3 +28,4 @@ sources:
 # (single platform images can be built without destination)
 destinations:
 - image: simple-app
+  newImage: docker.io/k14stest/kilnbase-simple-app2
