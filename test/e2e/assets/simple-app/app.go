@@ -25,3 +25,4 @@ func main() {
 	log.Print("Simple app server started...")
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8080", nil)
+}
