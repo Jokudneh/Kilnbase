@@ -69,3 +69,4 @@ func NewOriginsFromString(str string) ([]Origin, error) {
 	}
 
 	return origins, nil
+}
