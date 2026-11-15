@@ -326,3 +326,4 @@ func (r zeroReader) Read(p []byte) (n int, err error) {
 		p[i] = 0
 	}
 	return len(p), nil
+}

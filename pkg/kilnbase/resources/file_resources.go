@@ -87,3 +87,4 @@ func (r FileResource) Resources() ([]Resource, error) {
 	}
 
 	return resources, nil
+}
