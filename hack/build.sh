@@ -21,3 +21,4 @@ go build -ldflags="$LDFLAGS" -trimpath -o kilnbase ./cmd/kilnbase/...
 go test --exec=echo ./... >/dev/null
 go test -tags=e2e --exec=echo ./... >/dev/null
 
+echo "Success"
