@@ -173,3 +173,4 @@ func (p *PathPart) Matches(p2 *PathPart) bool {
 	default:
 		return false
 	}
+}

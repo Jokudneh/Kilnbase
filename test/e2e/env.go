@@ -55,3 +55,4 @@ func (e Env) WithRegistries(input string) string {
 		input = strings.Replace(input, hostname+"*username*/", newHostname+e.DockerHubUsername+"/", -1)
 	}
 	return input
+}
