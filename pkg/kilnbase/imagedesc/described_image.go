@@ -121,3 +121,4 @@ func (i DescribedImage) LayerByDiffID(diffID regv1.Hash) (regv1.Layer, error) {
 		}
 	}
 	return nil, fmt.Errorf("Expected to find layer '%s' by diff id", diffID)
+}
