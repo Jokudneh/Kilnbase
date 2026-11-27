@@ -14,7 +14,7 @@ writes the digest-pinned result back.
 - Website: https://github.com/Jokudneh/Kilnbase
 - Slack: [#kilnbase in Kubernetes slack](https://slack.kubernetes.io)
 - [Docs](docs/README.md) with topics about building, packaging images, blog posts, etc.
-- Install: Grab prebuilt binaries from the Releases page or [Homebrew Kilnbase tap](https://github.com/kilnbase-dev/homebrew)
+- Install: Grab prebuilt binaries from the Releases page or [Homebrew Kilnbase tap](https://github.com/carvel-dev/homebrew)
 - Backlog: [See what we're up to](https://github.com/orgs/kilnbase-dev/projects/1/views/1?filterQuery=repo%3A%22kilnbase-dev%2Fkilnbase%22).
 
 `kilnbase` (pronounced: `kei·bild`) seamlessly incorporates image building and image pushing into your development and deployment workflows.
@@ -31,15 +31,15 @@ Features:
 
 !
 
-See [building and deploying simple Go application to Kubernetes example](https://github.com/kilnbase-dev/simple-app-on-kubernetes#step-3-building-container-images-locally) that uses kilnbase.
+See [building and deploying simple Go application to Kubernetes example](https://github.com/carvel-dev/simple-app-on-kubernetes#step-3-building-container-images-locally) that uses kilnbase.
 
 ### Join the Community and Make Kilnbase Better
 Kilnbase is better because of our contributors and maintainers. It is because of you that we can bring great software to the community.
-Please join us during our online community meetings. Details can be found on our [Kilnbase website](https://kilnbase.dev/community/).
+Please join us during our online community meetings. Details can be found on our [Kilnbase website](https://carvel.dev/community/).
 
 You can chat with us on Kubernetes Slack in the #kilnbase channel and follow us on Twitter at @kilnbase_dev.
 
-Check out which organizations are using and contributing to Kilnbase: [Adopter's list](https://github.com/kilnbase-dev/kilnbase/blob/master/ADOPTERS.md)
+Check out which organizations are using and contributing to Kilnbase: [Adopter's list](https://github.com/carvel-dev/kilnbase/blob/master/ADOPTERS.md)
 
 # Development
 

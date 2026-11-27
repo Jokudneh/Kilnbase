@@ -127,3 +127,10 @@ func TestMatcherMatches(t *testing.T) {
 		}
 	}
 }
+
+func TestMatcherEmptyRefDoesNotPanic(t *testing.T) {
+	m := ctlimg.NewMatcher("docker.io/img")
+	if m.Matches(ctlconf.ImageRef{}) {
+		t.Fatal("an empty reference matched a URL")
+	}
+}

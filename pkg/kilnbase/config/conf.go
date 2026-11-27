@@ -6,7 +6,7 @@ package config
 import (
 	"reflect"
 
-	"kilnbase.dev/imgpkg/pkg/imgpkg/lockconfig"
+	"carvel.dev/imgpkg/pkg/imgpkg/lockconfig"
 	ctlres "github.com/Jokudneh/Kilnbase/pkg/kilnbase/resources"
 )
 

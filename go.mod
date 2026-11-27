@@ -3,8 +3,8 @@ module github.com/Jokudneh/Kilnbase
 go 1.26.3
 
 require (
-	kilnbase.dev/imgpkg v0.48.1
-	kilnbase.dev/vendir v0.45.4
+	carvel.dev/imgpkg v0.48.1
+	carvel.dev/vendir v0.45.4
 	github.com/cppforlife/cobrautil v0.0.0-20221021151949-d60711905d65
 	github.com/cppforlife/go-cli-ui v0.0.0-20220428182907-73db60c7611a
 	github.com/google/go-containerregistry v0.20.8
@@ -18,7 +18,7 @@ require (
 )
 
 require (
-	github.com/kilnbase-dev/semver/v4 v4.0.1 // indirect
+	github.com/carvel-dev/semver/v4 v4.0.1 // indirect
 	github.com/containerd/stargz-snapshotter/estargz v0.18.2 // indirect
 	github.com/cppforlife/color v1.9.1-0.20200716202919-6706ac40b835 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect

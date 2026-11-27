@@ -10,7 +10,7 @@ import (
 	"os"
 	"strings"
 
-	"kilnbase.dev/imgpkg/pkg/imgpkg/lockconfig"
+	"carvel.dev/imgpkg/pkg/imgpkg/lockconfig"
 	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
 	ctlimg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/image"
 	ctllog "github.com/Jokudneh/Kilnbase/pkg/kilnbase/logger"

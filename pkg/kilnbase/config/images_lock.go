@@ -4,6 +4,6 @@
 package config
 
 const (
-	ImagesLockKilnbaseID      = "kilnbase.kilnbase.dev/id"
-	ImagesLockKilnbaseOrigins = "kilnbase.kilnbase.dev/origins"
+	ImagesLockKilnbaseID      = "kilnbase.carvel.dev/id"
+	ImagesLockKilnbaseOrigins = "kilnbase.carvel.dev/origins"
 )
