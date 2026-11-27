@@ -1,3 +1,11 @@
+# Kilnbase
+
+[![Go 1.22+](https://img.shields.io/badge/go-%3E%3D1.22-00ADD8.svg)](go.mod)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
+**Image build tool for Kubernetes:** reads a config, resolves every image reference in it and
+writes the digest-pinned result back.
+
 
 [![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/7746/badge)](https://bestpractices.coreinfrastructure.org/projects/7746)
 
