@@ -33,16 +33,16 @@ eval $(minikube docker-env)
 
 For those interested in extending and improving kilnbase, below is a quick reference on the structure of the source code:
 
-- [.github/workflows/test-gh.yml](https://github.com/kilnbase-dev/kilnbase/blob/develop/.github/workflows/test-gh.yml) is a Github Action that runs build and unit tests when commits are pushed
-- [hack](https://github.com/kilnbase-dev/kilnbase/tree/develop/hack) has build and test scripts
-- [cmd/kilnbase](https://github.com/kilnbase-dev/kilnbase/blob/develop/cmd/kilnbase) is the entry package for main kilnbase binary
-- [pkg/kilnbase/cmd](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/cmd) includes all kilnbase CLI commands (kilnbase.go is root command)
-- [pkg/kilnbase/config](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/config) describes kilnbase configuration resources such as Config, Sources, etc.
-- [pkg/kilnbase/resources](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/resources) allows to parse YAML files into Resource objects 
-- [pkg/kilnbase/image](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/image) contains set of classes that know how to "transform" image URLs (build it, resolve it to digest, tag it)
-- [pkg/kilnbase/registry](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/registry) provides a simplified registry API client
-- [pkg/kilnbase/search](https://github.com/kilnbase-dev/kilnbase/tree/develop/pkg/kilnbase/search) implements YAML node searcher that finds image URLs
-- [test/e2e](https://github.com/kilnbase-dev/kilnbase/tree/develop/test/e2e) includes e2e tests that can run against Docker registry.
+- [.github/workflows/test-gh.yml](https://github.com/carvel-dev/kilnbase/blob/develop/.github/workflows/test-gh.yml) is a Github Action that runs build and unit tests when commits are pushed
+- [hack](https://github.com/carvel-dev/kilnbase/tree/develop/hack) has build and test scripts
+- [cmd/kilnbase](https://github.com/carvel-dev/kilnbase/blob/develop/cmd/kilnbase) is the entry package for main kilnbase binary
+- [pkg/kilnbase/cmd](https://github.com/carvel-dev/kilnbase/tree/develop/pkg/kilnbase/cmd) includes all kilnbase CLI commands (kilnbase.go is root command)
+- [pkg/kilnbase/config](https://github.com/carvel-dev/kilnbase/tree/develop/pkg/kilnbase/config) describes kilnbase configuration resources such as Config, Sources, etc.
+- [pkg/kilnbase/resources](https://github.com/carvel-dev/kilnbase/tree/develop/pkg/kilnbase/resources) allows to parse YAML files into Resource objects 
+- [pkg/kilnbase/image](https://github.com/carvel-dev/kilnbase/tree/develop/pkg/kilnbase/image) contains set of classes that know how to "transform" image URLs (build it, resolve it to digest, tag it)
+- [pkg/kilnbase/registry](https://github.com/carvel-dev/kilnbase/tree/develop/pkg/kilnbase/registry) provides a simplified registry API client
+- [pkg/kilnbase/search](https://github.com/carvel-dev/kilnbase/tree/develop/pkg/kilnbase/search) implements YAML node searcher that finds image URLs
+- [test/e2e](https://github.com/carvel-dev/kilnbase/tree/develop/test/e2e) includes e2e tests that can run against Docker registry.
 
 ## How to set up an insecure-only registry
 It is occasionally necessary to test against insecure-only registries in order to ensure the commands can run against http endpoints.

@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"os"
 
-	"kilnbase.dev/imgpkg/pkg/imgpkg/lockconfig"
+	"carvel.dev/imgpkg/pkg/imgpkg/lockconfig"
 	ctlres "github.com/Jokudneh/Kilnbase/pkg/kilnbase/resources"
 	"github.com/Jokudneh/Kilnbase/pkg/kilnbase/version"
-	versions "kilnbase.dev/vendir/pkg/vendir/versions/v1alpha1"
+	versions "carvel.dev/vendir/pkg/vendir/versions/v1alpha1"
 	semver "github.com/hashicorp/go-version"
 	"sigs.k8s.io/yaml"
 )

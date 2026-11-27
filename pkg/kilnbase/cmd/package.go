@@ -41,7 +41,7 @@ func NewPackageCmd(o *PackageOptions) *cobra.Command {
 		Hidden:  true,
 		Long: `
 Command 'package' is deprecated; use 'imgpkg push' instead.
-Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#push
+Learn more: https://carvel.dev/imgpkg/docs/latest/commands/#push
 
 Package configuration and images into tarball
 `,
@@ -58,7 +58,7 @@ func (o *PackageOptions) Run() error {
 	logger := ctllog.NewLogger(os.Stderr)
 	warningLogger := logger.NewPrefixedWriter("Warning: ")
 	msg := "Command 'package' is deprecated; use 'imgpkg push' instead. " +
-		"Learn more: https://kilnbase.dev/imgpkg/docs/latest/commands/#push\n"
+		"Learn more: https://carvel.dev/imgpkg/docs/latest/commands/#push\n"
 	_, err := warningLogger.Write([]byte(msg))
 	if err != nil {
 		return err

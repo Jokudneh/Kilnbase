@@ -8,8 +8,8 @@ import (
 
 	ctlconf "github.com/Jokudneh/Kilnbase/pkg/kilnbase/config"
 	ctlreg "github.com/Jokudneh/Kilnbase/pkg/kilnbase/registry"
-	"kilnbase.dev/vendir/pkg/vendir/versions"
-	"kilnbase.dev/vendir/pkg/vendir/versions/v1alpha1"
+	"carvel.dev/vendir/pkg/vendir/versions"
+	"carvel.dev/vendir/pkg/vendir/versions/v1alpha1"
 	regname "github.com/google/go-containerregistry/pkg/name"
 )
 

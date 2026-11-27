@@ -4,7 +4,6 @@
 package image
 
 import (
-	"fmt"
 	"regexp"
 
 	ctlbdk "github.com/Jokudneh/Kilnbase/pkg/kilnbase/builder/docker"
@@ -35,7 +34,10 @@ func (m Matcher) Matches(ref ctlconf.ImageRef) bool {
 		return lhs == rhs
 
 	default:
-		panic(fmt.Errorf("Missing image or imageRepo configuration"))
+		// A reference with neither an image nor a repo cannot match anything.
+		// This used to panic with a formatted error, which turned a malformed
+		// config into a stack trace in the middle of a resolve pass.
+		return false
 	}
 }
 
